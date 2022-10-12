@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" style="background:#000; opacity:1">
+  <div class="container fixed-top" style="background:transparent; opacity:1">
     <el-row>
     <el-col :span="12"><div class="grid-content ep-bg-purple" />
       <Slide class="Navbar bg-success">
@@ -42,6 +42,9 @@ export default {
 
 <style scoped>
 .Navbar {
+  z-index: 999;
+}
+.Slide{
   z-index: 999;
 }
 </style>
