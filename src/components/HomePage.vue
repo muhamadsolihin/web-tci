@@ -98,6 +98,7 @@ export default {
 /*** T H E - M A G I C - O F - O B J E C T - F I T ***/
 /*****************************************************/
 
+
 .video-container {
   position: relative;
   overflow: hidden;
@@ -120,6 +121,7 @@ export default {
     font-size: 4em;
     line-height: 1em;
     margin-top: 1em !important;
+    margin-left: 6%;
     
   }
 }
@@ -155,6 +157,7 @@ export default {
   color: #ffffff;
   @media (min-width: 992px) {
     margin-top: -2em !important;
+    margin-left:8%;
     
   }
 }
@@ -163,6 +166,9 @@ export default {
   height: 22px;
   margin-top: 0.9em;
   background: #0c4aa9;
+  @media (min-width: 600px) {
+    margin-left: 4%;
+  }
 }
 video {
   object-fit: cover; // Set the magic

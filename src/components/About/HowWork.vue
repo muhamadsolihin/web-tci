@@ -180,8 +180,8 @@ export default {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 55px;
-  margin-top: 28%;
+  font-size: 32px;
+  margin-top: 25%;
   margin-left: 6em;
   text-align: left;
   line-height: 67px;

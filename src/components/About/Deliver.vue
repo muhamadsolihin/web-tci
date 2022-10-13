@@ -1,12 +1,12 @@
 <template>
-  <div class="container-fluid" style="background: #eeeaea">
+  <div class="container-fluid" style="background: #eeeaea; height:76vh">
     <el-row class="container">
       <el-col :gutter="10" :span="10" :offset="2" style="margin-left: -1em"
         ><div class="grid-content" />
         <img
           class="pkarief"
           src="@/assets/pkarief.png"
-          style="width: 491px; height: 579px; margin-top: 10em"
+          style="width: 491px; height: 579px; margin-top: 12em"
         />
       </el-col>
       <el-col :span="10" :offset="2"
@@ -19,12 +19,12 @@
             class="card-header bg-transparent"
             style="border: none; text-align: left"
           >
-            We Deliver <br />
+            We Deliver <br/>
             Consistent Solutions
           </div>
           <ul class="list-group bg-transparent" style="border: none">
             <li
-              class="list-group-item bg-transparent"
+              class="list-group-item bg-transparent subheader"
               style="border: none; text-align: left"
             >
               Using a combination of technology, process and talents we focus on
@@ -38,10 +38,10 @@
                 customers.
               </p>
             </li>
-            <li class="list-group-item bg-transparent" style="border: none">
+            <li class="list-group-item bg-transparent img-group" style="border: none">
               <img
                 src="@/assets/imgGroup.png"
-                style="width: 528px; height: 250px; margin-top: 12em"
+                style="width: 528px; height: 250px; margin-top: 3em"
               />
             </li>
           </ul>
@@ -51,10 +51,10 @@
   </div>
 
   <div class="container-fluid bg-white">
-    <div class="container">
+    <div class="container ">
       <el-row :gutter="20">
-        <el-col :span="12"
-          ><div class="grid-content" />
+        <el-col :span="12" 
+          ><div class="grid-content  " />
           <p class="head">How We Do It</p>
         </el-col>
         <el-col :span="12"><div class="grid-content" /></el-col>
@@ -67,7 +67,7 @@
             style="border: none; background: transparent; margin-top: 10em"
           >
             <div
-              class="card-header bg-transparent"
+              class="list-group bg-transparent"
               style="border: none; text-align: justify; margin-left: 8em"
             >
               01 &nbsp; Positive impact in development
@@ -158,10 +158,28 @@ export default {
   font-weight: 600;
   font-size: 55px;
   line-height: 67px;
-  margin-top: 3em;
+  text-align: left;
+  margin-top: 60%;
   /* identical to box height */
   letter-spacing: -2.81895px;
   color: #000000;
+}
+.list-group{
+  text-align: left;
+}
+.card-header{
+  font-family:'montserrat';
+  font-size:3.5em;
+  font-weight: 600;
+  width:37em;
+  line-height:1.5em;
+}
+.subheader{
+  font-family: 'open sans';
+  font-size: 1.1em;
+  color: #8D8F9A;
+  width: 37em;
+  text-align: justify;
 }
 .card-header2 {
   font-family: "Montserrat";
@@ -182,5 +200,8 @@ export default {
   /* or 167% */
 
   color: #000000;
+}
+.img-group{
+margin-top: 10%;
 }
 </style>
