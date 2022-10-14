@@ -127,13 +127,13 @@
         <el-row :gutter="20" style="margin-left: 1%">
           <el-col :span="6" style="margin-left: 28%"
             ><div class="grid-content ep-bg-purple" />
-            <a class="dropdown" @click="show = true" role="button">
+            <a class="dropdown" @click="show1 = true" role="button">
               <img src="@/assets/images/animate/dataanimate.svg"
             /></a>
           </el-col>
           <el-col :span="6"
             ><div class="grid-content ep-bg-purple" />
-            <a class="dropdown" @click="show = false" role="button">
+            <a class="dropdown" @click="show1 =  false" role="button">
             <img src="@/assets/images/cyberanimate.svg"
           /></a></el-col>
         </el-row>
@@ -158,10 +158,10 @@
         </div>
       </el-col>
 
-      <el-col v-else style="margin-top: 10%; z-index: inherit;99" :span="12"
+      <el-col v-else-if="show1" style="margin-top: 10%; z-index: inherit;99" :span="12"
         ><div class="grid-content">
           <div>
-            <div class="head1" style="text-align: justify">IT Consultan</div>
+            <div class="head1" style="text-align: justify">IT Consl</div>
 
             <div
               class="subhead1"
@@ -176,7 +176,8 @@
           </div>
         </div>
       </el-col>
-      <!-- <el-col v-if="show" style="margin-top: 10%; z-index: inherit;99" :span="12"
+
+       <el-col v-else-if="show2" style="margin-top: 10%; z-index: inherit;99" :span="12"
         ><div class="grid-content">
           <div>
             <div class="head1" style="text-align: justify">IT Consultan</div>
@@ -193,6 +194,7 @@
           </div>
         </div>
       </el-col>
+      
       <el-col v-else style="margin-top: 10%; z-index: inherit;99" :span="12"
         ><div class="grid-content">
           <div>
@@ -209,7 +211,7 @@
             </div>
           </div>
         </div>
-      </el-col> -->
+      </el-col>
     </el-row>
   </div>
 
@@ -242,8 +244,8 @@ export default {
   data() {
     return {
       show: true,
-      show1:true,
-      show2:true,
+      show1:false,
+      show2:false,
 
     };
   },
