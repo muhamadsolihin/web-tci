@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap"
       rel="stylesheet"
     />
+    
   </head>
   <Navbar />
   <router-view></router-view>
@@ -21,6 +22,7 @@
 import { RouterView } from 'vue-router';
 import Navbar from "./components/Navbar.vue";
 </script>
+
 
 <style>
 #app {
