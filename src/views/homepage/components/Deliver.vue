@@ -156,9 +156,10 @@ export default {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 55px;
+  font-size: 3.4em;
   line-height: 67px;
   text-align: left;
+  margin-left: 6%;
   margin-top: 60%;
   /* identical to box height */
   letter-spacing: -2.81895px;

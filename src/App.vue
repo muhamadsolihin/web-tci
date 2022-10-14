@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap"
       rel="stylesheet"
     />
+    
   </head>
   <!-- <Navbar /> -->
   <div class="container-fluid scrollbar-custom">
@@ -23,6 +24,7 @@
 import { RouterView } from 'vue-router';
 // import Navbar from "./components/Navbar.vue";
 </script>
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
