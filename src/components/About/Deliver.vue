@@ -169,10 +169,10 @@ export default {
 }
 .card-header{
   font-family:'montserrat';
-  font-size:3.5em;
+  font-size:3em;
   font-weight: 600;
-  width:37em;
-  line-height:1.5em;
+  width:15em;
+  line-height:1.2em;
 }
 .subheader{
   font-family: 'open sans';

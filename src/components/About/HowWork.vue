@@ -107,45 +107,140 @@
       </el-col>
     </el-row>
 
-
-    <el-row >
-      <el-col :span="12" 
-        ><div class="grid-content"  />
-        <el-row style="margin-top:10%">
-          <el-col :span="6" style="margin-left:28%"
+    <el-row>
+      <el-col :span="12"
+        ><div class="grid-content" />
+        <el-row style="margin-top: 10%">
+          <el-col :span="6" style="margin-left: 28%"
             ><div class="grid-content ep-bg-purple" />
-            <img src="@/assets/service1.svg" />
+            <a
+              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+            >
+              <img src="@/assets/animate/consutant.svg"
+            /></a>
           </el-col>
           <el-col :span="6"
             ><div class="grid-content ep-bg-purple" />
-            <img src="@/assets/service1.svg"
-          /></el-col>
+            <a
+              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              href="#collapseExample2"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+            <img src="@/assets/animate/digital.svg"
+          /></a></el-col>
         </el-row>
 
-        <el-row :gutter="20" style="margin-left:1%">
-            <el-col :span="6" style="margin-left:28%"
+        <el-row :gutter="20" style="margin-left: 1%">
+          <el-col :span="6" style="margin-left: 28%"
             ><div class="grid-content ep-bg-purple" />
-            <img src="@/assets/service3.svg" />
+            <img src="@/assets/animate/dataanimate.svg" />
           </el-col>
           <el-col :span="6"
             ><div class="grid-content ep-bg-purple" />
-            <img src="@/assets/service4.svg"
+            <img src="@/assets/cyberanimate.svg"
           /></el-col>
         </el-row>
       </el-col>
-      <el-col style="margin-top:10%" :span="12"><div class="grid-content" />
-        <div class="head1" style="text-align:justify">
-            IT Consultant
+      <el-col style="margin-top: 10%" :span="12"
+        ><div class="grid-content collapse" id="collapseExample">
+          <div class="collapse multi-collapse" id="collapseExample">
+            <div class="head1" style="text-align: justify">IT Consultant</div>
+
+            <div
+              class="subhead1 "
+              style="text-align: justify; width: 34em; margin-top: 2%"
+            >
+              With our IT Consultant services, we could help you revamp your IT
+              Environment and synchronize it with your business needs,
+              leveraging the experiences inside it. We also offer consultancy on
+              holistic, fast, and cost-effective optimization of IT Systems and
+              Processes to ensure tangible business outcomes for you.
+            </div>
+          </div>
         </div>
 
-        <div class="subhead1" style="text-align:justify; width:34em; margin-top: 2%;">
-            With our IT Consultant services, we could help you revamp your 
-            IT Environment and synchronize it with your business needs, leveraging the experiences inside it. 
-             We also offer consultancy on holistic, fast, and cost-effective optimization of IT Systems and 
-             Processes to ensure tangible business outcomes for you.
-        </div>
+          <div class="collapse multi-collapse" id="collapseExample2">
+            <div class="head1" style="text-align: justify">IT Consultan</div>
 
-    </el-col>
+            <div
+              class="subhead1 "
+              style="text-align: justify; width: 34em; margin-top: 2%"
+            >
+              With our IT Consultant services, we could help you revamp your IT
+              Environment and synchronize it with your business needs,
+              leveraging the experiences inside it. We also offer consultancy on
+              holistic, fast, and cost-effective optimization of IT Systems and
+              Processes to ensure tangible business outcomes for you.
+            </div>
+          </div>
+        
+      </el-col>
+
+      <el-col style="margin-top: 10%" :span="12"
+        ><div class="grid-content collapse" id="collapseExample3">
+          <div class="collapse multi-collapse" id="collapseExample">
+            <div class="head1" style="text-align: justify">IT Consultan</div>
+
+            <div
+              class="subhead1"
+              style="text-align: justify; width: 34em; margin-top: 2%"
+            >
+              With our IT Consultant services, we could help you revamp your IT
+              Environment and synchronize it with your business needs,
+              leveraging the experiences inside it. We also offer consultancy on
+              holistic, fast, and cost-effective optimization of IT Systems and
+              Processes to ensure tangible business outcomes for you.
+            </div>
+          </div>
+        </div>
+      </el-col>
+
+      <el-col style="margin-top: 10%" :span="12"
+        ><div class="grid-content collapse" id="collapseExample4">
+          <div class="collapse multi-collapse" id="collapseExample">
+            <div class="head1" style="text-align: justify">IT Consultant</div>
+
+            <div
+              class="subhead1"
+              style="text-align: justify; width: 34em; margin-top: 2%"
+            >
+              With our IT Consultant services, we could help you revamp your IT
+              Environment and synchronize it with your business needs,
+              leveraging the experiences inside it. We also offer consultancy on
+              holistic, fast, and cost-effective optimization of IT Systems and
+              Processes to ensure tangible business outcomes for you.
+            </div>
+          </div>
+        </div>
+      </el-col>
+
+      <el-col style="margin-top: 10%" :span="12"
+        ><div class="grid-content collapse" id="collapseExample4">
+          <div class="collapse multi-collapse" id="collapseExample">
+            <div class="head1" style="text-align: justify">IT Consultant</div>
+
+            <div
+              class="subhead1"
+              style="text-align: justify; width: 34em; margin-top: 2%"
+            >
+              With our IT Consultant services, we could help you revamp your IT
+              Environment and synchronize it with your business needs,
+              leveraging the experiences inside it. We also offer consultancy on
+              holistic, fast, and cost-effective optimization of IT Systems and
+              Processes to ensure tangible business outcomes for you.
+            </div>
+          </div>
+        </div>
+      </el-col>
+
     </el-row>
   </div>
 
@@ -163,6 +258,7 @@
       /></el-col>
     </el-row>
   </div>
+
   <Product />
 </template>
 
@@ -170,7 +266,7 @@
 import Product from "./Product.vue";
 export default {
   components: {
-    Product
+    Product,
   },
 };
 </script>
@@ -189,17 +285,17 @@ export default {
   letter-spacing: -2.81895px;
   color: #ffffff;
 }
-.head1{
-    font-family: 'montserrat';
-    font-size: 2em;
-    color: #000000;
-    font-weight: 600;
+.head1 {
+  font-family: "montserrat";
+  font-size: 2em;
+  color: #000000;
+  font-weight: 600;
 }
-.subhead1{
-    font-family: 'montserrat';
-    font-size: 1em;
-    font-weight: 400;
-    color: #000000;
+.subhead1 {
+  font-family: "montserrat";
+  font-size: 1em;
+  font-weight: 400;
+  color: #000000;
 }
 img {
   float: right;

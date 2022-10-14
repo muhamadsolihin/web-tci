@@ -155,6 +155,7 @@ export default {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #ffffff;
+  padding-left:8%;
   @media (min-width: 992px) {
     margin-top: -2em !important;
     margin-left:8%;
