@@ -31,7 +31,7 @@
             </li>
             <li class="list-group-item bg-transparent" style="border: none">
               <img
-                src="@/assets/rndm1.png"
+                src="@/assets/images/rndm1.png"
                 style="width: 29em; height: 18em; margin-top: 9em"
               />
             </li>
@@ -42,7 +42,7 @@
         ><div class="grid-content" />
         <img
           class="ceopict"
-          src="@/assets/pictceo.png"
+          src="@/assets/images/pictceo.png"
           style="width: 40em; height: 41em; margin-top: 10em; margin-left: 10%"
         />
       </el-col>

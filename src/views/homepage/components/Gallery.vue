@@ -9,19 +9,19 @@
       <div class="row" style="margin-bottom: 7.5em">
         <div class="col-xl-6">
           <img
-            src="@/assets/galerry/pic1.png"
+            src="@/assets/images/galerry/pic1.png"
             style="width: 35em; height: 15em"
           />
           <div class="row" style="margin-top: 30px">
             <div class="col-6">
               <img
-                src="@/assets/galerry/pic2.png"
+                src="@/assets/images/galerry/pic2.png"
                 style="width: 16.8em; height: 15em; float: right"
               />
             </div>
             <div class="col-6">
               <img
-                src="@/assets/galerry/pic3.png"
+                src="@/assets/images/galerry/pic3.png"
                 style="width: 16.8em; height: 15em; float: left"
               />
             </div>
@@ -32,17 +32,17 @@
           <div class="row" style="margin-bottom: 7.5em">
             <div class="col-6" style="margin-left: -2em">
               <img
-                src="@/assets/galerry/pic4.png"
+                src="@/assets/images/galerry/pic4.png"
                 style="width: 17em; height: 31.7em"
               />
             </div>
             <div class="col-6" style="margin-left: -1.5em">
               <img
-                src="@/assets/galerry/pic5.png"
+                src="@/assets/images/galerry/pic5.png"
                 style="width: 17em; height: 15.3em"
               />
               <img
-                src="@/assets/galerry/pic6.png"
+                src="@/assets/images/galerry/pic6.png"
                 style="width: 17em; height: 15.3em; margin-top: 1em"
               />
             </div>
@@ -72,7 +72,7 @@
           <el-carousel-item>
             <div class="card" style="width: 36.6em; border: none">
               <img
-                src="@/assets/galerry/blog.png"
+                src="@/assets/images/galerry/blog.png"
                 class="card-img-top"
                 alt="responsive"
               />
@@ -87,7 +87,7 @@
           <el-carousel-item>
             <div class="card" style="width: 36.6em; border: none">
               <img
-                src="@/assets/galerry/blog.png"
+                src="@/assets/images/galerry/blog.png"
                 class="card-img-top"
                 alt="responsive"
               />
@@ -102,7 +102,7 @@
           <el-carousel-item>
             <div class="card" style="width: 36.6em; border: none">
               <img
-                src="@/assets/galerry/blog.png"
+                src="@/assets/images/galerry/blog.png"
                 class="card-img-top"
                 alt="responsive"
               />

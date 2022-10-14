@@ -7,7 +7,7 @@
       </el-col>
       <el-col :span="12"
         ><div class="grid-content" />
-        <img src="@/assets/batik2.svg" />
+        <img src="@/assets/images/batik2.svg" />
       </el-col>
     </el-row>
   </div>
@@ -121,7 +121,7 @@
               aria-expanded="true"
               aria-controls="collapseExample"
             >
-              <img src="@/assets/animate/consutant.svg"
+              <img src="@/assets/images/animate/consutant.svg"
             /></a>
           </el-col>
           <el-col :span="6"
@@ -134,18 +134,18 @@
               aria-expanded="false"
               aria-controls="collapseExample"
             >
-            <img src="@/assets/animate/digital.svg"
+            <img src="@/assets/images/animate/digital.svg"
           /></a></el-col>
         </el-row>
 
         <el-row :gutter="20" style="margin-left: 1%">
           <el-col :span="6" style="margin-left: 28%"
             ><div class="grid-content ep-bg-purple" />
-            <img src="@/assets/animate/dataanimate.svg" />
+            <img src="@/assets/images/animate/dataanimate.svg" />
           </el-col>
           <el-col :span="6"
             ><div class="grid-content ep-bg-purple" />
-            <img src="@/assets/cyberanimate.svg"
+            <img src="@/assets/images/cyberanimate.svg"
           /></el-col>
         </el-row>
       </el-col>
@@ -250,7 +250,7 @@
         ><div class="grid-content" />
         <img
           style="float: left; margin-left: -1em"
-          src="@/assets/batik-1.svg"
+          src="@/assets/images/batik-1.svg"
         />
       </el-col>
       <el-col :span="12"

@@ -14,17 +14,12 @@
     />
   </head>
   <Navbar />
+  <router-view></router-view>
 </template>
 
-<script>
+<script setup>
+import { RouterView } from 'vue-router';
 import Navbar from "./components/Navbar.vue";
-
-export default {
-  name: "App",
-  components: {
-    Navbar,
-  },
-};
 </script>
 
 <style>

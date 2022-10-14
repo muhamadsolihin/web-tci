@@ -5,7 +5,7 @@
         ><div class="grid-content" />
         <img
           class="pkarief"
-          src="@/assets/pkarief.png"
+          src="@/assets/images/pkarief.png"
           style="width: 491px; height: 579px; margin-top: 12em"
         />
       </el-col>
@@ -40,7 +40,7 @@
             </li>
             <li class="list-group-item bg-transparent img-group" style="border: none">
               <img
-                src="@/assets/imgGroup.png"
+                src="@/assets/images/imgGroup.png"
                 style="width: 528px; height: 250px; margin-top: 3em"
               />
             </li>
@@ -131,7 +131,7 @@
         ><div class="grid-content" />
         <img
           style="float: left; margin-left: -1em"
-          src="@/assets/batik-1.svg"
+          src="@/assets/images/batik-1.svg"
         />
       </el-col>
       <el-col :span="12"

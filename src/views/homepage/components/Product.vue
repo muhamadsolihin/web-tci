@@ -14,7 +14,7 @@
           ><div class="grid-content card-ic">
             <div class="card" style="border: none">
               <img
-                src="@/assets/iclogo.svg"
+                src="@/assets/images/iclogo.svg"
                 class="card-img-top ic-image"
                 alt="responsive"
               />
@@ -31,13 +31,13 @@
               </ul>
               <div class="card-body" style="border: none">
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/fb.svg" />
+                  <img src="@/assets/images/fb.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/ig.svg" />
+                  <img src="@/assets/images/ig.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/twit.svg" />
+                  <img src="@/assets/images/twit.svg" />
                 </a>
               </div>
             </div>
@@ -47,7 +47,7 @@
           ><div class="grid-content card-ic">
             <div class="card" style="border: none">
               <img
-                src="@/assets/rbilogo.png"
+                src="@/assets/images/rbilogo.png"
                 class="card-img-top ic-image"
                 alt="responsive"
               />
@@ -64,13 +64,13 @@
               </ul>
               <div class="card-body" style="border: none">
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/fb.svg" />
+                  <img src="@/assets/images/fb.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/ig.svg" />
+                  <img src="@/assets/images/ig.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/twit.svg" />
+                  <img src="@/assets/images/twit.svg" />
                 </a>
               </div>
             </div></div
@@ -79,7 +79,7 @@
           ><div class="grid-content card-ic">
             <div class="card" style="border: none">
               <img
-                src="@/assets/artlogo.svg"
+                src="@/assets/images/artlogo.svg"
                 class="card-img-top ic-image"
                 alt="responsive"
               />
@@ -96,13 +96,13 @@
               </ul>
               <div class="card-body" style="border: none">
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/fb.svg" />
+                  <img src="@/assets/images/fb.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/ig.svg" />
+                  <img src="@/assets/images/ig.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/twit.svg" />
+                  <img src="@/assets/images/twit.svg" />
                 </a>
               </div>
             </div></div
@@ -111,7 +111,7 @@
           ><div class="grid-content card-ic">
             <div class="card" style="border: none">
               <img
-                src="@/assets/makasilogo.svg"
+                src="@/assets/images/makasilogo.svg"
                 class="card-img-top ic-image"
                 alt="responsive"
               />
@@ -128,13 +128,13 @@
               </ul>
               <div class="card-body" style="border: none">
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/fb.svg" />
+                  <img src="@/assets/images/fb.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/ig.svg" />
+                  <img src="@/assets/images/ig.svg" />
                 </a>
                 <a href="#" class="btn-touch">
-                  <img src="@/assets/twit.svg" />
+                  <img src="@/assets/images/twit.svg" />
                 </a>
               </div>
             </div></div
@@ -157,7 +157,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background: url("@/assets/bgproduct.png") no-repeat center center fixed;
+  background: url("@/assets/images/bgproduct.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -18,15 +18,12 @@
   </Slide>
     </el-col>
     <el-col :span="12"><div class="grid-content ep-bg-purple-light mt-4 " />
-    <img src="../assets/TCI.svg">
+    <img src="../assets/images/TCI.svg">
     </el-col>
   </el-row>
-
 </div>
-  <HomePage />
 </template>
 <script>
-import HomePage from "./HomePage.vue";
 
 // import an animation
 import { Slide } from "vue3-burger-menu";
@@ -34,7 +31,6 @@ import { Slide } from "vue3-burger-menu";
 export default {
   components: {
     Slide,
-    HomePage,
     side: "right",
   },
 };

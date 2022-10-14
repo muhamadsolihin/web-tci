@@ -1,7 +1,7 @@
 <template>
   <div class="contanier" style="height:100%">
     <section class="video-container fixed-top">
-      <video src="../assets/video.mp4" autoplay loop playsinline muted></video>
+      <video src="@/assets/images/video.mp4" autoplay loop playsinline muted></video>
       <div class="container">
         <el-row  style="margin-top: 5em">
           <el-col :span="12"
@@ -73,7 +73,7 @@
           <el-col :span="18"
             ><div class="grid-content ep-bg-purple-light" />
             <img  class="bola"
-              src="../assets/bola.svg"
+              src="@/assets/images/bola.svg"
               style="margin-top: 0; width: 466px; height: 477px; position: relative; z-index: 12;"
             />
           </el-col>
@@ -86,7 +86,7 @@
 
 <script>
 
-import Deliver from "./About/Deliver.vue";
+import Deliver from "./components/Deliver.vue";
 export default {
   components: {
     Deliver
