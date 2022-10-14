@@ -14,23 +14,24 @@
     />
     
   </head>
-  <Navbar />
+  <!-- <Navbar /> -->
   <router-view></router-view>
 </template>
 
 <script setup>
 import { RouterView } from 'vue-router';
-import Navbar from "./components/Navbar.vue";
+// import Navbar from "./components/Navbar.vue";
 </script>
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 #app {
-  font-family: Montserrat, Montserrat, Montserrat, sans-serif, "Albert Sans", 'Open Sans';
+  font-family: 'Albert Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
