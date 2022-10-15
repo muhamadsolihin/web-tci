@@ -7,7 +7,7 @@
       </el-col>
       <el-col :span="12"
         ><div class="grid-content" />
-        <img src="@/assets/images/batik2.svg" />
+        <img style="margin-right: 0" src="@/assets/images/batik2.svg" />
       </el-col>
     </el-row>
   </div>
@@ -106,114 +106,9 @@
         <div class="square ml-5 container"></div>
       </el-col>
     </el-row>
-
-    <el-row>
-      <el-col :span="12"
-        ><div class="grid-content" />
-        <el-row style="margin-top: 10%">
-          <el-col :span="6" style="margin-left: 28%"
-            ><div class="grid-content ep-bg-purple" />
-            <a class="dropdown" @click="show = true" role="button">
-              <img src="@/assets/images/animate/consutant.svg"
-            /></a>
-          </el-col>
-          <el-col :span="6"
-            ><div class="grid-content ep-bg-purple" />
-            <a class="dropdown" @click="show = false" role="button">
-              <img src="@/assets/images/animate/digital.svg" /></a
-          ></el-col>
-        </el-row>
-
-        <el-row :gutter="20" style="margin-left: 1%">
-          <el-col :span="6" style="margin-left: 28%"
-            ><div class="grid-content ep-bg-purple" />
-            <a class="dropdown" @click="show1 = true" role="button">
-              <img src="@/assets/images/animate/dataanimate.svg"
-            /></a>
-          </el-col>
-          <el-col :span="6"
-            ><div class="grid-content ep-bg-purple" />
-            <a class="dropdown" @click="show1 =  false" role="button">
-            <img src="@/assets/images/cyberanimate.svg"
-          /></a></el-col>
-        </el-row>
-      </el-col>
-
-      <el-col v-if="show" style="margin-top: 10%" :span="12"
-        ><div class="grid-content">
-          <div>
-            <div class="head1" style="text-align: justify">IT</div>
-
-            <div
-              class="subhead1"
-              style="text-align: justify; width: 34em; margin-top: 2%"
-            >
-              With our IT Consultant services, we could help you revamp your IT
-              Environment and synchronize it with your business needs,
-              leveraging the experiences inside it. We also offer consultancy on
-              holistic, fast, and cost-effective optimization of IT Systems and
-              Processes to ensure tangible business outcomes for you.
-            </div>
-          </div>
-        </div>
-      </el-col>
-
-      <el-col v-else-if="show1" style="margin-top: 10%; z-index: inherit;99" :span="12"
-        ><div class="grid-content">
-          <div>
-            <div class="head1" style="text-align: justify">IT Consl</div>
-
-            <div
-              class="subhead1"
-              style="text-align: justify; width: 34em; margin-top: 2%"
-            >
-              IT Consultant services, we could help you revamp your IT
-              Environment and synchronize it with your business needs,
-              leveraging the experiences inside it. We also offer consultancy on
-              holistic, fast, and cost-effective optimization of IT Systems and
-              Processes to ensure tangible business outcomes for you.
-            </div>
-          </div>
-        </div>
-      </el-col>
-
-       <el-col v-else-if="show2" style="margin-top: 10%; z-index: inherit;99" :span="12"
-        ><div class="grid-content">
-          <div>
-            <div class="head1" style="text-align: justify">IT Consultan</div>
-
-            <div
-              class="subhead1"
-              style="text-align: justify; width: 34em; margin-top: 2%"
-            >
-              IT Consultant services, we could help you revamp your IT
-              Environment and synchronize it with your business needs,
-              leveraging the experiences inside it. We also offer consultancy on
-              holistic, fast, and cost-effective 
-            </div>
-          </div>
-        </div>
-      </el-col>
-      
-      <el-col v-else style="margin-top: 10%; z-index: inherit;99" :span="12"
-        ><div class="grid-content">
-          <div>
-            <div class="head1" style="text-align: justify">IT Consultan</div>
-
-            <div
-              class="subhead1"
-              style="text-align: justify; width: 34em; margin-top: 2%"
-            >
-              IT Consultant services, we could help you revamp your IT
-              Environment and synchronize it with your business needs,
-              leveraging the experiences inside it. We also offer consultancy on
-              holistic, fast, and cost-effective optimization of
-            </div>
-          </div>
-        </div>
-      </el-col>
-    </el-row>
+    <services />
   </div>
+
 
   <div class="container-fluid">
     <el-row>
@@ -230,22 +125,23 @@
     </el-row>
   </div>
 
+
   <Product />
 </template>
 
 <script>
 import Product from "./Product.vue";
+import services from "@/views/homepage/components/services.vue";
 
 export default {
+  props: ["show"],
   components: {
     Product,
+    services,
   },
 
   data() {
     return {
-      show: true,
-      show1:false,
-      show2:false,
 
     };
   },

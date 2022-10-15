@@ -1,13 +1,13 @@
 <template>
-  <header class="py-5 bg-image-full" style="height:57em">
-    <div class="container-fluid">
+  <header class="py-5 bg-image-full" style="height:57em; margin-top: 0;">
+      <div class="container">
       <div class="row">
         <div class="col-xl-6 col-md-6">
           <p class="head">Our Product</p>
         </div>
-        <div class="col-xl-6 col-md-6"></div>
       </div>
-    </div>
+      </div>
+    
     <div class="container">
       <el-row>
         <el-col :span="6"
@@ -184,7 +184,7 @@ header {
   box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   @media (min-width: 992px) {
-    margin-top: 2.5em;
+    margin-top:0;
     
   }
 }
