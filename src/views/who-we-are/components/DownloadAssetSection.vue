@@ -7,7 +7,7 @@
 				>
 					<div class="d-flex flex-column justify-content-center h-100">
 						<SectionNumberComponent
-							class="mt-4"
+							class="mt-4 me-auto"
 							:number="'07 / 07'"
 							:section-name="'Corporate Responsibility'"
 							:color="'#000000'"

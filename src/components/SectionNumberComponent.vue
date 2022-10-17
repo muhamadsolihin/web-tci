@@ -34,7 +34,6 @@
 <style scoped lang="scss">
 	.section-number {
 		border-radius: 25px;
-		margin-right: auto;
 		padding: 5px 10px;
 		font-family: 'IBM Plex Mono', sans-serif;
 		hr {

@@ -21,7 +21,7 @@
 							We believe that our colleagues have the rights to work in a safe place where they don’t need to worry about discrimination, bullying and harassment. With that in mind, we treat our colleagues based on their abilities and skills, regardless of their gender, race, age, physical condition, marital status, family circumstances or religious beliefs. We always make sure that our colleagues feel respected for who they are, because we support and uphold human rights principles.
 						</p>
 						<SectionNumberComponent
-							class="mt-auto"
+							class="mt-auto me-auto"
 							:number="'06 / 07'"
 							:section-name="'Diversity Equity Inclusion'"
 							:color="'#000000'"

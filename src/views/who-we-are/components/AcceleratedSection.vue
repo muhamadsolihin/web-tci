@@ -14,7 +14,7 @@
 							innovation autonomously, quickly, and on budget.
 						</p>
 						<SectionNumberComponent
-							class="mt-auto"
+							class="mt-auto me-auto"
 							:number="'02 / 07'"
 							:section-name="'How We Do It'"
 							:color="'#000000'"

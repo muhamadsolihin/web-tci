@@ -1,6 +1,7 @@
 <template>
   <HeroSection />
   <AcceleratedSection />
+  <VisionMissionSection />
   <DiversitySection />
   <DownloadAssetSection />
 	<section class="four">
@@ -11,6 +12,7 @@
 <script setup>
 import HeroSection from "./components/HeroSection.vue";
 import AcceleratedSection from "./components/AcceleratedSection.vue";
+import VisionMissionSection from "./components/VisionMissionSection.vue";
 import DiversitySection from "./components/DiversitySection.vue";
 import DownloadAssetSection from "./components/DownloadAssetSection.vue";
 </script>
