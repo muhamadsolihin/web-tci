@@ -39,16 +39,6 @@
 </template>
 
 <style lang="scss" scoped>
-	.w-50 {
-		width: 50%;
-	}
-	.albert-reg-20 {
-		font-family: 'Albert Sans', sans-serif;
-		font-size: 20px;
-		line-height: 30px;
-		font-weight: 400;
-		text-align: start;
-	}
   .shape-blue {
     width: 68px;
     height: 22px;
