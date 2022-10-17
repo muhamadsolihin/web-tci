@@ -24,6 +24,8 @@
 				</div>
 			</div>
 		</div>
+    <img class="asset-1" src="@/assets/images/who-we-are/asset-1.png" alt="asset">
+    <img class="asset-3" src="@/assets/images/who-we-are/asset-3.png" alt="asset">
 	</section>
 	<section class="two">
 		<h1>Second Page</h1>
@@ -80,6 +82,7 @@
 		height: 100vh;
 		width: 100%;
 		padding: 0 80px;
+      position: relative;
 		.container {
 			height: 100vh;
 			padding: 0;
@@ -99,11 +102,20 @@
 		}
 		.hero-title {
 			font-family: 'Montserrat', sans-serif;
-			font-size: 80px;
+			font-size: 4.5rem;
 			font-weight: 600;
 			line-height: 83px;
 			text-align: start;
 		}
+    .asset-1 {
+      position: absolute;
+      bottom: -90px;
+      left: 45%;
+    }
+    .asset-3 {
+      position: absolute;
+      bottom: 0;
+    }
 	}
 	.two {
 		background: rgb(36, 164, 138);
