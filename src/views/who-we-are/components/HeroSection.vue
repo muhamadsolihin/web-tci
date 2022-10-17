@@ -1,5 +1,5 @@
 <template>
-	<section class="hero">
+	<section id="hero">
 		<div class="container-border">
 			<img
 				class="asset-2"
@@ -8,11 +8,7 @@
 			/>
 			<div class="container d-flex flex-column justify-content-center">
 				<div class="d-flex flex-column align-items-start justify-content-start">
-					<div class="section-number d-flex flex-row align-items-center">
-						<p class="mb-0">01 / 07</p>
-						<hr class="mx-2" />
-						<p class="mb-0">About</p>
-					</div>
+          <SectionNumberComponent class="mt-auto" :number="'01 / 07'" :section-name="'About'" :color="'#ffffff'" />
 					<h1 class="hero-title mt-4">
 						Digital & IT <br />
 						Solution for <br />
@@ -22,7 +18,7 @@
 						class="d-flex flex-row justify-content-start align-items-start w-50"
 					>
 						<div class="shape-blue"></div>
-						<p class="albert-reg-20">
+						<p class="albert-reg-20 text-white">
 							We design and build solutions by connecting ideas and technology
 							to solve problems and get new ideas to business lifecycle
 						</p>
@@ -43,14 +39,20 @@
 	</section>
 </template>
 
+<script setup>
+import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
+
+</script>
+
 <style lang="scss" scoped>
-	.hero {
+	#hero {
 		background-image: url('@/assets/images/who-we-are/bg-hero-we-are.png');
 		background-size: cover;
 		height: 100vh;
 		width: 100%;
 		padding: 0 80px;
 		position: relative;
+    z-index: -1;
 		.container-border {
 			position: relative;
 			width: 100%;
@@ -68,6 +70,7 @@
 					font-weight: 600;
 					line-height: 83px;
 					text-align: start;
+          color: white;
 				}
 				.section-number {
 					border: 2px solid #b8bdc6;
