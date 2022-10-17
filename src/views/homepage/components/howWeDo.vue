@@ -1,260 +1,288 @@
 <template>
-  <section id="service">
+  <section id="howwedo">
     <div class="container-border">
-      <div class="container">
-        <h1 class="hero-title mt-4">Our Services</h1>
+      <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
+      <div class="container  hero-collap">
+        <h1 class="hero-title mt-4">How We Do</h1>
         <div
           class="d-flex flex-row justify-content-start align-items-start w-50"
         >
           <div class="shape-blue"></div>
         </div>
-      <!--begin::Tabs-->
-      <div class="row mt-5 pt-5">
-        <div class="col-md-6">
-          <ul
-            class="nav flex-center bg-transparent overflow-auto flex-nowrap p-2 mb-8"
+        <div class="row h-100" style="margin-top: 68px">
+          <div
+            class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
           >
-            <div class="row" style="margin-left: 28%">
-              <div class="col-md-6" style="border: none">
+            <ul class="nav flex-center bg-transparent flex-nowrap p-2 mb-8">
+              <div class="col-md-12">
                 <!--begin::Tab nav-->
-                <li class="nav-item flex-equal">
+                <li class="nav-item active">
                   <a
-                    class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold active"
+                    class="nav-link btn btn-active-white head py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
-                    href="#kt_lists_widget_3_tab_pane_1_consultant"
-                    ><img src="@/assets/images/animate/consutant.svg"
-                  /></a>
+                    href="#kt_lists_widget_3_tab_pane_1"
+                    style="text-align: left; margin-left: 106px"
+                    >01 &nbsp;Positive impact in development</a
+                  >
                 </li>
 
                 <!--end::Tab nav-->
                 <!--begin::Tab nav-->
 
-                <li class="nav-item flex-equal" style="margin-top: 55px">
+                <li class="nav-item flex-equal">
                   <a
-                    class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                    class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
-                    href="#kt_lists_data"
-                    ><img src="@/assets/images/animate/dataanimate.svg"
-                  /></a>
+                    href="#kt_lists_adaptive"
+                    style="text-align: left; margin-left: 103px"
+                    >02 &nbsp;Adaptive solution development</a
+                  >
+                </li>
+                <li class="nav-item flex-equal">
+                  <a
+                    class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                    data-bs-toggle="tab"
+                    href="#kt_lists_orien"
+                    style="text-align: left; margin-left: 103px"
+                    >03 &nbsp;User oriented group of talents</a
+                  >
+                </li>
+                <li class="nav-item flex-equal">
+                  <a
+                    class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                    data-bs-toggle="tab"
+                    href="#kt_lists_sustainable"
+                    style="text-align: left; margin-left: 103px"
+                    >04 &nbsp;Sustainable way of achieving</a
+                  >
                 </li>
               </div>
               <!--end::Tab nav-->
               <!--begin::Tab nav-->
-              <div class="col-md-6">
-                <li class="nav-item flex-equal mx-1">
-                  <a
-                    class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                    data-bs-toggle="tab"
-                    href="#kt_lists_widget_3_tab_pane_2_digital"
-                    ><img src="@/assets/images/animate/digital.svg"
-                  /></a>
-                </li>
-                <li class="nav-item flex-equal" style="margin-top: 55px">
-                  <a
-                    class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                    data-bs-toggle="tab"
-                    href="#kt_lists_widget_3_tab_pane_4_cyber"
-                    ><img src="@/assets/images/cyberanimate.svg"
-                  /></a>
-                </li>
-              </div>
               <!--end::Tab nav-->
-            </div>
-          </ul>
-        </div>
-        <!--end::Tabs-->
-        <!--begin:Tab content-->
-        <div class="col-md-6">
-          <div class="tab-content">
-            <!--begin::Tab pane-->
-            <div
-              class="tab-pane fade active show"
-              id="kt_lists_widget_3_tab_pane_1_consultant"
-            >
-              <!--begin::Section-->
-              <el-col id="consultant" style="margin-top: 10%" :span="12"
-                ><div class="grid-content">
-                  <div>
-                    <div class="head1" style="text-align: justify">
-                      IT Consultant
-                    </div>
-
-                    <div
-                      class="subhead1 mt-4"
-                      style="text-align: justify; width: 34em; margin-top: 2%"
-                    >
-                      With our IT Consultant services, we could help you revamp
-                      your IT Environment and synchronize it with your business
-                      needs, leveraging the experiences inside it. We also offer
-                      consultancy on holistic, fast, and cost-effective
-                      optimization of IT Systems and Processes to ensure
-                      tangible business outcomes for you.
-                    </div>
-                  </div>
-                </div>
-              </el-col>
-              <!--end::Section-->
-              <!--begin::Section-->
-
-              <!--end::Section-->
-            </div>
-            <!--end::Tab pane-->
-            <!--begin::Tab pane-->
-            <div
-              class="tab-pane fade"
-              id="kt_lists_widget_3_tab_pane_2_digital"
-            >
-              <!--begin::Chart-->
-              <el-col id="consultant" style="margin-top: 10%" :span="12"
-                ><div class="grid-content">
-                  <div>
-                    <div class="head1" style="text-align: justify">
-                      Digital Transformation
-                    </div>
-
-                    <div
-                      class="subhead1 mt-4"
-                      style="text-align: justify; width: 34em; margin-top: 2%"
-                    >
-                      We are here to empower every enterprise across multiple
-                      industries with the most suitable IT Solutions to build up
-                      new technology-based business models that meet the
-                      requirements of modern business environment.
-                    </div>
-                  </div>
-                </div>
-              </el-col>
-              <!--end::Chart-->
-            </div>
-            <!--end::Tab pane-->
-            <!--begin::Tab pane-->
-            <div class="tab-pane fade" id="kt_lists_data">
-              <!--begin::Items-->
-              <el-col id="consultant" style="margin-top: 10%" :span="12"
-                ><div class="grid-content">
-                  <div>
-                    <div class="head1" style="text-align: justify">
-                      Data Center & Infrastructures
-                    </div>
-
-                    <div
-                      class="subhead1 mt-4"
-                      style="text-align: justify; width: 34em; margin-top: 2%"
-                    >
-                      We will assist you in planning, designing, developing, and
-                      implementing the infrastructure of your data center. We
-                      deliver detailed documentation to facilitate the upgrade,
-                      migration, and diagnostic processes.
-                    </div>
-                  </div>
-                </div>
-              </el-col>
-            </div>
-            <div class="tab-pane fade" id="kt_lists_widget_3_tab_pane_4_cyber">
-              <el-col style="margin-top: 10%" :span="12"
-                ><div class="grid-content">
-                  <div>
-                    <div class="head1" style="text-align: justify">
-                      Cyber Security
-                    </div>
-
-                    <div
-                      class="subhead1 mt-4"
-                      style="text-align: justify; width: 34em; margin-top: 2%"
-                    >
-                      Our security experts develop a personal approach to each
-                      customer based on best practices and enriched that with
-                      our own experience. We offer a variety of services from
-                      information security consulting to assessing, testing, and
-                      improving the protection of applications and networks for
-                      companies.
-                    </div>
-                  </div>
-                </div>
-              </el-col>
-            </div>
-            <!--end::Items-->
+            </ul>
           </div>
-          <!--end::Tab pane-->
+
+          <div
+            class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
+          >
+            <div class="d-flex flex-column justify-content-center h-100">
+              <div class="tab-content ">
+                <!--begin::Tab pane-->
+                <div class="tab-pane" id="kt_lists_widget_3_tab_pane_1">
+                  <!--begin::Section-->
+                  <el-col id="consultant" style="margin-top: 10%" :span="12"
+                    ><div class="grid-content">
+                      <div>
+                        <div class="open-reg-26" style="text-align: justify;width:574px">
+                          Positive impact in development
+                        </div>
+
+                        <div
+                          class="subhead1"
+                          style="text-align: justify; width: 34em;height:180px"
+                        >
+                          At every stage of product cycle we design solutions to
+                          meet user needs and are easy to use. We invest our
+                          time in costumer research, behavior learning and put
+                          all data into the test. We leverage end-user centered
+                          in our process to deliver creative solutions, create a
+                          seamless customer experiences and explore new
+                          opportunities.
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <!--end::Section-->
+                  <!--begin::Section-->
+
+                  <!--end::Section-->
+                </div>
+                <!--end::Tab pane-->
+                <!--begin::Tab pane-->
+                <div class="tab-pane fade" id="kt_lists_adaptive">
+                  <!--begin::Chart-->
+                  <el-col id="consultant" style="margin-top: 10%" :span="12"
+                    ><div class="grid-content">
+                      <div>
+                        <div class="open-reg-26" style="text-align: justify; width:574px">
+                          Adaptive solution development
+                        </div>
+                        <div
+                          class="subhead1"
+                          style="text-align: justify; width: 34em;height:180px"
+                        >
+                          We work with partners around The world from individual
+                          Employers & regional start ups to multinational
+                          enterprises In the public & private sectors, goverment
+                          and communities. We work with partners around The
+                          world from individual Employers & regional start ups
+                          to multinational enterprises In the public & private
+                          sectors, goverment and communities.
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <!--end::Chart-->
+                </div>
+                <!--end::Tab pane-->
+                <!--begin::Tab pane-->
+                <div class="tab-pane fade" id="kt_lists_orien">
+                  <!--begin::Items-->
+                  <el-col id="consultant" style="margin-top: 10%" :span="12"
+                    ><div class="grid-content">
+                      <div>
+                        <div class="open-reg-26" style="text-align: justify;width:574px">
+                          User oriented group of talents
+                        </div>
+
+                        <div
+                          class="subhead1"
+                          style="text-align: justify; width: 34em;height:180px"
+                        >
+                          We communicate and co-operate with each other and With
+                          our communities. We communicate and co-operate with
+                          each other and With our communities. We communicate
+                          and co-operate with each other and With our
+                          communities. We communicate and co-operate with each
+                          other and With our communities. We communicate and
+                          co-operate with each other and With our communities.
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                </div>
+                <div class="tab-pane fade" id="kt_lists_sustainable">
+                  <el-col style="margin-top: 10%" :span="12"
+                    ><div class="grid-content">
+                      <div>
+                        <div class="open-reg-26" style="text-align: justify;width:574px">
+                          Sustainable way of achieving
+                        </div>
+
+                        <div
+                          class="subhead1"
+                          style="text-align: justify; width: 34em; height:180px"
+                        >
+                          We question conventional wisdom & Challenge the status
+                          quo. If there is a better way, we'll find it. We're
+                          excited By ingenuity and thrilled to try something
+                          new. We question conventional wisdom & Challenge the
+                          status quo. If there is a better way, we'll find it.
+                          We're excited By ingenuity and thrilled to try
+                          something new. We question conventional wisdom &
+                          Challenge the status quo. If there is a better way,
+                          we'll find it. We're excited By ingenuity and thrilled
+                          to try something new.
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                </div>
+                <!--end::Items-->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--end:Tab content-->
-  </div>
-  <div class="row ">
-          <div
-              class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-            <img
-                class="text-center mt-3"
-                src="@/assets/images/batik-1.svg"
-                style="
-                  float: left;
-                  justify-content: left;
-                  margin-left: 0;
-                  height: 195px;
-                "
-              />
-          </div>
-      </div>
   </section>
-  <Product/>
+  <HowWork/>
 </template>
 
-<script>
-import Product from "./Product.vue"
-export default {
-  components: {
-    Product,
-   
-},
-};
+<script setup>
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import HowWork from "@/views/homepage/components/HowWork.vue";
 </script>
 
 <style lang="scss" scoped>
-#service {
+#howwedo {
   background-color: white;
   height: 100vh;
-  margin-top: 0;
+  margin-top: 10%;
   z-index: 1;
-}
-.container {
-      padding: 80px;
-      h2 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 3rem;
-        line-height: 57px;
-      }
-    }
-.hero-title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 4.5rem;
-    font-weight: 600;
-    line-height: 83px;
-    text-align: start;
-    color: black;
+  .container-border {
+    position: relative;
+    width: 100%;
+    padding: 0 80px;
+    border-left: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
   }
 
-  .shape-blue {
-    width: 68px;
-    height: 22px;
-    background-color: #0c4aa9;
-    margin-right: 20px;
-    margin-top: 10px;
+  .asset-2 {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    height: 711px;
   }
+  .container {
+    padding: 80px;
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 3rem;
+      line-height: 57px;
+    }
+  }
+}
+.head {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #b8bdc6;
+}
 .head1 {
-  font-family: "montserrat";
-  font-size: 2em;
-  color: #000000;
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: 600;
-  width: 533px;
+  font-size: 35px;
+  line-height: 43px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 83px;
+  text-align: start;
+  color: black;
+}
+.shape-blue {
+  width: 68px;
+  height: 22px;
+  background-color: #0c4aa9;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.head1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 43px;
+  /* identical to box height */
+
+  color: #b8bdc6;
 }
 .subhead1 {
-  font-family: "montserrat";
-  font-size: 1em;
+  font-family: "Open Sans";
+  font-style: normal;
   font-weight: 400;
-  color: #000000;
+  margin-top: 1.8em;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 167% */
+
+  color: #000000 !important;
+}
+.tab-pane {
+  margin-top: -5em;
 }
 .nav-link {
   border: none;
@@ -268,8 +296,10 @@ export default {
 .btn.btn-active-white.active,
 .btn.btn-active-white.show,
 .show > .btn.btn-active-white {
-  color: #7e8299;
-  border-color: #ffffff;
+  color: #000 ;
+  border-color: 1px solid #e78448;
+  border-radius: 36px;
+  width: 25em;
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
@@ -552,8 +582,8 @@ export default {
 
 .btn.btn-primary {
   color: #ffffff;
-  border-color: #00b2ff;
-  background-color: #00b2ff;
+  border-color: #b8bdc6;
+  background-color: #b8bdc6;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
 .btn.btn-primary i {

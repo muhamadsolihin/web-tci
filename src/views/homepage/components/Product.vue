@@ -1,4 +1,6 @@
 <template>
+  <section id="product">
+  <div>
   <header class="py-5 bg-image-full" style="height:57em; margin-top: 0;">
       <div class="container">
       <div class="row">
@@ -142,6 +144,7 @@
       </el-row>
     </div>
   </header>
+</div></section>
   <!-- Content section-->
   <Journey/>
 </template>
@@ -150,12 +153,17 @@
 import Journey from "./Journey.vue";
 export default {
   components: {
-    Journey
+    Journey,
+
 },
 };
 </script>
 
 <style lang="scss" scoped>
+#product{
+  margin-top: 12%;
+  height: 100vh;
+}
 header {
   background: url("@/assets/images/bgproduct.png") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -169,11 +177,11 @@ header {
   font-size: 3.4em;
   color: #fff;
   font-weight: 600;
-  margin-top: 3em;
+  margin-top: 0;
   margin-left: 0;
   @media (min-width: 992px) {
-    margin-left: -4.5em;
-    margin-top: 2em;
+    margin-left: 0;
+    margin-top: 0;
   }
 }
 

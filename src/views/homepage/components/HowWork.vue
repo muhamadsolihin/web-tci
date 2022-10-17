@@ -1,13 +1,32 @@
 <template>
-  <div class="container-fluid" style="background-color: #263a5f; height: 43vh">
+  <section id="howwork">
+    <div class="row">
+        <div
+            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
+          >
+          <img
+              class="text-center "
+              src="@/assets/images/batik-1.svg"
+              style="
+                float: left;
+                justify-content: left;
+                margin-left: 0;
+                height: 195px;
+                margin-top:0;
+                z-index: 2 !important;
+              "
+            />
+        </div>
+    </div>
+  <div class="container-fluid" style="background-color: #263a5f; height: 43vh; margin-top: 0;">
     <el-row>
       <el-col :span="12"
         ><div class="grid-content" />
         <p class="head">This is How We Work</p>
       </el-col>
       <el-col :span="12"
-        ><div class="grid-content" />
-        <img style="margin-right: 0" src="@/assets/images/batik2.svg" />
+        ><div class="grid-content " />
+        <img class="img-batik" style="margin-right: 0" src="@/assets/images/batik2.svg" />
       </el-col>
     </el-row>
   </div>
@@ -17,7 +36,7 @@
         ><div class="grid-content" />
         <div
           class="card"
-          style="border: none; background: transparent; margin-top: 10em"
+          style="border: none; background: transparent; margin-top: 9em"
         >
           <div
             class="card-header bg-transparent"
@@ -93,62 +112,35 @@
     </el-row>
   </div>
 
-  <div class="container-fluid" id="ourservices" style="margin-top: 20%">
-    <el-row>
-      <el-col :span="12"
-        ><div class="grid-content" />
-        <p class="text">Our Services</p>
-      </el-col>
+</section>
 
-      <el-col :span="12"><div class="grid-content" /></el-col>
-      <el-col :span="8" style="margin-left: 1em"
-        ><div class="grid-content" />
-        <div class="square ml-5 container"></div>
-      </el-col>
-    </el-row>
-    <services />
-  </div>
-
-
-  <div class="container-fluid">
-    <el-row>
-      <el-col :span="12"
-        ><div class="grid-content" />
-        <img
-          style="float: left; margin-left: -1em"
-          src="@/assets/images/batik-1.svg"
-        />
-      </el-col>
-      <el-col :span="12"
-        ><div class="grid-content ep-bg-purple-light"
-      /></el-col>
-    </el-row>
-  </div>
-
-
-  <Product />
+  <!-- <Product /> --> 
+  <stack/>
 </template>
 
 <script>
+import services from "./services.vue";
 import Product from "./Product.vue";
-import services from "@/views/homepage/components/services.vue";
+import stack from "./stack.vue";
 
 export default {
   props: ["show"],
   components: {
     Product,
     services,
+    stack
   },
 
   data() {
-    return {
-
-    };
+    return {};
   },
 };
 </script>
 
 <style lang="scss" scoped>
+#howwork{
+  height: 100vh;
+}
 .collapse.in {
   min-height: 50px;
   border: 1px solid blue;
@@ -178,7 +170,27 @@ export default {
   font-weight: 400;
   color: #000000;
 }
-img {
+
+.tech-head {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 167% */
+  width: 56em;
+  text-align: center;
+  float: center;
+  margin-top: 2.8em;
+  margin-left: 12%;
+  color: #000000;
+}
+.stack{
+  width: 957.59px;
+height: 84.45px;
+}
+
+.img-batik {
   float: right;
   margin-top: 23%;
   margin-right: -0.75em;
@@ -219,6 +231,13 @@ img {
 .square {
   width: 38px;
   height: 22px;
+  margin-top: 0.9em;
+  background: #0c4aa9;
+}
+.square1 {
+  width: 38px;
+  height: 22px;
+  margin-left: 30%;
   margin-top: 0.9em;
   background: #0c4aa9;
 }

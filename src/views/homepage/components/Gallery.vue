@@ -118,10 +118,17 @@
       </div>
     </div>
   </section>
+  <OurTeam />
 </template>
 
 <script>
-export default {};
+import OurTeam from "./OurTeam.vue";
+export default {
+  components: {
+    OurTeam,
+   
+},
+};
 </script>
 
 <style lang="scss" scoped>
