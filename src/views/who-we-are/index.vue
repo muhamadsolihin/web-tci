@@ -2,6 +2,7 @@
   <HeroSection />
   <AcceleratedSection />
   <DiversitySection />
+  <DownloadAssetSection />
 	<section class="four">
 		<h1>Fourth Page</h1>
 	</section>
@@ -11,6 +12,7 @@
 import HeroSection from "./components/HeroSection.vue";
 import AcceleratedSection from "./components/AcceleratedSection.vue";
 import DiversitySection from "./components/DiversitySection.vue";
+import DownloadAssetSection from "./components/DownloadAssetSection.vue";
 </script>
 
 <style lang="scss" scoped>

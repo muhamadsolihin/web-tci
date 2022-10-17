@@ -27,3 +27,11 @@
 .text-white {
     color: white;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    opacity: 0.8;
+}
