@@ -1,8 +1,6 @@
 <template>
   <HeroSection />
-	<section class="two">
-		<h1>Second Page</h1>
-	</section>
+  <AcceleratedSection />
 	<section class="three">
 		<h1>Third Page</h1>
 	</section>
@@ -13,13 +11,13 @@
 
 <script setup>
 import HeroSection from "./components/HeroSection.vue";
+import AcceleratedSection from "./components/AcceleratedSection.vue";
 </script>
 
 <style lang="scss" scoped>
 	section {
 		height: 100vh;
 		display: flex;
-		color: white;
 		scroll-snap-align: start;
 		scroll-behavior: smooth;
 	}
