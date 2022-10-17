@@ -1,9 +1,7 @@
 <template>
   <HeroSection />
   <AcceleratedSection />
-	<section class="three">
-		<h1>Third Page</h1>
-	</section>
+  <DiversitySection />
 	<section class="four">
 		<h1>Fourth Page</h1>
 	</section>
@@ -12,11 +10,12 @@
 <script setup>
 import HeroSection from "./components/HeroSection.vue";
 import AcceleratedSection from "./components/AcceleratedSection.vue";
+import DiversitySection from "./components/DiversitySection.vue";
 </script>
 
 <style lang="scss" scoped>
 	section {
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		scroll-snap-align: start;
 		scroll-behavior: smooth;
