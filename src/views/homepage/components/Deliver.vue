@@ -7,7 +7,7 @@
 				alt=""
 			/>
     <div class="container">
-      <div class="row h-100" style="margin-top: 68px">
+      <div class="row h-100" style="margin-top: 0">
         <div
           class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
         >
@@ -56,14 +56,12 @@
     </div>
     </div>
   </section>
-  <!-- <HowWeDo/> -->
-  <!-- <Sample/> -->
+
 </template>
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-// import HowWeDo from "@/views/homepage/components/howWeDo.vue";
-// import Sample from "@/views/homepage/components/sample.vue";
+
 
 </script>
 

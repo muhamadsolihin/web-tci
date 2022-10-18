@@ -187,19 +187,17 @@
       </div>
     </div>
   </section>
-  <HowWork/>
 </template>
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import HowWork from "@/views/homepage/components/HowWork.vue";
 </script>
 
 <style lang="scss" scoped>
 #howwedo {
   background-color: white;
   height: 100vh;
-  margin-top: 10%;
+  margin-top: 0;
   z-index: 1;
   .container-border {
     position: relative;
