@@ -48,16 +48,16 @@
       </el-col>
     </el-row>
   </div>
-  <Gallery/>
+  <!-- <Gallery/> -->
 </template>
 
 <script>
-  import Gallery from "./Gallery.vue";
-  export default {
-    components: {
-        Gallery
-    },
-  };
+  // import Gallery from "./Gallery.vue";
+  // export default {
+  //   components: {
+  //       Gallery
+  //   },
+  // };
 </script>
 
 <style lang="scss" scoped>

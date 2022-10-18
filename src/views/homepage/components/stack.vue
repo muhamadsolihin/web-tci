@@ -3,7 +3,7 @@
       <div class="container-border">
         <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
         <div class="container">
-          <h1 class="hero-title mt-4">Technology Stack</h1>
+          <h1 class="hero-title mt-0">Technology Stack</h1>
           <div
             class="d-flex flex-row justify-content-start align-items-start w-50"
           >
@@ -97,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="row ">
+      <!-- <div class="row ">
           <div
               class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
             >
@@ -112,23 +112,20 @@
                 "
               />
           </div>
-      </div>
+      </div> -->
     </section>
-    <Services/>
   </template>
   
   <script setup>
   import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-  import HowWeDo from "@/views/homepage/components/howWeDo.vue";
-  import Sample from "@/views/homepage/components/sample.vue";
-      import Services from "./services.vue";
+
   </script>
   
   <style lang="scss" scoped>
   #howwedo {
     background-color: white;
-    height: auto;
-    margin-top: 20%;
+    height: 100vh;
+    margin-top: 0;
     z-index: 1;
     .container-border {
       position: relative;

@@ -1,6 +1,6 @@
 <template>
   <section id="howwork">
-    <div class="row">
+    <!-- <div class="row">
         <div
             class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
           >
@@ -17,7 +17,7 @@
               "
             />
         </div>
-    </div>
+    </div> -->
   <div class="container-fluid" style="background-color: #263a5f; height: 43vh; margin-top: 0;">
     <el-row>
       <el-col :span="12"
@@ -30,13 +30,13 @@
       </el-col>
     </el-row>
   </div>
-  <div class="container">
+  <!-- <div class="container">
     <el-row>
       <el-col :span="8"
         ><div class="grid-content" />
         <div
           class="card"
-          style="border: none; background: transparent; margin-top: 9em"
+          style="border: none; background: transparent; margin-top: 0"
         >
           <div
             class="card-header bg-transparent"
@@ -110,31 +110,29 @@
         </div></el-col
       >
     </el-row>
-  </div>
+  </div> -->
 
 </section>
 
-  <!-- <Product /> --> 
-  <stack/>
 </template>
 
 <script>
-import services from "./services.vue";
-import Product from "./Product.vue";
-import stack from "./stack.vue";
+// import services from "./services.vue";
+// import Product from "./Product.vue";
+// import stack from "./stack.vue";
 
-export default {
-  props: ["show"],
-  components: {
-    Product,
-    services,
-    stack
-  },
+// export default {
+//   props: ["show"],
+//   components: {
+//     Product,
+//     services,
+//     stack
+//   },
 
-  data() {
-    return {};
-  },
-};
+//   data() {
+//     return {};
+//   },
+// };
 </script>
 
 <style lang="scss" scoped>
@@ -193,7 +191,7 @@ height: 84.45px;
 .img-batik {
   float: right;
   margin-top: 23%;
-  margin-right: -0.75em;
+  margin-right: 0.75em;
 }
 .card-header {
   font-family: "Montserrat";

@@ -1,5 +1,6 @@
 <template>
-  <div class="container-fluid body" style="background: #263a5f">
+  
+  <section id="gallery" class="container-fluid body" style="background: #263a5f">
     <div class="container">
       <div class="row">
         <div class="col-xl-6 col-md-6">
@@ -8,25 +9,25 @@
       </div>
       <div class="row" style="margin-bottom: 0">
         <div class="col-xl-6">
-          <div class="hover hover-2 text-white rounded">          <img
-            src="@/assets/images/galerry/pic1.png"
-            style="width: 35em; height: 15em; "
-          />
-          <div class="hover-overlay"></div>
-          <div class="hover-2-content px-5 py-4">
-            <p class="hover-2-description text-uppercase mb-0">Photo Studio</p>
+          <div class="hover hover-2 text-white rounded">
+            <img
+              src="@/assets/images/galerry/pic1.png"
+              style="width: 35em; height: 15em"
+            />
+            <div class="hover-overlay"></div>
+            <div class="hover-2-content px-5 py-4">
+              <p class="hover-2-description text-uppercase mb-0">
+                Photo Studio
+              </p>
+            </div>
           </div>
-        </div>
 
-          
-          <div class="row" style="margin-top: 30px;margin-left: -5em;">
+          <div class="row" style="margin-top: 30px; margin-left: -5em">
             <div class="col-6">
-  <img
+              <img
                 src="@/assets/images/galerry/pic2.png"
                 style="width: 16.8em; height: 15em; float: right"
               />
-
-
             </div>
             <div class="col-6">
               <img
@@ -55,12 +56,11 @@
                 style="width: 17em; height: 15.3em; margin-top: 1em"
               />
             </div>
-      
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="container" style="background-color: #fff">
     <div class="row">
@@ -89,7 +89,8 @@
               <div class="card-body">
                 <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
                 <p class="card-text">
-                    Saat membicarakan soal data, apa yang pertama kali terlintas dipikiranmu? 
+                  Saat membicarakan soal data, apa yang pertama kali terlintas
+                  dipikiranmu?
                 </p>
               </div>
             </div>
@@ -104,7 +105,8 @@
               <div class="card-body">
                 <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
                 <p class="card-text">
-                    Saat membicarakan soal data, apa yang pertama kali terlintas dipikiranmu? 
+                  Saat membicarakan soal data, apa yang pertama kali terlintas
+                  dipikiranmu?
                 </p>
               </div>
             </div>
@@ -119,7 +121,8 @@
               <div class="card-body">
                 <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
                 <p class="card-text">
-                    Saat membicarakan soal data, apa yang pertama kali terlintas dipikiranmu? 
+                  Saat membicarakan soal data, apa yang pertama kali terlintas
+                  dipikiranmu?
                 </p>
               </div>
             </div>
@@ -128,21 +131,25 @@
       </div>
     </div>
   </section>
-  <Sample />
+  <!-- <Sample /> -->
 </template>
 
 <script>
-import Sample from "./sample.vue";
-export default {
-  components: {
-    Sample,
-   
-},
-};
+// import Sample from "./sample.vue";
+// export default {
+//   components: {
+//     Sample,
+//   },
+// };
 </script>
 
 <style lang="scss" scoped>
-
+#gallery{
+  background-color: white;
+    height: 100vh;
+    margin-top: 0;
+    z-index: 1;
+}
 .hover {
   overflow: hidden;
   position: relative;
@@ -154,12 +161,10 @@ export default {
   overflow: hidden;
   position: relative;
   padding-bottom: 100%;
-
-
 }
 .hover-overlay {
   width: 35em;
-height: 15em;
+  height: 15em;
   position: absolute;
   top: 0;
   left: 0;
@@ -168,8 +173,9 @@ height: 15em;
 }
 
 .hover-overlay1 {
-  width: 16.8em; height: 15em;
-  
+  width: 16.8em;
+  height: 15em;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -185,8 +191,9 @@ height: 15em;
   transition: all 0.3s;
 }
 .hover1 img {
-  width: 16.8em; height: 15em;
-  
+  width: 16.8em;
+  height: 15em;
+
   position: absolute;
   top: 0;
   left: 0;

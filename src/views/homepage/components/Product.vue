@@ -1,190 +1,250 @@
 <template>
-  <section id="product">
-  <div>
-  <header class="py-5 bg-image-full" style="height:57em; margin-top: 1em;">
-      <div class="container">
-      <div class="row">
-        <div class="col-xl-6 col-md-6">
-          <p class="head">Our Product</p>
+  <section id="hero">
+    <div class="container-border">
+      <img
+				class="asset-2"
+				src="@/assets/images/who-we-are/asset-2.png"
+				alt=""
+			/>
+      <div class="d-flex flex-row align-items-center">
+        <h2 class="head">Our Works</h2>
+        <SectionNumberComponent
+          class="ms-auto"
+          :number="'06 / 11'"
+          :section-name="'Our Product'"
+          :color="'#fff'"
+        />
+      </div>
+      <div class="container d-flex flex-column justify-content-center">
+        <div class="d-flex flex-column align-items-start justify-content-start">
+
+          <div class="container mt-5 pt-3">
+            <el-row>
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/iclogo.svg"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">InterconnectDATA</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contact">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/rbilogo.png"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Reliable Bussiness Service</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contactrbi">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/artlogo.svg"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Arthology Branding Consultant</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contactrbi">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/makasilogo.svg"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Makasi</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contact">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div></div
+              ></el-col>
+            </el-row>
+          </div>
         </div>
       </div>
-      </div>
-    
-    <div class="container">
-      <el-row>
-        <el-col :span="6"
-          ><div class="grid-content card-ic">
-            <div class="card" style="border: none">
-              <img
-                src="@/assets/images/iclogo.svg"
-                class="card-img-top ic-image"
-                alt="responsive"
-              />
-              <hr
-                class="center"
-                style="width: 13.5em; margin: auto; margin-top: 4.5em"
-              />
-              <div class="card-body">
-                <h5 class="card-title">InterconnectDATA</h5>
-                <p class="card-text">2021</p>
-              </div>
-              <ul class="list-group list-group-flush" style="border: none">
-                <li class="list-group-item contact">Contact :</li>
-              </ul>
-              <div class="card-body" style="border: none">
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/fb.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/ig.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/twit.svg" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6"
-          ><div class="grid-content card-ic">
-            <div class="card" style="border: none">
-              <img
-                src="@/assets/images/rbilogo.png"
-                class="card-img-top ic-image"
-                alt="responsive"
-              />
-              <hr
-                class="center"
-                style="width: 13.5em; margin: auto; margin-top: 4.5em"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Reliable Bussiness Service</h5>
-                <p class="card-text">2021</p>
-              </div>
-              <ul class="list-group list-group-flush" style="border: none">
-                <li class="list-group-item contactrbi">Contact :</li>
-              </ul>
-              <div class="card-body" style="border: none">
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/fb.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/ig.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/twit.svg" />
-                </a>
-              </div>
-            </div></div
-        ></el-col>
-        <el-col :span="6"
-          ><div class="grid-content card-ic">
-            <div class="card" style="border: none">
-              <img
-                src="@/assets/images/artlogo.svg"
-                class="card-img-top ic-image"
-                alt="responsive"
-              />
-              <hr
-                class="center"
-                style="width: 13.5em; margin: auto; margin-top: 4.5em"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Arthology Branding Consultant</h5>
-                <p class="card-text">2021</p>
-              </div>
-              <ul class="list-group list-group-flush" style="border: none">
-                <li class="list-group-item contactrbi">Contact :</li>
-              </ul>
-              <div class="card-body" style="border: none">
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/fb.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/ig.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/twit.svg" />
-                </a>
-              </div>
-            </div></div
-        ></el-col>
-        <el-col :span="6"
-          ><div class="grid-content card-ic">
-            <div class="card" style="border: none">
-              <img
-                src="@/assets/images/makasilogo.svg"
-                class="card-img-top ic-image"
-                alt="responsive"
-              />
-              <hr
-                class="center"
-                style="width: 13.5em; margin: auto; margin-top: 4.5em"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Makasi</h5>
-                <p class="card-text">2021</p>
-              </div>
-              <ul class="list-group list-group-flush" style="border: none">
-                <li class="list-group-item contact">Contact :</li>
-              </ul>
-              <div class="card-body" style="border: none">
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/fb.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/ig.svg" />
-                </a>
-                <a href="#" class="btn-touch">
-                  <img src="@/assets/images/twit.svg" />
-                </a>
-              </div>
-            </div></div
-        ></el-col>
-      </el-row>
     </div>
-  </header>
-</div></section>
-  <!-- Content section-->
-  <Journey/>
+  </section>
 </template>
 
-<script>
-import Journey from "./Journey.vue";
-export default {
-  components: {
-    Journey,
-
-},
-};
+<script setup>
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 </script>
 
 <style lang="scss" scoped>
-#product{
-  margin-top: 11%;
-  height: 100vh;
-}
-header {
-  background: url("@/assets/images/bgproduct.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+#hero {
+  background-image: url("@/assets/images/bgproduct.png");
   background-size: cover;
   height: 100vh;
+  width: 100%;
+  padding: 0 80px;
+  position: relative;
+  z-index: -1;
+  .container-border {
+    position: relative;
+    width: 100%;
+    padding: 0 0 0 120px;
+
+    .container {
+      height: 100vh;
+      padding: 0;
+
+      .hero-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 83px;
+        text-align: start;
+        color: white;
+      }
+      .section-number {
+        border: 2px solid #b8bdc6;
+        border-radius: 25px;
+        margin-right: auto;
+        
+        padding: 5px 10px;
+
+        font-family: "IBM Plex Mono", sans-serif;
+        hr {
+          width: 20px;
+          border-top: 2px solid;
+        }
+      }
+      .shape-blue {
+        width: 68px;
+        height: 22px;
+        background-color: #0c4aa9;
+        margin-right: 20px;
+        margin-top: 10px;
+      }
+    }
+    .asset-2 {
+      position: absolute;
+      left: -1px;
+      top: 30%;
+    }
+  }
+  .asset-1 {
+    position: absolute;
+    bottom: -90px;
+    left: 45%;
+  }
+  .asset-3 {
+    position: absolute;
+    bottom: 0;
+  }
 }
+
 .head {
   font-family: "Albert Sans";
   font-size: 3.4em;
   color: #fff;
   font-weight: 600;
-  margin-top: 0;
+  margin-top: 3%;
   margin-left: 0;
-  @media (min-width: 992px) {
-    margin-left: 0;
-    margin-top: 0;
-  }
 }
-
 .card-ic {
   width: 17em;
   height: 33em;
@@ -192,8 +252,7 @@ header {
   box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   @media (min-width: 992px) {
-    margin-top:0;
-    
+    margin-top: 0;
   }
 }
 
