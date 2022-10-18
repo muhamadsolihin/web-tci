@@ -14,204 +14,171 @@
 	</div>
 </template>
 
-<script>
-	import { onMounted } from 'vue';
-	import { gsap } from 'gsap';
-	import { Power4 } from 'gsap';
+<script>const sections = document.querySelectorAll("section");
+const images = document.querySelectorAll(".bg");
+const headings = gsap.utils.toArray(".section-heading");
+const outerWrappers = gsap.utils.toArray(".outer");
+const innerWrappers = gsap.utils.toArray(".inner");
 
-	gsap.registerPlugin(Power4);
+document.addEventListener("wheel", handleWheel);
+document.addEventListener("touchstart", handleTouchStart);
+document.addEventListener("touchmove", handleTouchMove);
+document.addEventListener("touchend", handleTouchEnd);
 
-	const cols = 3;
-	let parts = [];
+let listening = false,
+  direction = "down",
+  current,
+  next = 0;
 
-	let images = [
-		require('@/assets/images/images/bg1.jpg'),
-		require('@/assets/images/images/bg2.jpg'),
-		require('@/assets/images/images/bg3.jpg'),
-	];
-	let current = 0;
-	let playing = false;
+const touch = {
+  startX: 0,
+  startY: 0,
+  dx: 0,
+  dy: 0,
+  startTime: 0,
+  dt: 0
+};
 
-	let animOptions = {
-		duration: 2.3,
-		ease: Power4.easeInOut,
-	};
-	// Cursor Invent Target Touches
-	let startY;
-	let endY;
-	let clicked = false;
+const tlDefaults = {
+  ease: "slow.inOut",
+  duration: 1.25
+};
 
-	for (let i in images) {
-		new Image().src = images[i];
-	}
+const splitHeadings = headings.map((heading) => {
+  return new SplitText(heading, {
+    type: "chars, words, lines",
+    linesClass: "clip-text"
+  });
+});
 
-	function lerp(start, end, amount) {
-		return (1 - amount) * start + amount * end;
-	}
+function revealSectionHeading() {
+  return gsap.to(splitHeadings[next].chars, {
+    autoAlpha: 1,
+    yPercent: 0,
+    duration: 1,
+    ease: "power2",
+    stagger: {
+      each: 0.02,
+      from: "random"
+    }
+  });
+}
 
-	function loop() {
-		cursorX = lerp(cursorX, pageX, followSpeed);
-		cursorY = lerp(cursorY, pageY, followSpeed);
-		cursorF.style.top = cursorY - sizeF / 2 + 'px';
-		cursorF.style.left = cursorX - sizeF / 2 + 'px';
-		requestAnimationFrame(loop);
-	}
+gsap.set(outerWrappers, { yPercent: 100 });
+gsap.set(innerWrappers, { yPercent: -100 });
 
-	function go(dir) {
-		if (!playing) {
-			playing = true;
-			if (current + dir < 0) current = images.length - 1;
-			else if (current + dir >= images.length) current = 0;
-			else current += dir;
+// Slides a section in on scroll down
+function slideIn() {
+  // The first time this function runs, current is undefined
+  if (current !== undefined) gsap.set(sections[current], { zIndex: 0 });
 
-			function up(part, next) {
-				part.appendChild(next);
-				gsap
-					.to(part, { ...animOptions, y: -window.innerHeight })
-					.then(function () {
-						part.children[0].remove();
-						gsap.to(part, { duration: 0, y: 0 });
-					});
-			}
+  gsap.set(sections[next], { autoAlpha: 1, zIndex: 1 });
+  gsap.set(images[next], { yPercent: 0 });
+  gsap.set(splitHeadings[next].chars, { autoAlpha: 0, yPercent: 100 });
 
-			function down(part, next) {
-				part.prepend(next);
-				gsap.to(part, { duration: 0, y: -window.innerHeight });
-				gsap.to(part, { ...animOptions, y: 0 }).then(function () {
-					part.children[1].remove();
-					playing = false;
-				});
-			}
+  const tl = gsap
+    .timeline({
+      paused: true,
+      defaults: tlDefaults,
+      onComplete: () => {
+        listening = true;
+        current = next;
+      }
+    })
+    .to([outerWrappers[next], innerWrappers[next]], { yPercent: 0 }, 0)
+    .from(images[next], { yPercent: 15 }, 0)
+    .add(revealSectionHeading(), 0);
 
-			for (let p in parts) {
-				let part = parts[p];
-				let next = document.createElement('div');
-				next.className = 'section';
-				let img = document.createElement('img');
-				img.src = images[current];
-				next.appendChild(img);
+  if (current !== undefined) {
+    tl.add(
+      gsap.to(images[current], {
+        yPercent: -15,
+        ...tlDefaults
+      }),
+      0
+    ).add(
+      gsap
+        .timeline()
+        .set(outerWrappers[current], { yPercent: 100 })
+        .set(innerWrappers[current], { yPercent: -100 })
+        .set(images[current], { yPercent: 0 })
+        .set(sections[current], { autoAlpha: 0 })
+    );
+  }
 
-				if ((p - Math.max(0, dir)) % 2) {
-					down(part, next);
-				} else {
-					up(part, next);
-				}
-			}
-		}
-	}
+  tl.play(0);
+}
 
-	function mousedown(e) {
-		gsap.to(cursor, { scale: 4.5 });
-		gsap.to(cursorF, { scale: 0.4 });
+// Slides a section out on scroll up
+function slideOut() {
+  gsap.set(sections[current], { zIndex: 1 });
+  gsap.set(sections[next], { autoAlpha: 1, zIndex: 0 });
+  gsap.set(splitHeadings[next].chars, { autoAlpha: 0, yPercent: 100 });
+  gsap.set([outerWrappers[next], innerWrappers[next]], { yPercent: 0 });
+  gsap.set(images[next], { yPercent: 0 });
 
-		clicked = true;
-		startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
-	}
+  gsap
+    .timeline({
+      defaults: tlDefaults,
+      onComplete: () => {
+        listening = true;
+        current = next;
+      }
+    })
+    .to(outerWrappers[current], { yPercent: 100 }, 0)
+    .to(innerWrappers[current], { yPercent: -100 }, 0)
+    .to(images[current], { yPercent: 15 }, 0)
+    .from(images[next], { yPercent: -15 }, 0)
+    .add(revealSectionHeading(), ">-1")
+    .set(images[current], { yPercent: 0 });
+}
 
-	function mouseup(e) {
-		gsap.to(cursor, { scale: 1 });
-		gsap.to(cursorF, { scale: 1 });
+function handleDirection() {
+  listening = false;
 
-		endY = e.clientY || endY;
-		if (clicked && startY && Math.abs(startY - endY) >= 40) {
-			go(!Math.min(0, startY - endY) ? 1 : -1);
-			clicked = false;
-			startY = null;
-			endY = null;
-		}
-	}
+  if (direction === "down") {
+    next = current + 1;
+    if (next >= sections.length) next = 0;
+    slideIn();
+  }
 
-	//Mouse Wheel Scroll Transition
-	let scrollTimeout;
-	function wheel(e) {
-		clearTimeout(scrollTimeout);
-		setTimeout(function () {
-			if (e.deltaY < -40) {
-				go(-1);
-			} else if (e.deltaY >= 40) {
-				go(1);
-			}
-		});
-	}
-	window.addEventListener('mousewheel', wheel, false);
-	window.addEventListener('wheel', wheel, false);
+  if (direction === "up") {
+    next = current - 1;
+    if (next < 0) next = sections.length - 1;
+    slideOut();
+  }
+}
 
-	onMounted(() => {
-		const main = document.getElementById('main');
+function handleWheel(e) {
+  if (!listening) return;
+  direction = e.wheelDeltaY < 0 ? "down" : "up";
+  handleDirection();
+}
 
-		for (let col = 0; col < cols; col++) {
-			let part = document.createElement('div');
-			part.className = 'part';
-			let el = document.createElement('div');
-			el.className = 'section';
-			let img = document.createElement('img');
-			img.src = images[current];
-			el.appendChild(img);
-			part.style.setProperty('--x', (-100 / cols) * col + 'vw');
-			part.appendChild(el);
-			main.appendChild(part);
-			parts.push(part);
-		}
+function handleTouchStart(e) {
+  if (!listening) return;
+  const t = e.changedTouches[0];
+  touch.startX = t.pageX;
+  touch.startY = t.pageY;
+}
 
-		const cursor = document.createElement('div');
-		cursor.className = 'cursor';
+function handleTouchMove(e) {
+  if (!listening) return;
+  e.preventDefault();
+}
 
-		const cursorF = document.createElement('div');
-		cursorF.className = 'cursor-f';
-		let cursorX = 0;
-		let cursorY = 0;
-		let pageX = 0;
-		let pageY = 0;
-		let size = 8;
-		let sizeF = 36;
-		let followSpeed = 0.16;
+function handleTouchEnd(e) {
+  if (!listening) return;
+  const t = e.changedTouches[0];
+  touch.dx = t.pageX - touch.startX;
+  touch.dy = t.pageY - touch.startY;
+  if (touch.dy > 10) direction = "up";
+  if (touch.dy < -10) direction = "down";
+  handleDirection();
+}
 
-		document.body.appendChild(cursor);
-		document.body.appendChild(cursorF);
+slideIn();
 
-		if ('ontouchstart' in window) {
-			cursor.style.display = 'none';
-			cursorF.style.display = 'none';
-		}
-
-		cursor.style.setProperty('--size', size + 'px');
-		cursorF.style.setProperty('--size', sizeF + 'px');
-
-		window.addEventListener('mousemove', function (e) {
-			pageX = e.clientX;
-			pageY = e.clientY;
-			cursor.style.left = e.clientX - size / 2 + 'px';
-			cursor.style.top = e.clientY - size / 2 + 'px';
-		});
-
-		loop();
-
-		//Press Up & Down Keyboard Arrow Event
-		window.addEventListener('keydown', function (e) {
-			if (['ArrowDown', 'ArrowRight'].includes(e.key)) {
-				go(1);
-			} else if (['ArrowUp', 'ArrowLeft'].includes(e.key)) {
-				go(-1);
-			}
-		});
-
-		window.addEventListener('mousedown', mousedown, false);
-		window.addEventListener('touchstart', mousedown, false);
-		window.addEventListener(
-			'touchmove',
-			function (e) {
-				if (clicked) {
-					endY = e.touches[0].clientY || e.targetTouches[0].clientY;
-				}
-			},
-			false
-		);
-		window.addEventListener('touchend', mouseup, false);
-		window.addEventListener('mouseup', mouseup, false);
-
-		window.addEventListener('mousewheel', wheel, false);
-		window.addEventListener('wheel', wheel, false);
-	});
 </script>
 
 <style lang="scss" scoped>

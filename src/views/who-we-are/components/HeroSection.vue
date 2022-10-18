@@ -27,11 +27,6 @@
 			</div>
 		</div>
 		<img
-			class="asset-1"
-			src="@/assets/images/who-we-are/asset-1.png"
-			alt="asset"
-		/>
-		<img
 			class="asset-3"
 			src="@/assets/images/who-we-are/asset-3.png"
 			alt="asset"
@@ -52,10 +47,10 @@ import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 		width: 100%;
 		padding: 0 80px;
 		position: relative;
-    z-index: -1;
 		.container-border {
 			position: relative;
 			width: 100%;
+      height: 100%;
 			padding: 0 80px;
 			border-left: 1px solid #b8bdc6;
 			border-right: 1px solid #b8bdc6;
@@ -96,11 +91,6 @@ import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 				left: -1px;
 				top: 30%;
 			}
-		}
-		.asset-1 {
-			position: absolute;
-			bottom: -90px;
-			left: 45%;
 		}
 		.asset-3 {
 			position: absolute;
