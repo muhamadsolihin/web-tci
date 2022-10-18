@@ -1,20 +1,22 @@
 <template>
-  <section id="service">
+  <section id="howwedo">
     <div class="container-border">
+      <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
       <div class="container">
-        <h1 class="hero-title mt-4">Our Services</h1>
+        <h1 class="hero-title mt-4">Technology Stack</h1>
         <div
           class="d-flex flex-row justify-content-start align-items-start w-50"
         >
           <div class="shape-blue"></div>
         </div>
-      <!--begin::Tabs-->
-      <div class="row mt-5 pt-5">
-        <div class="col-md-6">
+        <div class="row h-100" style="margin-top: 10px">
+          <div
+            class="col-6 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+          >
           <ul
             class="nav flex-center bg-transparent overflow-auto flex-nowrap p-2 mb-8"
           >
-            <div class="row" style="margin-left: 28%">
+            <div class="row" style="margin-left: 0">
               <div class="col-md-6" style="border: none">
                 <!--begin::Tab nav-->
                 <li class="nav-item flex-equal">
@@ -61,10 +63,10 @@
               <!--end::Tab nav-->
             </div>
           </ul>
-        </div>
-        <!--end::Tabs-->
-        <!--begin:Tab content-->
-        <div class="col-md-6">
+          </div>
+          <div
+            class="col-6 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+          >
           <div class="tab-content">
             <!--begin::Tab pane-->
             <div
@@ -80,7 +82,7 @@
                     </div>
 
                     <div
-                      class="subhead1 mt-4"
+                      class="subhead1"
                       style="text-align: justify; width: 34em; margin-top: 2%"
                     >
                       With our IT Consultant services, we could help you revamp
@@ -113,7 +115,7 @@
                     </div>
 
                     <div
-                      class="subhead1 mt-4"
+                      class="subhead1"
                       style="text-align: justify; width: 34em; margin-top: 2%"
                     >
                       We are here to empower every enterprise across multiple
@@ -138,7 +140,7 @@
                     </div>
 
                     <div
-                      class="subhead1 mt-4"
+                      class="subhead1"
                       style="text-align: justify; width: 34em; margin-top: 2%"
                     >
                       We will assist you in planning, designing, developing, and
@@ -159,7 +161,7 @@
                     </div>
 
                     <div
-                      class="subhead1 mt-4"
+                      class="subhead1"
                       style="text-align: justify; width: 34em; margin-top: 2%"
                     >
                       Our security experts develop a personal approach to each
@@ -176,85 +178,136 @@
             <!--end::Items-->
           </div>
           <!--end::Tab pane-->
+
+          </div>
+         
         </div>
       </div>
     </div>
-    <!--end:Tab content-->
-  </div>
-  <div class="row ">
-          <div
-              class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-            <img
-                class="text-center mt-3"
-                src="@/assets/images/batik-1.svg"
-                style="
-                  float: left;
-                  justify-content: left;
-                  margin-left: 0;
-                  height: 195px;
-                "
-              />
-          </div>
+    <div class="row">
+      <div
+        class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
+      >
+        <img
+          class="text-center mt-3"
+          src="@/assets/images/batik-1.svg"
+          style="
+            float: left;
+            justify-content: left;
+            margin-left: 0;
+            height: 195px;
+          "
+        />
       </div>
+    </div>
   </section>
-  <Product/>
 </template>
 
-<script>
-import Product from "./Product.vue"
-export default {
-  components: {
-    Product,
-   
-},
-};
+<script setup>
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import HowWeDo from "@/views/homepage/components/howWeDo.vue";
 </script>
 
 <style lang="scss" scoped>
-#service {
+#howwedo {
   background-color: white;
-  height: 100vh;
-  margin-top: 0;
+  height: auto;
+  margin-top: 20%;
   z-index: 1;
-}
-.container {
-      padding: 80px;
-      h2 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 3rem;
-        line-height: 57px;
-      }
-    }
-.hero-title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 4.5rem;
-    font-weight: 600;
-    line-height: 83px;
-    text-align: start;
-    color: black;
+  .container-border {
+    position: relative;
+    width: 100%;
+    padding: 0 80px;
+    border-left: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
   }
 
-  .shape-blue {
-    width: 68px;
-    height: 22px;
-    background-color: #0c4aa9;
-    margin-right: 20px;
-    margin-top: 10px;
+  .title-2 {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+    width: 896px;
+    text-align: center;
+    margin-left: 10%;
+    color: #000000;
   }
+  .asset-2 {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    height: 711px;
+  }
+  .container {
+    padding: 80px;
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 3rem;
+      line-height: 57px;
+    }
+  }
+}
+.head {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #b8bdc6;
+}
 .head1 {
-  font-family: "montserrat";
-  font-size: 2em;
-  color: #000000;
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: 600;
-  width: 533px;
+  font-size: 35px;
+  line-height: 43px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 83px;
+  text-align: start;
+  color: black;
+}
+.shape-blue {
+  width: 68px;
+  height: 22px;
+  background-color: #0c4aa9;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.head1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 43px;
+  /* identical to box height */
+
+  color: #b8bdc6;
 }
 .subhead1 {
-  font-family: "montserrat";
-  font-size: 1em;
+  font-family: "Open Sans";
+  font-style: normal;
   font-weight: 400;
-  color: #000000;
+  margin-top: 1.8em;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 167% */
+
+  color: #000000 !important;
+}
+.tab-pane {
+  margin-top: -5em;
 }
 .nav-link {
   border: none;
@@ -268,8 +321,10 @@ export default {
 .btn.btn-active-white.active,
 .btn.btn-active-white.show,
 .show > .btn.btn-active-white {
-  color: #7e8299;
-  border-color: #ffffff;
+  color: #000;
+  border-color: 1px solid #e78448;
+  border-radius: 36px;
+  width: 25em;
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
@@ -552,8 +607,8 @@ export default {
 
 .btn.btn-primary {
   color: #ffffff;
-  border-color: #00b2ff;
-  background-color: #00b2ff;
+  border-color: #b8bdc6;
+  background-color: #b8bdc6;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
 .btn.btn-primary i {
