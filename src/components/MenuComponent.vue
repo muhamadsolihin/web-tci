@@ -39,11 +39,35 @@
 				class="container py-3 d-flex flex-row justify-content-end align-items-center"
 				style="padding: 0 60px"
 			>
-				<img
-					class="my-4 pointer"
-					src="@/assets/images/icons/close.svg"
-					@click="showMenu = false"
-				/>
+				<div class="d-flex flex-column align-items-end text-white">
+					<img
+						class="my-3 pointer"
+						src="@/assets/images/icons/close.svg"
+						style="width: 24px; height: 24px"
+						@click="showMenu = false"
+					/>
+					<transition-group
+						appear
+						tag="ul"
+						@before-enter="beforeMenuEnter"
+						@enter="menuEnter"
+					>
+						<li
+							class="monts-semilight-50 pointer"
+							v-for="(mn, indexMn) in menu"
+							:key="indexMn"
+							:data-index="indexMn"
+						>
+							<router-link :to="mn.link">{{ mn.text }}</router-link>
+						</li>
+					</transition-group>
+
+					<p class="ibm-semibold-16">Location</p>
+					<p class="open-reg-18" style="text-align: end">
+						PT Teknologi Cakra Internasional<br />Jl. Batununggal Indah IV
+						No.45, Mengger,<br />Kec. Bandung Kidul, Kota Bandung, Jawa Barat<br />40267
+					</p>
+				</div>
 			</div>
 		</div>
 	</transition>
@@ -51,6 +75,7 @@
 
 <script setup>
 	import { defineProps, ref } from 'vue';
+	import gsap from 'gsap';
 
 	const props = defineProps({
 		theme: {
@@ -64,4 +89,61 @@
 	});
 
 	const showMenu = ref(false);
+	const menu = ref([
+		{
+			text: 'Home',
+			link: '/',
+		},
+		{
+			text: 'Who We Are',
+			link: '/who-we-are',
+		},
+		{
+			text: 'Our Work',
+			link: '/who-we-are',
+		},
+		{
+			text: 'Our Gallery',
+			link: '/who-we-are',
+		},
+		{
+			text: 'Careers',
+			link: '/who-we-are',
+		},
+		{
+			text: 'Contact Us',
+			link: '/who-we-are',
+		},
+	]);
+
+	const beforeMenuEnter = (el) => {
+		el.style.opacity = 0;
+		el.style.transform = 'translateX(200px)';
+	};
+
+	const menuEnter = (el, done) => {
+		gsap.to(el, {
+			opacity: 1,
+			x: 0,
+			duration: 0.8,
+			onComplete: done,
+			delay: el.dataset.index * 0.2,
+		});
+	};
 </script>
+
+<style lang="scss" scoped>
+	ul {
+		padding: 15px 0 15px 40px;
+		text-align: end;
+		list-style-type: none;
+		border-bottom: 4px solid #e68246;
+		li {
+			margin-bottom: 5px;
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+</style>
