@@ -1,4 +1,5 @@
 <template>
+  <MenuComponent :theme="currentSection == 1 ? 'dark' : 'light'" :direction="direction" />
 	<transition :name="direction" @after-enter="listening = true" mode="out-in">
 		<HeroSection v-if="currentSection == 1" />
 		<AcceleratedSection v-else-if="currentSection == 2" />
@@ -10,6 +11,8 @@
 
 <script setup>
 	import { onMounted, ref } from 'vue';
+
+  import MenuComponent from "@/components/MenuComponent.vue";
 	import HeroSection from './components/HeroSection.vue';
 	import AcceleratedSection from './components/AcceleratedSection.vue';
 	import VisionMissionSection from './components/VisionMissionSection.vue';
@@ -74,45 +77,6 @@
 	section {
 		min-height: 100vh;
 		display: flex;
-	}
-	.down-enter-from {
-		opacity: 0;
-		transform: translateY(180px);
-	}
-	.down-leave-to {
-		opacity: 0;
-		transform: translateY(-180px);
-	}
-	.down-enter-to,
-	.down-leave-from {
-		opacity: 1;
-		transform: translateY(0);
-	}
-	.down-enter-active {
-		transition: all 0.8s;
-	}
-	.down-leave-active {
-		transition: all 0.2s;
-	}
-
-	.up-enter-from {
-		opacity: 0;
-		transform: translateY(-180px);
-	}
-	.up-leave-to {
-		opacity: 0;
-		transform: translateY(180px);
-	}
-	.up-enter-to,
-	.up-leave-from {
-		opacity: 1;
-		transform: translateY(0);
-	}
-	.up-enter-active {
-		transition: all 0.8s;
-	}
-	.up-leave-active {
-		transition: all 0.2s;
 	}
 
 	.two {

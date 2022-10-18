@@ -1,3 +1,4 @@
+@import './transition.scss';
 body {
     overflow: hidden;
     /* Hide scrollbars */
@@ -35,9 +36,10 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    /* or 167% */   
+    /* or 167% */
     color: #8D8F9A;
 }
+
 .open-reg-26 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -45,18 +47,15 @@ body {
     font-size: 35px;
     line-height: 43px;
     /* identical to box height */
-    
-    
     color: #000000;
 }
+
 .albert-reg-27 {
     font-family: 'Albert Sans', sans-serif;
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
-    
 }
-
 
 .monts-sem-35 {
     font-family: 'Montserrat', sans-serif;

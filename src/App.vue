@@ -14,7 +14,6 @@
     />
     
   </head>
-  <!-- <Navbar /> -->
   <div class="container-fluid scrollbar-custom">
     <router-view></router-view>
   </div>
