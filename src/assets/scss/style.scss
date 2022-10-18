@@ -1,3 +1,5 @@
+@import './font.scss';
+@import './color.scss';
 @import './transition.scss';
 body {
     overflow: hidden;
@@ -14,58 +16,6 @@ body {
 
 .w-50 {
     width: 50%;
-}
-
-.albert-reg-20 {
-    font-family: 'Albert Sans', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 400;
-}
-
-.open-reg-24 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    line-height: 35px;
-    font-weight: 400;
-}
-
-.open-reg-25 {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    /* or 167% */
-    color: #8D8F9A;
-}
-
-.open-reg-26 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 43px;
-    /* identical to box height */
-    color: #000000;
-}
-
-.albert-reg-27 {
-    font-family: 'Albert Sans', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 400;
-}
-
-.monts-sem-35 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    line-height: 42px;
-    font-weight: 600;
-}
-
-.text-white {
-    color: white;
 }
 
 .pointer {
