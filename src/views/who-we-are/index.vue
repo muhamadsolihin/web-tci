@@ -19,7 +19,7 @@
 	const sections = ref([1, 2, 3, 4, 5, 6]);
 	const currentSection = ref(1);
 	const listening = ref(false);
-  const direction = ref('up');
+	const direction = ref('up');
 
 	function go(dir) {
 		listening.value = false;
@@ -42,10 +42,10 @@
 		clearTimeout(scrollTimeout);
 		setTimeout(function () {
 			if (e.deltaY < -40) {
-        direction.value = 'up'
+				direction.value = 'up';
 				go(-1);
 			} else if (e.deltaY >= 40) {
-        direction.value = 'down'
+				direction.value = 'down';
 				go(1);
 			}
 		});
@@ -54,6 +54,17 @@
 	onMounted(() => {
 		window.addEventListener('mousewheel', wheel, false);
 		window.addEventListener('wheel', wheel, false);
+
+		//Press Up & Down Keyboard Arrow Event
+		window.addEventListener('keydown', function (e) {
+			if (['ArrowDown', 'ArrowRight'].includes(e.key)) {
+				direction.value = 'down';
+				go(1);
+			} else if (['ArrowUp', 'ArrowLeft'].includes(e.key)) {
+				direction.value = 'up';
+				go(-1);
+			}
+		});
 
 		listening.value = true;
 	});
@@ -84,7 +95,6 @@
 		transition: all 0.2s;
 	}
 
-  
 	.up-enter-from {
 		opacity: 0;
 		transform: translateY(-180px);
