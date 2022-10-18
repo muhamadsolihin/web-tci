@@ -6,18 +6,27 @@
           <p class="head">Our Gallery</p>
         </div>
       </div>
-      <div class="row" style="margin-bottom: 7.5em">
+      <div class="row" style="margin-bottom: 0">
         <div class="col-xl-6">
-          <img
+          <div class="hover hover-2 text-white rounded">          <img
             src="@/assets/images/galerry/pic1.png"
-            style="width: 35em; height: 15em"
+            style="width: 35em; height: 15em; "
           />
-          <div class="row" style="margin-top: 30px">
+          <div class="hover-overlay"></div>
+          <div class="hover-2-content px-5 py-4">
+            <p class="hover-2-description text-uppercase mb-0">Photo Studio</p>
+          </div>
+        </div>
+
+          
+          <div class="row" style="margin-top: 30px;margin-left: -5em;">
             <div class="col-6">
-              <img
+  <img
                 src="@/assets/images/galerry/pic2.png"
                 style="width: 16.8em; height: 15em; float: right"
               />
+
+
             </div>
             <div class="col-6">
               <img
@@ -46,6 +55,7 @@
                 style="width: 17em; height: 15.3em; margin-top: 1em"
               />
             </div>
+      
           </div>
         </div>
       </div>
@@ -118,20 +128,122 @@
       </div>
     </div>
   </section>
-  <OurTeam />
+  <Sample />
 </template>
 
 <script>
-import OurTeam from "./OurTeam.vue";
+import Sample from "./sample.vue";
 export default {
   components: {
-    OurTeam,
+    Sample,
    
 },
 };
 </script>
 
 <style lang="scss" scoped>
+
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 30%;
+  padding-right: -30%;
+}
+
+.hover1 {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%;
+
+
+}
+.hover-overlay {
+  width: 35em;
+height: 15em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover-overlay1 {
+  width: 16.8em; height: 15em;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.hover1 img {
+  width: 16.8em; height: 15em;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+.hover-2 .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+.hover-2 .hover-overlay1 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+.hover-2-title {
+  position: absolute;
+  top: 0;
+  display: none;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2-description {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2:hover .hover-2-title {
+  transform: translateY(-1.5rem);
+}
+
+.hover-2:hover .hover-2-description {
+  bottom: 0.5rem;
+  opacity: 1;
+}
+
+.hover-2:hover .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+.hover-2:hover .hover-overlay1 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+
 .body {
   margin-top: 10.7%;
   @media (min-width: 992px) {

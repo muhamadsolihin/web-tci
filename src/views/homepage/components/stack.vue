@@ -135,7 +135,7 @@
       width: 100%;
       padding: 0 80px;
       border-left: 1px solid #b8bdc6;
-      border-right: 1px solid #b8bdc6;
+      border-right: 0px solid #b8bdc6;
     }
   
     .title-2 {

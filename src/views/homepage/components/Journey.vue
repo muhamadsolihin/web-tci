@@ -39,7 +39,7 @@
         </div>
       </el-col>
       <el-col :gutter="10" :span="10" :offset="2" style="margin-left: -1em"
-        ><div class="grid-content" />
+        ><div class="grid-content cards" />
         <img
           class="ceopict"
           src="@/assets/images/pictceo.png"
@@ -85,5 +85,21 @@
     font-size: 1.5em;
     font-weight: 400;
     line-height:1.5em ;
+}
+
+.cards{
+
+transition: all 0.2s ease;
+cursor: pointer;
+
+
+}
+
+
+
+.ceopict:hover{
+
+box-shadow: 5px 6px 6px 2px #e9ecef;
+transform: scale(1.1);
 }
 </style>

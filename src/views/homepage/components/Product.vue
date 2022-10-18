@@ -1,7 +1,7 @@
 <template>
   <section id="product">
   <div>
-  <header class="py-5 bg-image-full" style="height:57em; margin-top: 0;">
+  <header class="py-5 bg-image-full" style="height:57em; margin-top: 1em;">
       <div class="container">
       <div class="row">
         <div class="col-xl-6 col-md-6">
@@ -161,7 +161,7 @@ export default {
 
 <style lang="scss" scoped>
 #product{
-  margin-top: 12%;
+  margin-top: 11%;
   height: 100vh;
 }
 header {

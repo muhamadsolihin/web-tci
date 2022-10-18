@@ -8,20 +8,23 @@
 			/>
 			<div class="container d-flex flex-column justify-content-center">
 				<div class="d-flex flex-column align-items-start justify-content-start">
-          <SectionNumberComponent class="mt-auto" :number="'01 / 011 '" :section-name="'About'" :color="'#ffffff'" :z-index="'99'" />
-					<h1 class="hero-title mt-4">
-						Generate  <br />
-						New Business <br />
-						Ideas
-					</h1>
-					<div
-						class="d-flex flex-row justify-content-start align-items-start w-50"
-					>
-						<div class="shape-blue"></div>
-						<p class="albert-reg-20 text-white">
-							We design and build solutions by connecting ideas and technology to solve problems and get new ideas to business lifecycle
-						</p>
-					</div>
+          <SectionNumberComponent class="mt-auto" :number="'01 / 10'" :section-name="'Our Work'" :color="'#ffffff'" />
+          <h1 class="hero-title mt-4">
+            We believe in the <br />
+            creativity in software<br />
+            innovation
+          </h1>
+          <div
+            class="d-flex flex-row justify-content-start align-items-start w-50"
+          >
+            <div class="shape-blue"></div>
+            <p class="albert-reg-27 text-white" style="width: 960px;">
+              Our IT Solution is committed to give unparalleled quality,
+              delighting our  customers while staying within the budget. We're
+              best to deliver our clients <br/> real high quality products with
+              unlimited features & options
+            </p>
+          </div>
 				</div>
 			</div>
 		</div>
@@ -36,22 +39,21 @@
 			alt="asset"
 		/>
 	</section>
-	<!-- <sampleindex/> -->
-  <Deliver/>
-
+    <!-- <Sample/> -->
+    <Ourwork/>
 </template>
 
 <script setup>
-import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
-import Deliver from "./components/Deliver.vue";
-import sampleindex from '@/views/our-work/components/sampleIndex.vue';
+import Ourwork from './/components/ourwork.vue';
+// import Sample from './components/sample.vue';
 
+import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 
 </script>
 
 <style lang="scss" scoped>
 	#hero {
-		background-image: url('@/assets/images/BG\ Page.png');
+		background-image: url('@/assets/images/our-work/bg-ourwork.png');
 		background-size: cover;
 		height: 100vh;
 		width: 100%;
@@ -113,3 +115,8 @@ import sampleindex from '@/views/our-work/components/sampleIndex.vue';
 		}
 	}
 </style>
+
+
+
+
+

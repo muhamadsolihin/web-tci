@@ -181,12 +181,12 @@
     </div>
     <!--end:Tab content-->
   </div>
-  <div class="row ">
+  <div class="row mt-0" >
           <div
               class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
             >
             <img
-                class="text-center mt-3"
+                class="text-center mt-0"
                 src="@/assets/images/batik-1.svg"
                 style="
                   float: left;
