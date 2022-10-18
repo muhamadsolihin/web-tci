@@ -8,49 +8,58 @@
 			/>
 			<div class="container d-flex flex-column justify-content-center">
 				<div class="d-flex flex-column align-items-start justify-content-start">
-          <SectionNumberComponent class="mt-auto" :number="'01 / 07'" :section-name="'About'" :color="'#ffffff'" />
+          <SectionNumberComponent class="mt-auto" :number="'01 / 011 '" :section-name="'About'" :color="'#ffffff'" :z-index="'99'" />
 					<h1 class="hero-title mt-4">
-						Digital & IT <br />
-						Solution for <br />
-						Business Future
+						Generate  <br />
+						New Business <br />
+						Ideas
 					</h1>
 					<div
 						class="d-flex flex-row justify-content-start align-items-start w-50"
 					>
 						<div class="shape-blue"></div>
 						<p class="albert-reg-20 text-white">
-							We design and build solutions by connecting ideas and technology
-							to solve problems and get new ideas to business lifecycle
+							We design and build solutions by connecting ideas and technology to solve problems and get new ideas to business lifecycle
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<img
+			class="asset-1"
+			src="@/assets/images/who-we-are/asset-1.png"
+			alt="asset"
+		/>
+		<img
 			class="asset-3"
 			src="@/assets/images/who-we-are/asset-3.png"
 			alt="asset"
 		/>
 	</section>
+	<!-- <sampleindex/> -->
+  <!-- <Deliver/> -->
+
 </template>
 
 <script setup>
 import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 
+
+
 </script>
 
 <style lang="scss" scoped>
 	#hero {
-		background-image: url('@/assets/images/who-we-are/bg-hero-we-are.png');
+		background-image: url('@/assets/images/BG\ Page.png');
 		background-size: cover;
 		height: 100vh;
 		width: 100%;
 		padding: 0 80px;
 		position: relative;
+    z-index: -1;
 		.container-border {
 			position: relative;
 			width: 100%;
-      height: 100%;
 			padding: 0 80px;
 			border-left: 1px solid #b8bdc6;
 			border-right: 1px solid #b8bdc6;
@@ -91,6 +100,11 @@ import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 				left: -1px;
 				top: 30%;
 			}
+		}
+		.asset-1 {
+			position: absolute;
+			bottom: -90px;
+			left: 45%;
 		}
 		.asset-3 {
 			position: absolute;

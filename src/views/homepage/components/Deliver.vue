@@ -56,21 +56,22 @@
     </div>
     </div>
   </section>
-  <HowWeDo/>
+  <!-- <HowWeDo/> -->
   <!-- <Sample/> -->
 </template>
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import HowWeDo from "@/views/homepage/components/howWeDo.vue";
-import Sample from "@/views/homepage/components/sample.vue";
+// import HowWeDo from "@/views/homepage/components/howWeDo.vue";
+// import Sample from "@/views/homepage/components/sample.vue";
 
 </script>
 
 <style lang="scss" scoped>
 #accelerated {
   background-color: #eeeaea;
-  height: 87.4vh;
+  height: 100vh;
+  width: 100%;
   z-index: 1;
   .container-border {
 			position: relative;

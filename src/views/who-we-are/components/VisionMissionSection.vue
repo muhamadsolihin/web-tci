@@ -20,7 +20,7 @@
         </div>
         <img src="@/assets/images/who-we-are/photo-4.png" alt="photo">
       </div>
-      <div class="d-flex flex-row align-items-end justify-content-between" style="margin-top: -40px">
+      <div class="d-flex flex-row align-items-end justify-content-between" style="margin-top: -140px">
         <img src="@/assets/images/who-we-are/photo-5.png" alt="photo">
         <div class="d-flex flex-column mt-3 ms-5">
           <h3 class="monts-sem-35">Mission</h3>
