@@ -45,3 +45,21 @@
 	.up-leave-active {
 	    transition: all 0.2s;
 	}
+	
+	.ease-enter-from,
+	.ease-leave-to {
+	    opacity: 0;
+	}
+	
+	.ease-enter-to,
+	.ease-leave-from {
+	    opacity: 1;
+	}
+	
+	.ease-enter-active {
+	    transition: all 0.2s ease;
+	}
+	
+	.ease-leave-active {
+	    transition: all 0.2s ease;
+	}
