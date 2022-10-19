@@ -15,9 +15,8 @@
 					</h1>
 					<div class="d-flex flex-row justify-content-start align-items-start">
 						<div class="shape-blue"></div>
-						<p class="albert-reg-20 text-white">
-							We design and build solutions by connecting ideas and technology
-							to solve problems and get new ideas to business lifecycle
+						<p class="albert-reg-20 text-white text-description">
+							We design and build solutions by connecting ideas and technology to solve problems and get new ideas to business lifecycle
 						</p>
 					</div>
 				</div>
@@ -112,6 +111,9 @@
 					font-weight: 600;
 					line-height: 48px;
 				}
+        .text-description {
+          width: 100%;
+        }
 			}
 		}
 	}

@@ -6,7 +6,7 @@
 	<transition :name="direction" @after-enter="listening = true" mode="out-in">
 		<HeroSection :sections-length="sections.length" :current-section="currentSection" v-if="currentSection == 1" />
 		<AcceleratedSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 2" />
-		<VisionMissionSection v-else-if="currentSection == 3" />
+		<VisionMissionSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 3" />
 		<DiversitySection v-else-if="currentSection == 4" />
 		<DownloadAssetSection v-else-if="currentSection == 5" />
 	</transition>
