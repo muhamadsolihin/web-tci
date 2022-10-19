@@ -5,10 +5,11 @@
     <HowWeDo v-else-if="currentSection == 3" />
     <HowWork v-else-if="currentSection == 4" />
     <Stack v-else-if="currentSection == 5" />
-    <Product v-else-if="currentSection == 6" />
-    <Journey v-else-if="currentSection == 7" />
-    <Gallery v-else-if="currentSection == 8" />
+    <Services v-else-if="currentSection == 6" />
+    <Product v-else-if="currentSection == 7" />
+    <Journey v-else-if="currentSection == 8" />
 	<Gallery v-else-if="currentSection == 9" />
+  <Blog v-else-if="currentSection == 10" />
 
   </transition>
 </template>
@@ -24,8 +25,9 @@ import Services from "./components/services.vue";
 import Product from "./components/Product.vue";
 import Journey from "./components/Journey.vue";
 import Gallery from "./components/Gallery.vue";
+import Blog from "./components/blog.vue";
 
-const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
 const currentSection = ref(1);
 const listening = ref(false);
 const direction = ref("up");

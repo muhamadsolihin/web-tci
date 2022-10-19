@@ -2,12 +2,12 @@
   <section id="hero">
     <div class="container-border">
       <img
-				class="asset-2"
-				src="@/assets/images/who-we-are/asset-2.png"
-				alt=""
-			/>
+        class="asset-2"
+        src="@/assets/images/who-we-are/asset-2.png"
+        alt=""
+      />
       <div class="d-flex flex-row align-items-center">
-        <h2 class="head">Our Works</h2>
+        <h2 class="head">Our Product</h2>
         <SectionNumberComponent
           class="ms-auto"
           :number="'06 / 11'"
@@ -17,7 +17,6 @@
       </div>
       <div class="container d-flex flex-column justify-content-center">
         <div class="d-flex flex-column align-items-start justify-content-start">
-
           <div class="container mt-5 pt-3">
             <el-row>
               <el-col :span="6"
@@ -203,7 +202,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
         border: 2px solid #b8bdc6;
         border-radius: 25px;
         margin-right: auto;
-        
+
         padding: 5px 10px;
 
         font-family: "IBM Plex Mono", sans-serif;

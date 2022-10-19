@@ -2,14 +2,25 @@
   <section id="howwedo">
     <div class="container-border">
       <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container  hero-collap">
-        <h1 class="hero-title mt-4">How We Do</h1>
+      <div class="container hero-collap">
+        <div class="d-flex flex-row align-items-center">
+          <h2 class="hero-title">How We Do It</h2>
+          <SectionNumberComponent
+            class="ms-auto"
+            :number="'03 / 11'"
+            :section-name="'How We Do It'"
+            :color="'#000'"
+          />
+        </div>
         <div
-          class="d-flex flex-row justify-content-start align-items-start w-50"
+          class="d-flex flex-row justify-content-start align-items-start w-20"
         >
           <div class="shape-blue"></div>
         </div>
-        <div class="row h-100" style="margin-top: 68px">
+        <div
+          class="row h-80"
+          style="margin-top: 68px; padding-bottom: 0 !important"
+        >
           <div
             class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
           >
@@ -21,7 +32,11 @@
                     class="nav-link btn btn-active-white head py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
                     href="#kt_lists_widget_3_tab_pane_1"
-                    style="text-align: left; margin-left: 106px"
+                    style="
+                      text-align: left;
+                      margin-left: 106px;
+                      font-weight: 500 !important;
+                    "
                     >01 &nbsp;Positive impact in development</a
                   >
                 </li>
@@ -34,7 +49,11 @@
                     class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
                     href="#kt_lists_adaptive"
-                    style="text-align: left; margin-left: 103px"
+                    style="
+                      text-align: left;
+                      margin-left: 103px;
+                      font-weight: 500 !important;
+                    "
                     >02 &nbsp;Adaptive solution development</a
                   >
                 </li>
@@ -43,7 +62,11 @@
                     class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
                     href="#kt_lists_orien"
-                    style="text-align: left; margin-left: 103px"
+                    style="
+                      text-align: left;
+                      margin-left: 103px;
+                      font-weight: 500 !important;
+                    "
                     >03 &nbsp;User oriented group of talents</a
                   >
                 </li>
@@ -52,7 +75,11 @@
                     class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
                     href="#kt_lists_sustainable"
-                    style="text-align: left; margin-left: 103px"
+                    style="
+                      text-align: left;
+                      margin-left: 103px;
+                      font-weight: 500 !important;
+                    "
                     >04 &nbsp;Sustainable way of achieving</a
                   >
                 </li>
@@ -67,20 +94,27 @@
             class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
           >
             <div class="d-flex flex-column justify-content-center h-100">
-              <div class="tab-content ">
+              <div class="tab-content">
                 <!--begin::Tab pane-->
                 <div class="tab-pane" id="kt_lists_widget_3_tab_pane_1">
                   <!--begin::Section-->
                   <el-col id="consultant" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
-                        <div class="open-reg-26" style="text-align: justify;width:574px">
+                        <div
+                          class="open-reg-26"
+                          style="text-align: justify; width: 574px"
+                        >
                           Positive impact in development
                         </div>
 
                         <div
                           class="subhead1"
-                          style="text-align: justify; width: 34em;height:180px"
+                          style="
+                            text-align: justify;
+                            width: 34em;
+                            height: 180px;
+                          "
                         >
                           At every stage of product cycle we design solutions to
                           meet user needs and are easy to use. We invest our
@@ -105,12 +139,19 @@
                   <el-col id="consultant" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
-                        <div class="open-reg-26" style="text-align: justify; width:574px">
+                        <div
+                          class="open-reg-26"
+                          style="text-align: justify; width: 574px"
+                        >
                           Adaptive solution development
                         </div>
                         <div
                           class="subhead1"
-                          style="text-align: justify; width: 34em;height:180px"
+                          style="
+                            text-align: justify;
+                            width: 34em;
+                            height: 180px;
+                          "
                         >
                           We work with partners around The world from individual
                           Employers & regional start ups to multinational
@@ -132,13 +173,20 @@
                   <el-col id="consultant" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
-                        <div class="open-reg-26" style="text-align: justify;width:574px">
+                        <div
+                          class="open-reg-26"
+                          style="text-align: justify; width: 574px"
+                        >
                           User oriented group of talents
                         </div>
 
                         <div
                           class="subhead1"
-                          style="text-align: justify; width: 34em;height:180px"
+                          style="
+                            text-align: justify;
+                            width: 34em;
+                            height: 180px;
+                          "
                         >
                           We communicate and co-operate with each other and With
                           our communities. We communicate and co-operate with
@@ -152,17 +200,24 @@
                     </div>
                   </el-col>
                 </div>
-                <div class="tab-pane fade" id="kt_lists_sustainable">
+                <div class="tab-pane fade bg-warning" id="kt_lists_sustainable">
                   <el-col style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
-                        <div class="open-reg-26" style="text-align: justify;width:574px">
+                        <div
+                          class="open-reg-26"
+                          style="text-align: justify; width: 574px"
+                        >
                           Sustainable way of achieving
                         </div>
 
                         <div
                           class="subhead1"
-                          style="text-align: justify; width: 34em; height:180px"
+                          style="
+                            text-align: justify;
+                            width: 34em;
+                            height: 180px;
+                          "
                         >
                           We question conventional wisdom & Challenge the status
                           quo. If there is a better way, we'll find it. We're
@@ -179,8 +234,27 @@
                     </div>
                   </el-col>
                 </div>
+
                 <!--end::Items-->
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid mt-5 pt-5">
+          <div class="row">
+            <div
+              class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+            >
+              <img
+                class="text-center batik-img mt-3"
+                src="@/assets/images/batik-1.svg"
+                style="
+                  float: left;
+                  justify-content: left;
+                  height: 195px;
+                  z-index: -2;
+                "
+              />
             </div>
           </div>
         </div>
@@ -223,10 +297,13 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     }
   }
 }
+.batik-img {
+  margin-left: -12em;
+}
 .head {
   font-family: "IBM Plex Mono";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   /* identical to box height */
@@ -274,6 +351,8 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   font-weight: 400;
   margin-top: 1.8em;
   font-size: 18px;
+  z-index: 9;
+  height: 200px;
   line-height: 30px;
   /* or 167% */
 
@@ -281,11 +360,15 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 }
 .tab-pane {
   margin-top: -5em;
+  height: 180px;
 }
 .nav-link {
-  border: none;
+  border-radius: 36px;
+  width: 25em;
 }
-
+li:last-child {
+  border-right: hidden !important;
+}
 .btn-check:checked + .btn.btn-active-white,
 .btn-check:active + .btn.btn-active-white,
 .btn.btn-active-white:focus:not(.btn-active),
@@ -294,9 +377,8 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .btn.btn-active-white.active,
 .btn.btn-active-white.show,
 .show > .btn.btn-active-white {
-  color: #000 ;
-  border-color: 1px solid #e78448;
-  border-radius: 36px;
+  color: #000;
+  border: 1px solid #e78448 !important;
   width: 25em;
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
@@ -384,6 +466,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .btn.btn-light {
   color: #7e8299;
   border-color: #f5f8fa;
+
   background-color: #f5f8fa;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
@@ -409,6 +492,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .btn.btn-light.show,
 .show > .btn.btn-light {
   color: #7e8299;
+
   border-color: #e4e6ef;
   background-color: #e4e6ef;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
@@ -483,6 +567,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 
 .btn.btn-bg-light {
   border-color: #f5f8fa;
+
   background-color: #f5f8fa;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
@@ -496,6 +581,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .show > .btn.btn-active-light {
   color: #7e8299;
   border-color: #f5f8fa;
+
   background-color: #f5f8fa;
 }
 .btn-check:checked + .btn.btn-active-light i,
@@ -581,6 +667,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .btn.btn-primary {
   color: #ffffff;
   border-color: #b8bdc6;
+  border: none;
   background-color: #b8bdc6;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
