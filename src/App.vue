@@ -9,7 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap"
       rel="stylesheet"
     />
-    
   </head>
   <div class="container-fluid scrollbar-custom">
     <router-view></router-view>
