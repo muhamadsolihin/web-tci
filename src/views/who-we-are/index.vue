@@ -7,7 +7,7 @@
 		<HeroSection :sections-length="sections.length" :current-section="currentSection" v-if="currentSection == 1" />
 		<AcceleratedSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 2" />
 		<VisionMissionSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 3" />
-		<DiversitySection v-else-if="currentSection == 4" />
+		<DiversitySection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 4" />
 		<DownloadAssetSection v-else-if="currentSection == 5" />
 	</transition>
 </template>
