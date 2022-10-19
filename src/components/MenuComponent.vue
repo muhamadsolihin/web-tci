@@ -60,7 +60,7 @@
 				class="container py-3 d-flex flex-row justify-content-end align-items-center"
 				style="padding: 0 60px"
 			>
-				<div class="d-flex flex-column align-items-end text-white">
+				<div class="d-flex flex-column align-items-end text-white w-100">
 					<img
 						class="my-3 pointer"
 						src="@/assets/images/icons/close.svg"
@@ -84,9 +84,9 @@
 					</transition-group>
 
 					<p class="ibm-semibold-16">Location</p>
-					<p class="open-reg-18" style="text-align: end">
+					<p class="open-reg-18 address" style="text-align: end">
 						PT Teknologi Cakra Internasional<br />Jl. Batununggal Indah IV
-						No.45, Mengger,<br />Kec. Bandung Kidul, Kota Bandung, Jawa Barat<br />40267
+						No.45, Mengger, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40267
 					</p>
 				</div>
 			</div>
@@ -176,6 +176,9 @@
 			}
 		}
 	}
+  .address {
+    width: 50%
+  }
 
 	@media screen and (max-width: 768px) {
 		.navbar {
@@ -186,5 +189,8 @@
 				font-size: 40px;
 			}
 		}
+    .address {
+      width: 100%;
+    }
 	}
 </style>
