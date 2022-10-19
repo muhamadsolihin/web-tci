@@ -1,10 +1,7 @@
 <template>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +45,15 @@ import { RouterView } from 'vue-router';
   overflow-y: scroll; */
   height: 100vh;
   padding: 0 !important;
+  
 }
+
+/* @media  (max-width:481px){
+  .container-fluid{
+width: 100%;
+height: 50vh;
+  }
+  } */
 
 // scrollbar
 .scrollbar-custom::-webkit-scrollbar {
