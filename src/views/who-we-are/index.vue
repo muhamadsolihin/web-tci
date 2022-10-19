@@ -4,11 +4,31 @@
 		:direction="direction"
 	/>
 	<transition :name="direction" @after-enter="listening = true" mode="out-in">
-		<HeroSection :sections-length="sections.length" :current-section="currentSection" v-if="currentSection == 1" />
-		<AcceleratedSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 2" />
-		<VisionMissionSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 3" />
-		<DiversitySection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 4" />
-		<DownloadAssetSection v-else-if="currentSection == 5" />
+		<HeroSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-if="currentSection == 1"
+		/>
+		<AcceleratedSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 2"
+		/>
+		<VisionMissionSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 3"
+		/>
+		<DiversitySection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 4"
+		/>
+		<DownloadAssetSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 5"
+		/>
 	</transition>
 </template>
 
@@ -70,7 +90,7 @@
 	function mouseup(e) {
 		endY = e.clientY || endY;
 		if (clicked && startY && Math.abs(startY - endY) >= 40) {
-      direction.value = !Math.min(0, startY - endY) ? 'down' : 'up';
+			direction.value = !Math.min(0, startY - endY) ? 'down' : 'up';
 			go(!Math.min(0, startY - endY) ? 1 : -1);
 			clicked = false;
 			startY = null;
