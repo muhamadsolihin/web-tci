@@ -1,8 +1,11 @@
 <template>
-  <MenuComponent :theme="currentSection == 1 ? 'dark' : 'light'" :direction="direction" />
+	<MenuComponent
+		:theme="currentSection == 1 ? 'dark' : 'light'"
+		:direction="direction"
+	/>
 	<transition :name="direction" @after-enter="listening = true" mode="out-in">
-		<HeroSection v-if="currentSection == 1" />
-		<AcceleratedSection v-else-if="currentSection == 2" />
+		<HeroSection :sections-length="sections.length" :current-section="currentSection" v-if="currentSection == 1" />
+		<AcceleratedSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 2" />
 		<VisionMissionSection v-else-if="currentSection == 3" />
 		<DiversitySection v-else-if="currentSection == 4" />
 		<DownloadAssetSection v-else-if="currentSection == 5" />
@@ -12,7 +15,7 @@
 <script setup>
 	import { onMounted, ref } from 'vue';
 
-  import MenuComponent from "@/components/MenuComponent.vue";
+	import MenuComponent from '@/components/MenuComponent.vue';
 	import HeroSection from './components/HeroSection.vue';
 	import AcceleratedSection from './components/AcceleratedSection.vue';
 	import VisionMissionSection from './components/VisionMissionSection.vue';
@@ -54,7 +57,42 @@
 		});
 	}
 
+	// Cursor Invent Target Touches
+	let startY;
+	let endY;
+	let clicked = false;
+
+	function mousedown(e) {
+		clicked = true;
+		startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+	}
+
+	function mouseup(e) {
+		endY = e.clientY || endY;
+		if (clicked && startY && Math.abs(startY - endY) >= 40) {
+      direction.value = !Math.min(0, startY - endY) ? 'down' : 'up';
+			go(!Math.min(0, startY - endY) ? 1 : -1);
+			clicked = false;
+			startY = null;
+			endY = null;
+		}
+	}
+
 	onMounted(() => {
+		window.addEventListener('mousedown', mousedown, false);
+		window.addEventListener('touchstart', mousedown, false);
+		window.addEventListener(
+			'touchmove',
+			function (e) {
+				if (clicked) {
+					endY = e.touches[0].clientY || e.targetTouches[0].clientY;
+				}
+			},
+			false
+		);
+		window.addEventListener('touchend', mouseup, false);
+		window.addEventListener('mouseup', mouseup, false);
+
 		window.addEventListener('mousewheel', wheel, false);
 		window.addEventListener('wheel', wheel, false);
 
@@ -77,15 +115,5 @@
 	section {
 		min-height: 100vh;
 		display: flex;
-	}
-
-	.two {
-		background: rgb(36, 164, 138);
-	}
-	.three {
-		background: rgb(67, 91, 175);
-	}
-	.four {
-		background: lightsalmon;
 	}
 </style>

@@ -1,11 +1,32 @@
 <template>
 	<div
-		class="container fixed-top py-3 d-flex flex-row justify-content-between align-items-center"
-		style="z-index: 1; background-color: transparent; padding: 0 60px"
+		class="navbar fixed-top py-3 d-flex flex-row justify-content-between align-items-center"
 	>
 		<transition :name="direction" mode="out-in">
-			<img src="@/assets/images/TCI.svg" v-if="theme == 'dark'" />
-			<img src="@/assets/images/TCI-dark.svg" v-else />
+			<img
+				class="d-md-none"
+				src="@/assets/images/tci-logo-2.svg"
+				alt="logo"
+				v-if="theme == 'dark'"
+			/>
+			<img
+				class="d-md-none"
+				src="@/assets/images/tci-logo-2.svg"
+				alt="logo"
+				v-else
+			/>
+		</transition>
+		<transition :name="direction" mode="out-in">
+			<img
+				class="d-none d-md-block"
+				src="@/assets/images/TCI.svg"
+				v-if="theme == 'dark'"
+			/>
+			<img
+				class="d-none d-md-block"
+				src="@/assets/images/TCI-dark.svg"
+				v-else
+			/>
 		</transition>
 		<transition :name="direction" mode="out-in">
 			<img
@@ -53,7 +74,7 @@
 						@enter="menuEnter"
 					>
 						<li
-							class="monts-semilight-50 pointer"
+							class="pointer"
 							v-for="(mn, indexMn) in menu"
 							:key="indexMn"
 							:data-index="indexMn"
@@ -133,6 +154,11 @@
 </script>
 
 <style lang="scss" scoped>
+	.navbar {
+		z-index: 1;
+		background-color: transparent;
+		padding: 0 145px;
+	}
 	ul {
 		padding: 15px 0 15px 40px;
 		text-align: end;
@@ -140,9 +166,24 @@
 		border-bottom: 4px solid #e68246;
 		li {
 			margin-bottom: 5px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 50px;
+			line-height: 61px;
+			font-weight: 300;
 			a {
 				color: white;
 				text-decoration: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.navbar {
+			padding: 0 30px;
+		}
+		ul {
+			li {
+				font-size: 40px;
 			}
 		}
 	}

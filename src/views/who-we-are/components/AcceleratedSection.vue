@@ -1,6 +1,7 @@
 <template>
 	<section id="accelerated">
 		<div class="container">
+      <BorderContainer :theme="'light'" :sections-length="sectionsLength" :current-section="currentSection" />
 			<div class="row h-100">
 				<div
 					class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
@@ -37,7 +38,21 @@
 </template>
 
 <script setup>
+	import { defineProps } from 'vue';
+
 	import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
+  import BorderContainer from "@/components/BorderContainer.vue";
+
+	const props = defineProps({
+		sectionsLength: {
+			type: Number,
+			require: true,
+		},
+		currentSection: {
+			type: Number,
+			require: true,
+		},
+	});
 </script>
 
 <style lang="scss" scoped>
