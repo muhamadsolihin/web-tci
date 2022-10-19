@@ -21,16 +21,34 @@
 				<div
 					class="d-flex flex-column mt-3 order-2 order-md-1 order-lg-1 order-xl-1"
 				>
-					<h3 class="monts-sem-35">Vision</h3>
+					<h3
+						class="monts-sem-35"
+						:class="imageHover ? 'title-smaller' : 'title-bigger'"
+					>
+						Vision
+					</h3>
 					<ul>
-						<li class="open-reg-24">Connecting human & technology as art</li>
-						<li class="open-reg-24">Create opportunity for everyone</li>
+						<li
+							class="open-reg-24"
+							:class="imageHover ? 'text-smaller' : 'text-bigger'"
+						>
+							Connecting human & technology as art
+						</li>
+						<li
+							class="open-reg-24"
+							:class="imageHover ? 'text-smaller' : 'text-bigger'"
+						>
+							Create opportunity for everyone
+						</li>
 					</ul>
 				</div>
 				<img
 					class="vision-image order-1 order-md-2 order-lg-2 order-xl-2"
+					:class="imageHover ? 'image-hover' : 'image-unhover'"
 					src="@/assets/images/who-we-are/photo-4.png"
 					alt="photo"
+					@mouseenter="imageHover = true"
+					@mouseleave="imageHover = false"
 				/>
 			</div>
 			<div
@@ -38,13 +56,24 @@
 			>
 				<img
 					class="mission-image"
+					:class="imageHover ? 'image-hover' : 'image-unhover'"
 					src="@/assets/images/who-we-are/photo-5.png"
 					alt="photo"
+					@mouseenter="imageHover = true"
+					@mouseleave="imageHover = false"
 				/>
 				<div class="d-flex flex-column text-mission">
-					<h3 class="monts-sem-35">Mission</h3>
+					<h3
+						class="monts-sem-35"
+						:class="imageHover ? 'title-smaller' : 'title-bigger'"
+					>
+						Mission
+					</h3>
 					<ul>
-						<li class="open-reg-24">
+						<li
+							class="open-reg-24"
+							:class="imageHover ? 'text-smaller' : 'text-bigger'"
+						>
 							To be the professional IT company that inspires creativity,
 							enables innovation, and realize success for our customers.
 						</li>
@@ -56,7 +85,7 @@
 </template>
 
 <script setup>
-	import { defineProps } from 'vue';
+	import { defineProps, ref } from 'vue';
 
 	import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 	import BorderContainer from '@/components/BorderContainer.vue';
@@ -71,6 +100,8 @@
 			require: true,
 		},
 	});
+
+	const imageHover = ref(false);
 </script>
 
 <style lang="scss" scoped>
@@ -79,7 +110,6 @@
 		width: 100%;
 		padding: 0 140px;
 		background-color: white;
-		z-index: 1;
 		.container-custom {
 			padding: 80px 0;
 			height: 100vh;
@@ -148,6 +178,81 @@
 					margin: 0 auto;
 				}
 			}
+		}
+	}
+
+	.image-hover {
+		animation: popup 1s ease-out;
+		transform: scale(1.1);
+	}
+	.image-unhover {
+		animation: popdown 1s ease-out;
+		transform: scale(1);
+	}
+	@keyframes popup {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.1);
+		}
+	}
+	@keyframes popdown {
+		from {
+			transform: scale(1.1);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+
+	.title-smaller {
+		animation: smaller 1s;
+		font-size: 30px;
+	}
+	@keyframes smaller {
+		from {
+			font-size: 35px;
+		}
+		to {
+			font-size: 30px;
+		}
+	}
+	.title-bigger {
+		animation: bigger 1s;
+		font-size: 35px;
+	}
+	@keyframes bigger {
+		from {
+			font-size: 30px;
+		}
+		to {
+			font-size: 35px;
+		}
+	}
+
+	.text-smaller {
+		animation: textsmaller 1s;
+		font-size: 21px;
+	}
+	@keyframes textsmaller {
+		from {
+			font-size: 24px;
+		}
+		to {
+			font-size: 21px;
+		}
+	}
+	.text-bigger {
+		animation: textbigger 1s;
+		font-size: 24px;
+	}
+	@keyframes textbigger {
+		from {
+			font-size: 21px;
+		}
+		to {
+			font-size: 24px;
 		}
 	}
 </style>
