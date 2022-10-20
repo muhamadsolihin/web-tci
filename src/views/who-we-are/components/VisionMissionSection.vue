@@ -22,7 +22,7 @@
 					class="d-flex flex-column mt-3 order-2 order-md-1 order-lg-1 order-xl-1"
 				>
 					<h3
-						class="monts-sem-35"
+						class="monts-bold-35"
 						:class="imageHover ? 'title-smaller' : 'title-bigger'"
 					>
 						Vision
@@ -64,7 +64,7 @@
 				/>
 				<div class="d-flex flex-column text-mission">
 					<h3
-						class="monts-sem-35"
+						class="monts-bold-35"
 						:class="imageHover ? 'title-smaller' : 'title-bigger'"
 					>
 						Mission
