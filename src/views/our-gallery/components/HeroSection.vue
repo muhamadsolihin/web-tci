@@ -63,8 +63,8 @@
 	@media screen and (max-width: 768px) {
 		#hero {
 			padding: 0 30px;
-		background-image: url('@/assets/images/our-gallery/hero-bg-mobile.png');
-		background-size:contain;
+			background-image: url('@/assets/images/our-gallery/hero-bg-mobile.png');
+			background-size: contain;
 			.container-custom {
 				height: 100vh;
 				padding: 0;

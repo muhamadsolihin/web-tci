@@ -32,13 +32,13 @@
 			<img
 				class="pointer"
 				src="@/assets/images/icons/menu.svg"
-				@click="showMenu = true"
+				@click="goToMenu"
 				v-if="theme == 'dark'"
 			/>
 			<img
 				class="pointer"
 				src="@/assets/images/icons/menu-dark.svg"
-				@click="showMenu = true"
+				@click="goToMenu"
 				v-else
 			/>
 		</transition>
@@ -95,7 +95,7 @@
 </template>
 
 <script setup>
-	import { defineProps, ref } from 'vue';
+	import { ref } from 'vue';
 	import gsap from 'gsap';
 
 	const props = defineProps({
@@ -108,6 +108,7 @@
 			require: true,
 		},
 	});
+  const emit = defineEmits(['goMenu'])
 
 	const showMenu = ref(false);
 	const menu = ref([
@@ -151,11 +152,16 @@
 			delay: el.dataset.index * 0.2,
 		});
 	};
+
+  const goToMenu = () => {
+    showMenu.value = true;
+    emit('goMenu');
+  }
 </script>
 
 <style lang="scss" scoped>
 	.navbar {
-		z-index: 1;
+		z-index: 2;
 		background-color: transparent;
 		padding: 0 145px;
 	}

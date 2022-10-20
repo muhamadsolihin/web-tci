@@ -1,8 +1,13 @@
 <template>
-	<MenuComponent :theme="'dark'" :direction="direction" />
+	<MenuComponent :theme="'dark'" :direction="'down'" @goMenu="scrollToTop" />
 	<div id="our-gallery">
 		<HeroSection />
 		<GallerySection />
+		<FooterComponent
+			:sections-length="4"
+			:current-section="3"
+      @toTop="scrollToTop"
+		/>
 	</div>
 </template>
 
@@ -10,12 +15,14 @@
 	import MenuComponent from '@/components/MenuComponent.vue';
 	import HeroSection from './components/HeroSection.vue';
 	import GallerySection from './components/GallerySection.vue';
+  import FooterComponent from "@/components/FooterComponent.vue";
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
 </script>
 
 <style lang="scss" scoped>
-	#our-gallery {
-		overflow-y: scroll !important;
-	}
 	section {
 		min-height: 100vh;
 		display: flex;
