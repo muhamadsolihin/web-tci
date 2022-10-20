@@ -4,7 +4,7 @@
 		:style="`border: 1px solid ${color}; color: ${color};`"
 	>
 		<p class="mb-0">{{ number }}</p>
-		<hr class="mx-2" />
+		<hr class="mx-2" v-if="number != ''" />
 		<p class="mb-0">{{ sectionName }}</p>
 	</div>
 </template>
