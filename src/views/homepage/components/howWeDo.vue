@@ -1,6 +1,7 @@
 <template>
   <section id="howwedo">
     <div class="container-border">
+      <BorderContainer :theme="'dark'" :sections-length="sectionsLength" :current-section="currentSection" />
       <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
       <div class="container hero-collap">
         <div class="d-flex flex-row align-items-center">
@@ -96,7 +97,7 @@
             <div class="d-flex flex-column justify-content-center h-100">
               <div class="tab-content">
                 <!--begin::Tab pane-->
-                <div class="tab-pane" id="kt_lists_widget_3_tab_pane_1">
+                <div class="tab-pane fade active show" id="kt_lists_widget_3_tab_pane_1">
                   <!--begin::Section-->
                   <el-col id="consultant" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
@@ -240,7 +241,7 @@
             </div>
           </div>
         </div>
-        <div class="container-fluid mt-5 pt-5">
+        <!-- <div class="container-fluid ">
           <div class="row">
             <div
               class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
@@ -257,7 +258,7 @@
               />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -271,7 +272,6 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 #howwedo {
   background-color: white;
   height: 100vh;
-  margin-top: 0;
   z-index: 1;
   .container-border {
     position: relative;

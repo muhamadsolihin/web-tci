@@ -4,28 +4,44 @@
     :direction="direction"
   />
   <transition :name="direction" @after-enter="listening = true" mode="out-in">
-    <Home v-if="currentSection == 1" />
-    <Deliver v-else-if="currentSection == 2" />
-    <HowWork v-else-if="currentSection == 3" />
-    <HowWeDo v-else-if="currentSection == 4" />
+    <Home
+      :sections-length="sections.length"
+      :current-section="currentSection"
+      v-if="currentSection == 1"
+    />
+    <Deliver
+      :sections-length="sections.length"
+      :current-section="currentSection"
+      v-else-if="currentSection == 2"
+    />
+    <HowWork
+      :sections-length="sections.length"
+      :current-section="currentSection"
+      v-else-if="currentSection == 3"
+    />
+    <HowWeDo
+      :sections-length="sections.length"
+      :current-section="currentSection"
+      v-else-if="currentSection == 4"
+    />
     <Stack v-else-if="currentSection == 5" />
     <Services v-else-if="currentSection == 6" />
     <Product v-else-if="currentSection == 7" />
     <Journey v-else-if="currentSection == 8" />
     <Gallery v-else-if="currentSection == 9" />
     <Blog v-else-if="currentSection == 10" />
-	<FooterComponent
-			:sections-length="sections.length"
-			:current-section="currentSection"
+    <FooterComponent
+      :sections-length="sections.length"
+      :current-section="currentSection"
       @toTop="currentSection = 1"
-			v-else-if="currentSection == 11"
-		/>
+      v-else-if="currentSection == 11"
+    />
   </transition>
 </template>
 
 <script setup>
 import { onMounted, ref } from "vue";
-import MenuComponent from '@/components/MenuComponent.vue';
+import MenuComponent from "@/components/MenuComponent.vue";
 import Home from "./components/home.vue";
 import Deliver from "./components/Deliver.vue";
 import HowWeDo from "./components/howWeDo.vue";
@@ -38,7 +54,7 @@ import Gallery from "./components/Gallery.vue";
 import Blog from "./components/blog.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
-const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12]);
+const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 const currentSection = ref(1);
 const listening = ref(false);
 const direction = ref("up");
@@ -128,57 +144,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-section {
-  min-height: 100vh;
-  display: flex;
-}
-.down-enter-from {
-  opacity: 0;
-  transform: translateY(180px);
-}
-.down-leave-to {
-  opacity: 0;
-  transform: translateY(-180px);
-}
-.down-enter-to,
-.down-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
-.down-enter-active {
-  transition: all 0.8s;
-}
-.down-leave-active {
-  transition: all 0.2s;
-}
-
-.up-enter-from {
-  opacity: 0;
-  transform: translateY(-180px);
-}
-.up-leave-to {
-  opacity: 0;
-  transform: translateY(180px);
-}
-.up-enter-to,
-.up-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
-.up-enter-active {
-  transition: all 0.8s;
-}
-.up-leave-active {
-  transition: all 0.2s;
-}
-
-.two {
-  background: rgb(36, 164, 138);
-}
-.three {
-  background: rgb(67, 91, 175);
-}
-.four {
-  background: lightsalmon;
-}
+	section {
+		min-height: 100vh;
+		display: flex;
+	}
 </style>

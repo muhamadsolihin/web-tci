@@ -6,8 +6,14 @@
 	<transition :name="direction" @after-enter="listening = true" mode="out-in">
 		<Homepage v-if="currentSection == 1" />
 		<Ourwork v-else-if="currentSection == 2" />
-
+		<FooterComponent
+			:sections-length="sections.length"
+			:current-section="currentSection"
+      @toTop="currentSection = 1"
+			v-else-if="currentSection == 3"
+		/>
 	</transition>
+	
 </template>
 
 <script setup>
@@ -15,9 +21,10 @@
 	import Homepage from "./components/Home.vue";
 	import Ourwork from './components/ourwork.vue';
 	import MenuComponent from '@/components/MenuComponent.vue';
+	import FooterComponent from "@/components/FooterComponent.vue";
 
 
-	const sections = ref([1, 2, 3]);
+	const sections = ref([1, 2, 3,4]);
 	const currentSection = ref(1);
 	const listening = ref(false);
 	const direction = ref('up');

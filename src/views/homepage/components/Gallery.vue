@@ -53,9 +53,9 @@
                     src="@/assets/images/galerry/pic3.png"
                     style="width: 16.8em; height: 15em; margin-left: -2em !important; float: left"
                   />
-                  <div class="transparent-box1" style="margin-left:-1.1em !important">
+                  <div class="transparent-box2" style="margin-left:-1.1em !important">
                   <div class="caption1">
-                    <p>Kuliah Umum</p>
+                    <p>Prelaunch Makasi - POS</p>
                   </div>
                 </div>
                 </div>
@@ -72,22 +72,36 @@
                   />
                   <div class="transparent-box3" style="margin-left:0 !important">
                   <div class="caption3">
-                    <p>Prelaunch Makasi - POS</p>
+                    <p>Kuliah Umum </p>
                   </div>
                 </div>
                 </div>
-                <div class="col-6" style="margin-left: -1.5em">
+                <div class="col-6 " style="margin-left: -1.5em">
                   <img
+                  class="img-box4"
                     src="@/assets/images/galerry/pic5.png"
-                    style="width: 17em; height: 15.3em"
+                    style="width: 17em; height: 15.3em; z-index: 3;"
                   />
+                  <div class="transparent-box4" style="margin-left:0 !important">
+                  <div class="caption4">
+                    <p>Video Shooting</p>
+                  </div>
+                </div>
+                <div class="img-box5">
                   <img
+                  class="img-box5"
                     src="@/assets/images/galerry/pic6.png"
                     style="width: 17em; height: 15.3em; margin-top: 1em"
                   />
+                  <div class="transparent-box5" style="margin-left:0 !important">
+                  <div class="caption5">
+                    <p>Employee of The Month</p>
+                  </div>
                 </div>
               </div>
-              -->
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -105,7 +119,6 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   background-color: #263a5f;
   background-size: cover;
   height: 100vh;
-  width: 100%;
   padding: 0 80px;
   position: relative;
   z-index: 1;
@@ -240,11 +253,19 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   margin-left: 0;
   transition: background-color 0.3s ease;
 }
-
-
-.img-box:hover img {
-  transform: scale(1.1);
+.transparent-box2 {
+  width: 15.9em; height: 15em;
+  background-color: rgba(0, 0.5, 0, 0);
+  position: absolute;
+  top: 0;
+  margin-left: 0;
+  transition: background-color 0.3s ease;
 }
+
+
+// .img-box:hover img {
+//   transform: scale(1.1);
+// }
 
 .img-box:hover .transparent-box {
   background-color: rgba(0, 0, 0, 0.5);
@@ -260,11 +281,14 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   cursor: pointer;
 }
 
-.img-box1:hover img {
-  transform: scale(1.1);
-}
+// .img-box1:hover img {
+//   transform: scale(1.1);
+// }
 
 .img-box1:hover .transparent-box1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.img-box1:hover .transparent-box2 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -321,12 +345,12 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 }
 
 .img-box3:hover {
-  cursor: pointer;
+  cursor: none;
 }
 
-.img-box3:hover img {
-  transform: scale(1.1);
-}
+// .img-box3:hover img {
+//   transform: scale(1.1);
+// }
 
 .img-box3:hover .transparent-box3 {
   background-color: rgba(0, 0, 0, 0.5);
@@ -343,6 +367,121 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 
 .caption3 > p:nth-child(2) {
   font-size: 0.8em;
+}
+
+
+.img-box4 {
+
+box-sizing: content-box;
+
+margin-left: 0;
+overflow: hidden;
+display: inline-block;
+color: #fff;
+position: relative;
+background-color: transparent;
+
+
+}
+
+.caption4 {
+position: absolute;
+text-align: left;
+bottom: 5px;
+left: 5%;
+opacity: 0;
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.transparent-box4 {
+  width: 17em; height: 15.3em;
+background-color: rgba(0, 0, 0, 0);
+position: absolute;
+top: 0;
+margin-left: 0;
+transition: background-color 0.3s ease;
+}
+
+.img-box4:hover {
+cursor: none;
+}
+
+// .img-box3:hover img {
+//   transform: scale(1.1);
+// }
+
+.img-box4:hover .transparent-box4 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box4:hover .caption4 {
+transform: translateY(-20px);
+opacity: 1;
+}
+
+.img-box4:hover {
+cursor: pointer;
+}
+
+.caption3 > p:nth-child(2) {
+font-size: 0.8em;
+}
+
+
+
+.img-box5 {
+
+box-sizing: content-box;
+
+margin-left: 0;
+overflow: hidden;
+display: inline-block;
+color: #fff;
+position: relative;
+background-color: transparent;
+
+
+}
+
+.caption5 {
+position: absolute;
+text-align: left;
+bottom: 5px;
+left: 5%;
+opacity: 0;
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.transparent-box5 {
+  width: 17em; height: 15.3em;
+background-color: rgba(0, 0, 0, 0);
+position: absolute;
+top: 0;
+margin-left: 0;
+transition: background-color 0.3s ease;
+}
+
+.img-box5:hover {
+cursor: none;
+}
+
+// .img-box3:hover img {
+//   transform: scale(1.1);
+// }
+
+.img-box5:hover .transparent-box4 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box5:hover .caption4 {
+transform: translateY(-20px);
+opacity: 1;
+}
+
+.img-box5:hover {
+cursor: pointer;
+}
+
+.caption3 > p:nth-child(2) {
+font-size: 0.8em;
 }
 
 

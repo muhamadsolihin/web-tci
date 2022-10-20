@@ -16,11 +16,11 @@
         />
       </div>
       <div
-        class="d-flex flex-row align-items-start justify-content-between mt-4"
+        class="d-flex flex-row  align-items-start justify-content-center mt-4"
       >
-        <el-row :gutter="5" style="margin-top: 53px">
+        <el-row class="py-5" :gutter="20" style="margin-top: 5px;">
           <el-col :span="6"
-            ><div class="grid-content card-ic">
+            ><div class="grid-content card-ic ">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/our-work/bmc.png"
@@ -126,10 +126,10 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   width: 100%;
   padding: 0 80px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   .container-border {
     position: relative;
-    padding-top: 0;
+    padding-top: 5%;
     width: 100%;
     padding-left: 80px;
     padding-right: 80px;
@@ -200,8 +200,8 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .card-ic {
   width: 17em;
   height: 33em;
- z-index: 99;
-  transition: all 0.2s ease;
+   z-index: 99;
+
   cursor: pointer;
   @media (min-width: 992px) {
     margin-top: 0;
@@ -209,24 +209,26 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 }
 
 .card-ic {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  background-color: #fff;
-  box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  transition: all 0.2s ease;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+}
+.card-ic:hover {
+
+  transform: translateZ(0);
+  box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
   -webkit-transition-property: transform;
   transition-property: transform;
   z-index: 3;
-}
-.card-ic:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .ic-image {
