@@ -29,6 +29,12 @@
 			:current-section="currentSection"
 			v-else-if="currentSection == 5"
 		/>
+		<FooterComponent
+			:sections-length="sections.length"
+			:current-section="currentSection"
+      @toTop="currentSection = 1"
+			v-else-if="currentSection == 6"
+		/>
 	</transition>
 </template>
 
@@ -41,9 +47,10 @@
 	import VisionMissionSection from './components/VisionMissionSection.vue';
 	import DiversitySection from './components/DiversitySection.vue';
 	import DownloadAssetSection from './components/DownloadAssetSection.vue';
+  import FooterComponent from "@/components/FooterComponent.vue";
 
-	const sections = ref([1, 2, 3, 4, 5, 6]);
-	const currentSection = ref(1);
+	const sections = ref([1, 2, 3, 4, 5, 6, 7]);
+	const currentSection = ref(6);
 	const listening = ref(false);
 	const direction = ref('up');
 

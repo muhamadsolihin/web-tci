@@ -6,20 +6,6 @@
     line-height: 30px;
 }
 
-.albert-reg-20 {
-    font-family: "Albert Sans", sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 400;
-    @media (max-width: 481px) {
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 18px;
-        margin-left: 0;
-        width: 376px;
-    }
-}
-
 .open-reg-24 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
@@ -60,6 +46,20 @@
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
+}
+
+.albert-reg-20 {
+    font-family: "Albert Sans", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    @media (max-width: 481px) {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        margin-left: 0;
+        width: 376px;
+    }
 }
 
 .monts-bold-55 {
