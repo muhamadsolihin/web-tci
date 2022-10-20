@@ -50,6 +50,8 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -60,9 +62,17 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  @media (max-width: 481px) {
-    min-width: 100%;
-    min-height: 100%;
+  @media (max-width: 768px) {
+  }
+}
+
+.albert-reg-20 {
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    min-width: 376px !important;
+    margin-top: 30px;
   }
 }
 #hero {
@@ -71,9 +81,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   padding: 0 80px;
   position: absolute;
   z-index: -1;
-  @media (max-width: 481px) {
+  @media (max-width: 768px) {
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
   .container-border {
     position: relative;
@@ -81,7 +91,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
-    @media (max-width: 481px) {
+    @media (max-width: 768px) {
       border: none;
     }
     .container {
@@ -89,7 +99,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       padding: 0;
       border-left: 1px solid #b8bdc6;
       border-right: 1px solid #b8bdc6;
-      @media (max-width: 481px) {
+      @media (max-width: 768px) {
         border: none;
       }
       .hero-title {
@@ -99,7 +109,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
         line-height: 83px;
         text-align: start;
         color: white;
-        @media (max-width: 481px) {
+        @media (max-width: 768px) {
           font-size: 40px !important;
           line-height: 49px;
           width: 379px;
@@ -113,8 +123,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
         margin-right: auto;
         padding: 5px 10px;
         font-family: "IBM Plex Mono", sans-serif;
-        @media (max-width: 481px) {
+        @media (max-width: 768px) {
           margin-left: -8em;
+          margin-top: -20em !important;
         }
         hr {
           width: 20px;
@@ -127,8 +138,8 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
         background-color: #0c4aa9;
         margin-right: 20px;
         margin-top: 10px;
-        @media (max-width: 481px) {
-          margin-left: -8em;
+        @media (max-width: 768px) {
+          margin-left: -8.5em;
         }
       }
     }
@@ -136,7 +147,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       position: absolute;
       left: -1px;
       top: 30%;
-      @media (max-width: 481px) {
+      @media (max-width: 768px) {
         display: none;
       }
     }
@@ -145,14 +156,14 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     position: absolute;
     bottom: -90px;
     left: 45%;
-    @media (max-width: 481px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
   .asset-3 {
     position: absolute;
     bottom: 0;
-    @media (max-width: 481px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }

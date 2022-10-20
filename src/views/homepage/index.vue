@@ -1,9 +1,13 @@
 <template>
+  	<MenuComponent
+		:theme="currentSection == 1 ? 'dark' : 'light'"
+		:direction="direction"
+	/>
   <transition :name="direction" @after-enter="listening = true" mode="out-in">
     <Home v-if="currentSection == 1" />
     <Deliver v-else-if="currentSection == 2" />
-    <HowWeDo v-else-if="currentSection == 3" />
-    <HowWork v-else-if="currentSection == 4" />
+    <HowWork  v-else-if="currentSection == 3" />
+    <HowWeDo v-else-if="currentSection == 4" />
     <Stack v-else-if="currentSection == 5" />
     <Services v-else-if="currentSection == 6" />
     <Product v-else-if="currentSection == 7" />
@@ -17,7 +21,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import Home from "./components/home.vue";
-import Deliver from './components/Deliver.vue';
+import Deliver from './components/sample.vue';
 import HowWeDo from "./components/howWeDo.vue";
 import HowWork from "./components/HowWork.vue";
 import Stack from "./components/stack.vue";
@@ -32,43 +36,90 @@ const currentSection = ref(1);
 const listening = ref(false);
 const direction = ref("up");
 
-function go(dir) {
-  listening.value = false;
+	function go(dir) {
+		listening.value = false;
 
-  if (currentSection.value + dir < 1) {
-    currentSection.value = 1;
-    listening.value = true;
-  } else if (currentSection.value + dir >= sections.value.length) {
-    currentSection.value = sections.value.length - 1;
-    listening.value = true;
-  } else {
-    currentSection.value += dir;
-  }
-  console.log(currentSection.value);
-}
+		if (currentSection.value + dir < 1) {
+			currentSection.value = 1;
+			listening.value = true;
+		} else if (currentSection.value + dir >= sections.value.length) {
+			currentSection.value = sections.value.length - 1;
+			listening.value = true;
+		} else {
+			currentSection.value += dir;
+		}
+	}
 
-//Mouse Wheel Scroll Transition
-let scrollTimeout;
-function wheel(e) {
-  if (!listening.value) return false;
-  clearTimeout(scrollTimeout);
-  setTimeout(function () {
-    if (e.deltaY < -40) {
-      direction.value = "up";
-      go(-1);
-    } else if (e.deltaY >= 40) {
-      direction.value = "down";
-      go(1);
-    }
-  });
-}
+	//Mouse Wheel Scroll Transition
+	let scrollTimeout;
+	function wheel(e) {
+		if (!listening.value) return false;
+		clearTimeout(scrollTimeout);
+		setTimeout(function () {
+			if (e.deltaY < -40) {
+				direction.value = 'up';
+				go(-1);
+			} else if (e.deltaY >= 40) {
+				direction.value = 'down';
+				go(1);
+			}
+		});
+	}
 
-onMounted(() => {
-  window.addEventListener("mousewheel", wheel, false);
-  window.addEventListener("wheel", wheel, false);
+	// Cursor Invent Target Touches
+	let startY;
+	let endY;
+	let clicked = false;
 
-  listening.value = true;
-});
+	function mousedown(e) {
+		clicked = true;
+		startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+	}
+
+	function mouseup(e) {
+		endY = e.clientY || endY;
+		if (clicked && startY && Math.abs(startY - endY) >= 40) {
+      direction.value = !Math.min(0, startY - endY) ? 'down' : 'up';
+			go(!Math.min(0, startY - endY) ? 1 : -1);
+			clicked = false;
+			startY = null;
+			endY = null;
+		}
+	}
+
+	onMounted(() => {
+		window.addEventListener('mousedown', mousedown, false);
+		window.addEventListener('touchstart', mousedown, false);
+		window.addEventListener(
+			'touchmove',
+			function (e) {
+				if (clicked) {
+					endY = e.touches[0].clientY || e.targetTouches[0].clientY;
+				}
+			},
+			false
+		);
+		window.addEventListener('touchend', mouseup, false);
+		window.addEventListener('mouseup', mouseup, false);
+
+		window.addEventListener('mousewheel', wheel, false);
+		window.addEventListener('wheel', wheel, false);
+
+		//Press Up & Down Keyboard Arrow Event
+		window.addEventListener('keydown', function (e) {
+			if (['ArrowDown', 'ArrowRight'].includes(e.key)) {
+				direction.value = 'down';
+				go(1);
+			} else if (['ArrowUp', 'ArrowLeft'].includes(e.key)) {
+				direction.value = 'up';
+				go(-1);
+			}
+		});
+
+		listening.value = true;
+	});
+
+
 </script>
 
 <style lang="scss" scoped>

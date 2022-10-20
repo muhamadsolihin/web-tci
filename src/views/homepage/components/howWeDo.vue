@@ -200,7 +200,7 @@
                     </div>
                   </el-col>
                 </div>
-                <div class="tab-pane fade bg-warning" id="kt_lists_sustainable">
+                <div class="tab-pane fade " id="kt_lists_sustainable">
                   <el-col style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>

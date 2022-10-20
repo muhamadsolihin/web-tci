@@ -20,7 +20,7 @@
           >
             <div class="d-flex flex-column justify-content-center h-100">
               <SectionNumberComponent
-                class="me-auto"
+                class="me-auto section-number"
                 :number="'02 / 11'"
                 :section-name="'Mission'"
                 :color="'#000000'"
@@ -77,7 +77,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     left: 5%;
     top: 0;
     height: 711px;
-    @media (max-width: 481px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -88,9 +88,10 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       font-weight: 600;
       font-size: 3rem;
       line-height: 57px;
-      @media (max-width: 481px) {
+      @media (max-width: 768px) {
         margin-left: -4em;
         font-size: 30px;
+        margin-top: 0.1em !important;
         line-height: 37px;
         width: 325px;
       }
@@ -98,32 +99,35 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   }
 }
 .section-number {
-  @media (max-width: 481px) {
+  @media (max-width: 768px) {
     margin-left: -8em;
-    margin-top: 20em !important;
+    margin-top:22em !important;
   }
 }
 .open-reg-25 {
-  @media (max-width: 481px) {
+  @media (max-width: 768px) {
     font-size: 13px;
     line-height: 18px;
-    width: 325px;
+    width: 335px;
+    margin-top: 1em !important;
+    text-align: left;
     margin-left: -9em;
   }
 }
 .pic-cto {
-  @media (max-width: 481px) {
-    width: 325.64px !important;
-    height: 384px !important;
-    margin-top: -105em;
+  @media (max-width: 768px) {
+    width:345px !important;
+    height: 394px !important;
+    margin-top: -70em;
     margin-left: -8em !important;
   }
 }
 .pic-cto-1 {
-  @media (max-width: 481px) {
+  @media (max-width: 768px) {
     width: 325.64px !important;
     height: 384px !important;
     margin-top: -8em;
+    display: none;
     margin-left: -8em !important;
   }
 }
@@ -144,7 +148,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 }
 .pic-cto:hover,
 .pic-cto:focus,
-.pic-cto:active {
+.pic-cto:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }

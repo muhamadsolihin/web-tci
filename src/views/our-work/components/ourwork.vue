@@ -126,7 +126,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   width: 100%;
   padding: 0 80px;
   position: relative;
-  z-index: -1;
+  z-index: 2;
   .container-border {
     position: relative;
     padding-top: 0;
@@ -208,12 +208,27 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   }
 }
 
-.card-ic:hover {
+.card-ic {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   background-color: #fff;
   box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
-  transform: scale(1.1);
-  z-index: 99;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  z-index: 3;
 }
+.card-ic:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .ic-image {
   width: 132px;
   height: 120px;

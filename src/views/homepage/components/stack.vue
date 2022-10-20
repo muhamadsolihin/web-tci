@@ -27,26 +27,61 @@
               driving our product to success.
             </h4>
           </div>
+
           <div
             class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <img
-              class="text-center mt-2"
-              src="@/assets/images/animate/stack1.png"
+              class="text-center fade-in-text mt-2"
+              src="@/assets/images/img-stack/1.png"
               style="
-                width: 957.59px;
-                height: 84.45px;
+                width: 120.93px;
+                height: 62.41px;
                 float: center;
                 justify-content: center;
                 margin-left: 10%;
               "
             />
+            <img
+              class="text-center fade-in-text mt-2"
+              src="@/assets/images/img-stack/2.png"
+              style="
+                width: 120.93px;
+                height: 62.41px;
+                float: center;
+                justify-content: center;
+                margin-left: 10%;
+              "
+            />
+            <img
+              class="text-center fade-in-text1 mt-2"
+              src="@/assets/images/img-stack/2.png"
+              style="
+                width: 120.93px;
+                height: 62.41px;
+                float: center;
+                justify-content: center;
+                margin-left: 10%;
+              "
+            />
+                        <img
+              class="text-center fade-in-text mt-2"
+              src="@/assets/images/img-stack/1.png"
+              style="
+                width: 120.93px;
+                height: 62.41px;
+                float: center;
+                justify-content: center;
+                margin-left: 10%;
+              "
+            />
+
           </div>
           <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12 col-md-12 slider1 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <img
-              class="text-center mt-3"
+              class="text-center logos1 mt-3"
               src="@/assets/images/animate/stack2.png"
               style="
                 width: 948.06px;
@@ -57,11 +92,12 @@
               "
             />
           </div>
+
           <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12 col-md-12 slider col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <img
-              class="text-center mt-3"
+              class="text-center logos mt-3"
               src="@/assets/images/animate/stack3.png"
               style="
                 width: 950.59px;
@@ -73,10 +109,10 @@
             />
           </div>
           <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12 col-md-12 slider1 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <img
-              class="text-center mt-3"
+              class="text-center logos1 mt-3"
               src="@/assets/images/animate/stack4.png"
               style="
                 width: 950.59px;
@@ -88,10 +124,10 @@
             />
           </div>
           <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12 col-md-12 slider col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <img
-              class="text-center mt-3"
+              class="text-center logos mt-3"
               src="@/assets/images/animate/stack5.png"
               style="
                 width: 957.59px;
@@ -112,15 +148,21 @@
               src="@/assets/images/batik-1.svg"
               style="float: left; justify-content: left; height: 195px"
             />
+
           </div>
         </div>
       </div>
+
+
     </div>
   </section>
 </template>
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -136,6 +178,43 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     border-left: 1px solid #b8bdc6;
     border-right: 0px solid #b8bdc6;
   }
+
+  
+
+
+  .fade-in-text {
+  font-family: Arial;
+  font-size: 60px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+.fade-in-text1 {
+  font-family: Arial;
+  font-size: 60px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
   .title-2 {
     font-family: "Open Sans";
@@ -226,6 +305,102 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   /* or 167% */
 
   color: #000000 !important;
+}
+
+.slider {
+  animation: slidein 30s linear infinite;
+  white-space: nowrap;
+  .logos {
+    width: 100vh;
+    display: inline-block;
+    margin: 0px 0;
+    .fab {
+      width: calc(100% / 5);
+      animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    }
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slider1 {
+  animation: slidein1 30s linear infinite;
+  white-space: nowrap;
+  .logos1 {
+    width: 100vh;
+    display: inline-block;
+    margin: 0px 0;
+    .fab {
+      width: calc(100% / 5);
+      animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    }
+  }
+}
+
+@keyframes slidein1 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(50%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide2 {
+  animation: slidein1 30s linear infinite;
+  white-space: nowrap;
+  .logos2 {
+    width: 100vh;
+    display: inline-block;
+    margin: 0px 0;
+    .fab {
+      width: calc(100% / 5);
+      animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    }
+  }
+}
+
+@keyframes slidein1 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(50%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .tab-pane {
   margin-top: -5em;
