@@ -1,4 +1,8 @@
 <template>
+	  <MenuComponent
+    :theme="currentSection == 1 ? 'dark' : 'light'"
+    :direction="direction"
+  />
 	<transition :name="direction" @after-enter="listening = true" mode="out-in">
 		<Homepage v-if="currentSection == 1" />
 		<Ourwork v-else-if="currentSection == 2" />
@@ -10,6 +14,7 @@
 	import { onMounted, ref } from 'vue';
 	import Homepage from "./components/Home.vue";
 	import Ourwork from './components/ourwork.vue';
+	import MenuComponent from '@/components/MenuComponent.vue';
 
 
 	const sections = ref([1, 2, 3]);
