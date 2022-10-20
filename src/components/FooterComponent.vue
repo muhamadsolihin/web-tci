@@ -67,6 +67,7 @@
 		width: 100%;
 		padding: 0 140px;
 		background-color: white;
+    position: relative;
 		.container-custom {
 			padding: 80px 0 0 0;
 			height: 100%;
