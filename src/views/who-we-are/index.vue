@@ -50,7 +50,7 @@
   import FooterComponent from "@/components/FooterComponent.vue";
 
 	const sections = ref([1, 2, 3, 4, 5, 6, 7]);
-	const currentSection = ref(6);
+	const currentSection = ref(1);
 	const listening = ref(false);
 	const direction = ref('up');
 
