@@ -4,11 +4,37 @@
 		:direction="direction"
 	/>
 	<transition :name="direction" @after-enter="listening = true" mode="out-in">
-		<HeroSection :sections-length="sections.length" :current-section="currentSection" v-if="currentSection == 1" />
-		<AcceleratedSection :sections-length="sections.length" :current-section="currentSection" v-else-if="currentSection == 2" />
-		<VisionMissionSection v-else-if="currentSection == 3" />
-		<DiversitySection v-else-if="currentSection == 4" />
-		<DownloadAssetSection v-else-if="currentSection == 5" />
+		<HeroSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-if="currentSection == 1"
+		/>
+		<AcceleratedSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 2"
+		/>
+		<VisionMissionSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 3"
+		/>
+		<DiversitySection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 4"
+		/>
+		<DownloadAssetSection
+			:sections-length="sections.length"
+			:current-section="currentSection"
+			v-else-if="currentSection == 5"
+		/>
+		<FooterComponent
+			:sections-length="sections.length"
+			:current-section="currentSection"
+      @toTop="currentSection = 1"
+			v-else-if="currentSection == 6"
+		/>
 	</transition>
 </template>
 
@@ -21,8 +47,9 @@
 	import VisionMissionSection from './components/VisionMissionSection.vue';
 	import DiversitySection from './components/DiversitySection.vue';
 	import DownloadAssetSection from './components/DownloadAssetSection.vue';
+  import FooterComponent from "@/components/FooterComponent.vue";
 
-	const sections = ref([1, 2, 3, 4, 5, 6]);
+	const sections = ref([1, 2, 3, 4, 5, 6, 7]);
 	const currentSection = ref(1);
 	const listening = ref(false);
 	const direction = ref('up');
@@ -70,7 +97,7 @@
 	function mouseup(e) {
 		endY = e.clientY || endY;
 		if (clicked && startY && Math.abs(startY - endY) >= 40) {
-      direction.value = !Math.min(0, startY - endY) ? 'down' : 'up';
+			direction.value = !Math.min(0, startY - endY) ? 'down' : 'up';
 			go(!Math.min(0, startY - endY) ? 1 : -1);
 			clicked = false;
 			startY = null;

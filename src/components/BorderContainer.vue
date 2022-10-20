@@ -5,12 +5,16 @@
 			:style="`background-color: ${theme == 'dark' ? 'white' : '#B8BDC6'}`"
 		>
 			<div
-				v-for="sec in sectionsLength"
+				v-for="sec in sectionsLength - 1"
 				:key="sec"
 				class="bar"
 				:style="`background-color: ${
-					sec == currentSection ? '#E78448' : theme == 'dark' ? 'white' : '#B8BDC6'
-				}; height: ${100 / sectionsLength}%`"
+					sec == currentSection
+						? '#E78448'
+						: theme == 'dark'
+						? 'white'
+						: '#B8BDC6'
+				}; height: ${100 / (sectionsLength - 1)}%`"
 			></div>
 		</div>
 	</div>
@@ -31,7 +35,7 @@
 		theme: {
 			type: String,
 			require: false,
-      default: 'light'
+			default: 'light',
 		},
 	});
 </script>
