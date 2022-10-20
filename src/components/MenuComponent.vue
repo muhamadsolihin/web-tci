@@ -125,7 +125,7 @@
 		},
 		{
 			text: 'Our Gallery',
-			link: '/who-we-are',
+			link: '/our-gallery',
 		},
 		{
 			text: 'Careers',

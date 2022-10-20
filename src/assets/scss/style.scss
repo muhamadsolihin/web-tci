@@ -2,8 +2,15 @@
 @import './color.scss';
 @import './transition.scss';
 body {
-    overflow: hidden;
-    /* Hide scrollbars */
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
 }
 
 .h-100 {

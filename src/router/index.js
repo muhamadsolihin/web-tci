@@ -21,6 +21,12 @@ const router = createRouter({
                 import ('../views/our-work/index.vue'),
         },
         {
+            path: '/our-gallery',
+            name: 'our-gallery',
+            component: () =>
+                import ('../views/our-gallery/index.vue'),
+        },
+        {
             path: '/test2',
             name: 'test2',
             component: () =>

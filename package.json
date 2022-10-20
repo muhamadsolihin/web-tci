@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "aos": "^2.3.4",
+        "@types/node": "^18.8.0",
         "bootstrap": "^5.2.2",
         "core-js": "^3.8.3",
         "element-plus": "^2.2.17",
