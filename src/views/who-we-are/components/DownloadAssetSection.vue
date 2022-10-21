@@ -46,7 +46,8 @@
 </template>
 
 <script setup>
-	import { defineProps, ref } from 'vue';
+	import { defineProps, ref, onMounted } from 'vue';
+	import Hammer from 'hammerjs';
 
 	import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 	import CtaComponent from '@/components/CtaComponent.vue';
@@ -64,6 +65,21 @@
 	});
 
 	const imageHover = ref(false);
+
+	const emit = defineEmits(['swipeUp', 'swipeDown']);
+
+	onMounted(() => {
+		var stage = document.getElementById('downloadable');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
+	});
 </script>
 
 <style lang="scss" scoped>

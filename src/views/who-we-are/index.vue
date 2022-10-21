@@ -7,32 +7,44 @@
 		<HeroSection
 			:sections-length="sections.length"
 			:current-section="currentSection"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
 			v-if="currentSection == 1"
 		/>
 		<AcceleratedSection
 			:sections-length="sections.length"
 			:current-section="currentSection"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
 			v-else-if="currentSection == 2"
 		/>
 		<VisionMissionSection
 			:sections-length="sections.length"
 			:current-section="currentSection"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
 			v-else-if="currentSection == 3"
 		/>
 		<DiversitySection
 			:sections-length="sections.length"
 			:current-section="currentSection"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
 			v-else-if="currentSection == 4"
 		/>
 		<DownloadAssetSection
 			:sections-length="sections.length"
 			:current-section="currentSection"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
 			v-else-if="currentSection == 5"
 		/>
 		<FooterComponent
 			:sections-length="sections.length"
 			:current-section="currentSection"
-      @toTop="currentSection = 1"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
+			@toTop="currentSection = 1"
 			v-else-if="currentSection == 6"
 		/>
 	</transition>
@@ -40,6 +52,7 @@
 
 <script setup>
 	import { onMounted, ref } from 'vue';
+	import Hammer from 'hammerjs';
 
 	import MenuComponent from '@/components/MenuComponent.vue';
 	import HeroSection from './components/HeroSection.vue';
@@ -47,7 +60,7 @@
 	import VisionMissionSection from './components/VisionMissionSection.vue';
 	import DiversitySection from './components/DiversitySection.vue';
 	import DownloadAssetSection from './components/DownloadAssetSection.vue';
-  import FooterComponent from "@/components/FooterComponent.vue";
+	import FooterComponent from '@/components/FooterComponent.vue';
 
 	const sections = ref([1, 2, 3, 4, 5, 6, 7]);
 	const currentSection = ref(1);
@@ -84,42 +97,17 @@
 		});
 	}
 
-	// Cursor Invent Target Touches
-	let startY;
-	let endY;
-	let clicked = false;
+  function swipeUp() {
+			direction.value = 'down';
+			go(1);
+  }
 
-	function mousedown(e) {
-		clicked = true;
-		startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
-	}
-
-	function mouseup(e) {
-		endY = e.clientY || endY;
-		if (clicked && startY && Math.abs(startY - endY) >= 40) {
-			direction.value = !Math.min(0, startY - endY) ? 'down' : 'up';
-			go(!Math.min(0, startY - endY) ? 1 : -1);
-			clicked = false;
-			startY = null;
-			endY = null;
-		}
-	}
+  function swipeDown() {
+			direction.value = 'up';
+			go(-1);
+  }
 
 	onMounted(() => {
-		window.addEventListener('mousedown', mousedown, false);
-		window.addEventListener('touchstart', mousedown, false);
-		window.addEventListener(
-			'touchmove',
-			function (e) {
-				if (clicked) {
-					endY = e.touches[0].clientY || e.targetTouches[0].clientY;
-				}
-			},
-			false
-		);
-		window.addEventListener('touchend', mouseup, false);
-		window.addEventListener('mouseup', mouseup, false);
-
 		window.addEventListener('mousewheel', wheel, false);
 		window.addEventListener('wheel', wheel, false);
 
