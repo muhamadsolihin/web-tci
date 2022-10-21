@@ -1,9 +1,13 @@
 <template>
   <section id="howwedo">
-    <div class="container-border">
-      <BorderContainer :theme="'dark'" :sections-length="sectionsLength" :current-section="currentSection" />
+    <div class="container-border ">
+      <BorderContainer
+        :theme="'dark'"
+        :sections-length="sectionsLength"
+        :current-section="currentSection"
+      />
       <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container hero-collap">
+      <div class="container hero-collap ">
         <div class="d-flex flex-row align-items-center">
           <h2 class="hero-title">How We Do It</h2>
           <SectionNumberComponent
@@ -14,23 +18,23 @@
           />
         </div>
         <div
-          class="d-flex flex-row justify-content-start align-items-start w-20"
+          class="d-flex  flex-row justify-content-start align-items-start w-20"
         >
           <div class="shape-blue"></div>
         </div>
         <div
-          class="row h-80"
+          class="row h-80 "
           style="margin-top: 68px; padding-bottom: 0 !important"
         >
           <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12  col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
           >
-            <ul class="nav flex-center bg-transparent flex-nowrap p-2 mb-8">
+            <ul class="nav  flex-center bg-transparent flex-nowrap p-2 mb-8">
               <div class="col-md-12">
                 <!--begin::Tab nav-->
-                <li class="nav-item active">
+                <li class="nav-item  active">
                   <a
-                    class="nav-link btn btn-active-white head py-2 px-4 fs-6 fw-bold"
+                    class="nav-link btn btn-active-white head py-2 px-4 fs-6 fw-bold active"
                     data-bs-toggle="tab"
                     href="#kt_lists_widget_3_tab_pane_1"
                     style="
@@ -45,7 +49,7 @@
                 <!--end::Tab nav-->
                 <!--begin::Tab nav-->
 
-                <li class="nav-item flex-equal">
+                <li class="nav-item  flex-equal">
                   <a
                     class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
@@ -89,15 +93,21 @@
               <!--begin::Tab nav-->
               <!--end::Tab nav-->
             </ul>
+
           </div>
 
+
           <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
+            class="col-12  col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
           >
+          
             <div class="d-flex flex-column justify-content-center h-100">
               <div class="tab-content">
                 <!--begin::Tab pane-->
-                <div class="tab-pane fade active show" id="kt_lists_widget_3_tab_pane_1">
+                <div
+                  class="tab-pane fade active show"
+                  id="kt_lists_widget_3_tab_pane_1"
+                >
                   <!--begin::Section-->
                   <el-col id="consultant" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
@@ -110,7 +120,7 @@
                         </div>
 
                         <div
-                          class="subhead1"
+                          class="subhead1 "
                           style="
                             text-align: justify;
                             width: 34em;
@@ -135,7 +145,7 @@
                 </div>
                 <!--end::Tab pane-->
                 <!--begin::Tab pane-->
-                <div class="tab-pane fade" id="kt_lists_adaptive">
+                <div class="tab-pane fade " id="kt_lists_adaptive">
                   <!--begin::Chart-->
                   <el-col id="consultant" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
@@ -201,7 +211,7 @@
                     </div>
                   </el-col>
                 </div>
-                <div class="tab-pane fade " id="kt_lists_sustainable">
+                <div class="tab-pane fade" id="kt_lists_sustainable">
                   <el-col style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
@@ -237,29 +247,31 @@
                 </div>
 
                 <!--end::Items-->
+                
               </div>
             </div>
           </div>
+          
         </div>
-        <!-- <div class="container-fluid ">
-          <div class="row">
-            <div
-              class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-              <img
-                class="text-center batik-img mt-3"
-                src="@/assets/images/batik-1.svg"
-                style="
-                  float: left;
-                  justify-content: left;
-                  height: 195px;
-                  z-index: -2;
-                "
-              />
-            </div>
-          </div>
-        </div> -->
       </div>
+
+                  <div class="row">
+                    <div
+                      class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+                    >
+                      <img
+                        class="text-center batik-img"
+                        src="@/assets/images/batik-1.svg"
+                        style="
+                          float: left;
+                          justify-content: left;
+                          height: 195px;
+                          z-index: -2;
+                        "
+                      />
+                    </div>
+                  </div>
+
     </div>
   </section>
 </template>
@@ -272,14 +284,35 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 #howwedo {
   background-color: white;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
   .container-border {
     position: relative;
     width: 100%;
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
+    @media screen and (max-width: 768px) {
+    padding: 0;
   }
+  }
+  .section-number{
+    @media screen and (max-width: 768px) {
+      margin-top: -7em;
+      margin-left: -100% !important;
+
+    }
+  }
+
+
+.open-reg-26{
+  @media screen and (max-width: 768px) {
+    font-size: 20px !important;
+   
+  }
+}
 
   .asset-2 {
     position: absolute;
@@ -297,8 +330,28 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     }
   }
 }
+
+.nav-item{
+  @media screen and (max-width:768px){
+    margin-top: -20% !important;
+    margin-left: -30% !important;
+    width: 325px !important;
+  }
+  
+  
+}
 .batik-img {
-  margin-left: -12em;
+  margin-left: -12%;
+  margin-top: 10% !important;
+  @media screen and (min-width: 1920px) {
+    margin-left: -12%;
+  margin-top: 31% !important;
+
+  }
+  @media screen and (max-width: 768px) {
+display: none;
+
+  }
 }
 .head {
   font-family: "IBM Plex Mono";
@@ -309,6 +362,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   /* identical to box height */
 
   color: #b8bdc6;
+  @media screen and (max-width:768px){
+    
+  }
 }
 .head1 {
   font-family: "Montserrat";
@@ -326,7 +382,13 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   font-weight: 600;
   line-height: 83px;
   text-align: start;
+ 
   color: black;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    margin-top: 10% !important;
+    
+  }
 }
 .shape-blue {
   width: 68px;
@@ -357,6 +419,11 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   /* or 167% */
 
   color: #000000 !important;
+  @media screen and (max-width: 768px) {
+    font-size: 13px !important;
+    
+    width: 325px !important;
+  }
 }
 .tab-pane {
   margin-top: -5em;

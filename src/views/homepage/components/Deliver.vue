@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row h-100" style="margin-top: 0">
           <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12 col-md-6 col-sm-12 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <img
               class="mx-auto pic-cto"
@@ -101,7 +101,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .section-number {
   @media (max-width: 768px) {
     margin-left: -8em;
-    margin-top:22em !important;
+    margin-top:24em !important;
   }
 }
 .open-reg-25 {

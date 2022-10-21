@@ -14,7 +14,7 @@
 
         </div>
         <div
-          class="d-flex flex-row justify-content-start align-items-start w-20"
+          class="d-flex flex-row justify-content-start align-items-start w-10"
         >
         <h2 class="hero-title">This is How We Work</h2>
         <img class="img-batik ms-auto"  src="@/assets/images/batik2.svg" />
@@ -79,9 +79,18 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     padding: 0 80px;
 
   }
+  .section-number{
+    @media (max-width: 768px) {
+      margin-left:-6em !important;
+
+    }
+  }
   .img-batik {
     float: right;
     margin-right: -12em !important; 
+    @media (max-width: 768px) {
+      margin-right: -10em !important;
+    }
   }
  
   .asset-2 {
@@ -132,11 +141,11 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       margin-top:21px;
       line-height: 57px;
       @media (max-width: 768px) {
-        margin-left: -4em;
-        font-size: 30px;
+        margin-left: -2em;
+        font-size: 24px;
         margin-top: 0.1em !important;
         line-height: 37px;
-        width: 325px;
+        width: 325px !important;
       }
     }
 

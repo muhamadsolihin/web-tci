@@ -90,12 +90,26 @@
   font-weight: 600;
   line-height: 67px;
   letter-spacing: -2.81895px;
+  @media screen and (max-width:768px){
+margin-top: 11em;
+margin-left: 1.1em;
+font-size: 24px;
+line-height: 29px;
+  }
 }
 .subhead {
   font-family: "open sans";
   font-size: 1.5em;
   font-weight: 400;
   line-height: 1.5em;
+  @media screen and (max-width:768px){
+    font-size: 13px;
+line-height: 18px;
+width:325px;
+margin-left:1.9em !important
+
+
+  }
 }
 
 .ceopict {
@@ -111,6 +125,12 @@
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
   transition-property: transform;
+  @media screen and (max-width:768px){
+    margin-left: -10em !important; 
+    margin-top: 2.5em !important;
+    width: 325px !important;
+height: 383.3px !important;
+  }
 }
 .ceopict:hover,
 .ceopict:focus,
@@ -132,6 +152,12 @@
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
   transition-property: transform;
+  @media screen and (max-width:768px){
+    margin-top:0.5em !important;
+    margin-left: 1.5em !important;
+    width: 325px !important;
+height: 210px !important;
+  }
 }
 
 .rndm:hover,

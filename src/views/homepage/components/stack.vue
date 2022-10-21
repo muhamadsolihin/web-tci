@@ -17,8 +17,8 @@
           class="d-flex flex-row justify-content-start align-items-start w-50"
         ></div>
         <div class="row">
-          <div class="col-md-6">
-            <div class="container_outer_img">
+          <div class="col-md-6 col-sm-6">
+            <div class="container_outer_img hide-on-mobile">
               <div class="img-inner">
                 <div class="row g-3">
                   <div class="col-md-2">
@@ -36,7 +36,7 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-2"
                       data-animation="slideInRight"
@@ -51,7 +51,7 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-3"
                       data-animation-delay=".6s"
@@ -66,7 +66,7 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-3"
                       data-animation-delay=".9s"
@@ -81,7 +81,7 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-2"
                       data-animation-delay=".3s"
@@ -410,7 +410,7 @@
           </div>
           <!--end::Tabs-->
           <!--begin:Tab content-->
-          <div class="col-md-6">
+          <div class="col-md-6 ">
             <div class="title">
               <h2 class="hero-title">Technology Stack</h2>
 
@@ -426,15 +426,21 @@
             <div class="row mt-3 justify-content-center">
               <div class="col-12 col-md-12">
                 <p class="sub-title">
-                  Iwan Ridwan, <br/> Chief Technolgy Officer of Teknologi Cakra Internasional
+                  Iwan Ridwan, <br />
+                  Chief Technolgy Officer of Teknologi Cakra Internasional
                 </p>
               </div>
             </div>
           </div>
+          <div class="col-md-6  ">
+            <img class="hero-mobile" src="@/assets/images/img-stack/group-mobile.png">
+          </div>
 
           <div class="overlay"></div>
         </div>
-        <!-- <div class="container-fluid mt-5 pt-5">
+
+      </div>
+
           <div class="row">
             <div
               class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
@@ -451,8 +457,7 @@
               />
             </div>
           </div>
-        </div> -->
-      </div>
+
     </div>
   </section>
 </template>
@@ -469,10 +474,22 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   .container-border {
     position: relative;
     width: 100%;
-
+    margin-top: 2%;
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+
+  .hero-mobile{
+    display: none;
+    @media screen and (max-width:768px){
+      display: block;
+      width: 325.07px !important;
+      height: 447.96px !important;
+    }
   }
   .container {
     margin-top: 2em;
@@ -485,31 +502,50 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       padding: 5px 10px;
       font-family: "IBM Plex Mono", sans-serif;
     }
+    @media screen and (max-width: 768px) {
+      border: 0;
+    }
   }
-  .hero-title {
+  .hide-on-mobile {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .hide-on-mobile .hero-title {
     font-family: "Montserrat", sans-serif;
     font-size: 55px;
     font-weight: 600;
     line-height: 67px;
     text-align: start;
     color: black;
+    @media screen and (max-width:768px){
+      width: 325px !important;
+    }
+
   }
   .batik-img {
-    justify-content: right;
-  margin-top: -16em !important;
-    margin-right: -49em;
+  margin-right: -48.7em;
+  margin-top: -35% !important;
+  @media screen and (min-width: 1920px) {
+    margin-right: -60.7em;
+  margin-top: -2% !important;
+
+  }
 }
-  .sub-title{
-    font-family: 'Open Sans';
-font-style: italic;
-font-weight: 400;
-font-size: 16px;
-line-height: 30px;
-/* or 188% */
+  .sub-title {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    /* or 188% */
 
-text-align: right;
+    text-align: right;
 
-color: #000000;
+    color: #000000;
+    @media screen and (max-width:768px){
+      font-size: 12px;
+    }
   }
   .shape-blue {
     width: 68px;
@@ -579,7 +615,13 @@ color: #000000;
   /* or 133% */
 
   color: #000000;
-}
+  @media screen and (max-width:768px){
+    
+   font-size: 13px; 
+  }
+
+  }
+
 
 p {
   line-height: 28px;
