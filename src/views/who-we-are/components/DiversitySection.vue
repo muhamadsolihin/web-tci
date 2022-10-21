@@ -12,16 +12,21 @@
 				>
 					<img
 						class="mx-auto diversity-image"
+					:class="imageHover ? 'image-hover' : 'image-unhover'"
 						src="@/assets/images/who-we-are/photo-2.png"
 						alt="photo"
+					@mouseenter="imageHover = true"
+					@mouseleave="imageHover = false"
 					/>
 				</div>
 				<div
 					class="col-12 col-md-6 col-lg-6 col-xl-6"
 				>
 					<div class="d-flex flex-column justify-content-center h-100">
-						<h2 class="mt-4 title">Diversity, Equity, Inclusion</h2>
-						<p class="open-reg-24 mt-3 text-body">
+						<h2 class="mt-4 title"
+						:class="imageHover ? 'title-smaller' : 'title-bigger'">Diversity, Equity, Inclusion</h2>
+						<p class="open-reg-24 mt-3 text-body"
+							:class="imageHover ? 'text-smaller' : 'text-bigger'">
 							We believe that our colleagues have the rights to work in a safe place where they don’t need to worry about discrimination, bullying and harassment. With that in mind, we treat our colleagues based on their abilities and skills, regardless of their gender, race, age, physical condition, marital status, family circumstances or religious beliefs. We always make sure that our colleagues feel respected for who they are, because we support and uphold human rights principles.
 						</p>
 						<SectionNumberComponent
@@ -38,7 +43,8 @@
 </template>
 
 <script setup>
-	import { defineProps } from 'vue';
+	import { defineProps, ref, onMounted } from 'vue';
+	import Hammer from 'hammerjs';
 
 	import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 	import BorderContainer from '@/components/BorderContainer.vue';
@@ -52,6 +58,23 @@
 			type: Number,
 			require: true,
 		},
+	});
+
+	const imageHover = ref(false);
+
+	const emit = defineEmits(['swipeUp', 'swipeDown']);
+
+	onMounted(() => {
+		var stage = document.getElementById('diversity');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
 	});
 </script>
 
@@ -72,7 +95,6 @@
 			.title {
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 600;
-				font-size: 3rem;
 				line-height: 57px;
 			}
 		}
@@ -98,6 +120,90 @@
 					line-height: 30px;
         }
 			}
+
+			.image-hover,
+			.image-unhover,
+			.title-smaller,
+			.title-bigger,
+			.text-smaller,
+			.text-bigger {
+				animation: 0s;
+			}
 		}
   }
+
+	.image-hover {
+		animation: popup 1s ease-out;
+		transform: scale(1.1);
+	}
+	.image-unhover {
+		animation: popdown 1s ease-out;
+		transform: scale(1);
+	}
+	@keyframes popup {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.1);
+		}
+	}
+	@keyframes popdown {
+		from {
+			transform: scale(1.1);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+
+	.title-smaller {
+		animation: smaller 1s;
+		font-size: 45px;
+	}
+	@keyframes smaller {
+		from {
+			font-size: 50px;
+		}
+		to {
+			font-size: 45px;
+		}
+	}
+	.title-bigger {
+		animation: bigger 1s;
+		font-size: 50px;
+	}
+	@keyframes bigger {
+		from {
+			font-size: 45px;
+		}
+		to {
+			font-size: 50px;
+		}
+	}
+
+	.text-smaller {
+		animation: textsmaller 1s;
+		font-size: 21px;
+	}
+	@keyframes textsmaller {
+		from {
+			font-size: 24px;
+		}
+		to {
+			font-size: 21px;
+		}
+	}
+	.text-bigger {
+		animation: textbigger 1s;
+		font-size: 24px;
+	}
+	@keyframes textbigger {
+		from {
+			font-size: 21px;
+		}
+		to {
+			font-size: 24px;
+		}
+	}
 </style>

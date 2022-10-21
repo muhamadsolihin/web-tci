@@ -1,7 +1,11 @@
 <template>
 	<section id="hero">
 		<div class="container-custom d-flex flex-column justify-content-center">
-      <BorderContainer :theme="'dark'" :sections-length="sectionsLength" :current-section="currentSection" />
+			<BorderContainer
+				:theme="'dark'"
+				:sections-length="sectionsLength"
+				:current-section="currentSection"
+			/>
 			<div class="row">
 				<div class="col-12 col-md-7 col-lg-7 col-xl-7 d-flex flex-column">
 					<SectionNumberComponent
@@ -16,7 +20,8 @@
 					<div class="d-flex flex-row justify-content-start align-items-start">
 						<div class="shape-blue"></div>
 						<p class="albert-reg-20 text-white text-description">
-							We design and build solutions by connecting ideas and technology to solve problems and get new ideas to business lifecycle
+							We design and build solutions by connecting ideas and technology
+							to solve problems and get new ideas to business lifecycle
 						</p>
 					</div>
 				</div>
@@ -31,10 +36,11 @@
 </template>
 
 <script setup>
-	import { defineProps } from 'vue';
+	import { onMounted } from 'vue';
+	import Hammer from 'hammerjs';
 
 	import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
-  import BorderContainer from "@/components/BorderContainer.vue";
+	import BorderContainer from '@/components/BorderContainer.vue';
 
 	const props = defineProps({
 		sectionsLength: {
@@ -45,6 +51,21 @@
 			type: Number,
 			require: true,
 		},
+	});
+
+	const emit = defineEmits(['swipeUp', 'swipeDown']);
+
+	onMounted(() => {
+		var stage = document.getElementById('hero');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
 	});
 </script>
 
@@ -111,9 +132,9 @@
 					font-weight: 600;
 					line-height: 48px;
 				}
-        .text-description {
-          width: 100%;
-        }
+				.text-description {
+					width: 100%;
+				}
 			}
 		}
 	}
