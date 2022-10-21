@@ -178,6 +178,15 @@
 					margin: 0 auto;
 				}
 			}
+
+			.image-hover,
+			.image-unhover,
+			.title-smaller,
+			.title-bigger,
+			.text-smaller,
+			.text-bigger {
+				animation: 0s;
+			}
 		}
 	}
 

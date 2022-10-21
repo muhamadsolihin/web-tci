@@ -17,8 +17,10 @@
 							:section-name="'Corporate Responsibility'"
 							:color="'#000000'"
 						/>
-						<h2 class="mt-3 title">Downloadable Assets</h2>
-						<p class="open-reg-24 mt-3 text-body">
+						<h2 class="mt-3 title"
+						:class="imageHover ? 'title-smaller' : 'title-bigger'">Downloadable Assets</h2>
+						<p class="open-reg-24 mt-3 text-body"
+							:class="imageHover ? 'text-smaller' : 'text-bigger'">
 							Get to know us better through our downloadable public information
 							assets such as Brochure, Company Booklet, and Videos.
 						</p>
@@ -30,9 +32,12 @@
 				>
 					<img
 						class="mx-auto"
+					:class="imageHover ? 'image-hover' : 'image-unhover'"
 						src="@/assets/images/who-we-are/photo-3.png"
 						alt="photo"
 						style="width: 85%; object-fit: contain"
+					@mouseenter="imageHover = true"
+					@mouseleave="imageHover = false"
 					/>
 				</div>
 			</div>
@@ -41,7 +46,7 @@
 </template>
 
 <script setup>
-	import { defineProps } from 'vue';
+	import { defineProps, ref } from 'vue';
 
 	import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
 	import CtaComponent from '@/components/CtaComponent.vue';
@@ -57,6 +62,8 @@
 			require: true,
 		},
 	});
+
+	const imageHover = ref(false);
 </script>
 
 <style lang="scss" scoped>
@@ -73,7 +80,6 @@
 			.title {
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 600;
-				font-size: 3rem;
 				line-height: 57px;
 			}
 		}
@@ -97,6 +103,90 @@
 					line-height: 30px;
 				}
 			}
+
+			.image-hover,
+			.image-unhover,
+			.title-smaller,
+			.title-bigger,
+			.text-smaller,
+			.text-bigger {
+				animation: 0s;
+			}
+		}
+	}
+
+	.image-hover {
+		animation: popup 1s ease-out;
+		transform: scale(1.1);
+	}
+	.image-unhover {
+		animation: popdown 1s ease-out;
+		transform: scale(1);
+	}
+	@keyframes popup {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.1);
+		}
+	}
+	@keyframes popdown {
+		from {
+			transform: scale(1.1);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+
+	.title-smaller {
+		animation: smaller 1s;
+		font-size: 30px;
+	}
+	@keyframes smaller {
+		from {
+			font-size: 35px;
+		}
+		to {
+			font-size: 30px;
+		}
+	}
+	.title-bigger {
+		animation: bigger 1s;
+		font-size: 35px;
+	}
+	@keyframes bigger {
+		from {
+			font-size: 30px;
+		}
+		to {
+			font-size: 35px;
+		}
+	}
+
+	.text-smaller {
+		animation: textsmaller 1s;
+		font-size: 21px;
+	}
+	@keyframes textsmaller {
+		from {
+			font-size: 24px;
+		}
+		to {
+			font-size: 21px;
+		}
+	}
+	.text-bigger {
+		animation: textbigger 1s;
+		font-size: 24px;
+	}
+	@keyframes textbigger {
+		from {
+			font-size: 21px;
+		}
+		to {
+			font-size: 24px;
 		}
 	}
 </style>
