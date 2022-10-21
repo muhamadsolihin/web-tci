@@ -1,132 +1,279 @@
+<template>
+  <section id="hero">
+    <div class="container-border">
+      <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
+      <div class="container">
+        <div class="d-flex flex-row align-items-center">
+          <h2 class="hero-title">Technology Stack</h2>
+          <SectionNumberComponent
+            class="ms-auto"
+            :number="'04 / 11'"
+            :section-name="'Technology Stack'"
+            :color="'#fff'"
+          />
+        </div>
 
-  <template>
-  <div class="container py-5">
-  <!-- For Demo Purpose -->
+        <!-- <div class="row gallery-image" style="margin-bottom: 0">
+            <div class="col-xl-6 gallery-image">
+              <div class="img-box text-white rounded">
+                <img
+                class="img-box"
+                  src="@/assets/images/galerry/pic1.png"
+                  style="width: 35em; height: 15em"
+                />
+                <div class="transparent-box">
+                  <div class="caption">
+                    <p>Library</p>
+                    <p class="opacity-low">Architect Design</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" style="margin-top: 30px; margin-left: -3em">
+                <div class="col-6">
+                  <img
+                    src="@/assets/images/galerry/pic2.png"
+                    style="width: 16.8em; height: 15em; float: right"
+                  />
+                </div>
+                <div class="col-6">
+                  <img
+                    src="@/assets/images/galerry/pic3.png"
+                    style="width: 16.8em; height: 15em; float: left"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-6">
+              <div class="row" style="margin-bottom: 7.5em">
+                <div class="col-6" style="margin-left: -2em">
+                  <img
+                    src="@/assets/images/galerry/pic4.png"
+                    style="width: 17em; height: 31.7em"
+                  />
+                </div>
+                <div class="col-6" style="margin-left: -1.5em">
+                  <img
+                    src="@/assets/images/galerry/pic5.png"
+                    style="width: 17em; height: 15.3em"
+                  />
+                  <img
+                    src="@/assets/images/galerry/pic6.png"
+                    style="width: 17em; height: 15.3em; margin-top: 1em"
+                  />
+                </div>
+              </div>
+              
+            </div>
+          </div> -->
 
 
 
 
-  <!-- DEMO 2-->
-  <div class="py-5">
-    <h3 class="font-weight-bold mb-0">Demo 2</h3>
-    <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <div class="row">
-      <!-- DEMO 2 Item-->
-      <div class="col-lg-6 mb-3 mb-lg-0">
-        <div class="hover hover-2 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-2.jpg" alt="">
-          <div class="hover-overlay"></div>
-          <div class="hover-2-content px-5 py-4">
-            <h3 class="hover-2-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image </span>Caption</h3>
-            <p class="hover-2-description text-uppercase mb-0">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit.</p>
+        <div class="gallery-image">
+          <div class="img-box">
+            <img
+              class="img-box"
+              src="@/assets/images/galerry/pic1.png"
+              style="width: 35em; height: 15em"
+            />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Library</p>
+                <p class="opacity-low">Architect Design</p>
+              </div>
+            </div>
+          </div>
+          <div class="img-box">
+            <img src="https://picsum.photos/350/250/?image=232" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Night Sky</p>
+                <p class="opacity-low">Cinematic</p>
+              </div>
+            </div>
+          </div>
+          <div class="img-box">
+            <img src="https://picsum.photos/350/250/?image=431" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Tea Talk</p>
+                <p class="opacity-low">Composite</p>
+              </div>
+            </div>
+          </div>
+          <div class="img-box">
+            <img src="https://picsum.photos/350/250?image=474" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Road</p>
+                <p class="opacity-low">Landscape</p>
+              </div>
+            </div>
+          </div>
+          <div class="img-box">
+            <img src="https://picsum.photos/350/250?image=344" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Sea</p>
+                <p class="opacity-low">Cityscape</p>
+              </div>
+            </div>
+          </div>
+          <div class="img-box">
+            <img src="https://picsum.photos/350/250?image=494" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Vintage</p>
+                <p class="opacity-low">Cinematic</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+</template>
+<script setup>
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+</script>
 
+<style lang="scss" scoped>
+#hero {
+  background-color: #263a5f;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding: 0 80px;
+  position: relative;
+  z-index: 1;
+  .container-border {
+    position: relative;
+    width: 100%;
+    padding: 0 80px;
+    border-left: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
+    .container {
+      height: 100vh;
+      padding: 0;
 
-</div></div>
-  </div>  
-  </template>
-  
-  <script>
-  export default {
-  
+      .hero-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 83px;
+        text-align: start;
+        color: white;
+      }
+      .section-number {
+        border: 2px solid #b8bdc6;
+        border-radius: 25px;
+        margin-right: auto;
+        padding: 5px 10px;
+        font-family: "IBM Plex Mono", sans-serif;
+        hr {
+          width: 20px;
+          border-top: 2px solid;
+        }
+      }
+      .shape-blue {
+        width: 68px;
+        height: 22px;
+        background-color: #0c4aa9;
+        margin-right: 20px;
+        margin-top: 10px;
+      }
+    }
+    .asset-2 {
+      position: absolute;
+      left: -1px;
+      top: 30%;
+    }
   }
-  </script>
-  
-  <style scoped>
-  .hover {
+  .asset-1 {
+    position: absolute;
+    bottom: -90px;
+    left: 45%;
+  }
+  .asset-3 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.head {
+  font-family: "Albert Sans";
+  font-size: 3.4em;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-left: 0;
+}
+
+
+.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image img {
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+
   overflow: hidden;
+  display: inline-block;
+  color: white;
   position: relative;
-  padding-bottom: 60%;
+  background-color: white;
 }
 
-.hover-overlay {
-  width: 100%;
-  height: 100%;
+.caption {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  transition: all 0.4s;
-}
-
-.hover img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
-}
-
-.hover-content {
-  position: relative;
-  z-index: 99;
-}
-
-
-/* DEMO 2 ============================== */
-.hover-2 .hover-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-}
-
-.hover-2-title {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  z-index: 99;
-  transition: all 0.3s;
-}
-
-.hover-2-description {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  bottom: 5px;
+  left: 20px;
   opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
   left: 0;
-  text-align: center;
-  z-index: 99;
-  transition: all 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.hover-2:hover .hover-2-title {
-  transform: translateY(-1.5rem);
+.img-box:hover img {
+  transform: scale(1.1);
 }
 
-.hover-2:hover .hover-2-description {
-  bottom: 0.5rem;
+.img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
   opacity: 1;
 }
 
-.hover-2:hover .hover-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+.img-box:hover {
+  cursor: pointer;
 }
 
-
-
-@media (min-width: 992px) {
-  .hover-4-description {
-    width: 50%;
-  }
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
 }
 
-.hover-4:hover img {
-  width: 100%;
+.opacity-low {
+  opacity: 0.5;
 }
-
-.hover-4:hover::after {
-  opacity: 1;
-  transform: none;
-}
-
-.hover-4:hover .hover-4-description {
-  opacity: 1;
-  transform: none;
-}
-
-.hover-4:hover .hover-overlay {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 </style>

@@ -122,7 +122,7 @@
 		},
 		{
 			text: 'Our Work',
-			link: '/who-we-are',
+			link: '/Our-Work',
 		},
 		{
 			text: 'Our Gallery',

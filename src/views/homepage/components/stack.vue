@@ -4,121 +4,458 @@
       <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
       <div class="container">
         <div class="d-flex flex-row align-items-center">
-          <h2 class="hero-title">Technology Stack</h2>
+          <!-- <h2 class="hero-title">Technology Stack</h2>
           <SectionNumberComponent
             class="ms-auto"
             :number="'04 / 11'"
             :section-name="'Technology Stack'"
-            :color="'#000'"
-          />
+            :color="'#fff'"
+          />-->
         </div>
+
         <div
           class="d-flex flex-row justify-content-start align-items-start w-50"
-        >
-          <div class="shape-blue"></div>
-        </div>
-        <div class="row h-100" style="margin-top: 10px">
-          <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <h4 class="title-2 text-center">
-              We use the most compatible Technology Stack to ensure it evolves
-              alongside our customer needs, making the process easier while
-              driving our product to success.
-            </h4>
-          </div>
-          <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <img
-              class="text-center mt-2"
-              src="@/assets/images/animate/stack1.png"
-              style="
-                width: 957.59px;
-                height: 84.45px;
-                float: center;
-                justify-content: center;
-                margin-left: 10%;
-              "
-            />
-          </div>
-          <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <img
-              class="text-center mt-3"
-              src="@/assets/images/animate/stack2.png"
-              style="
-                width: 948.06px;
-                height: 48.47px;
-                float: center;
-                justify-content: center;
-                margin-left: 10%;
-              "
-            />
-          </div>
-          <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <img
-              class="text-center mt-3"
-              src="@/assets/images/animate/stack3.png"
-              style="
-                width: 950.59px;
-                height: 45.1px;
-                float: center;
-                justify-content: center;
-                margin-left: 10%;
-              "
-            />
-          </div>
-          <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <img
-              class="text-center mt-3"
-              src="@/assets/images/animate/stack4.png"
-              style="
-                width: 950.59px;
-                height: 75.55px;
-                float: center;
-                justify-content: center;
-                margin-left: 10%;
-              "
-            />
-          </div>
-          <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <img
-              class="text-center mt-3"
-              src="@/assets/images/animate/stack5.png"
-              style="
-                width: 957.59px;
-                height: 50px;
-                float: center;
-                justify-content: center;
-                margin-left: 10%;
-              "
-            />
-          </div>
-        </div>
+        ></div>
         <div class="row">
-          <div
-            class="col-12 col-md-12 col-lg-12 col-xl-12 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <img
-              class="text-center batik-img mt-3"
-              src="@/assets/images/batik-1.svg"
-              style="float: left; justify-content: left; height: 195px"
-            />
+          <div class="col-md-6">
+            <div class="container_outer_img">
+              <div class="img-inner">
+                <div class="row g-3">
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      data-animation="slideInRight"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/5.png"
+                      style="
+                        width: 56px;
+                        height: 62px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      data-animation="slideInRight"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/4.png"
+                      style="
+                        width: 61px;
+                        height: 64;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      data-animation-delay=".6s"
+                      data-animation="zoomIn"
+                      src="@/assets/images/img-stack/3.png"
+                      style="
+                        width: 77px;
+                        height: 46px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      data-animation-delay=".9s"
+                      data-animation="zoomIn"
+                      src="@/assets/images/img-stack/2.png"
+                      style="
+                        width: 120px;
+                        height: 41px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      data-animation-delay=".3s"
+                      data-animation="zoomIn"
+                      src="@/assets/images/img-stack/1.png"
+                      style="
+                        width: 126.48px;
+                        height: 52.41px;
+                        float: right;
+                        justify-content: center;
+                        margin-right: -6em;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/1/5.png"
+                      style="
+                        width: 109px;
+                        height: 36px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/1/4.png"
+                      style="
+                        width: 115px;
+                        height: 30px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 1.5em !important;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/1/3.png"
+                      style="
+                        width: 44px;
+                        height: 61px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 3.5em !important;
+                        margin-top: -1em;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/1/2.png"
+                      style="
+                        width: 87px;
+                        height: 32px;
+                        float: right;
+                        justify-content: center;
+                        margin-right: -2.5em;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/1/1.png"
+                      style="
+                        width: 118px;
+                        height: 61px;
+                        float: right;
+                        justify-content: center;
+                        margin-right: -6em;
+                        margin-top: -1em;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/1/8.png"
+                      style="
+                        width: 124px;
+                        height: 70px;
+                        float: right;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-4"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/1/7.png"
+                      style="
+                        width: 164px;
+                        height: 38px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      data-animation-delay=".3s"
+                      data-animation="zoomIn"
+                      src="@/assets/images/img-stack/1/6.png"
+                      style="
+                        width: 229px;
+                        height: 52px;
+                        float: right;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/2/4.png"
+                      style="
+                        width: 123px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/2/3.png"
+                      style="
+                        width: 127px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/2/2.png"
+                      style="
+                        width: 112px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: 2em !important;
+                        margin-top: 0;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <img
+                      class="text-center slideOut sequence zoomReverseIn mt-1"
+                      data-animation-delay=".3s"
+                      data-animation="zoomReverseIn"
+                      src="@/assets/images/img-stack/2/1.png"
+                      style="
+                        width: 116px;
+
+                        float: center;
+                        justify-content: center;
+                        margin-left: 10%;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-5">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/2/7.png"
+                      style="
+                        width: 189px;
+                        height: 70px;
+                        float: left;
+                        justify-content: center;
+                        margin-left: 0;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-4"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/2/6.png"
+                      style="
+                        width: 152px;
+                        float: center;
+                        justify-content: center;
+                        margin-left: -1em;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      data-animation-delay=".3s"
+                      data-animation="zoomIn"
+                      src="@/assets/images/img-stack/2/5.png"
+                      style="
+                        width: 161px;
+                        float: right;
+                        justify-content: center;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-4">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/2/10.png"
+                      style="width: 146px; float: left; justify-content: center"
+                    />
+                  </div>
+                  <div class="col-md-5">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/2/9.png"
+                      style="
+                        width: 208px;
+                        float: center;
+                        justify-content: center;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      data-animation-delay=".3s"
+                      data-animation="zoomIn"
+                      src="@/assets/images/img-stack/2/8.png"
+                      style="
+                        width: 143px;
+                        float: right;
+                        justify-content: center;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-4">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/2/13.png"
+                      style="width: 167px; float: left; justify-content: center"
+                    />
+                  </div>
+                  <div class="col-md-5">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft"
+                      data-animation-delay=".3s"
+                      src="@/assets/images/img-stack/2/12.png"
+                      style="
+                        width: 162px;
+                        float: center;
+                        justify-content: center;
+                      "
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <img
+                      class="text-center slideOut sequence zoomInLeft"
+                      data-animation-delay=".3s"
+                      data-animation="zoomIn"
+                      src="@/assets/images/img-stack/2/11.png"
+                      style="
+                        width: 168px;
+                        float: right;
+                        justify-content: center;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-7">
+                    <SectionNumberComponent
+                      class="mx-auto"
+                      :number="'05 / 11'"
+                      :section-name="'Technology Stack'"
+                      :color="'#000'"
+                    />
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+            </div>
           </div>
+          <!--end::Tabs-->
+          <!--begin:Tab content-->
+          <div class="col-md-6">
+            <div class="title">
+              <h2 class="hero-title">Technology Stack</h2>
+
+              <div class="shape-blue"></div>
+            </div>
+            <div class="par">
+              <p>
+                We use the most compatible Technology Stack to ensure it evolves
+                alongside our customer needs, making the process easier while
+                driving our product to success.
+              </p>
+            </div>
+            <div class="row mt-3 justify-content-center">
+              <div class="col-12 col-md-12">
+                <p class="sub-title">
+                  Iwan Ridwan, <br/> Chief Technolgy Officer of Teknologi Cakra Internasional
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="overlay"></div>
         </div>
+        <!-- <div class="container-fluid mt-5 pt-5">
+          <div class="row">
+            <div
+              class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+            >
+              <img
+                class="text-center batik-img mt-3"
+                src="@/assets/images/img-stack/batik.png"
+                style="
+                  float: right;
+                  justify-content: right;
+                  height: 195px;
+                  z-index: -2;
+                "
+              />
+            </div>
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
 </template>
-
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 </script>
@@ -127,27 +464,59 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 #howwedo {
   background-color: white;
   height: 100vh;
-  margin-top: 0;
+  margin-top: -4em;
   z-index: 1;
   .container-border {
     position: relative;
     width: 100%;
+
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
-    border-right: 0px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
   }
+  .container {
+    margin-top: 2em;
+    padding: 80px;
+    .section-number {
+      border: 2px solid #b8bdc6;
+      border-radius: 25px;
+      margin-right: auto;
+      margin-top: 0;
+      padding: 5px 10px;
+      font-family: "IBM Plex Mono", sans-serif;
+    }
+  }
+  .hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 67px;
+    text-align: start;
+    color: black;
+  }
+  .batik-img {
+    justify-content: right;
+  margin-top: -16em !important;
+    margin-right: -49em;
+}
+  .sub-title{
+    font-family: 'Open Sans';
+font-style: italic;
+font-weight: 400;
+font-size: 16px;
+line-height: 30px;
+/* or 188% */
 
-  .title-2 {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    /* or 167% */
-    width: 896px;
-    text-align: center;
-    margin-left: 10%;
-    color: #000000;
+text-align: right;
+
+color: #000000;
+  }
+  .shape-blue {
+    width: 68px;
+    height: 22px;
+    background-color: #0c4aa9;
+    margin-right: 20px;
+    margin-top: 17px;
   }
   .asset-2 {
     position: absolute;
@@ -155,384 +524,157 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     top: 0;
     height: 711px;
   }
-  .container {
-    margin-top: -3.5em;
-    padding: 80px;
-    h2 {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      font-size: 3rem;
-      line-height: 57px;
-    }
-  }
+}
+.zoomIn {
+  animation-name: zoomIn;
 }
 
-.batik-img {
-  margin-left: -12em;
-  margin-top: -3em !important;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: var(--contrast-color);
 }
-.head {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  /* identical to box height */
 
-  color: #b8bdc6;
+.container_content {
+  width: 50%;
 }
-.head1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 43px;
-  /* identical to box height */
 
-  color: #000000;
+.container_content_inner {
+  width: 80%;
+  margin-left: 80px;
 }
-.hero-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 4.5rem;
-  font-weight: 600;
-  line-height: 83px;
-  text-align: start;
-  color: black;
-}
-.shape-blue {
-  width: 68px;
-  height: 22px;
-  background-color: #0c4aa9;
-  margin-right: 20px;
-  margin-top: 10px;
-}
-.head1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 43px;
-  /* identical to box height */
 
-  color: #b8bdc6;
+.container_outer_img {
+  margin-left: -3em;
+  width: 100%;
+  overflow: hidden;
 }
-.subhead1 {
+
+.container_img {
+  width: 100%;
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+[data-animation] {
+  opacity: 0;
+  animation-timing-function: var(--animation-timing-function);
+  animation-fill-mode: both;
+  animation-duration: var(--animation-duration);
+  will-change: transform, opacity;
+}
+
+.par {
+  height: auto;
+  overflow: hidden;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  margin-top: 1.8em;
-  font-size: 18px;
-  line-height: 30px;
-  /* or 167% */
+  font-size: 24px;
+  margin-top: 24px;
+  line-height: 32px;
+  /* or 133% */
 
-  color: #000000 !important;
-}
-.tab-pane {
-  margin-top: -5em;
-}
-.nav-link {
-  border: none;
+  color: #000000;
 }
 
-.btn-check:checked + .btn.btn-active-white,
-.btn-check:active + .btn.btn-active-white,
-.btn.btn-active-white:focus:not(.btn-active),
-.btn.btn-active-white:hover:not(.btn-active),
-.btn.btn-active-white:active:not(.btn-active),
-.btn.btn-active-white.active,
-.btn.btn-active-white.show,
-.show > .btn.btn-active-white {
-  color: #000;
-  border-color: 1px solid #e78448;
-  border-radius: 36px;
-  width: 25em;
-  background-color: #ffffff;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-active-white i,
-.btn-check:active + .btn.btn-active-white i,
-.btn.btn-active-white:focus:not(.btn-active) i,
-.btn.btn-active-white:hover:not(.btn-active) i,
-.btn.btn-active-white:active:not(.btn-active) i,
-.btn.btn-active-white.active i,
-.btn.btn-active-white.show i,
-.show > .btn.btn-active-white i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-white .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-white.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-white.dropdown-toggle:after,
-.btn.btn-active-white:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white.active.dropdown-toggle:after,
-.btn.btn-active-white.show.dropdown-toggle:after,
-.show > .btn.btn-active-white.dropdown-toggle:after {
-  color: #7e8299;
+p {
+  line-height: 28px;
+  transform: translateY(300px);
+  animation: slideUp 0.8s ease-in-out forwards 0.8s;
 }
 
-.btn.btn-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-  background-color: #f5f8fa;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn.btn-light i {
-  color: #7e8299;
-}
-.btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light,
-.btn-check:active + .btn.btn-light,
-.btn.btn-light:focus:not(.btn-active),
-.btn.btn-light:hover:not(.btn-active),
-.btn.btn-light:active:not(.btn-active),
-.btn.btn-light.active,
-.btn.btn-light.show,
-.show > .btn.btn-light {
-  color: #7e8299;
-  border-color: #e4e6ef;
-  background-color: #e4e6ef;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-light i,
-.btn-check:active + .btn.btn-light i,
-.btn.btn-light:focus:not(.btn-active) i,
-.btn.btn-light:hover:not(.btn-active) i,
-.btn.btn-light:active:not(.btn-active) i,
-.btn.btn-light.active i,
-.btn.btn-light.show i,
-.show > .btn.btn-light i {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn-check:active + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-light.dropdown-toggle:after,
-.btn.btn-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light.active.dropdown-toggle:after,
-.btn.btn-light.show.dropdown-toggle:after,
-.show > .btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
+.btns {
+  height: 100%;
+  position: relative;
+  width: 150px;
+  overflow: hidden;
 }
 
-.btn.btn-bg-light {
-  border-color: #f5f8fa;
-  background-color: #f5f8fa;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-active-light,
-.btn-check:active + .btn.btn-active-light,
-.btn.btn-active-light:focus:not(.btn-active),
-.btn.btn-active-light:hover:not(.btn-active),
-.btn.btn-active-light:active:not(.btn-active),
-.btn.btn-active-light.active,
-.btn.btn-active-light.show,
-.show > .btn.btn-active-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-  background-color: #f5f8fa;
-}
-.btn-check:checked + .btn.btn-active-light i,
-.btn-check:active + .btn.btn-active-light i,
-.btn.btn-active-light:focus:not(.btn-active) i,
-.btn.btn-active-light:hover:not(.btn-active) i,
-.btn.btn-active-light:active:not(.btn-active) i,
-.btn.btn-active-light.active i,
-.btn.btn-active-light.show i,
-.show > .btn.btn-active-light i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-light.dropdown-toggle:after,
-.btn.btn-active-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light.active.dropdown-toggle:after,
-.btn.btn-active-light.show.dropdown-toggle:after,
-.show > .btn.btn-active-light.dropdown-toggle:after {
-  color: #7e8299;
+.title {
+  overflow: hidden;
+  height: auto;
 }
 
-.btn.btn-primary {
-  color: #ffffff;
-  border-color: #b8bdc6;
-  background-color: #b8bdc6;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
+h1 {
+  font-size: 40px;
+  color: var(--contrast-color);
+  margin-bottom: 20px;
+  transform: translateY(100px);
+  animation: slideUp 0.8s ease forwards 0.5s;
 }
-.btn.btn-primary i {
-  color: #ffffff;
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(0.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.slideOut {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  display: inline-block;
+}
+
+.zoomInLeft {
+  animation-name: zoomInLeft;
+}
+.zoomReverseIn {
+  animation-name: zoomReverseIn;
+}
+
+/* zoomInLeft animation keyframes */
+@keyframes zoomInLeft {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes zoomReverseIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animations-disabled {
+  &,
+  [data-animation] {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 </style>
