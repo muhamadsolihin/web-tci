@@ -59,13 +59,25 @@
   </section>
 </template>
 
-<script>
-// import Gallery from "./Gallery.vue";
-// export default {
-//   components: {
-//       Gallery
-//   },
-// };
+<script setup>
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+// import Hammer from 'hammerjs';
+// import { onMounted } from 'vue';
+
+
+// const emit = defineEmits(['swipeUp', 'swipeDown']);
+// onMounted(() => {
+// 		var stage = document.getElementById('hero');
+// 		var hammertime = new Hammer.Manager(stage);
+// 		var Swipe = new Hammer.Swipe();
+// 		hammertime.add(Swipe);
+// 		hammertime.on('swipeup', function (ev) {
+// 			emit('swipeUp');
+// 		});
+// 		hammertime.on('swipedown', function (ev) {
+// 			emit('swipeDown');
+// 		});
+// 	});
 </script>
 
 <style lang="scss" scoped>
@@ -128,7 +140,7 @@ margin-left:1.9em !important
   @media screen and (max-width:768px){
     margin-left: -10em !important; 
     margin-top: 2.5em !important;
-    width: 325px !important;
+    width: 345px !important;
 height: 383.3px !important;
   }
 }

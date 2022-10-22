@@ -463,6 +463,23 @@
 </template>
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+// import Hammer from 'hammerjs';
+// import { onMounted } from 'vue';
+
+
+// const emit = defineEmits(['swipeUp', 'swipeDown']);
+// onMounted(() => {
+// 		var stage = document.getElementById('hero');
+// 		var hammertime = new Hammer.Manager(stage);
+// 		var Swipe = new Hammer.Swipe();
+// 		hammertime.add(Swipe);
+// 		hammertime.on('swipeup', function (ev) {
+// 			emit('swipeUp');
+// 		});
+// 		hammertime.on('swipedown', function (ev) {
+// 			emit('swipeDown');
+// 		});
+// 	});
 </script>
 
 <style lang="scss" scoped>
@@ -529,6 +546,10 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   @media screen and (min-width: 1920px) {
     margin-right: -60.7em;
   margin-top: -2% !important;
+
+  }
+  @media screen and (max-width: 768px) {
+   display: none;
 
   }
 }

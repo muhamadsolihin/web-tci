@@ -27,6 +27,12 @@ const router = createRouter({
                 import ('../views/our-gallery/index.vue'),
         },
         {
+            path: '/careers',
+            name: 'careers',
+            component: () =>
+                import ('../views/careers/index.vue'),
+        },
+        {
             path: '/test2',
             name: 'test2',
             component: () =>

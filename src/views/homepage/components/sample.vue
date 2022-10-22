@@ -16,10 +16,9 @@
         />
       </div>
       <div class="container d-flex flex-column justify-content-center">
-        <carousel :items-to-show="1">
-    <slide v-for="Photolist in 5" :key="Photolist">
-{{Photolist}}
-    </slide>
+        <carousel :src="image" :items-to-show="1">
+         {{Slide}}
+
 
     <template #addons>
       <navigation />
@@ -35,32 +34,14 @@
 <script>
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { Carousel, Slide,Pagination, Navigation } from 'vue3-carousel'
 
-const Photolist = ref([
-		require('@/assets/images/our-gallery/photo-1.png'),
-		require('@/assets/images/our-gallery/photo-2.png'),
-		require('@/assets/images/our-gallery/photo-3.png'),
-		require('@/assets/images/our-gallery/photo-4.png'),
-		require('@/assets/images/our-gallery/photo-5.png'),
-		require('@/assets/images/our-gallery/photo-6.png'),
-		require('@/assets/images/our-gallery/photo-7.png'),
-		require('@/assets/images/our-gallery/photo-8.png'),
-		require('@/assets/images/our-gallery/photo-9.png'),
-		require('@/assets/images/our-gallery/photo-10.png'),
-		require('@/assets/images/our-gallery/photo-11.png'),
-		require('@/assets/images/our-gallery/photo-12.png'),
-		require('@/assets/images/our-gallery/photo-13.png'),
-		require('@/assets/images/our-gallery/photo-14.png'),
-		require('@/assets/images/our-gallery/photo-15.png'),
-		require('@/assets/images/our-gallery/photo-16.png'),
-	]);
 
 export default {
   name: 'App',
   components: {
     Carousel,
-    Photolist,
+    Slide,
     Pagination,
     Navigation,
   },

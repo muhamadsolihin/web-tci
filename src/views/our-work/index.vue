@@ -18,13 +18,14 @@
 
 <script setup>
 	import { onMounted, ref } from 'vue';
+
 	import Homepage from "./components/Home.vue";
 	import Ourwork from './components/ourwork.vue';
 	import MenuComponent from '@/components/MenuComponent.vue';
 	import FooterComponent from "@/components/FooterComponent.vue";
 
 
-	const sections = ref([1, 2, 3,4]);
+	const sections = ref([1, 2, 3, 4, 5, 6, 7]);
 	const currentSection = ref(1);
 	const listening = ref(false);
 	const direction = ref('up');
@@ -59,6 +60,16 @@
 		});
 	}
 
+//   function swipeUp() {
+// 			direction.value = 'down';
+// 			go(1);
+//   }
+
+//   function swipeDown() {
+// 			direction.value = 'up';
+// 			go(-1);
+//   }
+
 	onMounted(() => {
 		window.addEventListener('mousewheel', wheel, false);
 		window.addEventListener('wheel', wheel, false);
@@ -82,54 +93,5 @@
 	section {
 		min-height: 100vh;
 		display: flex;
-	}
-	.down-enter-from {
-		opacity: 0;
-		transform: translateY(180px);
-	}
-	.down-leave-to {
-		opacity: 0;
-		transform: translateY(-180px);
-	}
-	.down-enter-to,
-	.down-leave-from {
-		opacity: 1;
-		transform: translateY(0);
-	}
-	.down-enter-active {
-		transition: all 0.8s;
-	}
-	.down-leave-active {
-		transition: all 0.2s;
-	}
-
-	.up-enter-from {
-		opacity: 0;
-		transform: translateY(-180px);
-	}
-	.up-leave-to {
-		opacity: 0;
-		transform: translateY(180px);
-	}
-	.up-enter-to,
-	.up-leave-from {
-		opacity: 1;
-		transform: translateY(0);
-	}
-	.up-enter-active {
-		transition: all 0.8s;
-	}
-	.up-leave-active {
-		transition: all 0.2s;
-	}
-
-	.two {
-		background: rgb(36, 164, 138);
-	}
-	.three {
-		background: rgb(67, 91, 175);
-	}
-	.four {
-		background: lightsalmon;
 	}
 </style>

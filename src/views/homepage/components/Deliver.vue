@@ -57,6 +57,23 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import Hammer from 'hammerjs';
+import { onMounted } from 'vue';
+
+
+const emit = defineEmits(['swipeUp', 'swipeDown']);
+onMounted(() => {
+		var stage = document.getElementById('accelerated');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -66,9 +83,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   width: 100%;
   z-index: 1;
   .container-border {
-    position: relative;
+    height: 100vh;
+    padding: 10px 80px;
     width: 100%;
-    padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
   }
