@@ -113,7 +113,7 @@ onMounted(() => {
     .container {
       height: 100vh;
       padding: 0;
-      border-left: 1px solid #b8bdc6;
+
       border-right: 1px solid #b8bdc6;
       @media (max-width: 768px) {
         border: none;

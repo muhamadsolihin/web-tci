@@ -18,14 +18,14 @@
       @swipeDown="swipeDown"
       v-else-if="currentSection == 2"
     />
-    <HowWork
+    <HowWeDo
       :sections-length="sections.length"
       :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 3"
     />
-    <HowWeDo
+    <HowWork
       :sections-length="sections.length"
       :current-section="currentSection"
       @swipeUp="swipeUp"

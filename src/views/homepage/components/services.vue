@@ -326,7 +326,7 @@ onMounted(() => {
   margin-top: -9.1% !important;
   @media screen and (min-width: 1920px) {
     margin-left: -12%;
-  margin-top: 15.1% !important;
+    margin-top: 14% !important;
 
   }
   @media screen and (max-width: 768px) {
