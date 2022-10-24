@@ -93,16 +93,16 @@ onMounted(() => {
 }
 #hero {
   height: 100vh;
-  width: 100%;
-  padding: 0 80px;
-  position: absolute;
-  z-index: -1;
+		width: 100%;
+		padding: 0 80px;
+		position: relative;
+    z-index: 1;
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
   }
   .container-border {
-    position: relative;
+    position: fixed;
     width: 100%;
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;

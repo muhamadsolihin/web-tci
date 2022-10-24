@@ -61,23 +61,23 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-// import Hammer from 'hammerjs';
-// import { onMounted } from 'vue';
+import Hammer from 'hammerjs';
+import { onMounted } from 'vue';
 
 
-// const emit = defineEmits(['swipeUp', 'swipeDown']);
-// onMounted(() => {
-// 		var stage = document.getElementById('hero');
-// 		var hammertime = new Hammer.Manager(stage);
-// 		var Swipe = new Hammer.Swipe();
-// 		hammertime.add(Swipe);
-// 		hammertime.on('swipeup', function (ev) {
-// 			emit('swipeUp');
-// 		});
-// 		hammertime.on('swipedown', function (ev) {
-// 			emit('swipeDown');
-// 		});
-// 	});
+const emit = defineEmits(['swipeUp', 'swipeDown']);
+onMounted(() => {
+		var stage = document.getElementById('journey');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
+	});
 </script>
 
 <style lang="scss" scoped>

@@ -176,7 +176,7 @@ import { onMounted } from 'vue';
 
 const emit = defineEmits(['swipeUp', 'swipeDown']);
 onMounted(() => {
-		var stage = document.getElementById('hero');
+		var stage = document.getElementById('howwedo');
 		var hammertime = new Hammer.Manager(stage);
 		var Swipe = new Hammer.Swipe();
 		hammertime.add(Swipe);
@@ -196,10 +196,9 @@ onMounted(() => {
   height: 100vh;
   width: 100%;
   padding: 0 80px;
-  position: relative;
-  z-index: -1;
+
   .container-border {
-    position: relative;
+
     width: 100%;
     padding: 0 0 0 120px;
 
@@ -240,6 +239,8 @@ onMounted(() => {
   }
     }
   }
+
+  
   .asset-1 {
     position: absolute;
     bottom: -90px;
@@ -251,6 +252,14 @@ onMounted(() => {
     bottom: 0;
 
   }
+}
+
+@media screen and (max-width: 768px) {
+		#hero {
+			padding: 0 30px;
+
+	}
+
 }
 
 .section-number{
