@@ -25,6 +25,7 @@
 							assets such as Brochure, Company Booklet, and Videos.
 						</p>
 						<CtaComponent :cta-text="'Media Gallery'" />
+						
 					</div>
 				</div>
 				<div

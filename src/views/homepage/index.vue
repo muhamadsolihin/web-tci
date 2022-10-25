@@ -74,7 +74,7 @@ import { onMounted, ref } from "vue";
 import MenuComponent from "@/components/MenuComponent.vue";
 import Hammer from "hammerjs";
 import Home from "./components/home.vue";
-import Deliver from "./components/Deliver.vue";
+import Deliver from "./components/HowWork.vue";
 import HowWeDo from "./components/howWeDo.vue";
 import HowWork from "./components/HowWork.vue";
 import Stack from "./components/stack.vue";
@@ -85,7 +85,7 @@ import Gallery from "./components/Gallery.vue";
 import Blog from "./components/blog.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
-const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,]);
+const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
 const currentSection = ref(1);
 const listening = ref(false);
 const direction = ref("up");

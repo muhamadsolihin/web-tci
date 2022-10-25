@@ -164,6 +164,12 @@
           </div>
         </div>
       </div>
+
+
+
+	
+
+
     </div>
   </section>
 </template>
@@ -350,4 +356,9 @@ img {
   margin: 5%;
   margin-top: 1%;
 }
+
+
+
+
+
 </style>

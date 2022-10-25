@@ -115,6 +115,9 @@
     width: 566px;
     height: 710px;
     margin-bottom: -8%;
+    @media screen and (max-width: 1920px) {
+      margin-bottom: -15%;
+    }
   }
   .sub-title {
     width: 546px;

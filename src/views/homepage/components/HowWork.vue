@@ -1,63 +1,74 @@
 <template>
   <section id="howwedo">
-    <div class="container-fluid" style="background-color: #263a5f; height: 43vh; margin-top: 0;">
-    <div class="container-border">
-      <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container hero-collap">
-        <div class="d-flex flex-row align-items-center">
-          <SectionNumberComponent
-            class="ml-auto"
-            :number="'04 / 11'"
-            :section-name="'What We Do'"
-            :color="'#fff'"
-          />
-
-        </div>
-        <div
-          class="d-flex flex-row justify-content-start align-items-start w-10"
-        >
-        <h2 class="hero-title">This is How We Work</h2>
-        <img class="img-batik ms-auto"  src="@/assets/images/batik2.svg" />
-        </div>
-        <div
-          class="row h-80"
-          style="margin-top: 68px; padding-bottom: 0 !important"
-        >
-          <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-           
+    <div
+      class="container-fluid"
+      style="background-color: #263a5f; height: 35vh; margin-top: 0"
+    >
+      <div class="container-border">
+        <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
+        <div class="container hero-collap">
+          <div class="d-flex flex-row align-items-center">
+            <SectionNumberComponent
+              class="ml-auto"
+              :number="'04 / 11'"
+              :section-name="'What We Do'"
+              :color="'#fff'"
+            />
           </div>
-
           <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
+            class="d-flex flex-row justify-content-start align-items-start w-10"
           >
-            <div class="d-flex flex-column justify-content-center h-100">
-              
-
-     
-            </div>
+            <h2 class="hero-title">This is How We Work</h2>
+            <img class="img-batik ms-auto" src="@/assets/images/batik2.svg" />
           </div>
-        </div>
-        <!-- <div class="container-fluid mt-5 pt-5">
-          <div class="row">
+          <div
+            class="row text-body h-80"
+            style="margin-top: 68px; padding-bottom: 0 !important"
+          >
             <div
-              class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+              class="col-12 card-1 col-md-4 col-lg-4 col-xl-4 order-2 order-md-1 order-lg-1 order-xl-1"
             >
-              <img
-                class="text-center batik-img mt-3"
-                src="@/assets/images/batik-1.svg"
-                style="
-                  float: left;
-                  justify-content: left;
-                  height: 195px;
-                  z-index: -2;
-                "
-              />
+              <p class="title">
+                Discover,<br />
+                design & build
+              </p>
+              <p class="subtitle">
+                We delivered tailored Digital and IT Solutions by listening to
+                our user needs, build prototype based on real feedback and apply
+                user feedback into scalable MVP. The way our end products are
+                built to give a great user experience.
+              </p>
+            </div>
+            <div
+              class="col-12 card-1 col-md-4 col-lg-4 col-xl-4 order-2 order-md-1 order-lg-1 order-xl-1"
+            >
+              <p class="title">
+                We grow <br />
+                your business
+              </p>
+              <p class="subtitle">
+                Our expertise work passionately in each product cycle to make
+                sure our users gain the benefit of growing their business. Our
+                solution will make it easier for them to engage with customers
+                and improve consistency.
+              </p>
+            </div>
+            <div
+              class="col-12 card-3 col-md-4 col-lg-4 col-xl-4 order-2 order-md-1 order-lg-1 order-xl-1"
+            >
+              <p class="title">
+                Dedicated for <br />
+                excellence
+              </p>
+              <p class="subtitle">
+                Our team fully assessed in terms of skills, experience, and
+                personality. Our objective is to deeply analyzed users’ needs to
+                create solution that speaks to your specific demographic and
+                meet your specified requirements.
+              </p>
             </div>
           </div>
-        </div> -->
-      </div>
+        </div>
       </div>
     </div>
   </section>
@@ -65,23 +76,22 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import Hammer from 'hammerjs';
-import { onMounted } from 'vue';
+import Hammer from "hammerjs";
+import { onMounted } from "vue";
 
-
-const emit = defineEmits(['swipeUp', 'swipeDown']);
+const emit = defineEmits(["swipeUp", "swipeDown"]);
 onMounted(() => {
-		var stage = document.getElementById('howwedo');
-		var hammertime = new Hammer.Manager(stage);
-		var Swipe = new Hammer.Swipe();
-		hammertime.add(Swipe);
-		hammertime.on('swipeup', function (ev) {
-			emit('swipeUp');
-		});
-		hammertime.on('swipedown', function (ev) {
-			emit('swipeDown');
-		});
-	});
+  var stage = document.getElementById("howwedo");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -94,22 +104,25 @@ onMounted(() => {
     position: relative;
     width: 100%;
     padding: 0 80px;
-
   }
-  .section-number{
+  .section-number {
     @media (max-width: 768px) {
-      margin-left:-6em !important;
-
+      margin-left: -6em !important;
     }
   }
   .img-batik {
     float: right;
-    margin-right: -12em !important; 
+    margin-top: -3.6em !important ;
+    margin-right: -12em !important ;
+    @media screen and (max-width: 1920px) {
+      margin-top: 2em !important;
+      margin-right: -24em !important ;
+    }
     @media (max-width: 768px) {
       margin-right: -10em !important;
     }
   }
- 
+
   .asset-2 {
     position: absolute;
     left: 5%;
@@ -126,390 +139,52 @@ onMounted(() => {
     }
   }
 }
-.batik-img {
-  margin-left: -12em;
-}
-.head {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  /* identical to box height */
 
-  color: #b8bdc6;
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  color: #fff;
+  margin-top: 21px;
+  line-height: 57px;
+  @media (max-width: 768px) {
+    margin-left: -2em;
+    font-size: 24px;
+    margin-top: 0.1em !important;
+    line-height: 37px;
+    width: 325px !important;
+  }
 }
-.head1 {
+.card-1 {
+  border-left: 1px solid #b8bdc6;
+}
+
+.card-3 {
+  border-left: 1px solid #b8bdc6;
+  border-right: 1px solid #b8bdc6;
+}
+.title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
+  margin-top: 3em !important;
   font-size: 35px;
   line-height: 43px;
-  /* identical to box height */
+  letter-spacing: -1.82px;
 
   color: #000000;
 }
-.hero-title {
-
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      font-size: 3rem;
-      color: #fff;
-      margin-top:21px;
-      line-height: 57px;
-      @media (max-width: 768px) {
-        margin-left: -2em;
-        font-size: 24px;
-        margin-top: 0.1em !important;
-        line-height: 37px;
-        width: 325px !important;
-      }
-    }
-
-.shape-blue {
-  width: 68px;
-  height: 22px;
-  background-color: #0c4aa9;
-  margin-right: 20px;
-  margin-top: 10px;
-}
-.head1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 43px;
-  /* identical to box height */
-
-  color: #b8bdc6;
-}
-.subhead1 {
+.subtitle {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  margin-top: 1.8em;
-  font-size: 18px;
-  z-index: 9;
-  height: 200px;
+  font-size: 16px;
   line-height: 30px;
-  /* or 167% */
+  /* or 188% */
 
-  color: #000000 !important;
+  color: #8d8f9a;
 }
-.tab-pane {
-  margin-top: -5em;
-  height: 180px;
-}
-.nav-link {
-  border-radius: 36px;
-  width: 25em;
-}
-li:last-child {
-  border-right: hidden !important;
-}
-.btn-check:checked + .btn.btn-active-white,
-.btn-check:active + .btn.btn-active-white,
-.btn.btn-active-white:focus:not(.btn-active),
-.btn.btn-active-white:hover:not(.btn-active),
-.btn.btn-active-white:active:not(.btn-active),
-.btn.btn-active-white.active,
-.btn.btn-active-white.show,
-.show > .btn.btn-active-white {
-  color: #000;
-  border: 1px solid #e78448 !important;
-  width: 25em;
-  background-color: #ffffff;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-active-white i,
-.btn-check:active + .btn.btn-active-white i,
-.btn.btn-active-white:focus:not(.btn-active) i,
-.btn.btn-active-white:hover:not(.btn-active) i,
-.btn.btn-active-white:active:not(.btn-active) i,
-.btn.btn-active-white.active i,
-.btn.btn-active-white.show i,
-.show > .btn.btn-active-white i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-white .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-white.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-white.dropdown-toggle:after,
-.btn.btn-active-white:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white.active.dropdown-toggle:after,
-.btn.btn-active-white.show.dropdown-toggle:after,
-.show > .btn.btn-active-white.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-
-  background-color: #f5f8fa;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn.btn-light i {
-  color: #7e8299;
-}
-.btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light,
-.btn-check:active + .btn.btn-light,
-.btn.btn-light:focus:not(.btn-active),
-.btn.btn-light:hover:not(.btn-active),
-.btn.btn-light:active:not(.btn-active),
-.btn.btn-light.active,
-.btn.btn-light.show,
-.show > .btn.btn-light {
-  color: #7e8299;
-
-  border-color: #e4e6ef;
-  background-color: #e4e6ef;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-light i,
-.btn-check:active + .btn.btn-light i,
-.btn.btn-light:focus:not(.btn-active) i,
-.btn.btn-light:hover:not(.btn-active) i,
-.btn.btn-light:active:not(.btn-active) i,
-.btn.btn-light.active i,
-.btn.btn-light.show i,
-.show > .btn.btn-light i {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn-check:active + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-light.dropdown-toggle:after,
-.btn.btn-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light.active.dropdown-toggle:after,
-.btn.btn-light.show.dropdown-toggle:after,
-.show > .btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-bg-light {
-  border-color: #f5f8fa;
-
-  background-color: #f5f8fa;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-active-light,
-.btn-check:active + .btn.btn-active-light,
-.btn.btn-active-light:focus:not(.btn-active),
-.btn.btn-active-light:hover:not(.btn-active),
-.btn.btn-active-light:active:not(.btn-active),
-.btn.btn-active-light.active,
-.btn.btn-active-light.show,
-.show > .btn.btn-active-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-
-  background-color: #f5f8fa;
-}
-.btn-check:checked + .btn.btn-active-light i,
-.btn-check:active + .btn.btn-active-light i,
-.btn.btn-active-light:focus:not(.btn-active) i,
-.btn.btn-active-light:hover:not(.btn-active) i,
-.btn.btn-active-light:active:not(.btn-active) i,
-.btn.btn-active-light.active i,
-.btn.btn-active-light.show i,
-.show > .btn.btn-active-light i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-light.dropdown-toggle:after,
-.btn.btn-active-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light.active.dropdown-toggle:after,
-.btn.btn-active-light.show.dropdown-toggle:after,
-.show > .btn.btn-active-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-primary {
-  color: #ffffff;
-  border-color: #b8bdc6;
-  border: none;
-  background-color: #b8bdc6;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn.btn-primary i {
-  color: #ffffff;
+.text-body {
+  margin-top: -13.5% !important;
 }
 </style>

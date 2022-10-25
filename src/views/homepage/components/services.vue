@@ -324,9 +324,9 @@ onMounted(() => {
 .batik-img {
   margin-left: -12%;
   margin-top: -9.1% !important;
-  @media screen and (min-width: 1920px) {
+  @media screen and (max-width: 1920px) {
     margin-left: -12%;
-    margin-top: 14% !important;
+    margin-top: 15.1% !important;
 
   }
   @media screen and (max-width: 768px) {
@@ -398,7 +398,9 @@ display: none;
 .show > .btn.btn-active-white {
   color: #7e8299;
   border-color: #ffffff;
-  background-color: #ffffff;
+  border-width: 120px;
+  border-bottom-width: 128px;
+  background-color: #fff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
   @media screen and (max-width: 768px) {
     box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);

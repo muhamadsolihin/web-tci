@@ -33,6 +33,12 @@ const router = createRouter({
                 import ('../views/careers/index.vue'),
         },
         {
+            path: '/Media-Gallery',
+            name: 'Media-Gallery',
+            component: () =>
+                import ('../views/media-gallery/index.vue'),
+        },
+        {
             path: '/test2',
             name: 'test2',
             component: () =>
