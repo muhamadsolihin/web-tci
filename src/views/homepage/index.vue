@@ -1,8 +1,5 @@
 <template>
-  <MenuComponent
-    :theme="currentSection == 1 ? 'dark' : 'light'"
-    :direction="direction"
-  />
+  <MenuComponent :theme="currentSection == 1 ? 'dark' : 'light'" :direction="direction" />
   <transition :name="direction" @after-enter="listening = true" mode="out-in">
     <Home
       :sections-length="sections.length"
@@ -32,45 +29,48 @@
       @swipeDown="swipeDown"
       v-else-if="currentSection == 4"
     />
-    <Stack
-      @swipeUp="swipeUp"
-      @swipeDown="swipeDown"
-      v-else-if="currentSection == 5"
-    />
+    <Stack @swipeUp="swipeUp" @swipeDown="swipeDown" v-else-if="currentSection == 5" />
     <Services
-    :sections-length="sections.length"
+      :sections-length="sections.length"
       :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 6"
     />
     <Product
-    :sections-length="sections.length"
+      :sections-length="sections.length"
       :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 7"
     />
     <Journey
-    :sections-length="sections.length"
+      :sections-length="sections.length"
       :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 8"
     />
     <Gallery
-    :sections-length="sections.length"
+      :sections-length="sections.length"
       :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 9"
     />
-    <Blog
-    :sections-length="sections.length"
+    <OurTeam
+      :sections-length="sections.length"
       :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 10"
+    />
+    <Blog
+      :sections-length="sections.length"
+      :current-section="currentSection"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
+      v-else-if="currentSection == 11"
     />
     <!-- <Blog v-else-if="currentSection == 10" /> -->
     <FooterComponent
@@ -79,7 +79,7 @@
       @toTop="currentSection = 1"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
-      v-else-if="currentSection == 11"
+      v-else-if="currentSection == 12"
     />
   </transition>
 </template>
@@ -87,7 +87,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import MenuComponent from "@/components/MenuComponent.vue";
-import Hammer from "hammerjs";
 import Home from "./components/home.vue";
 import Deliver from "./components/Deliver.vue";
 import HowWeDo from "./components/howWeDo.vue";
@@ -97,10 +96,11 @@ import Services from "./components/services.vue";
 import Product from "./components/Product.vue";
 import Journey from "./components/Journey.vue";
 import Gallery from "./components/Gallery.vue";
+import OurTeam from "./components/OurTeam.vue";
 import Blog from "./components/blog.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
-const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12]);
+const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 const currentSection = ref(1);
 const listening = ref(false);
 const direction = ref("up");
