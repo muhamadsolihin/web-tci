@@ -1,8 +1,8 @@
 <template>
   <section id="howwedo">
     <div
-      class="container-fluid"
-      style="background-color: #263a5f; height: 35vh; margin-top: 0"
+      class="container-fluid bg-biru"
+      
     >
       <div class="container-border">
         <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
@@ -16,7 +16,7 @@
             />
           </div>
           <div
-            class="d-flex flex-row justify-content-start align-items-start w-10"
+            class="d-flex row-title flex-row justify-content-start align-items-start w-10" 
           >
             <h2 class="hero-title">This is How We Work</h2>
             <img class="img-batik ms-auto" src="@/assets/images/batik2.svg" />
@@ -100,14 +100,21 @@ onMounted(() => {
   height: 100vh;
   margin-top: 0;
   z-index: 1;
+  @media (max-width: 768px) {
+     height: 100%;
+    }
   .container-border {
     position: relative;
     width: 100%;
     padding: 0 80px;
+    @media (max-width: 768px) {
+      padding: 0 0px;
+    }
   }
   .section-number {
     @media (max-width: 768px) {
-      margin-left: -6em !important;
+      margin-left: 0em !important;
+      margin-top: -3em;
     }
   }
   .img-batik {
@@ -140,6 +147,18 @@ onMounted(() => {
   }
 }
 
+.bg-biru{
+background-color: #263a5f; height: 35vh; margin-top: 0;
+@media screen and (max-width:768px){
+  height: 20vh;
+}
+}
+.row-title{
+  @media screen and (max-width:768px){
+  margin-top:-18em
+  }
+}
+
 .hero-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -148,11 +167,13 @@ onMounted(() => {
   margin-top: 21px;
   line-height: 57px;
   @media (max-width: 768px) {
-    margin-left: -2em;
-    font-size: 24px;
-    margin-top: 0.1em !important;
-    line-height: 37px;
+    
+    margin-left: 0 !important;
+    font-size: 2rem !important ;
+    margin-top: 9.5em !important;
+    line-height: 35px !important; 
     width: 325px !important;
+    margin-bottom: 1.5em !important;
   }
 }
 .card-1 {
@@ -171,8 +192,13 @@ onMounted(() => {
   font-size: 35px;
   line-height: 43px;
   letter-spacing: -1.82px;
-
   color: #000000;
+  @media screen and (max-width:768px){
+    font-size: 20px;
+    width: 239px;
+
+    line-height: 20px;
+  }
 }
 .subtitle {
   font-family: "Open Sans";

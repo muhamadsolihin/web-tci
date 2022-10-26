@@ -1,17 +1,18 @@
 <template>
-  <section id="hero">
+	<section id="hero">
     <div class="container-custom d-flex flex-column justify-content-center">
       <BorderContainer
         :theme="'dark'"
-        :sections-length="sectionsLength"
-        :current-section="currentSection"
+      	:sections-length="4"
+				:current-section="1"
       />
       <div class="row">
         <div class="col-12 col-md-7 col-lg-7 col-xl-7 d-flex flex-column">
           <SectionNumberComponent
             class="mt-auto"
-            :number="'01 / 07'"
-            :section-name="'About'"
+            :number="'01 / 010'"
+            :section-name="'Our Work'"
+            style="width:218px;"
             :color="'#ffffff'"
           />
           <h1 class="hero-title mt-4">
@@ -28,23 +29,22 @@
           </div>
         </div>
       </div>
-    </div>
-    <img
-      class="asset-3"
-      src="@/assets/images/who-we-are/asset-3.png"
-      alt="asset"
-    />
-  </section>
+      </div>
+		<img
+			class="asset-3"
+			src="@/assets/images/who-we-are/asset-3.png"
+			alt="asset"
+		/>
+	</section>
 </template>
 
 <script setup>
-import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import BorderContainer from "@/components/BorderContainer.vue";
-
+	import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
+	import BorderContainer from '@/components/BorderContainer.vue';
 </script>
 
 <style lang="scss" scoped>
-#hero {
+	#hero {
   background-image: url("@/assets/images/our-work/bg-ourwork.png");
   background-size: cover;
   height: 100vh;
@@ -99,23 +99,22 @@ import BorderContainer from "@/components/BorderContainer.vue";
   }
 }
 
-@media screen and (max-width: 768px) {
-  #hero {
-    background-image: url("@/assets/images/our-work/bg-mobile.png");
-    padding: 0 30px;
-    .container-custom {
-      height: 100vh;
-      padding: 0;
-      border: none;
-      .hero-title {
-        font-size: 40px;
-        font-weight: 600;
-        line-height: 48px;
-      }
-      .text-description {
-        width: 100%;
-      }
-    }
-  }
-}
+
+	@media screen and (max-width: 768px) {
+		#hero {
+			padding: 0 30px;
+			background-image: url('@/assets/images/our-work/bg-mobile.png');
+			background-size: contain;
+			.container-custom {
+				height: 100vh;
+				padding: 0;
+				border: none;
+				.hero-title {
+					font-size: 40px;
+					font-weight: 600;
+					line-height: 48px;
+				}
+			}
+		}
+	}
 </style>

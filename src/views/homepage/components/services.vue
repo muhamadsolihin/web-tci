@@ -324,6 +324,7 @@ onMounted(() => {
 .batik-img {
   margin-left: -12%;
   margin-top: -9.1% !important;
+  display: none;
   @media screen and (max-width: 1920px) {
     margin-left: -12%;
     margin-top: 15.1% !important;
