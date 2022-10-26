@@ -38,24 +38,39 @@
       v-else-if="currentSection == 5"
     />
     <Services
+    :sections-length="sections.length"
+      :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 6"
     />
     <Product
+    :sections-length="sections.length"
+      :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 7"
     />
     <Journey
+    :sections-length="sections.length"
+      :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 8"
     />
     <Gallery
+    :sections-length="sections.length"
+      :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
       v-else-if="currentSection == 9"
+    />
+    <Blog
+    :sections-length="sections.length"
+      :current-section="currentSection"
+      @swipeUp="swipeUp"
+      @swipeDown="swipeDown"
+      v-else-if="currentSection == 10"
     />
     <!-- <Blog v-else-if="currentSection == 10" /> -->
     <FooterComponent
@@ -64,7 +79,7 @@
       @toTop="currentSection = 1"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
-      v-else-if="currentSection == 10"
+      v-else-if="currentSection == 11"
     />
   </transition>
 </template>
@@ -74,7 +89,7 @@ import { onMounted, ref } from "vue";
 import MenuComponent from "@/components/MenuComponent.vue";
 import Hammer from "hammerjs";
 import Home from "./components/home.vue";
-import Deliver from "./components/HowWork.vue";
+import Deliver from "./components/Deliver.vue";
 import HowWeDo from "./components/howWeDo.vue";
 import HowWork from "./components/HowWork.vue";
 import Stack from "./components/stack.vue";
@@ -85,7 +100,7 @@ import Gallery from "./components/Gallery.vue";
 import Blog from "./components/blog.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
-const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+const sections = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12]);
 const currentSection = ref(1);
 const listening = ref(false);
 const direction = ref("up");

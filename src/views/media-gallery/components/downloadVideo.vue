@@ -3,7 +3,7 @@
     <div class="row">
                     <div class="col-12 col-md-7 col-lg-7 col-xl-7 d-flex flex-column">
                         <h1 class="hero-title mt-4 ml-5">
-                            Product Information
+                            Our Videos
                         </h1>
                     </div>
                 </div></div>

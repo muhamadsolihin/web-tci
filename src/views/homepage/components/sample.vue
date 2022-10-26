@@ -1,175 +1,190 @@
 <template>
-  <section id="footer">
-    <div class="container-custom">
-      <BorderContainer
-        :theme="'light'"
-        :sections-length="sectionsLength"
-        :current-section="currentSection"
-      />
-      <div class="row mx-1 h-100">
-        <div class="col-12 py-5 discover">
-          <h1 class="hashtag title">
-            path path into Meaningful work starts here
-          </h1>
-        </div>
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end location"
-        >
-          <p class="sub-title">
-            We know that everyone has a lot of different skills and field
-            interests. If you are a passionate person who is ready to share your
-            vision and show the world what you got, no matter where you came
-            from, we have a spot for you. Find the most suitable job here.
+  <section id="howwedo">
+		<div class="container-custom">
+			<BorderContainer
+				:theme="'light'"
+				:sections-length="sectionsLength"
+				:current-section="currentSection"
+			/>
+      <div class="row h-100">
+        <div class="col-12 section-blog col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1">
+          <div class="d-flex flex-column justify-content-center h-100">
+						<SectionNumberComponent
+							class="mt-4 me-auto d-none d-md-flex"
+							:number="'09 / 11'"
+							:section-name="'Our Blog'"
+							:color="'#000000'"
+              style="margin-left:3em"
+						/>
+          <p class="headblog">Our Blog</p>
+          <p class="subhead">
+            The success of our clients is a big part of who we are and how we
+            believe in our values. Their journey becomes our story of passion
+            and persistence.
           </p>
-          <img class="assets-3" src="@/assets/images/careers/search.svg" />
-        </div>
+        </div></div>
         <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end find-us"
+            class="col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2"
+          >
+            <div class=" justify-content-center h-100">
+              <el-carousel
+          trigger="click"
+          height="32.5em"
+          width="37em"
+          style="margin-top: 20%; margin-left: 4%"
         >
-          <img class="asset-high" src="@/assets/images/careers/high.png" />
-        </div>
+          <el-carousel-item>
+            <div class="card" style="width: 36.6em; border: none">
+              <img
+                src="@/assets/images/galerry/blog.png"
+                class="card-img-top"
+                alt="responsive"
+              />
+              <div class="card-body">
+                <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
+                <p class="card-text">
+                  Saat membicarakan soal data, apa yang pertama kali terlintas
+                  dipikiranmu?
+                </p>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item>
+            <div class="card" style="width: 36.6em; border: none">
+              <img
+                src="@/assets/images/galerry/blog.png"
+                class="card-img-top"
+                alt="responsive"
+              />
+              <div class="card-body">
+                <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
+                <p class="card-text">
+                  Saat membicarakan soal data, apa yang pertama kali terlintas
+                  dipikiranmu?
+                </p>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item>
+            <div class="card" style="width: 36.6em; border: none">
+              <img
+                src="@/assets/images/galerry/blog.png"
+                class="card-img-top"
+                alt="responsive"
+              />
+              <div class="card-body">
+                <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
+                <p class="card-text">
+                  Saat membicarakan soal data, apa yang pertama kali terlintas
+                  dipikiranmu?
+                </p>
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+            </div>
+          </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from "vue";
-
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 import BorderContainer from "@/components/BorderContainer.vue";
 
-const props = defineProps({
-  sectionsLength: {
-    type: Number,
-    require: true,
-  },
-  currentSection: {
-    type: Number,
-    require: true,
-  },
-});
 
-const emit = defineEmits(["toTop"]);
+import Hammer from "hammerjs";
+import { onMounted } from "vue";
+
+const props = defineProps({
+		sectionsLength: {
+			type: Number,
+			require: true,
+		},
+		currentSection: {
+			type: Number,
+			require: true,
+		},
+	});
+
+
+	const emit = defineEmits(['swipeUp', 'swipeDown']);
+
+	onMounted(() => {
+		var stage = document.getElementById('howwedo');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
+	});
 </script>
 
 <style lang="scss" scoped>
-#footer {
-  height: 100vh;
-  width: 100%;
-  padding: 0 140px;
-  background-image: url("@/assets/images/careers/Background.png");
-  position: relative;
-  .container-custom {
-    padding: 80px 0 0 0;
-    height: 100%;
-    width: 100%;
-    border-left: 1px solid #b8bdc6;
-    border-right: 1px solid #b8bdc6;
-    .hashtag {
-      span {
-        color: #e78448;
-      }
-    }
-    .title {
-      width: 546px;
-
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 45px;
-      line-height: 67px;
-      letter-spacing: -2.81895px;
-      text-transform: capitalize;
-
-      color: #ffffff;
-    }
-    .discover {
-      border-bottom: 1px solid #b8bdc6;
-    }
-    .location {
-      padding: 0 40px;
-      height: 50%;
-    }
-    .find-us {
-      height: 50%;
-      border-left: 1px solid #b8bdc6;
-      position: relative;
-      .to-top {
-        position: absolute;
-        bottom: 0;
-        right: -5px;
-        height: 200px;
-        width: 200px;
-        border: 1px solid #b8bdc6;
-        z-index: 1;
-      }
-    }
+#howwedo {
+	height: 100vh;
+		width: 100%;
+		padding: 0 140px;
+		background-color: white;
+		.container-custom {
+			padding: 80px 0;
+			height: 100vh;
+			border-left: 1px solid #b8bdc6;
+			border-right: 1px solid #b8bdc6;
+  
   }
 
-  .assets-3 {
-    width: 295px;
-height: 44px;
+  .headblog {
+    font-family: "montserrat";
+    font-size: 3.4em;
+    font-weight: 600;
+    line-height: 67px;
+    /* identical to box height */
+    text-align: left;
+    margin-left: 6%;
+    margin-top: 2%;
+    letter-spacing: -2.81895px;
   }
-}
-.asset-high {
-  width: 566px;
-  height: 710px;
-  margin-bottom: -8%;
-}
-.sub-title {
-  width: 546px;
+  .subhead {
+    font-family: "open sans";
+    font-weight: 400;
+    font-size: 2.1em;
+    text-align: justify;
+    
+    line-height: 50px;
+    margin-left: 6%;
+  }
+  .card-title {
+    font-family: "montserrat";
+    font-size: 1.87em;
+    font-weight: 600;
+    text-align: justify;
+    margin-left: -3%;
+  }
+  .card-text {
+    font-family: "montserrat";
+    text-align: justify;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 31px;
+    margin-left: -3%;
+    color: #b8bdc6;
+  }
 
-  /* Sub Body Text */
-  margin-top: -10%;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  /* or 133% */
-
-  color: #ffffff;
-}
-@media screen and (max-width: 768px) {
-  #footer {
-    padding: 0 30px;
-    .container-custom {
-      height: 100vh;
-      padding: 80px 0;
-      border: none;
-      .hashtag {
-        font-size: 24px;
-        line-height: 37px;
-      }
-      .title {
-        font-size: 20px;
-        line-height: 27px;
-      }
-      .discover {
-        border-bottom: none;
-      }
-      .location {
-        padding: 0;
-        height: auto;
-      }
-      .find-us {
-        padding: 0;
-        border-left: none;
-        height: auto;
-        .to-top {
-          height: 60px;
-          width: 60px;
-          img {
-            height: 30px;
-          }
-        }
-      }
-    }
-    .tci-logo {
-      height: 20%;
-      top: 30%;
-      transform: translate(0, -30%);
+  .open-reg-26 {
+    @media screen and (max-width: 768px) {
+      font-size: 20px !important;
     }
   }
+}
+
+
+.section-blog{
+  margin-top: -3em !important;
 }
 </style>
