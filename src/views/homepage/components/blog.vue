@@ -1,214 +1,158 @@
 <template>
-     <section id="Gallery" style="background-color: #fff">
-    <div class="row">
-      <div class="col-xl-6 col-md-6">
-        <p class="headblog">Our Blog</p>
-        <p class="subhead">
-          The success of our clients is a big part of who we are and how we
-          believe in our values. Their journey becomes our story of passion and
-          persistence.
-        </p>
-      </div>
-      <div class="col-xl-6 col-md-6">
-        <el-carousel
-          trigger="click"
-          height="32.5em"
-          width="37em"
-          style="margin-top: 20%; margin-left: 4%"
+  <section id="howwedo">
+    <div class="container-custom">
+      <BorderContainer
+        :theme="'light'"
+        :sections-length="sectionsLength"
+        :current-section="currentSection"
+      />
+      <div class="row h-100 blog-row">
+        <div
+          class="col-12 section-blog col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
         >
-          <el-carousel-item>
-            <div class="card" style="width: 36.6em; border: none">
-              <img
-                src="@/assets/images/galerry/blog.png"
-                class="card-img-top"
-                alt="responsive"
-              />
-              <div class="card-body">
-                <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
-                <p class="card-text">
-                  Saat membicarakan soal data, apa yang pertama kali terlintas
-                  dipikiranmu?
-                </p>
-              </div>
-            </div>
-          </el-carousel-item>
-          <el-carousel-item>
-            <div class="card" style="width: 36.6em; border: none">
-              <img
-                src="@/assets/images/galerry/blog.png"
-                class="card-img-top"
-                alt="responsive"
-              />
-              <div class="card-body">
-                <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
-                <p class="card-text">
-                  Saat membicarakan soal data, apa yang pertama kali terlintas
-                  dipikiranmu?
-                </p>
-              </div>
-            </div>
-          </el-carousel-item>
-          <el-carousel-item>
-            <div class="card" style="width: 36.6em; border: none">
-              <img
-                src="@/assets/images/galerry/blog.png"
-                class="card-img-top"
-                alt="responsive"
-              />
-              <div class="card-body">
-                <h5 class="card-title">How Data Could Impact Our Daily Life</h5>
-                <p class="card-text">
-                  Saat membicarakan soal data, apa yang pertama kali terlintas
-                  dipikiranmu?
-                </p>
-              </div>
-            </div>
-          </el-carousel-item>
-        </el-carousel>
+          <div class="d-flex flex-column justify-content-center h-100">
+            <SectionNumberComponent
+              class="mt-4 me-auto d-none d-md-flex"
+              :number="'09 / 11'"
+              :section-name="'Our Blog'"
+              :color="'#000000'"
+              style="margin-left: 3em"
+            />
+            <p class="headblog">Our Blog</p>
+            <p class="subhead">
+              The success of our clients is a big part of who we are and how we
+              believe in our values. Their journey becomes our story of passion
+              and persistence.
+            </p>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2"
+        >
+          <div class="justify-content-center h-100">
+            <el-carousel
+              trigger="click"
+              height="32.5em"
+              width="37em"
+              style="margin-top: 20%; margin-left: 4%"
+            >
+              <el-carousel-item>
+                <div class="card" style="width: 36.6em; border: none">
+                  <img
+                    src="@/assets/images/galerry/blog.png"
+                    class="card-img-top"
+                    alt="responsive"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      How Data Could Impact Our Daily Life
+                    </h5>
+                    <p class="card-text">
+                      Saat membicarakan soal data, apa yang pertama kali
+                      terlintas dipikiranmu?
+                    </p>
+                  </div>
+                </div>
+              </el-carousel-item>
+              <el-carousel-item>
+                <div class="card" style="width: 36.6em; border: none">
+                  <img
+                    src="@/assets/images/galerry/blog.png"
+                    class="card-img-top"
+                    alt="responsive"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      How Data Could Impact Our Daily Life
+                    </h5>
+                    <p class="card-text">
+                      Saat membicarakan soal data, apa yang pertama kali
+                      terlintas dipikiranmu?
+                    </p>
+                  </div>
+                </div>
+              </el-carousel-item>
+              <el-carousel-item>
+                <div class="card" style="width: 36.6em; border: none">
+                  <img
+                    src="@/assets/images/galerry/blog.png"
+                    class="card-img-top"
+                    alt="responsive"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      How Data Could Impact Our Daily Life
+                    </h5>
+                    <p class="card-text">
+                      Saat membicarakan soal data, apa yang pertama kali
+                      terlintas dipikiranmu?
+                    </p>
+                  </div>
+                </div>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
-
 </template>
 
- 
-  
-  <script>
-  // import Sample from "./sample.vue";
-  // export default {
-  //   components: {
-  //     Sample,
-  //   },
-  // };
-  </script>
-  
-  <style lang="scss" scoped>
-  #Gallery{
-    background-color: blue;
-      height: 100vh;
-      margin-top: 0;
-      z-index: 1;
+<script setup>
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import BorderContainer from "@/components/BorderContainer.vue";
+
+import Hammer from "hammerjs";
+import { onMounted } from "vue";
+
+const props = defineProps({
+  sectionsLength: {
+    type: Number,
+    require: true,
+  },
+  currentSection: {
+    type: Number,
+    require: true,
+  },
+});
+
+const emit = defineEmits(["swipeUp", "swipeDown"]);
+
+onMounted(() => {
+  var stage = document.getElementById("howwedo");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
+</script>
+
+<style lang="scss" scoped>
+#howwedo {
+  height: 100vh;
+  width: 100%;
+  padding: 0 140px;
+  background-color: white;
+  .container-custom {
+    padding: 80px 0;
+    height: 100vh;
+    border-left: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
   }
-  .hover {
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 30%;
-    padding-right: -30%;
+  .card {
+    background: #ffffff;
+    box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
+    padding: 20px;
   }
-  
-  .hover1 {
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 100%;
+  .blog-row{
+    margin-top: -3em;
   }
-  .hover-overlay {
-    width: 35em;
-    height: 15em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 90;
-    transition: all 0.4s;
-  }
-  
-  .hover-overlay1 {
-    width: 16.8em;
-    height: 15em;
-  
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 90;
-    transition: all 0.4s;
-  }
-  
-  .hover img {
-    width: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.3s;
-  }
-  .hover1 img {
-    width: 16.8em;
-    height: 15em;
-  
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.3s;
-  }
-  
-  .hover-content {
-    position: relative;
-    z-index: 99;
-  }
-  
-  .hover-2 .hover-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-  }
-  
-  .hover-2 .hover-overlay1 {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-  }
-  
-  .hover-2-title {
-    position: absolute;
-    top: 0;
-    display: none;
-    left: 0;
-    text-align: center;
-    width: 100%;
-    z-index: 99;
-    transition: all 0.3s;
-  }
-  
-  .hover-2-description {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    opacity: 0;
-    left: 0;
-    text-align: center;
-    z-index: 99;
-    transition: all 0.3s;
-  }
-  
-  .hover-2:hover .hover-2-title {
-    transform: translateY(-1.5rem);
-  }
-  
-  .hover-2:hover .hover-2-description {
-    bottom: 0.5rem;
-    opacity: 1;
-  }
-  
-  .hover-2:hover .hover-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
-  }
-  .hover-2:hover .hover-overlay1 {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
-  }
-  
-  .body {
-    margin-top: 0%;
-    @media (min-width: 992px) {
-      margin-top: 12.7em !important;
-    }
-  }
-  .head {
-    font-family: "montserrat";
-    font-size: 3.4em;
-    margin-top: 5em;
-    color: #fff;
-    text-align: left;
-    margin-left: 6%;
-    font-weight: 600;
-    @media (min-width: 992px) {
-      margin-top: 2em !important;
-    }
-  }
+
   .headblog {
     font-family: "montserrat";
     font-size: 3.4em;
@@ -217,7 +161,7 @@
     /* identical to box height */
     text-align: left;
     margin-left: 6%;
-    margin-top: 20%;
+    margin-top: 2%;
     letter-spacing: -2.81895px;
   }
   .subhead {
@@ -225,6 +169,7 @@
     font-weight: 400;
     font-size: 2.1em;
     text-align: justify;
+
     line-height: 50px;
     margin-left: 6%;
   }
@@ -244,5 +189,15 @@
     margin-left: -3%;
     color: #b8bdc6;
   }
-  </style>
-  
+
+  .open-reg-26 {
+    @media screen and (max-width: 768px) {
+      font-size: 20px !important;
+    }
+  }
+}
+
+.section-blog {
+  margin-top: -3em !important;
+}
+</style>

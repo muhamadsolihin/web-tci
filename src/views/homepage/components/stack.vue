@@ -17,15 +17,18 @@
           class="d-flex flex-row justify-content-start align-items-start w-50"
         ></div>
         <div class="row">
-          <div class="col-md-6">
-            <div class="container_outer_img">
+          <div class="col-md-6 col-sm-6">
+            <div class="container_outer_img hide-on-mobile">
               <div class="img-inner">
                 <div class="row g-3">
                   <div class="col-md-2">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      class="text-center stack-image slideOut sequence zoomInLeft mt-2"
                       data-animation="slideInRight"
+                      :class="imageHover ? 'image-hover' : 'image-unhover'"
                       data-animation-delay=".3s"
+                      @mouseenter="imageHover = true"
+                      @mouseleave="imageHover = false"
                       src="@/assets/images/img-stack/5.png"
                       style="
                         width: 56px;
@@ -36,9 +39,9 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      class="text-center stack-image slideOut sequence zoomInLeft mt-2"
                       data-animation="slideInRight"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/4.png"
@@ -51,7 +54,7 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-3"
                       data-animation-delay=".6s"
@@ -66,7 +69,7 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-3"
                       data-animation-delay=".9s"
@@ -81,7 +84,7 @@
                       "
                     />
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-2 col-sm-2">
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-2"
                       data-animation-delay=".3s"
@@ -382,6 +385,7 @@
                   <div class="col-md-3">
                     <img
                       class="text-center slideOut sequence zoomInLeft"
+                      :class="imageHover ? 'image-hover' : 'image-unhover'"
                       data-animation-delay=".3s"
                       data-animation="zoomIn"
                       src="@/assets/images/img-stack/2/11.png"
@@ -426,38 +430,60 @@
             <div class="row mt-3 justify-content-center">
               <div class="col-12 col-md-12">
                 <p class="sub-title">
-                  Iwan Ridwan, <br/> Chief Technolgy Officer of Teknologi Cakra Internasional
+                  Iwan Ridwan, <br />
+                  Chief Technolgy Officer of Teknologi Cakra Internasional
                 </p>
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <img
+              class="hero-mobile"
+              src="@/assets/images/img-stack/group-mobile.png"
+            />
+          </div>
 
           <div class="overlay"></div>
         </div>
-        <!-- <div class="container-fluid mt-5 pt-5">
-          <div class="row">
-            <div
-              class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-              <img
-                class="text-center batik-img mt-3"
-                src="@/assets/images/img-stack/batik.png"
-                style="
-                  float: right;
-                  justify-content: right;
-                  height: 195px;
-                  z-index: -2;
-                "
-              />
-            </div>
-          </div>
-        </div> -->
+      </div>
+
+      <div class="row">
+        <div
+          class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+        >
+          <img
+            class="text-center batik-img mt-3"
+            src="@/assets/images/img-stack/batik.png"
+            style="
+              float: right;
+              justify-content: right;
+              height: 195px;
+              z-index: -2;
+            "
+          />
+        </div>
       </div>
     </div>
   </section>
 </template>
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import Hammer from "hammerjs";
+import { onMounted } from "vue";
+
+const emit = defineEmits(["swipeUp", "swipeDown"]);
+onMounted(() => {
+  var stage = document.getElementById("howwedo");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -469,10 +495,46 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   .container-border {
     position: relative;
     width: 100%;
-
+    margin-top: 2%;
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+  .image-hover {
+    animation: popup 1s ease-out;
+    transform: scale(1.1);
+  }
+  .image-unhover {
+    animation: popdown 1s ease-out;
+    transform: scale(1);
+  }
+  @keyframes popup {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  @keyframes popdown {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .hero-mobile {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      width: 325.07px !important;
+      height: 447.96px !important;
+    }
   }
   .container {
     margin-top: 2em;
@@ -485,31 +547,51 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       padding: 5px 10px;
       font-family: "IBM Plex Mono", sans-serif;
     }
+    @media screen and (max-width: 768px) {
+      border: 0;
+    }
   }
-  .hero-title {
+  .hide-on-mobile {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .hide-on-mobile .hero-title {
     font-family: "Montserrat", sans-serif;
     font-size: 55px;
     font-weight: 600;
     line-height: 67px;
     text-align: start;
     color: black;
+    @media screen and (max-width: 768px) {
+      width: 325px !important;
+    }
   }
   .batik-img {
-    justify-content: right;
-  margin-top: -16em !important;
-    margin-right: -49em;
-}
-  .sub-title{
-    font-family: 'Open Sans';
-font-style: italic;
-font-weight: 400;
-font-size: 16px;
-line-height: 30px;
-/* or 188% */
+    margin-right: -48.7em;
+    margin-top: -35% !important;
+    @media screen and (max-width: 1920px) {
+      margin-right: -60.7em;
+      margin-top: -3.3% !important;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .sub-title {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    /* or 188% */
 
-text-align: right;
+    text-align: right;
 
-color: #000000;
+    color: #000000;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
   .shape-blue {
     width: 68px;
@@ -525,10 +607,11 @@ color: #000000;
     height: 711px;
   }
 }
-.zoomIn {
-  animation-name: zoomIn;
-}
 
+.sequence{
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -540,31 +623,10 @@ color: #000000;
   background-color: var(--contrast-color);
 }
 
-.container_content {
-  width: 50%;
-}
-
-.container_content_inner {
-  width: 80%;
-  margin-left: 80px;
-}
-
 .container_outer_img {
   margin-left: -3em;
   width: 100%;
   overflow: hidden;
-}
-
-.container_img {
-  width: 100%;
-  animation: slideIn 1.5s ease-in-out forwards;
-}
-[data-animation] {
-  opacity: 0;
-  animation-timing-function: var(--animation-timing-function);
-  animation-fill-mode: both;
-  animation-duration: var(--animation-duration);
-  will-change: transform, opacity;
 }
 
 .par {
@@ -579,19 +641,15 @@ color: #000000;
   /* or 133% */
 
   color: #000000;
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+  }
 }
 
 p {
   line-height: 28px;
   transform: translateY(300px);
   animation: slideUp 0.8s ease-in-out forwards 0.8s;
-}
-
-.btns {
-  height: 100%;
-  position: relative;
-  width: 150px;
-  overflow: hidden;
 }
 
 .title {
@@ -617,9 +675,29 @@ h1 {
 }
 
 .slideOut {
+
+
   animation-duration: 1s;
   animation-fill-mode: both;
   display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.slideOut:hover,
+.slideOut:focus,
+.slideOut:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .zoomInLeft {

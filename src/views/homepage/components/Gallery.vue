@@ -9,7 +9,7 @@
       <div class="d-flex flex-row align-items-center">
         <h2 class="head">Our Gallery</h2>
         <SectionNumberComponent
-          class="ms-auto"
+          class="ms-auto section-number"
           :number="'08 / 11'"
           :section-name="'Our Gallery'"
           :color="'#fff'"
@@ -19,8 +19,8 @@
         <div
           class="d-flex gallery-image flex-column align-items-start justify-content-start"
         >
-          <div class="row" style="margin-bottom: 0">
-            <div class="col-xl-6">
+          <div class="row image-gallery" style="margin-bottom: 0">
+            <div class=" col-12 col-md-6 col-lg-6 col-xl-6">
               <div class="img-box text-white rounded">
                 <img
                   class="img-box"
@@ -35,7 +35,7 @@
               </div>
 
               <div class="row g-4" style="margin-top:2px ; margin-left: 0">
-                <div class="col-xl-6 col-md-6 img-box1">
+                <div class="col-6 col-md-6 col-lg-6 col-xl-6 img-box1">
                   <img
                   class="img-box1 img "
                     src="@/assets/images/galerry/pic2.png"
@@ -47,7 +47,7 @@
                   </div>
                 </div>
                 </div>
-                <div class="col-6 img-box1">
+                <div class="col-6 col-md-6 col-lg-6 col-xl-6 img-box1">
                   <img
                   class="img-box1 img"
                     src="@/assets/images/galerry/pic3.png"
@@ -62,7 +62,7 @@
               </div>
             </div>
 
-            <div class="col-xl-6">
+            <div class="col-6 col-md-6 col-lg-6 col-xl-6">
               <div class="row gallery-image" style="margin-bottom: 7.5em">
                 <div class="col-6 img-box3 img" style="margin-left: -2em">
                   <img
@@ -76,7 +76,7 @@
                   </div>
                 </div>
                 </div>
-                <div class="col-6 " style="margin-left: -1.5em">
+                <div class="col-6 col-md-6 col-lg-6 col-xl-6 " style="margin-left: -1.5em">
                   <img
                   class="img-box4"
                     src="@/assets/images/galerry/pic5.png"
@@ -112,6 +112,23 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import Hammer from 'hammerjs';
+import { onMounted } from 'vue';
+
+
+const emit = defineEmits(['swipeUp', 'swipeDown']);
+onMounted(() => {
+		var stage = document.getElementById('hero');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -176,6 +193,11 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   }
 }
 
+.image-gallery{
+  @media screen and (max-width:768px){
+    display: none;
+  }
+}
 .head {
   font-family: "Albert Sans";
   font-size: 3.4em;
@@ -183,6 +205,17 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   font-weight: 600;
   margin-top: 3%;
   margin-left: 0;
+  @media screen and (max-width:768px){
+    margin-top: 2em !important;
+  margin-left: -1.5em !important;
+  }
+}
+.section-number{
+  @media screen and (max-width:768px){
+    margin-top: -4em !important;
+  margin-left: -18em !important;
+  }
+
 }
 
 .gallery-image {

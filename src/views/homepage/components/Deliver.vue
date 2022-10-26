@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row h-100" style="margin-top: 0">
           <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12 col-md-6 col-sm-12 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <img
               class="mx-auto pic-cto"
@@ -57,6 +57,23 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import Hammer from 'hammerjs';
+import { onMounted } from 'vue';
+
+
+const emit = defineEmits(['swipeUp', 'swipeDown']);
+onMounted(() => {
+		var stage = document.getElementById('accelerated');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -66,9 +83,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   width: 100%;
   z-index: 1;
   .container-border {
-    position: relative;
+    height: 100vh;
+    padding: 10px 80px;
     width: 100%;
-    padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
   }
@@ -101,7 +118,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 .section-number {
   @media (max-width: 768px) {
     margin-left: -8em;
-    margin-top:22em !important;
+    margin-top:24em !important;
   }
 }
 .open-reg-25 {

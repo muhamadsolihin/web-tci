@@ -9,7 +9,7 @@
       <div class="d-flex flex-row align-items-center">
         <h2 class="head">Our Product</h2>
         <SectionNumberComponent
-          class="ms-auto"
+          class="ms-auto section-number"
           :number="'06 / 11'"
           :section-name="'Our Product'"
           :color="'#fff'"
@@ -18,7 +18,7 @@
       <div class="container d-flex flex-column justify-content-center">
         <div class="d-flex flex-column align-items-start justify-content-start">
           <div class="container mt-5 pt-3">
-            <el-row>
+            <el-row class="hide-mobile">
               <el-col :span="6"
                 ><div class="grid-content card-ic">
                   <div class="card" style="border: none">
@@ -164,12 +164,35 @@
           </div>
         </div>
       </div>
+
+
+
+	
+
+
     </div>
   </section>
 </template>
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import Hammer from 'hammerjs';
+import { onMounted } from 'vue';
+
+
+const emit = defineEmits(['swipeUp', 'swipeDown']);
+onMounted(() => {
+		var stage = document.getElementById('hero');
+		var hammertime = new Hammer.Manager(stage);
+		var Swipe = new Hammer.Swipe();
+		hammertime.add(Swipe);
+		hammertime.on('swipeup', function (ev) {
+			emit('swipeUp');
+		});
+		hammertime.on('swipedown', function (ev) {
+			emit('swipeDown');
+		});
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -180,11 +203,12 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   width: 100%;
   padding: 0 80px;
   position: relative;
-  z-index: -1;
+
   .container-border {
-    position: relative;
+
     width: 100%;
     padding: 0 0 0 120px;
+
 
     .container {
       height: 100vh;
@@ -199,13 +223,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
         color: white;
       }
       .section-number {
-        border: 2px solid #b8bdc6;
-        border-radius: 25px;
-        margin-right: auto;
 
-        padding: 5px 10px;
-
-        font-family: "IBM Plex Mono", sans-serif;
         hr {
           width: 20px;
           border-top: 2px solid;
@@ -223,19 +241,44 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       position: absolute;
       left: -1px;
       top: 30%;
+      @media screen and (max-width:768px){
+    display: none;
+  }
     }
   }
+
+  
   .asset-1 {
     position: absolute;
     bottom: -90px;
     left: 45%;
+    
   }
   .asset-3 {
     position: absolute;
     bottom: 0;
+
   }
 }
 
+@media screen and (max-width: 768px) {
+		#hero {
+			padding: 0 30px;
+
+	}
+
+}
+
+.section-number{
+  @media screen and (max-width:768px){
+    margin-left: -19em !important;
+  }
+}
+.hide-mobile{
+  @media screen and (max-width:768px){
+    display: none;
+  }
+}
 .head {
   font-family: "Albert Sans";
   font-size: 3.4em;
@@ -243,6 +286,13 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   font-weight: 600;
   margin-top: 3%;
   margin-left: 0;
+  
+  @media screen and (max-width:768px){
+    margin-top: 3em;
+    margin-left: -3em;
+  }
+  
+  
 }
 .card-ic {
   width: 17em;
@@ -306,4 +356,9 @@ img {
   margin: 5%;
   margin-top: 1%;
 }
+
+
+
+
+
 </style>
