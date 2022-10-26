@@ -9,7 +9,7 @@
       <div class="d-flex flex-row align-items-center">
         <h2 class="title">Our Works</h2>
         <SectionNumberComponent
-          class="ms-auto"
+          class="ms-auto section-number"
           :number="'02 / 02'"
           :section-name="'Our Works'"
           :color="'#000000'"
@@ -19,8 +19,8 @@
         class="d-flex flex-row  align-items-start justify-content-center mt-4"
       >
         <el-row class="py-5" :gutter="20" style="margin-top: 5px;">
-          <el-col :span="6"
-            ><div class="grid-content card-ic ">
+          <div class="col-md-3">
+            <div class="grid-content card-ic ">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/our-work/bmc.png"
@@ -41,9 +41,8 @@
                 </div>
               </div>
             </div>
-          </el-col>
-          <el-col :span="6"
-            ><div class="grid-content card-ic">
+          </div>
+          <div class="col-md-3"> <div class="grid-content card-ic">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/our-work/collega.png"
@@ -62,10 +61,8 @@
                   </p>
                 </div>
               </div>
-            </div></el-col
-          >
-          <el-col :span="6"
-            ><div class="grid-content card-ic">
+            </div></div>
+            <div class="col-md-3"><div class="grid-content card-ic">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/our-work/sedekah.png"
@@ -84,10 +81,8 @@
                   </p>
                 </div>
               </div>
-            </div></el-col
-          >
-          <el-col :span="6"
-            ><div class="grid-content card-ic">
+            </div></div>
+            <div class="col-md-3"><div class="grid-content card-ic">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/makasilogo.svg"
@@ -106,8 +101,7 @@
                   </p>
                 </div>
               </div>
-            </div></el-col
-          >
+            </div></div>
         </el-row>
       </div>
     </div>
@@ -117,31 +111,15 @@
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 
-import Hammer from "hammerjs";
-import { onMounted } from "vue";
-
-const emit = defineEmits(["swipeUp", "swipeDown"]);
-onMounted(() => {
-  var stage = document.getElementById("vision");
-  var hammertime = new Hammer.Manager(stage);
-  var Swipe = new Hammer.Swipe();
-  hammertime.add(Swipe);
-  hammertime.on("swipeup", function (ev) {
-    emit("swipeUp");
-  });
-  hammertime.on("swipedown", function (ev) {
-    emit("swipeDown");
-  });
-});
 </script>
 
 <style lang="scss" scoped>
 #vision {
   background-color: #fff;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  padding: 0 80px;
+  padding: 0 69px;
   position: relative;
   z-index: 1;
   .container-border {
@@ -152,14 +130,11 @@ onMounted(() => {
     padding-right: 80px;
 
     border-left: 1px solid #b8bdc6;
-
+    @media screen and (max-width:768px){
+          border:none;
+  }
     .container {
-      .section-number {
-        border: 2px solid #b8bdc6;
-        border-radius: 25px;
-        margin-right: auto;
-        padding: 5px 10px;
-        font-family: "IBM Plex Mono", sans-serif;
+
         hr {
           width: 20px;
           border-top: 2px solid;
@@ -181,38 +156,24 @@ onMounted(() => {
     position: absolute;
     bottom: 0;
   }
-}
+
 .title {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 3rem;
   line-height: 57px;
   color: #000;
+  @media screen and (max-width:768px){
+    margin-top: 0.5em;
+    font-size: 2em;
+  }
 }
-// #vision {
-//   background-color: white !important;
-//   padding-top: 15%;
-//   height: 100vh;
-//   .container-border {
-// 			position: relative;
-// 			width: 100%;
-// 			padding: 0 80px;
-// 			border-left: 1px solid #b8bdc6;
-// 			border-right: 1px solid #b8bdc6;
-//   }
-
-//     h2 {
-//       font-family: "Montserrat", sans-serif;
-//       font-weight: 600;
-//       font-size: 3rem;
-//       line-height: 57px;
-//     }
-//     .asset-2 {
-// 				position: absolute;
-// 				left: -1px;
-// 				top: 30%;
-// 			}
-//   }
+.section-number {
+  
+        @media screen and (max-width:768px){
+          display: none !important;
+  }
+}
 
 .card-ic {
   width: 17em;
@@ -274,8 +235,14 @@ onMounted(() => {
   font-weight: 600;
   text-align: left;
   margin-top: 10%;
+ 
   margin-left: 6%;
+  @media screen and (max-width:768px){
+          text-align: center;
+          font-size: 25px;
+  }
 }
+
 
 .card-text {
   font-family: "Open Sans";
@@ -287,5 +254,10 @@ onMounted(() => {
 
   line-height: 30px;
   /* or 167% */
+  @media screen and (max-width:768px){
+          text-align: justify;
+          width: 250px;
+          margin-left: 0;
+  }
 }
 </style>

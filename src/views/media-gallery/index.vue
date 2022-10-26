@@ -1,5 +1,6 @@
 <template>
-	<MenuComponent :theme="'dark'" :direction="'down'" @goMenu="scrollToTop" />
+	<MenuComponent     :theme="currentSection == 1 ? 'dark' : 'light'"
+    :direction="direction"/>
 	<div id="our-gallery">
 		<HeroSection />
 		<!-- <ComproDownload /> -->
