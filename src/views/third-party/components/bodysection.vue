@@ -306,7 +306,7 @@
                 principles and values laid out in the International Bill of
                 Human Rights (consisting of the Universal Declaration of Human
                 Rights and its related covenants), the International Labor
-                Organization’s Declaration on Fundamental Principles and Rights
+                Organization's Declaration on Fundamental Principles and Rights
                 at Work and the United Nations Guiding Principles on Business
                 and Human Rights. TCI provides products and services that expand
                 opportunities to communicate and contribute directly to the
@@ -325,7 +325,7 @@
                 following channels to report a concern when: • Any violation or
                 attempted violation of law or of this Third-Party Code of
                 Conduct is suspected • Questions arise regarding this
-                Third-Party Code of Conduct or about TCI’s expectations from
+                Third-Party Code of Conduct or about TCI's expectations from
                 Third Parties. Violations reported will be kept confidential, to
                 the maximum extent allowable, or unless required to be disclosed
                 by law. TCI will not retaliate against anyone, who reports,
@@ -338,7 +338,7 @@
                 concerning the matter being investigated.<br /><br />
 
                 @Website<br />
-                Online Access TCI’s Code and Ethics Helpline by clicking on the
+                Online Access TCI's Code and Ethics Helpline by clicking on the
                 following link:<br />
                 <a href="">
                 Teknologi Cakra Internasional</a> <br />
@@ -378,14 +378,19 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   padding: 0 69px;
   position: relative;
   z-index: 1;
+  @media screen and (min-width: 1920px) {
+    padding: 0 87px;
+    }
   .container-border {
     position: relative;
     padding-top: 5%;
     width: 100%;
     padding-left: 80px;
     padding-right: 80px;
-
     border-left: 1px solid #b8bdc6;
+    @media screen and (min-width: 1920px) {
+      padding-left: 150px;
+    }
     @media screen and (max-width: 768px) {
       border: none;
     }
@@ -438,6 +443,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   color: #000000;
 
   width: 1174px;
+  @media screen and (min-width: 1920px) {
+    width: 1374px;
+      }
 }
 .hero-title-1 {
   font-family: "Montserrat";

@@ -86,12 +86,12 @@ import BorderContainer from "@/components/BorderContainer.vue";
   background-size: cover;
   height: 100vh;
   width: 100%;
-  padding: 0 140px;
+  padding: 0 140px 0px 140px;
   position: relative;
   .container-custom {
     height: 100vh;
     border-left: 1px solid #b8bdc6;
-    border-right: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;  
     .hero-title {
       font-family: "Montserrat";
       font-style: normal;
@@ -111,6 +111,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
       @media screen and (min-width: 1920px) {
         font-size: 80px;
         line-height: 83px;
+        width: 1133px;
       }
     }
     .hero-sub-title {
