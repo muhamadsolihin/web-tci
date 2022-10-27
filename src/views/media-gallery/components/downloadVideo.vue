@@ -14,59 +14,122 @@
     >
       <div class="carousel-inner">
         <div class="carousel-item active bg-transparent">
-          <div
-            class="cards-wrapper"
-            v-for="(filesrc, index) in filesrcs"
-            :key="index"
-          >
+          <div class="cards-wrapper">
             <div class="card bg-transparent">
-              <div class="image-wrapper">
-                <img
-                  src="@/assets/images/media-gallery/arthboardtci.png"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <a
-                  href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
-                  class="btn btn1 btn-primary"
-                
-                  >Company Profile &nbsp;
-                  <img src="@/assets/images/media-gallery/icon-download.svg"
-                /></a>
+              <div
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-transparent popup-youtube image-wrapper"
+              >
+                <img src="@/assets/images/media-gallery/bg-yt1.png" alt="..." />
               </div>
             </div>
-            <div class="card">
-              <div class="image-wrapper">
-                <img src="@/assets/images/media-gallery/compro.png" alt="..." />
-              </div>
-              <div class="card-body">
-                <a
-                  href="https://drive.google.com/file/d/1fWdoz8xKvzkaGokDGSECIC4KagVDR5jD/view?usp=sharing"
-                  class="btn btn-primary"
-                  style="float: center; margin-left: 10%"
-                  >IT Solution Profile &nbsp;<img
-                    src="@/assets/images/media-gallery/icon-download.svg"
-                  />
-                </a>
+            <div class="card bg-transparent">
+              <div
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal-1"
+                class="btn btn-transparent popup-youtube image-wrapper"
+              >
+                <img src="@/assets/images/media-gallery/bg-yt2.png" alt="..." />
               </div>
             </div>
-            <div class="card">
-              <div class="image-wrapper">
-                <img
-                  src="@/assets/images/media-gallery/minicompro.png"
-                  alt="..."
-                />
+            <div class="card bg-transparent">
+              <div
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal-2"
+                class="btn btn-transparent popup-youtube image-wrapper"
+              >
+                <img src="@/assets/images/media-gallery/bg-yt3.png" alt="..." />
               </div>
-              <div class="card-body">
-                <a
-                  href="https://drive.google.com/file/d/1gx7II_pfH_Si6Uf9KvVg6wvIqs54Pw2s/view?usp=sharing"
-                  class="btn btn-primary"
-                  style="float: center; margin-left: 30%"
-                  >Mini Company Profile &nbsp;<img
-                    src="@/assets/images/media-gallery/icon-download.svg"
-                  />
-                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body bg-transparan">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  class="embed-responsive-item yt-3"
+                  src="https://www.youtube.com/embed/k4Dq-kOEu7g"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="exampleModal-1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body bg-transparan">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  class="embed-responsive-item yt-3"
+                  src="https://www.youtube.com/embed/E3y7V9Ff8Mc"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="exampleModal-2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body bg-transparan">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  class="embed-responsive-item yt-3"
+                  src="https://www.youtube.com/embed/DhSAC7s2i5c"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -110,6 +173,7 @@ export default {
           src1: require("@/assets/images/galerry/pic1.png"),
         },
       ],
+      data: { showModal: false },
     };
   },
   methods: {
@@ -167,24 +231,17 @@ export default {
   width: 1.5rem;
   height: 1.5rem;
 }
-.btn {
-  width: 231px;
-height: 45px;
-border: none;
-border-radius: 0 !important;
-padding: 10px;
+// .btn {
+//   width: 231px;
+//   height: 45px;
+//   border: none;
+//   border-radius: 0 !important;
+//   padding: 10px;
 
-background: linear-gradient(93.03deg, #E28D41 3.11%, #E0983E 97.13%);
-box-shadow: 0px 4px 18px rgba(224, 149, 62, 0.25);
+//   background: linear-gradient(93.03deg, #e28d41 3.11%, #e0983e 97.13%);
+//   box-shadow: 0px 4px 18px rgba(224, 149, 62, 0.25);
+// }
 
-}
-.btn1{
-  margin-left: 18%;
-
-  @media screen and (min-width:1920px){
-  margin-left: 26% ;
-}
-}
 .hero-title {
   font-family: "IBM Plex Mono";
   font-style: normal;
@@ -220,5 +277,10 @@ box-shadow: 0px 4px 18px rgba(224, 149, 62, 0.25);
 .image-wrapper img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.yt-3 {
+  width: 100%;
+  height: 70vh;
 }
 </style>
