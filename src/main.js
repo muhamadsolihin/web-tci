@@ -6,16 +6,18 @@ import 'aos/dist/aos.css'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './assets/scss/style.scss'
 
+import Bootstrap from 'bootstrap'
 
 import "bootstrap"
 // Create your Vue 3 app
 const app = createApp(App)
 
 // Choice #1: register all components. Impacts global bundle size
-app.use(ElementPlus, {
+app.use(ElementPlus, Bootstrap, {
     // options
 
 })

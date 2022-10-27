@@ -1,20 +1,21 @@
 <template>
-	<MenuComponent :theme="'dark'" :direction="'down'" @goMenu="scrollToTop" />
+		<MenuComponent     :theme="currentSection == 1 ? 'dark' : 'light'"
+    :direction="direction"/>
 	<div id="our-works">
 		<HeroSection />
 		<Ourwork />
-		<FooterComponent
+		<!-- <FooterComponent
 			:sections-length="4"
 			:current-section="3"
       @toTop="scrollToTop"
-		/>
+		/> -->
 	</div>
 </template>
 
 <script setup>
 	import MenuComponent from '@/components/MenuComponent.vue';
-	import HeroSection from './components/Home.vue';
-	import Ourwork from './components/ourwork.vue';
+	import HeroSection from './components/herosection.vue';
+	import Ourwork from './components/bodysection.vue';
   import FooterComponent from "@/components/FooterComponent.vue";
 
   const scrollToTop = () => {

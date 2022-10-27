@@ -39,6 +39,12 @@ const router = createRouter({
                 import ('../views/media-gallery/index.vue'),
         },
         {
+            path: '/Third-Party',
+            name: 'Third-Party',
+            component: () =>
+                import ('../views/third-party/index.vue'),
+        },
+        {
             path: '/test2',
             name: 'test2',
             component: () =>

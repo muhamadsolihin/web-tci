@@ -13,10 +13,10 @@
           <h1 class="hero-title text-center" style="margin-left: 0">
             TCI Media Gallery
           </h1>
-		  <p class="sub-heading mt-4 ml-5">
-          Welcome to our Media Gallery. This is the place where you could see,
-          watch, and download a variety of our resources.
-        </p>
+          <p class="sub-heading mt-4 ml-5">
+            Welcome to our Media Gallery. This is the place where you could see,
+            watch, and download a variety of our resources.
+          </p>
 
           <!-- <div class="subtitle" style="padding-left:7em">Welcome to our Media Gallery. This is the place where you could see, watch,  and download a variety of our resources.</div> -->
         </div>
@@ -31,9 +31,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-12 col-md-7 col-lg-7 col-xl-7 d-flex flex-column">
-        <h1 class="heading mt-4 ml-5">Corporate Information <br/>
-		</h1>
-
+        <h1 class="heading mt-4 ml-5">Corporate Information <br /></h1>
       </div>
     </div>
   </div>
@@ -59,11 +57,12 @@
               </div>
               <div class="card-body">
                 <a
-                  @click="downloadWithAxios(filesrc.src, filesrc.title)"
-                  class="btn btn-primary"
-                  style="float: center; margin-left: 30%"
-                  >{{ index.title }} Company Profile</a
-                >
+                  href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+                  class="btn btn1 btn-primary"
+                
+                  >Company Profile &nbsp;
+                  <img src="@/assets/images/media-gallery/icon-download.svg"
+                /></a>
               </div>
             </div>
             <div class="card">
@@ -72,17 +71,16 @@
               </div>
               <div class="card-body">
                 <a
-                  href="#"
+                  href="https://drive.google.com/file/d/1fWdoz8xKvzkaGokDGSECIC4KagVDR5jD/view?usp=sharing"
                   class="btn btn-primary"
                   style="float: center; margin-left: 10%"
-                  >IT Solution Profile</a
-                >
+                  >IT Solution Profile &nbsp;<img
+                    src="@/assets/images/media-gallery/icon-download.svg"
+                  />
+                </a>
               </div>
             </div>
-            <div
-              class="card"
-              @click="downloadWithAxios(filesrc.src1, filesrc.title1)"
-            >
+            <div class="card">
               <div class="image-wrapper">
                 <img
                   src="@/assets/images/media-gallery/minicompro.png"
@@ -91,16 +89,19 @@
               </div>
               <div class="card-body">
                 <a
+                  href="https://drive.google.com/file/d/1gx7II_pfH_Si6Uf9KvVg6wvIqs54Pw2s/view?usp=sharing"
                   class="btn btn-primary"
                   style="float: center; margin-left: 30%"
-                  >{{ index.title1 }} Mino Company Profile</a
-                >
+                  >Mini Company Profile &nbsp;<img
+                    src="@/assets/images/media-gallery/icon-download.svg"
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <button
+      <!-- <button
         class="carousel-control-prev"
         type="button"
         data-bs-target="#carouselExampleControls"
@@ -117,7 +118,7 @@
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-      </button>
+      </button> -->
     </div>
   </section>
 </template>
@@ -188,6 +189,9 @@ export default {
       line-height: 83px;
       text-align: center;
       color: black;
+      @media screen and (min-width: 1920px) {
+        margin-top: -4em;
+      }
     }
   }
   .asset-3 {
@@ -214,13 +218,20 @@ export default {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  margin-top:-2em;
+  margin-top: -2em;
   line-height: 30px;
   /* or 167% */
 
   text-align: center;
 
   color: #000000;
+}
+.btn1{
+  margin-left: 18%;
+
+  @media screen and (min-width:1920px){
+  margin-left: 26% ;
+}
 }
 @media screen and (max-width: 768px) {
   #hero {
@@ -271,8 +282,14 @@ export default {
   height: 1.5rem;
 }
 .btn {
-  background-color: #e28d41;
+  width: 231px;
+  height: 45px;
   border: none;
+  border-radius: 0;
+  padding: 10px;
+
+  background: linear-gradient(93.03deg, #e28d41 3.11%, #e0983e 97.13%);
+  box-shadow: 0px 4px 18px rgba(224, 149, 62, 0.25);
 }
 @media screen and (min-width: 577px) {
   .cards-wrapper {
