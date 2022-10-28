@@ -13,32 +13,158 @@
           :number="'06 / 11'"
           :section-name="'Our Product'"
           :color="'#fff'"
+          style="margin-top: 4em; margin-right: 3em"
         />
       </div>
-
-
-      <div class="carousel-slider" id="responsive">
-    <div class="carousel-content" data-pagination="true">
-        <aside class="slide-item">slide 1</aside>
-        <aside class="slide-item">slide 2</aside>
-        <aside class="slide-item">slide 3</aside>
-        <aside class="slide-item">slide 4</aside>
-        <aside class="slide-item">slide 5</aside>
-        <aside class="slide-item">slide 6</aside>
-        <aside class="slide-item">slide 7</aside>
-        <aside class="slide-item">slide 8</aside>
-        <aside class="slide-item">slide 9</aside>
-        <aside class="slide-item">slide 10</aside>
-        <aside class="slide-item">slide 11</aside>
-        <aside class="slide-item">slide 12</aside>
-    </div>
-    <button class="carousel-prev-btn">&larr;</button>
-    <button class="carousel-next-btn">&rarr;</button>
-    <div class="carousel-pagination"></div>
-</div>
-
-
-
+      <div class="container d-flex flex-column justify-content-center">
+        <div class="d-flex flex-column align-items-start justify-content-start">
+          <div class="container mt-5 pt-3">
+            <el-row class="hide-mobile">
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/iclogo.svg"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">InterconnectDATA</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contact">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/rbilogo.png"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Reliable Bussiness Service</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contactrbi">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/artlogo.svg"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Arthology Branding Consultant</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contactrbi">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content card-ic">
+                  <div class="card" style="border: none">
+                    <img
+                      src="@/assets/images/makasilogo.svg"
+                      class="card-img-top ic-image"
+                      alt="responsive"
+                    />
+                    <hr
+                      class="center"
+                      style="width: 13.5em; margin: auto; margin-top: 4.5em"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Makasi</h5>
+                      <p class="card-text">2021</p>
+                    </div>
+                    <ul
+                      class="list-group list-group-flush"
+                      style="border: none"
+                    >
+                      <li class="list-group-item contact">Contact :</li>
+                    </ul>
+                    <div class="card-body" style="border: none">
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/fb.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/ig.svg" />
+                      </a>
+                      <a href="#" class="btn-touch">
+                        <img src="@/assets/images/twit.svg" />
+                      </a>
+                    </div>
+                  </div></div
+              ></el-col>
+            </el-row>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -61,205 +187,6 @@ onMounted(() => {
     emit("swipeDown");
   });
 });
-
-
-let carousel = (el, parameter) => {
-    el = el !==undefined ? el : "";
-    parameter = parameter !== undefined ? parameter : {};
-    let method = {
-        transition: parameter.transition !== undefined ? parameter.transition : null,
-        responsive: parameter.grid !== undefined ? parameter.grid : null,
-        pagination: parameter.pagination !== undefined ? parameter.pagination : false,
-        autoplay: parameter.autoplay !== undefined ? parameter.autoplay : null,
-        playTimer: parameter.autoplay !== undefined && parameter.autoplay.playTimer !== undefined
-            ? parameter.autoplay.playTimer
-            : 2000,
-    },trigger = document.querySelectorAll(".carousel-slider"+el);
-    Array.prototype.forEach.call(trigger, function (el) {
-        
-    let content = el.querySelector (".carousel-content"),
-        count = content.childElementCount,
-        responsive = method.responsive || JSON.parse (content.getAttribute ("data-grid")),
-        widths,
-        d_widths = el.offsetWidth,
-        c_widths = d_widths * count,
-        autoplay = method.autoplay || el.getAttribute ("data-autoplay"),
-        autoplay_timer = method.playTimer || el.getAttribute ("data-timer"),
-        is_pagination = method.pagination || content.getAttribute ("data-pagination"),
-        config = {
-            "lg": 1024,
-            "md": 768,
-            "sm": 667
-        },
-        step,
-        pagination_content = el.querySelector (".carousel-pagination");
-
-    content.firstElementChild.classList.add ("active");
-    content.style.transitionDuration = method.transition || "500ms";
-    this.autoplayEffect = null;
-
-    let index_settings = () => {//tabindexleri slide itemlerine aktarıyoruz
-        let slides = content.querySelectorAll (".slide-item");
-        for (i in slides) {
-            slides[ i ].tabIndex = i;
-        }
-    }, size = (widths) => {
-        let item_resize = el.querySelectorAll (".slide-item");
-        Array.prototype.forEach.call (item_resize, (item_size) => {
-            item_size.style.width = widths + "px";
-        });
-    }, responsive_grid = () => {
-        if (responsive) {
-            if (window.innerWidth >= config.lg) {
-                if (responsive.xl !== undefined) {
-                    gridCount = responsive.xl;
-                    widths = Number (d_widths) / Number (gridCount);
-                }
-            } else if (window.innerWidth >= config.md) {
-                if (responsive.lg !== undefined) {
-                    gridCount = responsive.lg;
-                    widths = Number (d_widths) / Number (gridCount);
-                    console.log (d_widths, gridCount, responsive)
-                }
-            } else if (window.innerWidth >= config.sm) {
-                if (responsive.md !== undefined) {
-                    gridCount = responsive.md;
-                    widths = Number (d_widths) / Number (gridCount);
-                }
-            } else if (window.innerWidth < config.sm) {
-                if (responsive.sm !== undefined) {
-                    gridCount = responsive.sm;
-                    widths = Number (d_widths) / Number (gridCount);
-                }
-            }
-        } else {
-            widths = d_widths;
-        }
-        size (widths);
-        c_widths = widths * content.lastElementChild.tabIndex;
-        content.style.minWidth = c_widths;
-        return widths;
-    };
-
-    let autoplay_ = () => {
-        if (autoplay) {
-            let i = 0;
-            let last_i = content.lastElementChild.tabIndex;
-            this.autoplayEffect = setInterval (() => {
-                if (last_i > i) {
-                    content.style.transform = "translate3d(-" + d_widths * i + "px,0px,0px)";
-                    content.children.item (i + 1).classList.add ("active");
-                    content.children.item (i).classList.remove ("active");
-                } else {
-                    content.lastElementChild.classList.remove ("active");
-                    content.firstElementChild.classList.add ("active");
-                    content.style.transform = "translate3d(" + 0 + "px,0px,0px)";
-
-                    i = 0;
-                }
-                i++;
-            }, Number (autoplay_timer));
-        }
-    }, pagination = () => {
-        if (is_pagination) {
-            let pagination_item = el.querySelector (".carousel-pagination");
-            for (let i = 0; i < count; i++) {
-                let p_item = document.createElement ("a");
-                p_item.href = "#!";
-                p_item.classList.add ("item");
-                p_item.tabIndex = i;
-                pagination_item.appendChild (p_item);
-            }
-        }
-    }, slider_next = (el) => {
-        let content = el.querySelector (".carousel-content");
-        let last_i = content.lastElementChild.tabIndex;
-        let i = content.querySelector (".slide-item.active").tabIndex + 1;
-        step = d_widths / responsive_grid ();
-        widths = d_widths / step;
-        if (step > 1) {
-            last_i = last_i - step + 1;
-        }
-        if (i <= last_i) {
-            content.children.item (i).classList.add ("active");
-            content.children.item (i - 1).classList.remove ("active");
-            let ml_ = widths * i;
-            content.style.transform = "translate3d(-" + ml_ + "px,0px,0px)";
-            i++;
-        } else {
-            i = 1;
-            content.lastElementChild.classList.remove ("active");
-            content.firstElementChild.classList.add ("active");
-            content.style.transform = "translate3d(" + 0 + "px,0px,0px)";
-        }
-    }, slider_prev = () => {
-        let content = el.querySelector (".carousel-content");
-        let last_i = content.lastElementChild.tabIndex;
-        let i = content.querySelector (".slide-item.active").tabIndex;
-        step = d_widths / responsive_grid ();
-        widths = d_widths / step;
-        if (i >= 1) {
-            content.children.item (i - 1).classList.add ("active");
-            content.children.item (i).classList.remove ("active");
-            i--;
-            let ml_ = widths * i;
-            content.style.transform = "translate3d(-" + ml_ + "px,0px,0px)";
-        } else {
-            i = last_i;
-            content.lastElementChild.classList.add ("active");
-            content.firstElementChild.classList.remove ("active");
-            if (step > 1) {
-                last_i = last_i - step + 1;
-            }
-            let ml_ = widths * ( last_i - 1 );
-            content.style.transform = "translate3d(-" + ml_ + "px,0px,0px)";
-            i--;
-        }
-
-    }, slider_direction = (el) => {
-        let prev = el.querySelector (".carousel-prev-btn");
-        let next = el.querySelector (".carousel-next-btn");
-        if (el.contains (prev) && el.contains (next)) {
-            prev.addEventListener ("click", () => {
-                window.clearInterval (this.autoplayEffect);
-                slider_prev (el);
-            }, false);
-
-            next.addEventListener ("click", () => {
-                window.clearInterval (this.autoplayEffect);
-                slider_next (el);
-            }, false);
-        }
-        if (el.contains (pagination_content)) {
-            pagination ();
-            let paginate = pagination_content.querySelectorAll (".item");
-            Array.prototype.forEach.call (paginate, (el) => {
-                el.addEventListener ("click", () => {
-                    window.clearInterval (this.autoplayEffect);
-                    let last_i = el.parentNode.lastChild.tabIndex,
-                        i = el.tabIndex;
-                    let ml_ = widths * i;
-                    content.style.transform = "translate3d(-" + ml_ + "px,0px,0px)";
-                }, false);
-            });
-        }
-    };
-    window.addEventListener ("resize", () => {
-        d_widths = el.offsetWidth;
-        console.log ("ekran değişti", d_widths);
-        responsive_grid ();
-    }, true);
-    responsive_grid ();
-    slider_direction (el);
-    autoplay_ ();
-    index_settings ();
-
-    });
-
-    return this;
-};
-
-carousel();
 </script>
 
 <style lang="scss" scoped>
@@ -274,6 +201,7 @@ carousel();
   .container-border {
     width: 100%;
     padding: 0 0 0 120px;
+    height: 100vh;
 
     .container {
       height: 100vh;
@@ -310,113 +238,17 @@ carousel();
       }
     }
   }
-}
-  .carousel-slider * {
-    touch-action: manipulation;
-}
 
-.carousel-slider {
-    position: relative;
-    background: #fff;
-    width: 100%;
-    height: auto;
-    border: 1px solid #e2e2e2;
-    padding: 0;
-    overflow: hidden;
-}
-
-.carousel-slider > .carousel-content {
-    position: relative;
-    -webkit-display: inline-flex;
-    -moz-display: inline-flex;
-    -ms-display: inline-flex;
-    -o-display: inline-flex;
-    display: inline-flex;
-    user-select: none;
-}
-
-.carousel-slider > .carousel-content > .slide-item {
-    background: white;
-  height: 200px; padding-top: 100px;
-}
-
-.carousel-slider .carousel-next-btn,
-.carousel-slider .carousel-prev-btn {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 14px 8px 14px;
-    outline: none;
-    border: none;
-    transition: all 0.25s ease-in-out;
-    text-align: center;
-    opacity: 0;
+  .asset-1 {
     position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
-    -ms-transform: translate(0%, -50%);
-    min-height: 40px;
-    min-width: 40px;
-}
-
-.carousel-slider .carousel-next-btn:hover,
-.carousel-slider .carousel-prev-btn:hover {
-    background-color: black;
-    cursor: pointer;
-}
-
-.carousel-slider .carousel-next-btn {
+    bottom: -90px;
+    left: 45%;
+  }
+  .asset-3 {
     position: absolute;
-    right: 0;
-}
-
-.carousel-slider .carousel-prev-btn {
-    position: absolute;
-    left: 0;
-}
-
-.carousel-slider .carousel-pagination {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
     bottom: 0;
-    position: absolute;
-    opacity: 0;
-    left: 0;
+  }
 }
-
-.carousel-slider .carousel-pagination.stick .item {
-    border-radius: 17px;
-    min-width: 30px;
-    min-height: 5px !important;
-    cursor: pointer;
-    position: relative;
-    top: -10px;
-}
-
-.carousel-slider .carousel-pagination .item {
-    background: rgba(0, 0, 0, 0.7);
-    transition: all 0.25s ease-in-out;
-    color: white;
-    min-height: 10px;
-    min-width: 10px;
-    border-radius: 50%;
-    margin: 5px;
-}
-
-.carousel-slider .carousel-pagination .item:hover {
-    background-color: black;
-}
-
-.carousel-slider:hover .carousel-next-btn,
-.carousel-slider:hover .carousel-prev-btn,
-.carousel-slider:hover .carousel-pagination {
-    opacity: 1;
-}
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
   #hero {
@@ -426,24 +258,40 @@ carousel();
 
 .section-number {
   @media screen and (max-width: 768px) {
+    margin-top: -2em !important;
     margin-left: -19em !important;
   }
 }
-.hide-mobile {
-  @media screen and (max-width: 768px) {
-    display: none;
+
+// @media screen and (max-width:768px){
+//   display: none;
+// }
+@media screen and (max-width: 768px) {
+  #hero {
+    padding: 0 30px;
+
+    .container {
+      overflow-x: scroll;
+      width: 460px;
+      margin-left: -7.8em;
+      height: 589px !important;
+      .hide-mobile {
+        width: 1200px;
+      }
+    }
   }
 }
+
 .head {
   font-family: "Albert Sans";
   font-size: 3.4em;
   color: #fff;
   font-weight: 600;
-  margin-top: 3%;
+  margin-top: 6%;
   margin-left: 0;
 
   @media screen and (max-width: 768px) {
-    margin-top: 3em;
+    margin-top: 2em;
     margin-left: -2em;
   }
 }
@@ -455,6 +303,9 @@ carousel();
   border-radius: 4px;
   @media (min-width: 992px) {
     margin-top: 0;
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 50%;
   }
 }
 

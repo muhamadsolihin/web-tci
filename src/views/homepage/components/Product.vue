@@ -13,6 +13,7 @@
           :number="'06 / 11'"
           :section-name="'Our Product'"
           :color="'#fff'"
+          style="margin-top: 4em; margin-right: 3em"
         />
       </div>
       <div class="container d-flex flex-column justify-content-center">
@@ -164,35 +165,28 @@
           </div>
         </div>
       </div>
-
-
-
-	
-
-
     </div>
   </section>
 </template>
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import Hammer from 'hammerjs';
-import { onMounted } from 'vue';
+import Hammer from "hammerjs";
+import { onMounted } from "vue";
 
-
-const emit = defineEmits(['swipeUp', 'swipeDown']);
+const emit = defineEmits(["swipeUp", "swipeDown"]);
 onMounted(() => {
-		var stage = document.getElementById('hero');
-		var hammertime = new Hammer.Manager(stage);
-		var Swipe = new Hammer.Swipe();
-		hammertime.add(Swipe);
-		hammertime.on('swipeup', function (ev) {
-			emit('swipeUp');
-		});
-		hammertime.on('swipedown', function (ev) {
-			emit('swipeDown');
-		});
-	});
+  var stage = document.getElementById("hero");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -205,10 +199,9 @@ onMounted(() => {
   position: relative;
 
   .container-border {
-
     width: 100%;
     padding: 0 0 0 120px;
-
+    height: 100vh;
 
     .container {
       height: 100vh;
@@ -223,7 +216,6 @@ onMounted(() => {
         color: white;
       }
       .section-number {
-
         hr {
           width: 20px;
           border-top: 2px solid;
@@ -241,58 +233,67 @@ onMounted(() => {
       position: absolute;
       left: -1px;
       top: 30%;
-      @media screen and (max-width:768px){
-    display: none;
-  }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
-  
   .asset-1 {
     position: absolute;
     bottom: -90px;
     left: 45%;
-    
   }
   .asset-3 {
     position: absolute;
     bottom: 0;
-
   }
 }
 
 @media screen and (max-width: 768px) {
-		#hero {
-			padding: 0 30px;
-
-	}
-
+  #hero {
+    padding: 0 30px;
+  }
 }
 
-.section-number{
-  @media screen and (max-width:768px){
+.section-number {
+  @media screen and (max-width: 768px) {
+    margin-top: -2em !important;
     margin-left: -19em !important;
   }
 }
-.hide-mobile{
-  @media screen and (max-width:768px){
-    display: none;
+
+// @media screen and (max-width:768px){
+//   display: none;
+// }
+@media screen and (max-width: 768px) {
+  #hero {
+    padding: 0 30px;
+
+    .container {
+      overflow-x: scroll;
+      width: 460px;
+      margin-left: -7.8em;
+      height: 589px !important;
+      .hide-mobile {
+        width: 1200px;
+      }
+    }
   }
 }
+
 .head {
   font-family: "Albert Sans";
   font-size: 3.4em;
   color: #fff;
   font-weight: 600;
-  margin-top: 3%;
+  margin-top: 6%;
   margin-left: 0;
-  
-  @media screen and (max-width:768px){
-    margin-top: 3em;
-    margin-left: -3em;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 2em;
+    margin-left: -2em;
   }
-  
-  
 }
 .card-ic {
   width: 17em;
@@ -302,6 +303,9 @@ onMounted(() => {
   border-radius: 4px;
   @media (min-width: 992px) {
     margin-top: 0;
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 50%;
   }
 }
 
@@ -356,9 +360,4 @@ img {
   margin: 5%;
   margin-top: 1%;
 }
-
-
-
-
-
 </style>

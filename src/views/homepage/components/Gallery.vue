@@ -104,6 +104,61 @@
               
             </div>
           </div>
+
+          <div class="row  hide-desktop">
+            <div class="col-12  col-sm-12">
+              <img class="img-1 " src="@/assets/images/galerry/hero-image.png" />
+              <!-- <div class="transparent-box" style="margin-left:0 !important">
+                  <div class="caption">
+                    <p>Employee of The Month</p>
+                  </div>
+                </div> -->
+            </div>
+            <div class="row py-3">
+              <div class="col-sm-6 col-6 col-md-6">
+                <img
+                  class="img-2"
+                  style="width: 155px; height: 135px"
+                  src="@/assets/images/galerry/hero-1.png"
+                />
+              </div>
+              <div class="col-sm-6 col-6 col-md-6">
+                <img
+                  class="img-2"
+                  style="width: 155px; height: 135px"
+                  src="@/assets/images/galerry/hero-2.png"
+                />
+              </div>
+            </div>
+            <div
+              class="container-custom d-flex flex-column justify-content-center"
+            >
+              <div class="row">
+                <div class="col-sm-6 col-6 col-md-6">
+                  <img
+                    class="img-2"
+                    style="width: 155px; height: 285px"
+                    src="@/assets/images/galerry/pic-karin.png"
+                  />
+                </div>
+                <div class="col-sm-6 col-6 col-md-6">
+                  <img
+                    class="img-2"
+                    style="width: 155px; height: 135px"
+                    src="@/assets/images/galerry/hero-3.png"
+                  />
+                  <img
+                    class="img-2 mt-3 "
+                    style="width: 155px; height: 135px"
+                    src="@/assets/images/galerry/hero-4.png"
+                  />
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -145,6 +200,9 @@ onMounted(() => {
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
+    @media screen and (max-width: 768px) {
+      border: 0;
+    }
     .container {
       height: 100vh;
       padding: 0;
@@ -180,6 +238,9 @@ onMounted(() => {
       position: absolute;
       left: -1px;
       top: 30%;
+      @media screen and (max-width: 768px) {
+      display: none;
+    }
     }
   }
   .asset-1 {
@@ -517,5 +578,20 @@ cursor: pointer;
 font-size: 0.8em;
 }
 
+
+.hide-desktop {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    margin-top: -17em;
+    margin-left: -6em;
+    transform: scale(1);
+  transition: transform 0.4s ease;
+  }
+}
+.img-1 {
+  width: 325px;
+  height: 140px;
+}
 
 </style>
