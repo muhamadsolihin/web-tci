@@ -25,7 +25,7 @@
           @mouseleave="activeTeam = null"
         >
           <div class="inside">
-            <img :src="team.photo2" alt="photo" class="photo" />
+            <img :src="team.photo" alt="photo" class="photo" />
             <div class="cover"></div>
 
             <transition name="ease" mode="out-in">
