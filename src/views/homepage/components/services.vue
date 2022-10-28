@@ -321,6 +321,19 @@ onMounted(() => {
     }
   }
 }
+.grid-content{
+  transform: translateY(500px);
+  animation: slideUp 1s ease-in-out forwards 0.5s;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .batik-img {
   margin-left: -12%;
   margin-top: -9.1% !important;

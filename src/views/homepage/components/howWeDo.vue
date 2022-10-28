@@ -106,7 +106,7 @@
                   id="kt_lists_widget_3_tab_pane_1"
                 >
                   <!--begin::Section-->
-                  <el-col id="consultant" style="margin-top: 10%" :span="12"
+                  <el-col id="#" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
                         <div
@@ -144,7 +144,7 @@
                 <!--begin::Tab pane-->
                 <div class="tab-pane -in" id="kt_lists_adaptive">
                   <!--begin::Chart-->
-                  <el-col id="consultant" style="margin-top: 10%" :span="12"
+                  <el-col id="#" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
                         <div
@@ -178,7 +178,7 @@
                 <!--begin::Tab pane-->
                 <div class="tab-pane fade" id="kt_lists_orien">
                   <!--begin::Items-->
-                  <el-col id="consultant" style="margin-top: 10%" :span="12"
+                  <el-col id="#" style="margin-top: 10%" :span="12"
                     ><div class="grid-content">
                       <div>
                         <div
@@ -410,6 +410,10 @@ onMounted(() => {
 
   color: #b8bdc6;
 }
+.grid-content{
+  transform: translateY(500px);
+  animation: slideUp 1s ease-in-out forwards 0.5s;
+}
 .subhead1 {
   font-family: "Open Sans";
   font-style: normal;
@@ -419,6 +423,7 @@ onMounted(() => {
   z-index: 9;
   height: 200px;
   line-height: 30px;
+
   /* or 167% */
 
   color: #000000 !important;
@@ -426,6 +431,14 @@ onMounted(() => {
     font-size: 13px !important;
 
     width: 325px !important;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 .tab-pane {

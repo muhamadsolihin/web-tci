@@ -11,6 +11,11 @@
           <h1 class="hero-title">
             We do our job professionally quickly and precisely.
           </h1>
+          <p class="hero-title-mobile">
+            Benefit <br />
+            Working On TCI
+          </p>
+
           <p class="sub-title">
             More than a place to work, Teknologi Cakra Internasional is a place
             where you could grow, learn, and collaborate with all your passion.
@@ -34,16 +39,16 @@
         :current-section="1"
       />
       <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-9 col-lg-9 col-xl-9 d-flex flex-column">
+        <div class="row">
+          <div class="col-12 col-md-9 col-lg-9 col-xl-9 d-flex flex-column">
             <img
-            class="asset-4"
-            src="@/assets/images/careers/animate.gif"
-            alt="asset"
-          />
+              class="asset-4"
+              src="@/assets/images/careers/animate.gif"
+              alt="asset"
+            />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
 </template>
@@ -76,6 +81,22 @@ import BorderContainer from "@/components/BorderContainer.vue";
       font-weight: 600;
       text-align: start;
       color: black;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .hero-title-mobile {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        margin-top: 3em;
+        color: #000000;
+      }
     }
     .sub-title {
       font-family: "Open Sans";
@@ -89,6 +110,15 @@ import BorderContainer from "@/components/BorderContainer.vue";
       width: 1069px !important;
 
       color: #000000;
+      @media screen and (max-width: 768px) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        width: 325px !important;
+        color: #8d8f9a;
+        margin-left: 0;
+        text-align: left;
+      }
     }
   }
 }
@@ -99,20 +129,22 @@ import BorderContainer from "@/components/BorderContainer.vue";
   justify-content: right;
   margin-right: -35%;
 }
-.asset-4{
-    float: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 75px;
-    padding-bottom: 90px ;
-    width: 1048px;
-height: 1277px;
+.asset-4 {
+  float: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 75px;
+  padding-bottom: 90px;
+  width: 1048px;
+  height: 1277px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
   #hero {
     padding: 0 30px;
-    background-image: url("@/assets/images/our-gallery/hero-bg-mobile.png");
     background-size: contain;
     .container-custom {
       height: 100vh;

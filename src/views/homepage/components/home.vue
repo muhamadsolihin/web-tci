@@ -41,7 +41,6 @@ import BorderContainer from "@/components/BorderContainer.vue";
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 import Hammer from "hammerjs";
 import { onMounted } from "vue";
-
 const props = defineProps({
   sectionsLength: {
     type: Number,
@@ -76,7 +75,6 @@ onMounted(() => {
   min-width: 100%;
   min-height: 100%;
 }
-
 #hero {
   height: 100vh;
   width: 100%;
@@ -133,7 +131,6 @@ onMounted(() => {
   bottom: 0;
   right: 0;
 }
-
 @media screen and (max-width: 768px) {
   #hero {
     padding: 0 30px;
@@ -146,7 +143,7 @@ onMounted(() => {
         margin-top: 5px;
         line-height: 30px;
         color: white !important;
-        width: 100%;
+        width: 85%;
       }
       .shape-blue {
         width: 38px;
