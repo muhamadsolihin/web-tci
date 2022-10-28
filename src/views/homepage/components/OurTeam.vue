@@ -1,6 +1,6 @@
 <template>
   <section id="our-team">
-    <div class="container-custom w-100">
+    <div id="container-custom" class="container-custom w-100">
       <BorderContainer
         :theme="'light'"
         :sections-length="sectionsLength"
@@ -15,28 +15,32 @@
           :color="'#000000'"
         />
       </div>
-      <div class="photo-section">
-        <div
-          class="photo-container"
-          :class="activeTeam != indexTeam ? 'photo-inactive' : 'photo-active'"
-          v-for="(team, indexTeam) in teamList"
-          :key="indexTeam"
-          @click="activeTeam = indexTeam"
-          @mouseleave="activeTeam = null"
-        >
-          <div class="inside">
-            <img :src="team.photo" alt="photo" class="photo" />
-            <div class="cover"></div>
+      <div class="section-body">
+        <div class="photo-section">
+          <div
+            class="photo-container"
+            :class="activeTeam != indexTeam ? 'photo-inactive' : 'photo-active'"
+            v-for="(team, indexTeam) in teamList"
+            :key="indexTeam"
+            @click="activeTeam = indexTeam"
+            @mouseleave="activeTeam = null"
+          >
+            <div class="inside">
+              <img :src="team.photo" alt="photo" class="photo" />
+              <div class="cover"></div>
 
-            <transition name="ease" mode="out-in">
-              <p class="mb-0 team-name" v-if="activeTeam != indexTeam">{{ team.name }}</p>
-            </transition>
-            <transition name="ease" mode="out-in" appear>
-              <div v-if="activeTeam == indexTeam">
-                <p class="mb-0 active-name">{{ team.name }}</p>
-                <p class="mb-0 active-description">{{ team.description }}</p>
-              </div>
-            </transition>
+              <transition name="ease" mode="out-in">
+                <p class="mb-0 team-name" v-if="activeTeam != indexTeam">
+                  {{ team.name }}
+                </p>
+              </transition>
+              <transition name="ease" mode="out-in" appear>
+                <div v-if="activeTeam == indexTeam">
+                  <p class="mb-0 active-name">{{ team.name }}</p>
+                  <p class="mb-0 active-description">{{ team.description }}</p>
+                </div>
+              </transition>
+            </div>
           </div>
         </div>
       </div>
@@ -137,6 +141,10 @@ onMounted(() => {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
       line-height: 57px;
+    }
+    .section-body {
+      width: 100%;
+      height: 100%;
     }
     .photo-section {
       margin-top: 30px;
@@ -254,7 +262,9 @@ onMounted(() => {
   #our-team {
     padding: 0 30px;
     .container-custom {
-      overflow-x: scroll;
+      .section-body {
+        overflow-x: scroll;
+      }
       .photo-section {
         width: 1200px;
       }
