@@ -146,7 +146,7 @@ onMounted(() => {
         margin-top: 5px;
         line-height: 30px;
         color: white !important;
-        width: 75%;
+        width: 100%;
       }
       .shape-blue {
         width: 38px;
