@@ -87,7 +87,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import MenuComponent from "@/components/MenuComponent.vue";
-import Home from "./components/home.vue";
+import Home from "./components/sample.vue";
 import Deliver from "./components/Deliver.vue";
 import HowWeDo from "./components/howWeDo.vue";
 import HowWork from "./components/HowWork.vue";
