@@ -1,53 +1,54 @@
 <template>
-  <section id="accelerated">
-    <div class="container-border">
-      <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container">
-        <div class="row h-100" style="margin-top: 0">
-          <div
-            class="col-12 col-md-6 col-sm-12 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <img
-              class="mx-auto pic-cto"
-              src="@/assets/images/pkarief.png"
-              alt="photo"
-              style="width: 85%; object-fit: contain"
+  <section id="deliver">
+    <div class="container-custom">
+      <BorderContainer
+        :theme="'light'"
+        :sections-length="sectionsLength"
+        :current-section="currentSection"
+      />
+      <div class="row h-100">
+        <div class="col-12 col-md-5 col-lg-5 col-xl-5 d-flex flex-row align-items-start">
+          <img
+            class="mx-auto pic-cto"
+            :class="imageHover ? 'image-hover' : 'image-unhover'"
+            src="@/assets/images/pkarief.png"
+            alt="photo"
+            @mouseenter="imageHover = true"
+            @mouseleave="imageHover = false"
+          />
+        </div>
+        <div class="col-12 col-md-7 col-lg-7 col-xl-7">
+          <div class="d-flex flex-column justify-content-center h-100">
+            <SectionNumberComponent
+              class="me-auto mt-3"
+              :number="'02 / 11'"
+              :section-name="'Mission'"
+              :color="'#000000'"
+              style="margin-top: 0"
             />
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
-          >
-            <div class="d-flex flex-column justify-content-center h-100">
-              <SectionNumberComponent
-                class="me-auto section-number"
-                :number="'02 / 11'"
-                :section-name="'Mission'"
-                :color="'#000000'"
-                style="margin-top: 0"
-              />
-              <h2 class="mt-4">
-                We Deliver <br />
-                Consistent Solutions
-              </h2>
-              <p class="open-reg-25 mt-3">
-                Using a combination of technology, process and talents we focus
-                on our users needs and help to accelerate their business at any
-                scale. We deliver consistent solutions and that is why we are
-                all about the details and the end-users. <br />
-                <br />
-                We constantly listen to our user feedback through our
-                development cycle to ensure a foundational setup for success.
-                Whether it is to grow your business, get greater connection with
-                customers.
-              </p>
-              <img
-                class="mx-auto pic-cto-1"
-                src="@/assets/images/imgGroup.png"
-                alt="photo"
-                style="width: 90%; object-fit: contain"
-              />
-            </div>
+            <h2 class="mt-2 title" :class="imageHover ? 'title-smaller' : 'title-bigger'">
+              We Deliver <br />
+              Consistent Solutions
+            </h2>
+            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+              Using a combination of technology, process and talents we focus on our users
+              needs and help to accelerate their business at any scale. We deliver
+              consistent solutions and that is why we are all about the details and the
+              end-users.
+            </p>
+            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+              We constantly listen to our user feedback through our development cycle to
+              ensure a foundational setup for success. Whether it is to grow your
+              business, get greater connection with customers.
+            </p>
+            <img
+              class="mx-auto pic-cto-1"
+              :class="imageHover ? 'image-hover' : 'image-unhover'"
+              src="@/assets/images/imgGroup.png"
+              alt="photo"
+              @mouseenter="imageHover = true"
+              @mouseleave="imageHover = false"
+            />
           </div>
         </div>
       </div>
@@ -56,38 +57,71 @@
 </template>
 
 <script setup>
+import Hammer from "hammerjs";
+import { onMounted, ref } from "vue";
+
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import Hammer from 'hammerjs';
-import { onMounted } from 'vue';
+import BorderContainer from "@/components/BorderContainer.vue";
 
+const props = defineProps({
+  sectionsLength: {
+    type: Number,
+    require: true,
+  },
+  currentSection: {
+    type: Number,
+    require: true,
+  },
+});
 
-const emit = defineEmits(['swipeUp', 'swipeDown']);
+const emit = defineEmits(["swipeUp", "swipeDown"]);
+
+const imageHover = ref(false);
+
 onMounted(() => {
-		var stage = document.getElementById('accelerated');
-		var hammertime = new Hammer.Manager(stage);
-		var Swipe = new Hammer.Swipe();
-		hammertime.add(Swipe);
-		hammertime.on('swipeup', function (ev) {
-			emit('swipeUp');
-		});
-		hammertime.on('swipedown', function (ev) {
-			emit('swipeDown');
-		});
-	});
+  var stage = document.getElementById("deliver");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
 </script>
 
 <style lang="scss" scoped>
-#accelerated {
+#deliver {
   background-color: #eeeaea;
   height: 100vh;
   width: 100%;
+  padding: 0 140px;
   z-index: 1;
-  .container-border {
+  .container-custom {
     height: 100vh;
-    padding: 10px 80px;
-    width: 100%;
+    padding: 80px 0;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
+    .title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      line-height: 55px;
+    }
+    .pic-cto {
+      width: 90%;
+      object-fit: contain;
+    }
+    .pic-cto-1 {
+      width: 90%;
+      object-fit: contain;
+    }
+    .text-body {
+      font-family: "Open Sans", sans-serif;
+      line-height: 30px;
+      font-weight: 400;
+    }
   }
   .asset-2 {
     position: absolute;
@@ -98,75 +132,115 @@ onMounted(() => {
       display: none;
     }
   }
-  .container {
-    padding: 80px;
-    h2 {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      font-size: 3rem;
-      line-height: 57px;
-      @media (max-width: 768px) {
-        margin-left: -4em;
-        font-size: 30px;
-        margin-top: 0.1em !important;
-        line-height: 37px;
-        width: 325px;
+}
+
+@media screen and (max-width: 768px) {
+  #deliver {
+    padding: 0 30px;
+    .container-custom {
+      height: 100vh;
+      padding: 80px 0;
+      border: none;
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
       }
+      .text-body {
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 20px;
+      }
+      .pic-cto {
+        width: 70%;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+    }
+
+    .image-hover,
+    .image-unhover,
+    .title-smaller,
+    .title-bigger,
+    .text-smaller,
+    .text-bigger {
+      animation: 0s;
     }
   }
 }
-.section-number {
-  @media (max-width: 768px) {
-    margin-left: -8em;
-    margin-top:24em !important;
+
+.image-hover {
+  animation: popup 1s ease-out;
+  transform: scale(1.1);
+}
+.image-unhover {
+  animation: popdown 1s ease-out;
+  transform: scale(1);
+}
+@keyframes popup {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
   }
 }
-.open-reg-25 {
-  @media (max-width: 768px) {
-    font-size: 13px;
-    line-height: 18px;
-    width: 335px;
-    margin-top: 1em !important;
-    text-align: left;
-    margin-left: -9em;
+@keyframes popdown {
+  from {
+    transform: scale(1.1);
   }
-}
-.pic-cto {
-  @media (max-width: 768px) {
-    width:345px !important;
-    height: 394px !important;
-    margin-top: -70em;
-    margin-left: -8em !important;
-  }
-}
-.pic-cto-1 {
-  @media (max-width: 768px) {
-    width: 325.64px !important;
-    height: 384px !important;
-    margin-top: -8em;
-    display: none;
-    margin-left: -8em !important;
+  to {
+    transform: scale(1);
   }
 }
 
-.pic-cto {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+.title-smaller {
+  animation: smaller 1s;
+  font-size: 40px;
 }
-.pic-cto:hover,
-.pic-cto:focus,
-.pic-cto:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+@keyframes smaller {
+  from {
+    font-size: 46px;
+  }
+  to {
+    font-size: 40px;
+  }
+}
+.title-bigger {
+  animation: bigger 1s;
+  font-size: 46px;
+}
+@keyframes bigger {
+  from {
+    font-size: 40px;
+  }
+  to {
+    font-size: 46px;
+  }
+}
+
+.text-smaller {
+  animation: textsmaller 1s;
+  font-size: 16px;
+}
+@keyframes textsmaller {
+  from {
+    font-size: 18px;
+  }
+  to {
+    font-size: 16px;
+  }
+}
+.text-bigger {
+  animation: textbigger 1s;
+  font-size: 18px;
+}
+@keyframes textbigger {
+  from {
+    font-size: 16px;
+  }
+  to {
+    font-size: 18px;
+  }
 }
 </style>
