@@ -32,9 +32,9 @@
               forth TCI's expectations of its Third parties and is based on the
               values and principles set forth in TCI's Code of Conduct,
               available on our website at the followinglink,
-              <a href="" style="color: #0c4aa9; border: none">
+              <!-- <span class="link-tci"><a href="" style="color: #0c4aa9; border: none">
                 https://www.teknologicakrainternasional.com/corporate-governance/code-of-conduct
-              </a>
+              </a></span> -->
               <br />
               <br />
               We require that all TCI Third Parties understand and live our
@@ -394,12 +394,6 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     @media screen and (max-width: 768px) {
       border: none;
     }
-    .container {
-      hr {
-        width: 20px;
-        border-top: 2px solid;
-      }
-    }
   }
   .asset-2 {
     position: absolute;
@@ -417,6 +411,8 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   @media screen and (max-width: 768px) {
     margin-top: 0.5em;
     font-size: 2em;
+    margin-left: -50%;
+    
   }
 }
 
@@ -429,6 +425,11 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   /* identical to box height */
   margin-left: 0.2em;
   color: #000000;
+  @media screen and (max-width: 768px) {
+    margin-left: -23%;
+    width: 350px;
+    
+  }
 }
 .hero-sub-title {
   margin-top: 20px;
@@ -446,6 +447,11 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   @media screen and (min-width: 1920px) {
     width: 1374px;
       }
+      @media screen and (max-width: 768px) {
+    margin-left: -23%;
+    width: 350px;
+    
+  }
 }
 .hero-title-1 {
   font-family: "Montserrat";
@@ -456,6 +462,12 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   /* identical to box height */
   margin-top: 62px;
   color: #000000;
+  @media screen and (max-width: 768px) {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    margin-left: -24%;
+    width: 350px;
+  }
 }
 .hero-sub-title-2 {
   font-family: "Albert Sans";
@@ -468,5 +480,18 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   letter-spacing: -1px;
   margin-top: 18px;
   color: #000000;
+  @media screen and (max-width: 768px) {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    margin-left: -24%;
+    width: 350px;
+  }
+}
+.link-tci{
+  @media screen and (max-width: 768px) {
+    width: 250px !important;
+
+  }
+  
 }
 </style>

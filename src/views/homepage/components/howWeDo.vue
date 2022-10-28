@@ -329,6 +329,7 @@ onMounted(() => {
   }
   .container {
     padding: 80px;
+    margin-top:10%;
     h2 {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;

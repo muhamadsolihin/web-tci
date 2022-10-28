@@ -2,7 +2,7 @@
   <section id="howwedo">
     <div class="container-border">
       <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container hero-collap">
+      <div class="container  hero-collap">
         <div class="d-flex flex-row align-items-center">
           <h2 class="hero-title">Our Services</h2>
           <SectionNumberComponent
@@ -311,7 +311,7 @@ onMounted(() => {
     height: 711px;
   }
   .container {
-    margin-top: -2em;
+    // margin-top: -2em;
     padding: 80px;
     h2 {
       font-family: "Montserrat", sans-serif;

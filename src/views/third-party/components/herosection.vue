@@ -45,9 +45,11 @@
             <dd>- 1.2. Trade compliance</dd>
             <dd>- 1.3 Insider Trading</dd>
             <dd>- 1.4. Fair competition / Antitrust</dd>
-            <dd>- 1.5. Anti-money laundering and anti-facilitation of tax evasion</dd>
+            <dd>
+              - 1.5. Anti-money laundering and anti-facilitation of tax evasion
+            </dd>
             <dd>- 1.6 Data privacy</dd>
-            <dd>- 1.7. Intellectual property and confidential information</dd>            
+            <dd>- 1.7. Intellectual property and confidential information</dd>
           </dl>
         </div>
         <div class="col-md-6">
@@ -61,11 +63,13 @@
             <dd>- 3.2. Environment</dd>
             <dd>- 3.3. Health and safety</dd>
             <dd>- 3.4. Human rights</dd>
-            <dd>- 4. Your responsibility under this code of conduct as a TCI <br/>Third Party</dd>
+            <dd>
+              - 4. Your responsibility under this code of conduct as a TCI
+              <br />Third Party
+            </dd>
           </dl>
         </div>
       </div>
-      
     </div>
     <img
       class="asset-3"
@@ -91,7 +95,8 @@ import BorderContainer from "@/components/BorderContainer.vue";
   .container-custom {
     height: 100vh;
     border-left: 1px solid #b8bdc6;
-    border-right: 1px solid #b8bdc6;  
+    border-right: 1px solid #b8bdc6;
+    
     .hero-title {
       font-family: "Montserrat";
       font-style: normal;
@@ -112,6 +117,17 @@ import BorderContainer from "@/components/BorderContainer.vue";
         font-size: 80px;
         line-height: 83px;
         width: 1133px;
+        
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 20px !important;
+        line-height: 43px !important;
+        margin-top: 1em;
+        width: 344px;
+        margin-left: 15%;
+        margin-right: 0;
+        letter-spacing: 0px !important;
+        
       }
     }
     .hero-sub-title {
@@ -126,6 +142,14 @@ import BorderContainer from "@/components/BorderContainer.vue";
       letter-spacing: -0.5px;
 
       color: #ffffff;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 20px;
+        width: 324px;
+        margin-left: 15%;
+        margin-right: 0;
+        
+      }
     }
     .section-number {
       border: 2px solid #b8bdc6;
@@ -163,7 +187,6 @@ import BorderContainer from "@/components/BorderContainer.vue";
   margin-top: 0;
 }
 .list-content {
-
   font-family: "Albert Sans";
   font-style: normal;
   font-weight: 400;
@@ -173,6 +196,13 @@ import BorderContainer from "@/components/BorderContainer.vue";
   letter-spacing: -0.5px;
 
   color: #ffffff;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height:16px;
+    margin-top: -1.5em;
+    
+  }
 }
 
 @media screen and (max-width: 768px) {
