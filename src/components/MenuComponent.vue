@@ -130,11 +130,11 @@
 		},
 		{
 			text: 'Careers',
-			link: '/Careers',
+			link: '/careers',
 		},
 		{
 			text: 'Contact Us',
-			link: '/who-we-are',
+			link: '/contact-us',
 		},
 	]);
 

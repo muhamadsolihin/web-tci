@@ -27,22 +27,28 @@ const router = createRouter({
                 import ('../views/our-gallery/index.vue'),
         },
         {
-            path: '/Careers',
+            path: '/careers',
             name: 'careers',
             component: () =>
                 import ('../views/careers/index.vue'),
         },
         {
-            path: '/Media-Gallery',
+            path: '/media-gallery',
             name: 'Media-Gallery',
             component: () =>
                 import ('../views/media-gallery/index.vue'),
         },
         {
-            path: '/Third-Party',
+            path: '/third-party',
             name: 'Third-Party',
             component: () =>
                 import ('../views/third-party/index.vue'),
+        },
+        {
+            path: '/contact-us',
+            name: 'Contact-Us',
+            component: () =>
+                import ('../views/contact-us/index.vue'),
         },
         {
             path: '/test2',
