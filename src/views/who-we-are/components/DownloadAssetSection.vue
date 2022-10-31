@@ -24,6 +24,7 @@
 							Get to know us better through our downloadable public information
 							assets such as Brochure, Company Booklet, and Videos.
 						</p>
+						
 						<CtaComponent :cta-text="'Media Gallery'" />
 						
 					</div>

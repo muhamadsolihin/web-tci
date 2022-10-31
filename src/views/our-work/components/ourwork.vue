@@ -122,6 +122,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   padding: 0 69px;
   position: relative;
   z-index: 1;
+  @media screen and (min-width:1920px){
+    padding: 0 85.8px;
+  }
   .container-border {
     position: relative;
     padding-top: 5%;

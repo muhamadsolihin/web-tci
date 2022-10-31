@@ -89,6 +89,7 @@
     min-height: 100%;
     z-index: -4;
     @media (max-width: 768px) {
+		
     }
   }
 	#hero {
