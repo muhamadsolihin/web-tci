@@ -1,7 +1,7 @@
 <template>
   <section id="hero">
     <div class="container-custom d-flex flex-column justify-content-center">
-      <BorderContainer :theme="'dark'" :sections-length="4" :current-section="1" />
+      <BorderContainer :theme="'dark'" :sections-length="3" :current-section="1" />
     </div>
     <img class="asset-3" src="@/assets/images/who-we-are/asset-3.png" alt="asset" />
   </section>
