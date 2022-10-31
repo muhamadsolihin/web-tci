@@ -144,6 +144,7 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 30px;
+      margin: 0 auto 15px auto;
     }
     .card-form {
       background-color: white;
@@ -173,6 +174,9 @@
     padding: 0 30px;
     .container-custom {
       margin: -550px 0;
+      .subtitle {
+        margin: 0 0 15px 0;
+      }
       .card-form {
         width: 100%;
       }
