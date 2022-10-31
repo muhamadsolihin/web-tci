@@ -47,7 +47,7 @@
                       class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                       data-bs-toggle="tab"
                       href="#kt_lists_data"
-                      ><img src="@/assets/images/animate/dataanimate.svg"
+                      ><img class="data-centre" src="@/assets/images/animate/dataanimate.svg"
                     /></a>
                   </li>
                 </div>
@@ -249,6 +249,9 @@ onMounted(() => {
   height: 100vh;
   margin-top: 0;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+margin-top:-1em;
+  }
   .container-border {
     position: relative;
     width: 100%;
@@ -322,7 +325,7 @@ onMounted(() => {
   }
 }
 .grid-content{
-  transform: translateY(500px);
+  transform: translateY(700px);
   animation: slideUp 1s ease-in-out forwards 0.5s;
 }
 @keyframes slideUp {
@@ -400,6 +403,9 @@ display: none;
 }
 .nav-link {
   border: none;
+}
+.data-centre{
+  padding:0 0 15px 0;
 }
 
 .btn-check:checked + .btn.btn-active-white,
@@ -504,6 +510,7 @@ display: none;
   color: #7e8299;
   border-color: #f5f8fa;
   background-color: #f5f8fa;
+  
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
 .btn.btn-light i {
@@ -530,6 +537,7 @@ display: none;
   color: #7e8299;
   border-color: #e4e6ef;
   background-color: #e4e6ef;
+  
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
 .btn-check:checked + .btn.btn-light i,
@@ -603,6 +611,7 @@ display: none;
 .btn.btn-bg-light {
   border-color: #f5f8fa;
   background-color: #f5f8fa;
+
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
 .btn-check:checked + .btn.btn-active-light,
@@ -616,6 +625,7 @@ display: none;
   color: #7e8299;
   border-color: #f5f8fa;
   background-color: #f5f8fa;
+
 }
 .btn-check:checked + .btn.btn-active-light i,
 .btn-check:active + .btn.btn-active-light i,

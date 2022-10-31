@@ -15,24 +15,34 @@
             :number="'03 / 11'"
             :section-name="'How We Do It'"
             :color="'#000'"
+            
           />
         </div>
         <div
-          class="d-flex flex-row justify-content-start align-items-start w-20"
+          class="d-flex  flex-row justify-content-start align-items-start w-20"
         >
           <div class="shape-blue"></div>
         </div>
+         
+        
         <div
-          class="row h-80"
+          class="row h-80 b"
           style="margin-top: 68px; padding-bottom: 0 !important"
         >
+
+ 
+  
+
+
+
+
           <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+            class="col-12 hide-mobile col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
           >
             <ul class="nav flex-center bg-transparent flex-nowrap p-2 mb-8">
               <div class="col-md-12">
                 <!--begin::Tab nav-->
-                <li class="nav-item active">
+                <li class="nav-item active ">
                   <a
                     class="nav-link btn btn-active-white head py-2 px-4 fs-6 fw-bold active"
                     data-bs-toggle="tab"
@@ -49,7 +59,7 @@
                 <!--end::Tab nav-->
                 <!--begin::Tab nav-->
 
-                <li class="nav-item flex-equal">
+                <li class="nav-item mt-3 flex-equal">
                   <a
                     class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
@@ -62,7 +72,7 @@
                     >02 &nbsp;Adaptive solution development</a
                   >
                 </li>
-                <li class="nav-item flex-equal">
+                <li class="nav-item mt-3 flex-equal">
                   <a
                     class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
@@ -75,7 +85,7 @@
                     >03 &nbsp;User oriented group of talents</a
                   >
                 </li>
-                <li class="nav-item flex-equal">
+                <li class="nav-item mt-3 flex-equal">
                   <a
                     class="nav-link btn btn-active-white head btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                     data-bs-toggle="tab"
@@ -96,18 +106,18 @@
           </div>
 
           <div
-            class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
+            class="col-12  col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
           >
-            <div class="d-flex flex-column justify-content-center h-100">
-              <div class="tab-content">
+            <div class="d-flex  flex-column justify-content-center h-100">
+              <div class="tab-content ">
                 <!--begin::Tab pane-->
                 <div
-                  class="tab-pane -in active show"
+                  class="tab-pane  active show"
                   id="kt_lists_widget_3_tab_pane_1"
                 >
                   <!--begin::Section-->
                   <el-col id="#" style="margin-top: 10%" :span="12"
-                    ><div class="grid-content">
+                    ><div class="grid-content ">
                       <div>
                         <div
                           class="open-reg-26"
@@ -117,7 +127,7 @@
                         </div>
 
                         <div
-                          class="subhead1"
+                          class="subhead1 "
                           style="
                             text-align: justify;
                             width: 34em;
@@ -148,7 +158,7 @@
                     ><div class="grid-content">
                       <div>
                         <div
-                          class="open-reg-26"
+                          class="open-reg-26 "
                           style="text-align: justify; width: 574px"
                         >
                           Adaptive solution development
@@ -311,7 +321,7 @@ onMounted(() => {
   .section-number {
     @media screen and (max-width: 768px) {
       margin-top: -7em;
-      margin-left: -100% !important;
+      margin-left: -21em !important;
     }
   }
 
@@ -340,6 +350,7 @@ onMounted(() => {
 }
 
 .nav-item {
+
   @media screen and (max-width: 768px) {
     margin-top: -20% !important;
     margin-left: -30% !important;
@@ -368,6 +379,11 @@ onMounted(() => {
 
   color: #b8bdc6;
   @media screen and (max-width: 768px) {
+  }
+}
+.hide-mobile{
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 .head1 {
@@ -411,7 +427,7 @@ onMounted(() => {
   color: #b8bdc6;
 }
 .grid-content{
-  transform: translateY(500px);
+  transform: translateY(600px);
   animation: slideUp 1s ease-in-out forwards 0.5s;
 }
 .subhead1 {
@@ -433,6 +449,13 @@ onMounted(() => {
     width: 325px !important;
   }
 }
+.tab-content{
+  @media screen and (max-width: 768px) {
+ 
+
+    width: 325px !important;
+  }
+}
 @keyframes slideUp {
   0% {
     transform: translateY(300px);
@@ -448,6 +471,8 @@ onMounted(() => {
 .nav-link {
   border-radius: 36px;
   width: 25em;
+  border: 1px solid #b8bdc6;
+border-radius: 36px;
 }
 li:last-child {
   border-right: hidden !important;

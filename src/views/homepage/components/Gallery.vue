@@ -15,11 +15,11 @@
           :color="'#fff'"
         />
       </div>
-      <div class="container d-flex flex-column justify-content-center">
+      <div class="container  d-flex flex-column justify-content-center">
         <div
-          class="d-flex gallery-image flex-column align-items-start justify-content-start"
+          class="d-flex gallery-image  flex-column align-items-start justify-content-start"
         >
-          <div class="row image-gallery" style="margin-bottom: 0">
+          <div class="row image-gallery " style="margin-bottom: 0">
             <div class=" col-12 col-md-6 col-lg-6 col-xl-6">
               <div class="img-box text-white rounded">
                 <img
@@ -221,10 +221,14 @@ onMounted(() => {
         margin-right: auto;
         padding: 5px 10px;
         font-family: "IBM Plex Mono", sans-serif;
+//         @media screen and (max-width:1920px){
+// margin-left: -10em;
+//   }
         hr {
           width: 20px;
           border-top: 2px solid;
         }
+
       }
       .shape-blue {
         width: 68px;
@@ -255,6 +259,11 @@ onMounted(() => {
 }
 
 .image-gallery{
+  @media screen and (min-width:1920px){
+
+    margin-top: -15em !important;
+
+  }
   @media screen and (max-width:768px){
     display: none;
   }
@@ -266,15 +275,24 @@ onMounted(() => {
   font-weight: 600;
   margin-top: 3%;
   margin-left: 0;
+  @media screen and (min-width:1920px){
+    font-size: 3em;
+    width:400px;
+    margin-top: 3em !important;
+  margin-left: 2.5em !important;
+  }
   @media screen and (max-width:768px){
+    font-size: 3em;
+    width:400px;
     margin-top: 2em !important;
   margin-left: -1.5em !important;
   }
 }
 .section-number{
   @media screen and (max-width:768px){
-    margin-top: -4em !important;
+    margin-top: 0 !important;
   margin-left: -18em !important;
+  display: none !important;
   }
 
 }
@@ -283,6 +301,7 @@ onMounted(() => {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .gallery-image img {

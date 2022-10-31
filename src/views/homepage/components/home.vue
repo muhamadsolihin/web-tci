@@ -67,6 +67,18 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+<<<<<<< HEAD
+  #bg-video {
+    position: fixed;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -4;
+    @media (max-width: 768px) {
+		
+=======
 #bg-video {
   position: fixed;
   background-size: cover;
@@ -115,6 +127,7 @@ onMounted(() => {
       background-color: #0c4aa9;
       margin-right: 20px;
       margin-top: 10px;
+>>>>>>> b783d47f152e82ed41b8981c30718feb40442a59
     }
   }
 }

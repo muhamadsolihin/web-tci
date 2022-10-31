@@ -42,7 +42,8 @@
       :current-section="currentSection"
       @swipeUp="swipeUp"
       @swipeDown="swipeDown"
-      v-else-if="currentSection == 7"
+      :theme="currentSection == 7 ? 'light' : 'dark'"
+      v-else-if="currentSection == 7 "
     />
     <Journey
       :sections-length="sections.length"
