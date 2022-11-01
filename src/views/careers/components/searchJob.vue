@@ -159,7 +159,8 @@ const emit = defineEmits(["toTop"]);
   margin-top: -50%;
   margin-left: 5.6em;
   @media screen and (max-width: 1920px) {
-    margin-bottom: -15%;
+    margin-bottom: 15%;
+    margin-top: 0;
   }
   @media screen and (max-width: 768px) {
     width: 224.81px;
@@ -251,11 +252,11 @@ line-height: 37px;
     display: none;
   }
 }
-// .show-mobile{
-//   display: none;
-//   @media screen and (max-width: 768px) {
-//     display: block;
-//   }
-// }
+.show-mobile{
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
 
 </style>

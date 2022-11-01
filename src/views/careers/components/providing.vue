@@ -480,6 +480,10 @@ import BorderContainer from "@/components/BorderContainer.vue";
 }
 
 .collapse-mobile {
+  display: none;
+  @media screen and (max-width:768px){
+    display: block;
+  }
   width: 500px;
 
   margin-left: 0;
