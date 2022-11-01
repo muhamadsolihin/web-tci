@@ -67,7 +67,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-  #bg-video {
+
+#bg-video {
     position: fixed;
     background-size: cover;
     right: 0;
@@ -77,15 +78,14 @@ onMounted(() => {
     z-index: -4;
     @media (max-width: 768px) {}
   }
-		
-#bg-video {
-  position: fixed;
-  background-size: cover;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
+// #bg-video {
+//   position: fixed;
+//   background-size: cover;
+//   right: 0;
+//   bottom: 0;
+//   min-width: 100%;
+//   min-height: 100%;
+// }
 #hero {
   height: 100vh;
   width: 100%;
