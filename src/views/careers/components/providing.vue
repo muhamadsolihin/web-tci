@@ -495,7 +495,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
   position: absolute;
   font-size: 14px;
   width: 145px;
-  margin-top: -5em;
+  margin-top: -5.2em;
   margin-bottom: 5em;
   padding-top: 9px;
   height: 42px;

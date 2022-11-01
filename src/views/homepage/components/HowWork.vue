@@ -126,7 +126,11 @@ onMounted(() => {
       margin-right: -24em !important ;
     }
     @media (max-width: 768px) {
-      margin-right: -10em !important;
+      margin-left: -20em !important;
+      width: 32px;
+height: 161px;
+display: none;
+
     }
   }
 

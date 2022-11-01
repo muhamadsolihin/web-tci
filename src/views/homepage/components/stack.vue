@@ -452,7 +452,7 @@
           class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
         >
           <img
-            class="text-center batik-img mt-3"
+            class="batik-img "
             src="@/assets/images/img-stack/batik.png"
             style="
               float: right;
@@ -492,6 +492,9 @@ onMounted(() => {
   height: 100vh;
   margin-top: -4em;
   z-index: 1;
+  @media screen and (min-width: 1920px) {
+      margin-top: 2em;
+    }
   .container-border {
     position: relative;
     width: 100%;
@@ -567,17 +570,8 @@ onMounted(() => {
       width: 325px !important;
     }
   }
-  .batik-img {
-    margin-right: -48.7em;
-    margin-top: -35% !important;
-    @media screen and (max-width: 1920px) {
-      margin-right: -60.7em;
-      margin-top: -3.3% !important;
-    }
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  }
+
+
   .sub-title {
     font-family: "Open Sans";
     font-style: italic;
@@ -591,6 +585,7 @@ onMounted(() => {
     color: #000000;
     @media screen and (max-width: 768px) {
       font-size: 12px;
+      margin-top: -2em;
     }
   }
   .shape-blue {
@@ -599,6 +594,9 @@ onMounted(() => {
     background-color: #0c4aa9;
     margin-right: 20px;
     margin-top: 17px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   .asset-2 {
     position: absolute;
@@ -607,7 +605,17 @@ onMounted(() => {
     height: 711px;
   }
 }
-
+.batik-img {
+    margin-right: -48.7em;
+    margin-top: -35% !important;
+    @media screen and (min-width: 1920px) {
+      margin-right: -60.7em;
+      margin-top: -15% !important;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
 .sequence{
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;

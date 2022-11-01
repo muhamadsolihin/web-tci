@@ -16,7 +16,7 @@
         />
       </div>
       <div
-        class="d-flex flex-row  align-items-start justify-content-center mt-4"
+        class="d-flex flex-row   align-items-start justify-content-center mt-4"
       >
         <el-row class="py-5" :gutter="20" style="margin-top: 5px;">
           <div class="col-md-3">
@@ -168,7 +168,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   color: #000;
   @media screen and (max-width:768px){
     margin-top: 0.5em;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 .section-number {
@@ -182,7 +182,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   width: 17em;
   height: 33em;
    z-index: 99;
-
+margin: 1em;
   cursor: pointer;
   @media (min-width: 992px) {
     margin-top: 0;

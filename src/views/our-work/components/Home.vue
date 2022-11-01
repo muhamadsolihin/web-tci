@@ -114,6 +114,9 @@
 					font-weight: 600;
 					line-height: 48px;
 				}
+        .albert-reg-20{
+          width: 325px;
+        }
 			}
 		}
 	}

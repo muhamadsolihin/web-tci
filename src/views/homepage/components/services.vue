@@ -2,7 +2,7 @@
   <section id="howwedo">
     <div class="container-border">
       <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container  hero-collap">
+      <div class="container hero-collap">
         <div class="d-flex flex-row align-items-center">
           <h2 class="hero-title">Our Services</h2>
           <SectionNumberComponent
@@ -47,7 +47,9 @@
                       class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                       data-bs-toggle="tab"
                       href="#kt_lists_data"
-                      ><img class="data-centre" src="@/assets/images/animate/dataanimate.svg"
+                      ><img
+                        class="data-centre"
+                        src="@/assets/images/animate/dataanimate.svg"
                     /></a>
                   </li>
                 </div>
@@ -59,7 +61,7 @@
                       class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                       data-bs-toggle="tab"
                       href="#kt_lists_widget_3_tab_pane_2_digital"
-                      ><img src="@/assets/images/animate/digital.svg"
+                      ><img  src="@/assets/images/animate/digital.svg"
                     /></a>
                   </li>
                   <li
@@ -196,61 +198,57 @@
             </div>
             <!--end::Tab pane-->
           </div>
-          </div>
         </div>
+      </div>
 
-          <div class="row">
-            <div
-              class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-              <img
-                class="text-center batik-img "
-                src="@/assets/images/batik-1.svg"
-                style="
-                  float: left;
-                  justify-content: left;
-                  height: 195px;
-                  z-index: -2;
-                "
-              />
-            </div>
-          </div>
-        </div> 
-
-
+      <div class="row">
+        <div
+          class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
+        >
+          <img
+            class="text-center batik-img"
+            src="@/assets/images/batik-1.svg"
+            style="
+              float: left;
+              justify-content: left;
+              height: 195px;
+              z-index: -2;
+            "
+          />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import Hammer from 'hammerjs';
-import { onMounted } from 'vue';
+import Hammer from "hammerjs";
+import { onMounted } from "vue";
 
-
-const emit = defineEmits(['swipeUp', 'swipeDown']);
+const emit = defineEmits(["swipeUp", "swipeDown"]);
 onMounted(() => {
-		var stage = document.getElementById('howwedo');
-		var hammertime = new Hammer.Manager(stage);
-		var Swipe = new Hammer.Swipe();
-		hammertime.add(Swipe);
-		hammertime.on('swipeup', function (ev) {
-			emit('swipeUp');
-		});
-		hammertime.on('swipedown', function (ev) {
-			emit('swipeDown');
-		});
-	});
+  var stage = document.getElementById("howwedo");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
 </script>
 
 <style lang="scss" scoped>
-
 #howwedo {
   background-color: white;
   height: 100vh;
   margin-top: 0;
   z-index: 1;
   @media screen and (max-width: 768px) {
-margin-top:-1em;
+    margin-top: -1em;
   }
   .container-border {
     position: relative;
@@ -275,7 +273,6 @@ margin-top:-1em;
       margin-top: 3em;
       margin-left: -30% !important;
       width: 325px !important;
-      
     }
   }
 
@@ -324,7 +321,7 @@ margin-top:-1em;
     }
   }
 }
-.grid-content{
+.grid-content {
   transform: translateY(700px);
   animation: slideUp 1s ease-in-out forwards 0.5s;
 }
@@ -340,15 +337,15 @@ margin-top:-1em;
 .batik-img {
   margin-left: -12%;
   margin-top: -9.1% !important;
-  display: none;
-  @media screen and (max-width: 1920px) {
+  width: 262px;
+height: 195px;
+  // display: none;
+  @media screen and (min-width: 1920px) {
     margin-left: -12%;
-    margin-top: 15.1% !important;
-
+    margin-top: 11.5% !important;
   }
   @media screen and (max-width: 768px) {
-display: none;
-
+    display: none;
   }
 }
 .head {
@@ -404,10 +401,9 @@ display: none;
 .nav-link {
   border: none;
 }
-.data-centre{
-  padding:0 0 15px 0;
+.data-centre {
+  padding: 0 0 15px 0;
 }
-
 .btn-check:checked + .btn.btn-active-white,
 .btn-check:active + .btn.btn-active-white,
 .btn.btn-active-white:focus:not(.btn-active),
@@ -418,8 +414,8 @@ display: none;
 .show > .btn.btn-active-white {
   color: #7e8299;
   border-color: #ffffff;
-  border-width: 120px;
-  border-bottom-width: 128px;
+//   width: 120px;
+// height: 128px;
   background-color: #fff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
   @media screen and (max-width: 768px) {
@@ -510,7 +506,7 @@ display: none;
   color: #7e8299;
   border-color: #f5f8fa;
   background-color: #f5f8fa;
-  
+
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
 .btn.btn-light i {
@@ -537,7 +533,7 @@ display: none;
   color: #7e8299;
   border-color: #e4e6ef;
   background-color: #e4e6ef;
-  
+
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
 }
 .btn-check:checked + .btn.btn-light i,
@@ -625,7 +621,6 @@ display: none;
   color: #7e8299;
   border-color: #f5f8fa;
   background-color: #f5f8fa;
-
 }
 .btn-check:checked + .btn.btn-active-light i,
 .btn-check:active + .btn.btn-active-light i,

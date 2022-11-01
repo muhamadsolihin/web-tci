@@ -9,11 +9,11 @@
       <div class="d-flex flex-row align-items-center">
         <h2 class="head">Our Product</h2>
         <SectionNumberComponent
-          class="ms-auto section-number"
+          class="mx-auto mt-auto"
           :number="'06 / 11'"
           :section-name="'Our Product'"
           :color="'#fff'"
-          style="margin-top: 4em; margin-right: 3em"
+          style="margin-left:45em !important"
         />
       </div>
       <div class="container d-flex flex-column justify-content-center">
@@ -288,7 +288,7 @@ onMounted(() => {
   color: #fff;
   font-weight: 600;
   margin-top: 6%;
-  margin-left: 0;
+  margin-left: 3em;
 
   @media screen and (max-width: 768px) {
     margin-top: 2em;

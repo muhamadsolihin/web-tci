@@ -112,6 +112,7 @@ onMounted(() => {
     .pic-cto {
       width: 90%;
       object-fit: contain;
+      
     }
     .pic-cto-1 {
       width: 90%;
@@ -121,6 +122,8 @@ onMounted(() => {
       font-family: "Open Sans", sans-serif;
       line-height: 30px;
       font-weight: 400;
+      width: 585px;
+      color: #8D8F9A !important;
     }
   }
   .asset-2 {
@@ -150,10 +153,11 @@ onMounted(() => {
         font-size: 12px;
         margin-top: 5px;
         line-height: 20px;
+        width: 385px;
       }
       .pic-cto {
-        width: 70%;
-        margin: 0 auto;
+        width: 90%;
+        margin-left: 1em !important;
         object-fit: contain;
       }
     }

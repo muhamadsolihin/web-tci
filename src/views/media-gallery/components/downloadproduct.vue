@@ -208,6 +208,9 @@ import BorderContainer from "@/components/BorderContainer.vue";
    margin-top: -170px;
    z-index: 1;
  }
+ @media screen and (max-width:768px){
+   display: none;
+ }
 }
 .card {
  border: none;
@@ -267,6 +270,9 @@ box-shadow: 0px 4px 18px rgba(224, 149, 62, 0.25);
  border-radius: 30px;
  padding: 10px;
  color: #000000;
+  @media screen and (max-width:768px){
+   display: none;
+ }
 }
 
 .carousel-inner {

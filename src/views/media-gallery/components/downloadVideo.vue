@@ -209,6 +209,9 @@ export default {
     margin-top: -170px;
     z-index: 1;
   }
+  @media screen and (max-width:768px){
+   display: none;
+ }
 }
 .card {
   border: none;
@@ -254,6 +257,9 @@ export default {
   border-radius: 30px;
   padding: 10px;
   color: #000000;
+  @media screen and (max-width:768px){
+   display: none;
+ }
 }
 @media screen and (min-width: 577px) {
   .cards-wrapper {

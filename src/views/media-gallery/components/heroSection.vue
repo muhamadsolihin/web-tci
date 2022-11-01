@@ -35,7 +35,7 @@
       </div>
     </div>
   </div>
-  <section id="gallery">
+  <section id="gallery" class="hide-mobile">
     <div
       id="carouselExampleControls"
       class="carousel slide"
@@ -59,7 +59,6 @@
                 <a
                   href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
                   class="btn btn1 btn-primary"
-                
                   >Company Profile &nbsp;
                   <img src="@/assets/images/media-gallery/icon-download.svg"
                 /></a>
@@ -119,6 +118,93 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button> -->
+    </div>
+  </section>
+
+  <section id="show-mobile">
+    <div class="row">
+      <div class="col-4">
+        <div class="card bg-transparent">
+          <div class="image-wrapper" style="margin-left: 1em">
+            <img
+              src="@/assets/images/media-gallery/arthboardtci.png"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <a
+              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+              class="btn btn1 btn-primary"
+              style="
+                position: absolute;
+                width: 145px;
+                height: 39px;
+                font-size: 12px;
+                margin-left: -1em;
+              "
+              >Company Profile &nbsp;
+              <img
+                style="width: 19.31px; height: 17.83px"
+                src="@/assets/images/media-gallery/icon-download.svg"
+            /></a>
+          </div>
+        </div>       
+      </div>
+
+      <div class="col-4">
+        <div class="card bg-transparent">
+          <div class="image-wrapper" style="margin-left: 1em">
+            <img
+              src="@/assets/images/media-gallery/arthboardtci.png"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <a
+              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+              class="btn btn1 btn-primary"
+              style="
+                position: absolute;
+                width: 145px;
+                height: 39px;
+                font-size: 12px;
+                margin-left: -1.5em;
+              "
+              >Company Profile &nbsp;
+              <img
+                style="width: 19.31px; height: 17.83px"
+                src="@/assets/images/media-gallery/icon-download.svg"
+            /></a>
+          </div>
+        </div>       
+      </div>
+      <div class="col-4">
+        <div class="card bg-transparent">
+          <div class="image-wrapper" style="margin-left: 1em">
+            <img
+              src="@/assets/images/media-gallery/arthboardtci.png"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <a
+              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+              class="btn btn1 btn-primary"
+              style="
+                position: absolute;
+                width: 145px;
+                height: 39px;
+                font-size: 12px;
+                margin-left: -2em;
+              "
+              >Company Profile &nbsp;
+              <img
+                style="width: 19.31px; height: 17.83px"
+                src="@/assets/images/media-gallery/icon-download.svg"
+            /></a>
+          </div>
+        </div>       
+      </div>
     </div>
   </section>
 </template>
@@ -200,6 +286,13 @@ export default {
     right: 0;
   }
 }
+#show-mobile{
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+}
 .heading {
   font-family: "IBM Plex Mono";
   font-style: normal;
@@ -212,6 +305,12 @@ export default {
   border-radius: 30px;
   padding: 10px;
   color: #000000;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    line-height: 13px;
+    margin-left: 30%;
+    width: 154px;
+  }
 }
 .sub-heading {
   font-family: "Open Sans";
@@ -225,13 +324,16 @@ export default {
   text-align: center;
 
   color: #000000;
+  @media screen and (max-width: 768px) {
+    width: 325px;
+    margin-left: 5%;
+  }
 }
-.btn1{
+.btn1 {
   margin-left: 18%;
-
-  @media screen and (min-width:1920px){
-  margin-left: 26% ;
-}
+  @media screen and (min-width: 1920px) {
+    margin-left: 26%;
+  }
 }
 @media screen and (max-width: 768px) {
   #hero {
@@ -245,16 +347,23 @@ export default {
       .hero-title {
         font-size: 40px;
         font-weight: 600;
+        margin-top: -8em;
         line-height: 48px;
+      }
+      .carousel-inner {
+        width: 345px;
       }
     }
   }
 }
 
+
+
 #gallery {
   height: 70vh;
   width: 100%;
   padding: 50px 140px;
+  background-size: contain;
   .container-custom {
     margin-top: -170px;
     z-index: 1;
@@ -290,6 +399,8 @@ export default {
 
   background: linear-gradient(93.03deg, #e28d41 3.11%, #e0983e 97.13%);
   box-shadow: 0px 4px 18px rgba(224, 149, 62, 0.25);
+
+
 }
 @media screen and (min-width: 577px) {
   .cards-wrapper {
@@ -313,5 +424,15 @@ export default {
 .image-wrapper img {
   max-width: 100%;
   max-height: 100%;
+  @media screen and (max-width: 768px) {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+.hide-mobile {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 </style>

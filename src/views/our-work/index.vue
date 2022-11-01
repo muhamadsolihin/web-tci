@@ -1,5 +1,5 @@
 <template>
-	<MenuComponent :theme="'dark'" :direction="'down'" @goMenu="scrollToTop" />
+	<MenuComponent :theme="'light'" :direction="'dark'" @goMenu="scrollToTop" />
 	<div id="our-works">
 		<HeroSection />
 		<Ourwork />

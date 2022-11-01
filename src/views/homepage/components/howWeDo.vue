@@ -31,7 +31,68 @@
         >
 
  
+        <div class="row  collapse-mobile">
+              <div class="col-12">
+                <ul
+                  class="nav flex-center justify-content-left bg-transparent pt-5"
+                >
+                  <div class="row  row-menu" style="width: 300px">
+                    <div class="col-md-12" style="border: none">
+                      <div class="row g-5">
+                        <div class="col-2">
+                          <!--begin::Tab nav-->
+                          <li class="nav-item menu-0 flex-equal">
+                            <a
+                              class="nav-link btn btn-active-white text-center btn-color-gray-500 btn-active-color-gray-700 px-4 fs-6 fw-bold active"
+                              data-bs-toggle="tab"
+                              style="text-align: center"
+                              href="#kt_lists_widget_3_tab_pane_1"
+                              ><p class="no-title">01</p></a
+                            >
+                          </li>
+                        </div>
+                        <div class="col-2">
+                          <li class="nav-item menu-1  flex-equal">
+                            <a
+                              class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                              data-bs-toggle="tab"
+                              href="#kt_lists_adaptive"
+                              ><p class="no-title">02</p></a
+                            >
+                          </li>
+                        </div>
+                        <div class="col-2">
+                          <li class="nav-item menu-2 flex-equal">
+                            <a
+                              class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                              data-bs-toggle="tab"
+                              href="#kt_lists_orien"
+                              ><p class="no-title">03</p></a
+                            >
+                          </li>
+                        </div>
+                        <div class="col-2">
+                          <li class="nav-item  " style="width:20px">
+                            <a
+                              class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                              data-bs-toggle="tab"
+                              href="#kt_lists_sustainable"
+                              ><p class="no-title">04</p></a
+                            >
+                          </li>
+                        </div>
   
+                       
+                      </div>
+                    </div>
+                    <!--end::Tab nav-->
+                    <!--begin::Tab nav-->
+                    <div class="col-md-6"></div>
+                    <!--end::Tab nav-->
+                  </div>
+                </ul>
+              </div>
+            </div>
 
 
 
@@ -316,6 +377,7 @@ onMounted(() => {
     border-right: 1px solid #b8bdc6;
     @media screen and (max-width: 768px) {
       padding: 0;
+      border: 0;
     }
   }
   .section-number {
@@ -328,6 +390,7 @@ onMounted(() => {
   .open-reg-26 {
     @media screen and (max-width: 768px) {
       font-size: 20px !important;
+      width: 350px !important;
     }
   }
 
@@ -353,17 +416,17 @@ onMounted(() => {
 
   @media screen and (max-width: 768px) {
     margin-top: -20% !important;
-    margin-left: -30% !important;
-    width: 325px !important;
+    margin-left: -20% !important;
+   
   }
 }
 .batik-img {
   margin-left: -12%;
-  margin-top: 0 !important;
-  display: none;
-  @media screen and (max-width: 1920px) {
+  margin-top: -35%!important;
+
+  @media screen and (min-width: 1920px) {
     margin-left: -12%;
-    margin-top: 31% !important;
+    margin-top: 5.5% !important;
   }
   @media screen and (max-width: 768px) {
     display: none;
@@ -415,6 +478,9 @@ onMounted(() => {
   background-color: #0c4aa9;
   margin-right: 20px;
   margin-top: 10px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 .head1 {
   font-family: "Montserrat";
@@ -430,6 +496,52 @@ onMounted(() => {
   transform: translateY(600px);
   animation: slideUp 1s ease-in-out forwards 0.5s;
 }
+
+.collapse-mobile {
+  display: none;
+  @media screen and (max-width:768px){
+    display: block;
+    width: 350px;
+    margin-left: 5.5em;
+    padding-left: 2em;
+    margin-top: -4em;
+    margin-bottom: 4em;
+  }
+
+}
+.sub-1-title {
+  font-style: normal;
+  font-weight: 500;
+  position: absolute;
+  font-size: 14px;
+  width: 145px;
+  margin-top: -5.2em;
+  margin-bottom: 5em;
+  padding-top: 9px;
+  height: 42px;
+  margin-left: -3em;
+  text-align: center;
+  line-height: 21px;
+  /* identical to box height */
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 36px;
+}
+.no-title {
+  width: 32px;
+  height: 18px;
+  text-align: center;
+  margin-left: -18px;
+  padding-top: 8px;
+  font-size: 18px !important;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+// .nav-link {
+//   border: 1px solid #000000;
+//   border-radius: 100%;
+// }
 .subhead1 {
   font-family: "Open Sans";
   font-style: normal;
@@ -473,6 +585,10 @@ onMounted(() => {
   width: 25em;
   border: 1px solid #b8bdc6;
 border-radius: 36px;
+@media screen and (max-width:768px){
+  border-radius: 100%;
+  width: 20px;
+}
 }
 li:last-child {
   border-right: hidden !important;
@@ -490,6 +606,10 @@ li:last-child {
   width: 25em;
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
+  @media screen and (max-width:768px){
+
+  width: 20px;
+}
 }
 .btn-check:checked + .btn.btn-active-white i,
 .btn-check:active + .btn.btn-active-white i,

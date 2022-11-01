@@ -9,17 +9,75 @@
       <div class="d-flex flex-row align-items-center">
         <h2 class="head">Our Gallery</h2>
         <SectionNumberComponent
-          class="ms-auto section-number"
+          class="mx-auto mt-auto"
           :number="'08 / 11'"
           :section-name="'Our Gallery'"
           :color="'#fff'"
+          style="margin-left:33em !important"
         />
       </div>
-      <div class="container  d-flex flex-column justify-content-center">
-        <div
-          class="d-flex gallery-image  flex-column align-items-start justify-content-start"
-        >
-          <div class="row image-gallery " style="margin-bottom: 0">
+      <div class="container d-flex flex-column justify-content-center">
+        <div class="d-flex gallery-image">
+          <div class="row img-gallery">
+            <div class="col-md-6 ">
+              <img
+              class="img-box"
+                src="@/assets/images/galerry/pic1.png"
+                style="width: 35em; height: 15em"
+              />
+              <div class="transparent-box">
+                  <div class="caption">
+                    <p>Photo Studio</p>
+                  </div>
+                </div>
+              <div class="row mt-3" style="margin-left: -6em">
+                <div class="col-md-6">
+                  <img
+                    class="img-box1 img"
+                    src="@/assets/images/galerry/pic2.png"
+                    style="width: 16.8em; height: 15em; float: right"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <img
+                    class="img-box1 img"
+                    src="@/assets/images/galerry/pic3.png"
+                    style="width: 16.8em; height: 15em"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img
+                class="img-box3 img"
+                src="@/assets/images/galerry/pic4.png"
+                style="
+                  width: 17em;
+                  height: 31em;
+                  margin-left: -6em;
+                  float: left;
+                "
+              />
+              <div class="row">
+                <div class="col-md-12 col-12">
+                  <img
+                    class="img-box4"
+                    src="@/assets/images/galerry/pic5.png"
+                    style="width: 17em; height: 15.3em; z-index: 3"
+                  />
+                </div>
+                <div class="col-md-12 col-12 mt-2">
+                  <img
+                    class="img-box5"
+                    src="@/assets/images/galerry/pic6.png"
+                    style="width: 17em; height: 15.3em"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row image-gallery " style="margin-bottom: 0">
             <div class=" col-12 col-md-6 col-lg-6 col-xl-6">
               <div class="img-box text-white rounded">
                 <img
@@ -103,11 +161,11 @@
               </div>
               
             </div>
-          </div>
+          </div> -->
 
-          <div class="row  hide-desktop">
-            <div class="col-12  col-sm-12">
-              <img class="img-1 " src="@/assets/images/galerry/hero-image.png" />
+          <div class="row hide-desktop">
+            <div class="col-12 col-sm-12">
+              <img class="img-1" src="@/assets/images/galerry/hero-image.png" />
               <!-- <div class="transparent-box" style="margin-left:0 !important">
                   <div class="caption">
                     <p>Employee of The Month</p>
@@ -148,17 +206,14 @@
                     src="@/assets/images/galerry/hero-3.png"
                   />
                   <img
-                    class="img-2 mt-3 "
+                    class="img-2 mt-3"
                     style="width: 155px; height: 135px"
                     src="@/assets/images/galerry/hero-4.png"
                   />
-                  
                 </div>
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -167,23 +222,22 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import Hammer from 'hammerjs';
-import { onMounted } from 'vue';
+import Hammer from "hammerjs";
+import { onMounted } from "vue";
 
-
-const emit = defineEmits(['swipeUp', 'swipeDown']);
+const emit = defineEmits(["swipeUp", "swipeDown"]);
 onMounted(() => {
-		var stage = document.getElementById('hero');
-		var hammertime = new Hammer.Manager(stage);
-		var Swipe = new Hammer.Swipe();
-		hammertime.add(Swipe);
-		hammertime.on('swipeup', function (ev) {
-			emit('swipeUp');
-		});
-		hammertime.on('swipedown', function (ev) {
-			emit('swipeDown');
-		});
-	});
+  var stage = document.getElementById("hero");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -216,19 +270,19 @@ onMounted(() => {
         color: white;
       }
       .section-number {
-        border: 2px solid #b8bdc6;
-        border-radius: 25px;
-        margin-right: auto;
-        padding: 5px 10px;
-        font-family: "IBM Plex Mono", sans-serif;
-//         @media screen and (max-width:1920px){
-// margin-left: -10em;
-//   }
+        // border: 2px solid #b8bdc6;
+        // border-radius: 25px;
+        // margin-left: 20em;
+        // padding: 5px 10px;
+        // font-family: "IBM Plex Mono", sans-serif;
+        //         @media screen and (min-width:1920px){
+        // margin-top: 2em !important;
+        // position:absolute;
+        //   }
         hr {
           width: 20px;
           border-top: 2px solid;
         }
-
       }
       .shape-blue {
         width: 68px;
@@ -243,8 +297,8 @@ onMounted(() => {
       left: -1px;
       top: 30%;
       @media screen and (max-width: 768px) {
-      display: none;
-    }
+        display: none;
+      }
     }
   }
   .asset-1 {
@@ -258,13 +312,17 @@ onMounted(() => {
   }
 }
 
-.image-gallery{
-  @media screen and (min-width:1920px){
-
-    margin-top: -15em !important;
-
-  }
+.img-gallery{
   @media screen and (max-width:768px){
+    display: none;
+  }
+}
+
+.image-gallery {
+  @media screen and (min-width: 1920px) {
+    margin-top: -15em !important;
+  }
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }
@@ -274,34 +332,39 @@ onMounted(() => {
   color: #fff;
   font-weight: 600;
   margin-top: 3%;
-  margin-left: 0;
-  @media screen and (min-width:1920px){
+  margin-left: 2em !important;
+  @media screen and (min-width: 1920px) {
     font-size: 3em;
-    width:400px;
+    width: 400px;
     margin-top: 3em !important;
-  margin-left: 2.5em !important;
+    margin-left: 2.5em !important;
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     font-size: 3em;
-    width:400px;
+    width: 400px;
     margin-top: 2em !important;
-  margin-left: -1.5em !important;
+    margin-left: -2.5em !important;
   }
 }
-.section-number{
-  @media screen and (max-width:768px){
+.section-number {
+  @media screen and (max-width: 768px) {
     margin-top: 0 !important;
-  margin-left: -18em !important;
-  display: none !important;
+    margin-left: -18em !important;
+    display: none !important;
   }
-
 }
 
 .gallery-image {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+  margin-top: -20em;
+  @media screen and (max-width:768px){
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+  }
 }
 
 .gallery-image img {
@@ -321,7 +384,8 @@ onMounted(() => {
 
 .img-box1 {
   box-sizing: content-box;
-  width: 16.8em; height: 15em;
+  width: 16.8em;
+  height: 15em;
   margin-left: 0;
   overflow: hidden;
   display: inline-block;
@@ -348,7 +412,6 @@ onMounted(() => {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
 .transparent-box {
   width: 35em;
   height: 15em;
@@ -359,7 +422,8 @@ onMounted(() => {
   transition: background-color 0.3s ease;
 }
 .transparent-box1 {
-  width: 16.8em; height: 15em;
+  width: 16.8em;
+  height: 15em;
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
@@ -367,14 +431,14 @@ onMounted(() => {
   transition: background-color 0.3s ease;
 }
 .transparent-box2 {
-  width: 15.9em; height: 15em;
+  width: 15.9em;
+  height: 15em;
   background-color: rgba(0, 0.5, 0, 0);
   position: absolute;
   top: 0;
   margin-left: 0;
   transition: background-color 0.3s ease;
 }
-
 
 // .img-box:hover img {
 //   transform: scale(1.1);
@@ -388,7 +452,6 @@ onMounted(() => {
   transform: translateY(-20px);
   opacity: 1;
 }
-
 
 .img-box1:hover {
   cursor: pointer;
@@ -425,9 +488,7 @@ onMounted(() => {
   opacity: 0.5;
 }
 
-
 .img-box3 {
-
   box-sizing: content-box;
 
   margin-left: 0;
@@ -436,8 +497,6 @@ onMounted(() => {
   color: #fff;
   position: relative;
   background-color: transparent;
-  
-
 }
 
 .caption3 {
@@ -449,7 +508,8 @@ onMounted(() => {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .transparent-box3 {
-  width: 17em; height: 31.7em;
+  width: 17em;
+  height: 31.7em;
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
@@ -482,40 +542,37 @@ onMounted(() => {
   font-size: 0.8em;
 }
 
-
 .img-box4 {
+  box-sizing: content-box;
 
-box-sizing: content-box;
-
-margin-left: 0;
-overflow: hidden;
-display: inline-block;
-color: #fff;
-position: relative;
-background-color: transparent;
-
-
+  margin-left: 0;
+  overflow: hidden;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  background-color: transparent;
 }
 
 .caption4 {
-position: absolute;
-text-align: left;
-bottom: 5px;
-left: 5%;
-opacity: 0;
-transition: transform 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  text-align: left;
+  bottom: 5px;
+  left: 5%;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .transparent-box4 {
-  width: 17em; height: 15.3em;
-background-color: rgba(0, 0, 0, 0);
-position: absolute;
-top: 0;
-margin-left: 0;
-transition: background-color 0.3s ease;
+  width: 17em;
+  height: 15.3em;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  margin-left: 0;
+  transition: background-color 0.3s ease;
 }
 
 .img-box4:hover {
-cursor: none;
+  cursor: none;
 }
 
 // .img-box3:hover img {
@@ -523,57 +580,53 @@ cursor: none;
 // }
 
 .img-box4:hover .transparent-box4 {
-background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .img-box4:hover .caption4 {
-transform: translateY(-20px);
-opacity: 1;
+  transform: translateY(-20px);
+  opacity: 1;
 }
 
 .img-box4:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .caption3 > p:nth-child(2) {
-font-size: 0.8em;
+  font-size: 0.8em;
 }
 
-
-
 .img-box5 {
+  box-sizing: content-box;
 
-box-sizing: content-box;
-
-margin-left: 0;
-overflow: hidden;
-display: inline-block;
-color: #fff;
-position: relative;
-background-color: transparent;
-
-
+  margin-left: 0;
+  overflow: hidden;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  background-color: transparent;
 }
 
 .caption5 {
-position: absolute;
-text-align: left;
-bottom: 5px;
-left: 5%;
-opacity: 0;
-transition: transform 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  text-align: left;
+  bottom: 5px;
+  left: 5%;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .transparent-box5 {
-  width: 17em; height: 15.3em;
-background-color: rgba(0, 0, 0, 0);
-position: absolute;
-top: 0;
-margin-left: 0;
-transition: background-color 0.3s ease;
+  width: 17em;
+  height: 15.3em;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  margin-left: 0;
+  transition: background-color 0.3s ease;
 }
 
 .img-box5:hover {
-cursor: none;
+  cursor: none;
 }
 
 // .img-box3:hover img {
@@ -581,22 +634,21 @@ cursor: none;
 // }
 
 .img-box5:hover .transparent-box4 {
-background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .img-box5:hover .caption4 {
-transform: translateY(-20px);
-opacity: 1;
+  transform: translateY(-20px);
+  opacity: 1;
 }
 
 .img-box5:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .caption3 > p:nth-child(2) {
-font-size: 0.8em;
+  font-size: 0.8em;
 }
-
 
 .hide-desktop {
   display: none;
@@ -605,12 +657,11 @@ font-size: 0.8em;
     margin-top: -17em;
     margin-left: -6em;
     transform: scale(1);
-  transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
   }
 }
 .img-1 {
   width: 325px;
   height: 140px;
 }
-
 </style>
