@@ -13,7 +13,7 @@
           </h1>
         </div>
         <div
-          class="col-12  col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end location"
+          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end location"
         >
           <p class="sub-title">
             We know that everyone has a lot of different skills and field
@@ -30,7 +30,6 @@
         </div>
       </div>
 
-
       <div class="row show-mobile mx-1 h-50">
         <div class="col-12 py-5 discover">
           <h1 class="hashtag title">
@@ -38,7 +37,7 @@
           </h1>
         </div>
         <div
-          class="col-12  col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end location"
+          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end location"
         >
           <p class="sub-title">
             We know that everyone has a lot of different skills and field
@@ -46,7 +45,7 @@
             vision and show the world what you got, no matter where you came
             from, we have a spot for you. Find the most suitable job here.
           </p>
-          <img class="assets-3 " src="@/assets/images/careers/search.svg" />
+          <img class="assets-3" src="@/assets/images/careers/search.svg" />
         </div>
         <div
           class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end find-us"
@@ -84,12 +83,12 @@ const emit = defineEmits(["toTop"]);
   padding: 0 140px;
   background-image: url("@/assets/images/careers/Background.png");
   position: relative;
-        @media screen and (max-width: 768px) {
-        // font-weight: 700;
-        // font-size: 30px !important;
-        // line-height: 47px;
-        // width: 325px;
-      }
+  @media screen and (max-width: 768px) {
+    // font-weight: 700;
+    // font-size: 30px !important;
+    // line-height: 47px;
+    // width: 325px;
+  }
   .container-custom {
     padding: 80px 0 0 0;
     height: 100%;
@@ -118,7 +117,6 @@ const emit = defineEmits(["toTop"]);
         font-size: 30px !important;
         line-height: 47px;
         width: 325px;
-
       }
     }
     .discover {
@@ -158,7 +156,7 @@ const emit = defineEmits(["toTop"]);
   height: 710px !important;
   margin-top: -50%;
   margin-left: 5.6em;
-  
+
   @media screen and (min-width: 1920px) {
     margin-bottom: 15%;
     margin-top: 0;
@@ -210,7 +208,7 @@ const emit = defineEmits(["toTop"]);
       }
       .title {
         font-size: 30px;
-line-height: 37px;
+        line-height: 37px;
 
         margin-top: -3em;
         margin-left: -0.1em;
@@ -242,22 +240,21 @@ line-height: 37px;
     }
   }
 }
-.asset-high-1{
+.asset-high-1 {
   width: 224.81px;
-    height: 282px;
-    margin-top: -14em;
-    margin-left: 14em;
+  height: 282px;
+  margin-top: -14em;
+  margin-left: 14em;
 }
-.hide-mobile{
+.hide-mobile {
   @media screen and (max-width: 768px) {
     display: none;
   }
 }
-.show-mobile{
+.show-mobile {
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
   }
 }
-
 </style>
