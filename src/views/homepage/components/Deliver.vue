@@ -97,8 +97,9 @@ onMounted(() => {
   background-color: #eeeaea;
   height: 100vh;
   width: 100%;
-  padding: 0 140px;
+  padding: 0 140px 340px ;
   z-index: 1;
+  
   .container-custom {
     height: 100vh;
     padding: 80px 0;

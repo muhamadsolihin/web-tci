@@ -43,13 +43,13 @@
                       <li class="list-group-item contact">Contact :</li>
                     </ul>
                     <div class="card-body" style="border: none">
-                      <a href="#" class="btn-touch">
+                      <a href="https://www.facebook.com/Official.ICData/" target="_blank" class="btn-touch">
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="#" class="btn-touch">
+                      <a href="https://www.instagram.com/interconnectdata/" target="_blank" class="btn-touch">
                         <img src="@/assets/images/ig.svg" />
                       </a>
-                      <a href="#" class="btn-touch">
+                      <a href="https://mobile.twitter.com/icdata" target="_blank" class="btn-touch">
                         <img src="@/assets/images/twit.svg" />
                       </a>
                     </div>
@@ -82,7 +82,7 @@
                       <a href="#" class="btn-touch">
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="#" class="btn-touch">
+                      <a href="https://www.instagram.com/reliablebusinessservices/" target="_blank" class="btn-touch">
                         <img src="@/assets/images/ig.svg" />
                       </a>
                       <a href="#" class="btn-touch">
@@ -117,7 +117,7 @@
                       <a href="#" class="btn-touch">
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="#" class="btn-touch">
+                      <a href="https://www.instagram.com/arthology.id/" target="_blank" class="btn-touch">
                         <img src="@/assets/images/ig.svg" />
                       </a>
                       <a href="#" class="btn-touch">
@@ -149,13 +149,13 @@
                       <li class="list-group-item contact">Contact :</li>
                     </ul>
                     <div class="card-body" style="border: none">
-                      <a href="#" class="btn-touch">
+                      <a href="https://www.facebook.com/people/Makasi-Indonesia/100083488881963/" target="_blank" class="btn-touch">
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="#" class="btn-touch">
+                      <a href="https://www.instagram.com/makasipos/" target="_blank" class="btn-touch">
                         <img src="@/assets/images/ig.svg" />
                       </a>
-                      <a href="#" class="btn-touch">
+                      <a href="https://twitter.com/makasipos" target="_blank" class="btn-touch">
                         <img src="@/assets/images/twit.svg" />
                       </a>
                     </div>
@@ -288,7 +288,11 @@ onMounted(() => {
   color: #fff;
   font-weight: 600;
   margin-top: 6%;
+  margin-left: -1em;
+  @media screen and (min-width: 1920px) {
+    margin-top: 6%;
   margin-left: 3em;
+  }
 
   @media screen and (max-width: 768px) {
     margin-top: 2em;

@@ -1,12 +1,12 @@
 <template>
   <section id="howwedo">
-    <div class="container-custom">
+    <div class="container-custom ">
       <BorderContainer
         :theme="'light'"
         :sections-length="sectionsLength"
         :current-section="currentSection"
       />
-      <div class="row h-100 blog-row">
+      <div class="row h-100  blog-row">
         <div
           class="col-12 section-blog col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
         >
@@ -92,20 +92,9 @@
               </el-carousel-item>
             </el-carousel>
           </div>
+          
         </div>
-              <!-- <div class="col-md-12">
-        <form action="input">
-          <input
-            type="email"
-            maxlength="50"
-            required
-            placeholder="Enter your email address"
-          />
-          <button class="bt">Subscribe</button>
-        </form>
-      </div> -->
       </div>
-
 
       <div class="row h-100 show-mobile">
         <div
@@ -195,8 +184,11 @@
           </div>
         </div>
       </div>
-    </div>
+
+    </div>  
+    
   </section>
+  
 </template>
 
 <script setup>
@@ -239,6 +231,7 @@ onMounted(() => {
   width: 100%;
   padding: 0 140px;
   background-color: white;
+  
   @media screen and (max-width: 768px) {
     padding: 15px;
   }

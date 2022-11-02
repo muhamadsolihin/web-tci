@@ -30,7 +30,7 @@
                     <p>Photo Studio</p>
                   </div>
                 </div>
-              <div class="row mt-3" style="margin-left: -6em">
+              <div class="row mt-3 pic-employee" style="margin-left: -3em">
                 <div class="col-md-6">
                   <img
                     class="img-box1 img"
@@ -38,7 +38,7 @@
                     style="width: 16.8em; height: 15em; float: right"
                   />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" >
                   <img
                     class="img-box1 img"
                     src="@/assets/images/galerry/pic3.png"
@@ -47,14 +47,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" >
               <img
-                class="img-box3 img"
+                class="img-box3 img img-karin"
                 src="@/assets/images/galerry/pic4.png"
                 style="
                   width: 17em;
                   height: 31em;
-                  margin-left: -6em;
+                  margin-left: -3em;
                   float: left;
                 "
               />
@@ -317,6 +317,11 @@ onMounted(() => {
     display: none;
   }
 }
+.img-karin{
+  @media screen and (min-width:1920px){
+    margin-left: -6em !important;
+  }
+}
 
 .image-gallery {
   @media screen and (min-width: 1920px) {
@@ -331,8 +336,8 @@ onMounted(() => {
   font-size: 3.4em;
   color: #fff;
   font-weight: 600;
-  margin-top: 3%;
-  margin-left: 2em !important;
+  margin-top: 8%;
+  margin-left: 0;
   @media screen and (min-width: 1920px) {
     font-size: 3em;
     width: 400px;
@@ -358,12 +363,20 @@ onMounted(() => {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: -20em;
+  margin-top: -10em;
+  @media screen and (min-width:1920px){
+    margin-top: -20em;
+  }
   @media screen and (max-width:768px){
     display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 0;
+  }
+}
+.pic-employee{
+  @media screen and (min-width:1920px){
+    margin-left: -6em !important;
   }
 }
 

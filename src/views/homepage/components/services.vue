@@ -339,10 +339,11 @@ onMounted(() => {
   margin-top: -9.1% !important;
   width: 262px;
 height: 195px;
-  // display: none;
+  display: none;
   @media screen and (min-width: 1920px) {
     margin-left: -12%;
     margin-top: 11.5% !important;
+    display: block;
   }
   @media screen and (max-width: 768px) {
     display: none;

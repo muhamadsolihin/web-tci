@@ -205,6 +205,60 @@
           </div>
         </div>       
       </div>
+      <div class="col-4 mt-5">
+        <div class="card bg-transparent">
+          <div class="image-wrapper" style="margin-left: 1em">
+            <img
+              src="@/assets/images/media-gallery/arthboardtci.png"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <a
+              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+              class="btn btn1 btn-primary"
+              style="
+                position: absolute;
+                width: 145px;
+                height: 39px;
+                font-size: 12px;
+                margin-left: -1.5em;
+              "
+              >Company Profile &nbsp;
+              <img
+                style="width: 19.31px; height: 17.83px"
+                src="@/assets/images/media-gallery/icon-download.svg"
+            /></a>
+          </div>
+        </div>       
+      </div>
+      <div class="col-4 mt-5">
+        <div class="card bg-transparent">
+          <div class="image-wrapper" style="margin-left: 1em">
+            <img
+              src="@/assets/images/media-gallery/arthboardtci.png"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <a
+              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+              class="btn btn1 btn-primary"
+              style="
+                position: absolute;
+                width: 145px;
+                height: 39px;
+                font-size: 12px;
+                margin-left: -2em;
+              "
+              >Company Profile &nbsp;
+              <img
+                style="width: 19.31px; height: 17.83px"
+                src="@/assets/images/media-gallery/icon-download.svg"
+            /></a>
+          </div>
+        </div>       
+      </div>
     </div>
   </section>
 </template>
