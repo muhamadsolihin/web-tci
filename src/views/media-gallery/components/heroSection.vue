@@ -121,7 +121,10 @@
     </div>
   </section>
 
-  <section id="show-mobile" style="margin-left:3em; margin-top:1em; width: 405px;">
+  <section
+    id="show-mobile"
+    style="margin-left: 3em; margin-top: 1em; width: 405px"
+  >
     <div class="row">
       <div class="col-6">
         <div class="card bg-transparent">
@@ -148,14 +151,14 @@
                 src="@/assets/images/media-gallery/icon-download.svg"
             /></a>
           </div>
-        </div>       
+        </div>
       </div>
 
       <div class="col-6">
         <div class="card bg-transparent">
-          <div class="image-wrapper" style="margin-left: -2em;">
+          <div class="image-wrapper" style="margin-left: -2em">
             <img
-            style="width:200px"
+              style="width: 200px"
               src="@/assets/images/media-gallery/compro.png"
               alt="..."
             />
@@ -177,13 +180,13 @@
                 src="@/assets/images/media-gallery/icon-download.svg"
             /></a>
           </div>
-        </div>       
+        </div>
       </div>
-      <div class="col-6 mt-5" style="margin-bottom:2em">
+      <div class="col-6 mt-5" style="margin-bottom: 2em">
         <div class="card bg-transparent">
           <div class="image-wrapper" style="margin-left: -1em">
             <img
-            style="width:100%"
+              style="width: 100%"
               src="@/assets/images/media-gallery/minicompro.png"
               alt="..."
             />
@@ -205,9 +208,8 @@
                 src="@/assets/images/media-gallery/icon-download.svg"
             /></a>
           </div>
-        </div>       
+        </div>
       </div>
-      
     </div>
   </section>
 </template>
@@ -289,12 +291,11 @@ export default {
     right: 0;
   }
 }
-#show-mobile{
+#show-mobile {
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
   }
-
 }
 .heading {
   font-family: "IBM Plex Mono";
@@ -360,8 +361,6 @@ export default {
   }
 }
 
-
-
 #gallery {
   height: 70vh;
   width: 100%;
@@ -402,8 +401,6 @@ export default {
 
   background: linear-gradient(93.03deg, #e28d41 3.11%, #e0983e 97.13%);
   box-shadow: 0px 4px 18px rgba(224, 149, 62, 0.25);
-
-
 }
 @media screen and (min-width: 577px) {
   .cards-wrapper {

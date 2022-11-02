@@ -212,7 +212,10 @@
     </div>
   </section>
 
-  <section id="show-mobile" style="margin-left: 3em; margin-top: 1em; width: 405px;">
+  <section
+    id="show-mobile"
+    style="margin-left: 3em; margin-top: 1em; width: 405px"
+  >
     <div class="row">
       <div class="col-6">
         <div class="card bg-transparent">
@@ -339,7 +342,7 @@
           </div>
           <div class="card-body">
             <a
-              href="https://drive.google.com/file/d/1WcGEzn_bjFn2oEjWhaCdiKmzLRvrv_HG/view?usp=sharing"
+              href="https://drive.google.com/file/d/17eDsHPF8uCc5uZmfIkmZXH7hjGxcIgDe/view?usp=sharing"
               class="btn btn1 btn-primary"
               style="
                 position: absolute;
@@ -368,7 +371,7 @@
           </div>
           <div class="card-body">
             <a
-              href="https://drive.google.com/file/d/1WcGEzn_bjFn2oEjWhaCdiKmzLRvrv_HG/view?usp=sharing"
+              href="https://drive.google.com/file/d/1rgk934RtJG0Ui23-NmZec4Do0vp0hIsU/view?usp=sharing"
               class="btn btn1 btn-primary"
               style="
                 position: absolute;
@@ -397,7 +400,7 @@
           </div>
           <div class="card-body">
             <a
-              href="https://drive.google.com/file/d/1WcGEzn_bjFn2oEjWhaCdiKmzLRvrv_HG/view?usp=sharing"
+              href="https://drive.google.com/file/d/1NnuEL3bUGJ17xaeHplZ30tpnZY0KYYu4/view?usp=sharing"
               class="btn btn1 btn-primary"
               style="
                 position: absolute;
@@ -426,7 +429,7 @@
           </div>
           <div class="card-body">
             <a
-              href="https://drive.google.com/file/d/1WcGEzn_bjFn2oEjWhaCdiKmzLRvrv_HG/view?usp=sharing"
+              href="https://drive.google.com/file/d/1AIOiGuoYy7Z57NlU_YsHs3ggPV-QnQnJ/view?usp=sharing"
               class="btn btn1 btn-primary"
               style="
                 position: absolute;
@@ -443,8 +446,6 @@
           </div>
         </div>
       </div>
-
-
     </div>
   </section>
 </template>
