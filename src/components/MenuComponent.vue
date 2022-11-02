@@ -161,7 +161,7 @@
 
 <style lang="scss" scoped>
 	.navbar {
-		z-index: 2;
+		z-index: 5;
 		background-color: transparent;
 		padding: 0 145px;
 	}
