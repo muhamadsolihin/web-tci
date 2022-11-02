@@ -52,7 +52,7 @@
 				width: 100vw;
 				background: rgba(0, 0, 0, 0.4);
 				backdrop-filter: blur(10px);
-				z-index: 2;
+				z-index: 6;
 			"
 			v-if="showMenu"
 		>
@@ -161,7 +161,7 @@
 
 <style lang="scss" scoped>
 	.navbar {
-		z-index: 2;
+		z-index: 5;
 		background-color: transparent;
 		padding: 0 145px;
 	}
