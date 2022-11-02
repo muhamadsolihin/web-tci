@@ -158,7 +158,8 @@ const emit = defineEmits(["toTop"]);
   height: 710px !important;
   margin-top: -50%;
   margin-left: 5.6em;
-  @media screen and (max-width: 1920px) {
+  
+  @media screen and (min-width: 1920px) {
     margin-bottom: 15%;
     margin-top: 0;
   }

@@ -121,9 +121,9 @@
     </div>
   </section>
 
-  <section id="show-mobile">
+  <section id="show-mobile" style="margin-left:3em; margin-top:1em; width: 405px;">
     <div class="row">
-      <div class="col-4">
+      <div class="col-6">
         <div class="card bg-transparent">
           <div class="image-wrapper" style="margin-left: 1em">
             <img
@@ -151,26 +151,27 @@
         </div>       
       </div>
 
-      <div class="col-4">
+      <div class="col-6">
         <div class="card bg-transparent">
-          <div class="image-wrapper" style="margin-left: 1em">
+          <div class="image-wrapper" style="margin-left: -2em;">
             <img
-              src="@/assets/images/media-gallery/arthboardtci.png"
+            style="width:200px"
+              src="@/assets/images/media-gallery/compro.png"
               alt="..."
             />
           </div>
           <div class="card-body">
             <a
-              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+              href="https://drive.google.com/file/d/1fWdoz8xKvzkaGokDGSECIC4KagVDR5jD/view?usp=sharing"
               class="btn btn1 btn-primary"
               style="
                 position: absolute;
-                width: 145px;
+                width: 175px;
                 height: 39px;
                 font-size: 12px;
-                margin-left: -1.5em;
+                margin-left: -2.5em;
               "
-              >Company Profile &nbsp;
+              >IT Solution Profile &nbsp;
               <img
                 style="width: 19.31px; height: 17.83px"
                 src="@/assets/images/media-gallery/icon-download.svg"
@@ -178,26 +179,27 @@
           </div>
         </div>       
       </div>
-      <div class="col-4">
+      <div class="col-6 mt-5" style="margin-bottom:2em">
         <div class="card bg-transparent">
-          <div class="image-wrapper" style="margin-left: 1em">
+          <div class="image-wrapper" style="margin-left: -1em">
             <img
-              src="@/assets/images/media-gallery/arthboardtci.png"
+            style="width:100%"
+              src="@/assets/images/media-gallery/minicompro.png"
               alt="..."
             />
           </div>
           <div class="card-body">
             <a
-              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
+              href="https://drive.google.com/file/d/1gx7II_pfH_Si6Uf9KvVg6wvIqs54Pw2s/view?usp=sharing"
               class="btn btn1 btn-primary"
               style="
                 position: absolute;
-                width: 145px;
+                width: 175px;
                 height: 39px;
                 font-size: 12px;
-                margin-left: -2em;
+                margin-left: -1em;
               "
-              >Company Profile &nbsp;
+              >Mini Company Profile &nbsp;
               <img
                 style="width: 19.31px; height: 17.83px"
                 src="@/assets/images/media-gallery/icon-download.svg"
@@ -205,60 +207,7 @@
           </div>
         </div>       
       </div>
-      <div class="col-4 mt-5">
-        <div class="card bg-transparent">
-          <div class="image-wrapper" style="margin-left: 1em">
-            <img
-              src="@/assets/images/media-gallery/arthboardtci.png"
-              alt="..."
-            />
-          </div>
-          <div class="card-body">
-            <a
-              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
-              class="btn btn1 btn-primary"
-              style="
-                position: absolute;
-                width: 145px;
-                height: 39px;
-                font-size: 12px;
-                margin-left: -1.5em;
-              "
-              >Company Profile &nbsp;
-              <img
-                style="width: 19.31px; height: 17.83px"
-                src="@/assets/images/media-gallery/icon-download.svg"
-            /></a>
-          </div>
-        </div>       
-      </div>
-      <div class="col-4 mt-5">
-        <div class="card bg-transparent">
-          <div class="image-wrapper" style="margin-left: 1em">
-            <img
-              src="@/assets/images/media-gallery/arthboardtci.png"
-              alt="..."
-            />
-          </div>
-          <div class="card-body">
-            <a
-              href="https://drive.google.com/file/d/1o7rPERMtLBxM1kdNVm3ImHy_p2MYqx1m/view"
-              class="btn btn1 btn-primary"
-              style="
-                position: absolute;
-                width: 145px;
-                height: 39px;
-                font-size: 12px;
-                margin-left: -2em;
-              "
-              >Company Profile &nbsp;
-              <img
-                style="width: 19.31px; height: 17.83px"
-                src="@/assets/images/media-gallery/icon-download.svg"
-            /></a>
-          </div>
-        </div>       
-      </div>
+      
     </div>
   </section>
 </template>

@@ -155,6 +155,138 @@
       </button> -->
     </div>
   </section>
+
+  <section
+    id="show-mobile"
+    style="margin-left: 2em; margin-top: 1em; width: 405px"
+  >
+    <div class="row">
+      <div class="col-6">
+        <div class="card bg-transparent">
+          <div
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal-11"
+            class="btn btn-transparent popup-youtube image-wrapper"
+          >
+            <img src="@/assets/images/media-gallery/bg-yt1.png" alt="..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card bg-transparent">
+          <div
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal-12"
+            class="btn btn-transparent popup-youtube image-wrapper"
+          >
+            <img src="@/assets/images/media-gallery/bg-yt2.png" alt="..." />
+          </div>
+        </div>
+      </div>
+      <div class="col-6 mt-5" style="margin-bottom: 2em">
+        <div class="card bg-transparent">
+          <div
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal-13"
+            class="btn btn-transparent popup-youtube image-wrapper"
+          >
+            <img src="@/assets/images/media-gallery/bg-yt3.png" alt="..." />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal-11"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body bg-transparan">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item yt-3"
+                src="https://www.youtube.com/embed/k4Dq-kOEu7g"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal-12"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body bg-transparan">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item yt-3"
+                src="https://www.youtube.com/embed/E3y7V9Ff8Mc"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal-13"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body bg-transparan">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item yt-3"
+                src="https://www.youtube.com/embed/DhSAC7s2i5c"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -209,9 +341,9 @@ export default {
     margin-top: -170px;
     z-index: 1;
   }
-  @media screen and (max-width:768px){
-   display: none;
- }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 .card {
   border: none;
@@ -257,9 +389,13 @@ export default {
   border-radius: 30px;
   padding: 10px;
   color: #000000;
-  @media screen and (max-width:768px){
-   display: none;
- }
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    line-height: 13px;
+    margin-left: 30%;
+    text-align: center;
+    width: 140px;
+  }
 }
 @media screen and (min-width: 577px) {
   .cards-wrapper {
@@ -288,5 +424,15 @@ export default {
 .yt-3 {
   width: 100%;
   height: 70vh;
+  @media screen and (max-width: 768px) {
+    height: 50vh;
+  }
+}
+
+#show-mobile {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 }
 </style>
