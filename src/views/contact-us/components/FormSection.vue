@@ -98,15 +98,15 @@
             </div> -->
             <div class="d-flex flex-row align-items-center">
               <img src="@/assets/images/icons/agree.svg" alt="icon" />
-              <p class="mb-0 ms-2 fw-500">
+              <router-link to="/third-party" class="mb-0 ms-2 fw-500">
                 I agree to receive other communications from TCI
-              </p>
+              </router-link>
             </div>
             <div class="d-flex flex-row align-items-center mt-3">
               <img src="@/assets/images/icons/agree.svg" alt="icon" />
-              <p class="mb-0 ms-2 fw-500">
+              <router-link to="/third-party" class="mb-0 ms-2 fw-500">
                 I agree to allow TCI to store and process my personal data
-              </p>
+              </router-link>
             </div>
           </div>
           <div
