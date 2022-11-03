@@ -366,7 +366,7 @@ onMounted(() => {
   background-color: white;
   height: 100vh;
   z-index: 2;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     padding: 0;
   }
   .container-border {
@@ -375,22 +375,23 @@ onMounted(() => {
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
       padding: 0;
       border: 0;
     }
   }
   .section-number {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
       margin-top: -7em;
-      margin-left: -21em !important;
+      margin-left: -14em !important;
     }
   }
 
   .open-reg-26 {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
       font-size: 20px !important;
-      width: 350px !important;
+      width: 275px !important;
+      text-align: left !important;
     }
   }
 
@@ -414,7 +415,7 @@ onMounted(() => {
 
 .nav-item {
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     margin-top: -20% !important;
     margin-left: -20% !important;
    
@@ -422,14 +423,14 @@ onMounted(() => {
 }
 .batik-img {
   margin-left: -12%;
-  margin-top: -35%!important;
+  margin-top: -45%!important;
   display: none;
-  @media screen and (min-width: 1920px) {
+  @media screen and (max-width: 1920px) {
     margin-left: -12%;
     margin-top: 5.5% !important;
-    display: block;
+    display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 }
@@ -442,11 +443,11 @@ onMounted(() => {
   /* identical to box height */
 
   color: #b8bdc6;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
   }
 }
 .hide-mobile{
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 }
@@ -468,8 +469,8 @@ onMounted(() => {
   text-align: start;
 
   color: black;
-  @media screen and (max-width: 768px) {
-    font-size: 30px;
+  @media screen and (max-width: 576px) {
+    font-size: 30px !important;
     margin-top: 10% !important;
   }
 }
@@ -479,7 +480,7 @@ onMounted(() => {
   background-color: #0c4aa9;
   margin-right: 20px;
   margin-top: 10px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 }
@@ -500,10 +501,10 @@ onMounted(() => {
 
 .collapse-mobile {
   display: none;
-  @media screen and (max-width:768px){
+  @media screen and (max-width:576px){
     display: block;
-    width: 350px;
-    margin-left: 5.5em;
+    width: 320px;
+    margin-left: 5em;
     padding-left: 2em;
     margin-top: -4em;
     margin-bottom: 4em;
@@ -556,14 +557,14 @@ onMounted(() => {
   /* or 167% */
 
   color: #000000 !important;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     font-size: 13px !important;
 
-    width: 325px !important;
+    width: 275px !important;
   }
 }
 .tab-content{
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
  
 
     width: 325px !important;
@@ -586,7 +587,7 @@ onMounted(() => {
   width: 25em;
   border: 1px solid #b8bdc6;
 border-radius: 36px;
-@media screen and (max-width:768px){
+@media screen and (max-width:576px){
   border-radius: 100%;
   width: 20px;
 }
@@ -607,7 +608,7 @@ li:last-child {
   width: 25em;
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width:768px){
+  @media screen and (max-width:576px){
 
   width: 20px;
 }

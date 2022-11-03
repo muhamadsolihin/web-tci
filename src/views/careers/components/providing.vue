@@ -294,7 +294,7 @@
                           </div>
                           <div
                             class="head1"
-                            style="text-align: center; width: 331px"
+                            style="text-align: center; width: 331px;"
                           >
                             You could get your vacation time or send some remote
                             working request when you need it, your team members
@@ -327,7 +327,7 @@
                           </div>
                           <div
                             class="head1"
-                            style="text-align: center; width: 331px"
+                            style="text-align: center; width: 331px;margin-left: -9em;"
                           >
                             At TCI, we offer some benefits that allows you to
                             gain more skill through our Interconnect Academy
@@ -393,13 +393,13 @@ import BorderContainer from "@/components/BorderContainer.vue";
       font-weight: 600;
       text-align: start;
       color: black;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 567px) {
         display: none;
       }
     }
     .hero-title-mobile {
       display: none;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 567px) {
         display: block;
         font-family: "Montserrat";
         font-style: normal;
@@ -422,7 +422,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
       width: 1069px !important;
 
       color: #000000;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 567px) {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
@@ -449,12 +449,12 @@ import BorderContainer from "@/components/BorderContainer.vue";
   padding-bottom: 90px;
   width: 1048px;
   height: 1277px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 567px) {
   #hero {
     padding: 0 30px;
 
@@ -468,7 +468,14 @@ import BorderContainer from "@/components/BorderContainer.vue";
         line-height: 48px;
       }
     }
+
   }
+  .head1{
+      margin-left:-3em;
+    }
+    .subhead1{
+      margin-left:-3em;
+    }
 }
 
 #hero1 {
@@ -481,7 +488,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
 
 .collapse-mobile {
   display: none;
-  @media screen and (max-width:768px){
+  @media screen and (max-width:567px){
     display: block;
   }
   width: 500px;
@@ -495,11 +502,11 @@ import BorderContainer from "@/components/BorderContainer.vue";
   position: absolute;
   font-size: 14px;
   width: 145px;
-  margin-top: -5.2em;
+  margin-top: -4.5em;
   margin-bottom: 5em;
   padding-top: 9px;
   height: 42px;
-  margin-left: -4em;
+  margin-left: -7em;
   text-align: center;
   line-height: 21px;
   /* identical to box height */
@@ -538,7 +545,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
 
   background-color: #fff;
   box-shadow: 0px 10px 0px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);
   }
 }

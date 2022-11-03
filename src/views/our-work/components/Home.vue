@@ -110,12 +110,13 @@
 				padding: 0;
 				border: none;
 				.hero-title {
-					font-size: 40px;
+					font-size: 40px !important;
 					font-weight: 600;
 					line-height: 48px;
+          width: 325px;
 				}
         .albert-reg-20{
-          width: 325px;
+          width: 280px !important;
         }
 			}
 		}

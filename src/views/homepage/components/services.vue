@@ -61,7 +61,7 @@
                       class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
                       data-bs-toggle="tab"
                       href="#kt_lists_widget_3_tab_pane_2_digital"
-                      ><img  src="@/assets/images/animate/digital.svg"
+                      ><img src="@/assets/images/animate/digital.svg"
                     /></a>
                   </li>
                   <li
@@ -247,7 +247,7 @@ onMounted(() => {
   height: 100vh;
   margin-top: 0;
   z-index: 1;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     margin-top: -1em;
   }
   .container-border {
@@ -258,18 +258,18 @@ onMounted(() => {
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       padding: 0;
       z-index: 5;
     }
   }
   .section-number {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       margin-left: -10% !important;
     }
   }
   .row-menu {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       margin-top: 3em;
       margin-left: -30% !important;
       width: 325px !important;
@@ -277,19 +277,19 @@ onMounted(() => {
   }
 
   .menu-1 {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       margin-top: -40% !important;
       margin-left: 16em !important;
     }
   }
   .menu-2 {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       margin-top: 35% !important;
       margin-left: -1em !important;
     }
   }
   .menu-3 {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       margin-top: -40% !important;
       margin-left: 16em !important;
     }
@@ -300,7 +300,7 @@ onMounted(() => {
     background-color: #0c4aa9;
     margin-right: 20px;
     margin-top: 10px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       display: none;
     }
   }
@@ -338,14 +338,14 @@ onMounted(() => {
   margin-left: -12%;
   margin-top: -9.1% !important;
   width: 262px;
-height: 195px;
+  height: 195px;
   display: none;
-  @media screen and (min-width: 1920px) {
+  @media screen and (max-width: 1920px) {
     margin-left: -12%;
     margin-top: 11.5% !important;
-    display: block;
+    display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: none;
   }
 }
@@ -368,12 +368,12 @@ height: 195px;
   /* identical to box height */
 
   color: #000000;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     font-size: 30px !important;
     text-align: center !important;
     width: 241px !important;
     padding-top: 1em;
-    margin-left: 1.5em;
+    margin-left: 0;
   }
 }
 .hero-title {
@@ -384,7 +384,7 @@ height: 195px;
   text-align: start;
   color: black;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: none;
   }
 }
@@ -393,9 +393,10 @@ height: 195px;
   font-size: 1em;
   font-weight: 400;
   color: #000000;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     font-size: 12px;
     width: 322px !important;
+    margin-left: -25% !important;
     text-align: center !important;
   }
 }
@@ -415,11 +416,11 @@ height: 195px;
 .show > .btn.btn-active-white {
   color: #7e8299;
   border-color: #ffffff;
-//   width: 120px;
-// height: 128px;
+  //   width: 120px;
+  // height: 128px;
   background-color: #fff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);
   }
 }
