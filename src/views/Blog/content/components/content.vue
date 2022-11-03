@@ -13,7 +13,7 @@
           <p class="description">
             “Jadi fotografer tuh gampang tinggal mencet mencet tombol shutter
             doang” <br />
-        
+
             Apakah ada yang familiar dengan ungkapan tersebut? Pernah
             mendengarnya dari orang lain, atau mungkin, kamu adalah salah satu
             manusia yang juga kerap menyampaikan ungkapan itu?<br />
@@ -84,49 +84,45 @@
             manusia selalu melibatkan ilmu fotografi.”
           </p>
         </div>
-
       </div>
-      <p class="sub-title">
-          Similar Blogs
-        </p>
-        <div class="row">
+      <p class="sub-title">Similar Blogs</p>
+      <div class="row similar">
         <div class="col-md-4">
-            <img class="img-2" src="@/assets/images/blog/1.png" />
-            <p class="title">Lorem Ipsum</p>
-            <p class="tgl">october 04, 2022</p>
-            <p class="description">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy ni...
-            </p>
-          </div>
-          <div class="col-md-4">
-            <img class="img-2" src="@/assets/images/blog/2.png" />
-            <p class="title">Lorem Ipsum</p>
-            <p class="tgl">october 04, 2022</p>
-            <p class="description">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy ni...
-            </p>
-          </div>
-          <div class="col-md-4">
-            <img class="img-2" src="@/assets/images/blog/3.png" />
-            <p class="title">Lorem Ipsum</p>
-            <p class="tgl">october 04, 2022</p>
-            <p class="description">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy ni
-              
-              <a href="">...</a>
-            </p>
-          </div>
+          <img class="img-2" src="@/assets/images/blog/1.png" />
+          <p class="title">Lorem Ipsum</p>
+          <p class="tgl">october 04, 2022</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy ni...
+          </p>
         </div>
+        <div class="col-md-4">
+          <img class="img-2" src="@/assets/images/blog/2.png" />
+          <p class="title">Lorem Ipsum</p>
+          <p class="tgl">october 04, 2022</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy ni...
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-2" src="@/assets/images/blog/3.png" />
+          <p class="title">Lorem Ipsum</p>
+          <p class="tgl">october 04, 2022</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy ni
+
+            <a href="">...</a>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 <script></script>
 <style lang="scss" scoped>
 #content-blog {
-
   width: 100%;
   // margin-bottom: 100%;
   padding: 0 140px;
@@ -153,21 +149,53 @@
     }
     .description {
       font-weight: 400;
-font-size: 18px;
-line-height: 35px;
-/* or 194% */
-text-align: justify;
+      font-size: 18px;
+      line-height: 35px;
+      /* or 194% */
+      text-align: justify;
 
-color: #000000;
+      color: #000000;
     }
     .img-1 {
       width: 1000px;
       height: 680px;
     }
     .img-2 {
-        width: 372px;
-        height: 346px;
-      }
+      width: 372px;
+      height: 346px;
+    }
+    .sub-title {
+      font-weight: 600;
+      font-size: 55px;
+      line-height: 66px;
+      /* identical to box height */
+
+      letter-spacing: -2.81895px;
+
+      color: #000000;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .content {
+    width: 325px;
+    margin-left: -25%;
+  }
+  .img-1 {
+    width: 325px !important;
+    height: 325px !important;
+  }
+  .similar {
+    width: 325px;
+    margin-left: -30%;
+  }
+  .sub-title {
+    font-size: 30px !important;
+    line-height: 37px;
+    /* identical to box height */
+    margin-left: -20%;
+
+    color: #000000;
   }
 }
 </style>

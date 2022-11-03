@@ -9,11 +9,10 @@
         <div class="row content">
           <div class="col-md-4">
             <img class="img-1" src="@/assets/images/blog/1.png" />
-            <p class="title">Lorem Ipsum</p>
+            <p class="title">A Photographer’s Point of View </p>
             <p class="tgl">october 04, 2022</p>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy ni...
+              “Jadi fotografer tuh gampang tinggal mencet mencet tombol shutter doang”<a class="btn" @click="$router.push(`/blog/content`)">...</a>
             </p>
           </div>
           <div class="col-md-4">
@@ -22,7 +21,7 @@
             <p class="tgl">october 04, 2022</p>
             <p class="description">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy ni...
+              nonummy ni <a class="btn" @click="$router.push(`/blog/content`)">...</a>
             </p>
           </div>
           <div class="col-md-4">
@@ -33,7 +32,7 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy ni
               
-              <a href="">...</a>
+              <a class="btn" @click="$router.push(`/blog/content`)">...</a>
             </p>
           </div>
         </div>
@@ -81,6 +80,22 @@
         width: 372px;
         height: 346px;
       }
+    }
+  }
+
+  @media screen and (max-width:768px){
+    #content-blog{
+      margin-bottom: 40em;
+    }
+    .container-custom {
+      margin-left: -3%;
+    }
+    .content{
+      margin-left: -30%;
+      width: 325px;
+    }
+    .description {
+      width: 325px;
     }
   }
   </style>

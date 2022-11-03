@@ -31,13 +31,14 @@
         >
           <div class="justify-content-center h-100">
             <el-carousel
+
               trigger="click"
               height="32.5em"
               width="37em"
               style="margin-top: 20%; margin-left: 4%"
             >
               <el-carousel-item>
-                <div class="card" style="width: 36.6em; border: none">
+                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -55,7 +56,7 @@
                 </div>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card" style="width: 36.6em; border: none">
+                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -73,7 +74,7 @@
                 </div>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card" style="width: 36.6em; border: none">
+                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -127,7 +128,7 @@
               style="margin-top: 20%; margin-left: 4%"
             >
               <el-carousel-item>
-                <div class="card" style="width: 36.6em; border: none">
+                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -145,7 +146,7 @@
                 </div>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card" style="width: 36.6em; border: none">
+                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -163,7 +164,7 @@
                 </div>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card" style="width: 36.6em; border: none">
+                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"

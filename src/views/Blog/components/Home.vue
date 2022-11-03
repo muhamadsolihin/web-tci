@@ -15,10 +15,8 @@
             style="width: 218px"
             :color="'#ffffff'"
           />-->
-          <h1 class="hero-title ">
-              Our Blogs
-          </h1>
-          <!--
+      <h1 class="hero-title">Our Blogs</h1>
+      <!--
           <div class="d-flex flex-row justify-content-start align-items-start">
             <div class="shape-blue"></div>
             <p class="albert-reg-20 text-white text-description">
@@ -37,9 +35,7 @@
       alt="asset"
     />
   </section>
-  <section id="hero-1">
-
-  </section>
+  <section id="hero-1"></section>
 </template>
 
 <script setup>
@@ -62,7 +58,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
     .hero-title {
       font-size: 60px;
       font-family: "Montserrat", sans-serif;
-        margin-top: -15%;
+      margin-top: -15%;
       font-weight: 600;
       line-height: 60px;
       text-align: center;
@@ -103,9 +99,9 @@ import BorderContainer from "@/components/BorderContainer.vue";
   }
 }
 
-#hero-1{
-    height: 20vh;
-    background-color: #fff;
+#hero-1 {
+  height: 20vh;
+  background-color: #fff;
 }
 @media screen and (max-width: 768px) {
   #hero {
