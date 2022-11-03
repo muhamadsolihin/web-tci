@@ -16,11 +16,11 @@
         />
       </div>
       <div
-        class="d-flex flex-row   align-items-start justify-content-center mt-4"
+        class="d-flex flex-row align-items-start justify-content-center mt-4"
       >
-        <el-row class="py-5" :gutter="20" style="margin-top: 5px;">
+        <el-row class="py-5" :gutter="20" style="margin-top: 5px">
           <div class="col-md-3">
-            <div class="grid-content card-ic ">
+            <div class="grid-content card-ic">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/our-work/bmc.png"
@@ -42,7 +42,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3"> <div class="grid-content card-ic">
+          <div class="col-md-3">
+            <div class="grid-content card-ic">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/our-work/collega.png"
@@ -61,8 +62,10 @@
                   </p>
                 </div>
               </div>
-            </div></div>
-            <div class="col-md-3"><div class="grid-content card-ic">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="grid-content card-ic">
               <div class="card" style="border: none">
                 <img
                   src="@/assets/images/our-work/sedekah.png"
@@ -81,11 +84,13 @@
                   </p>
                 </div>
               </div>
-            </div></div>
-            <div class="col-md-3"><div class="grid-content card-ic">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="grid-content card-ic">
               <div class="card" style="border: none">
                 <img
-                  src="@/assets/images/makasilogo.svg"
+                  src="@/assets/images/product/logo-makasi.svg"
                   class="card-img-top ic-image"
                   alt="responsive"
                 />
@@ -101,7 +106,8 @@
                   </p>
                 </div>
               </div>
-            </div></div>
+            </div>
+          </div>
         </el-row>
       </div>
     </div>
@@ -110,7 +116,6 @@
 
 <script setup>
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-
 </script>
 
 <style lang="scss" scoped>
@@ -122,7 +127,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   padding: 0 69px;
   position: relative;
   z-index: 1;
-  @media screen and (min-width:1920px){
+  @media screen and (min-width: 1920px) {
     padding: 0 85.8px;
   }
   .container-border {
@@ -133,32 +138,31 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
     padding-right: 80px;
 
     border-left: 1px solid #b8bdc6;
-    @media screen and (max-width:768px){
-          border:none;
-  }
+    @media screen and (max-width: 567px) {
+      border: none;
+    }
     .container {
-
-        hr {
-          width: 20px;
-          border-top: 2px solid;
-        }
+      hr {
+        width: 20px;
+        border-top: 2px solid;
       }
     }
-    .asset-2 {
-      position: absolute;
-      left: -1px;
-      top: 30%;
-    }
   }
-  .asset-1 {
+  .asset-2 {
     position: absolute;
-    bottom: -90px;
-    left: 45%;
+    left: -1px;
+    top: 30%;
   }
-  .asset-3 {
-    position: absolute;
-    bottom: 0;
-  }
+}
+.asset-1 {
+  position: absolute;
+  bottom: -90px;
+  left: 45%;
+}
+.asset-3 {
+  position: absolute;
+  bottom: 0;
+}
 
 .title {
   font-family: "Montserrat", sans-serif;
@@ -166,23 +170,23 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   font-size: 3rem;
   line-height: 57px;
   color: #000;
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 567px) {
     margin-top: 0.5em;
-    font-size: 1.5em;
+    width: 325px !important;
+
   }
 }
 .section-number {
-  
-        @media screen and (max-width:768px){
-          display: none !important;
+  @media screen and (max-width: 567px) {
+    display: none !important;
   }
 }
 
 .card-ic {
   width: 17em;
   height: 33em;
-   z-index: 99;
-margin: 1em;
+  z-index: 99;
+  margin: 1em;
   cursor: pointer;
   @media (min-width: 992px) {
     margin-top: 0;
@@ -201,7 +205,6 @@ margin: 1em;
   transition-duration: 0.3s;
 }
 .card-ic:hover {
-
   transform: translateZ(0);
   box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
   -webkit-backface-visibility: hidden;
@@ -238,14 +241,13 @@ margin: 1em;
   font-weight: 600;
   text-align: left;
   margin-top: 10%;
- 
+
   margin-left: 6%;
-  @media screen and (max-width:768px){
-          text-align: center;
-          font-size: 25px;
+  @media screen and (max-width: 567px) {
+    text-align: center;
+    font-size: 25px;
   }
 }
-
 
 .card-text {
   font-family: "Open Sans";
@@ -257,10 +259,10 @@ margin: 1em;
 
   line-height: 30px;
   /* or 167% */
-  @media screen and (max-width:768px){
-          text-align: justify;
-          width: 250px;
-          margin-left: 0;
+  @media screen and (max-width: 567px) {
+    text-align: justify;
+    width: 250px;
+    margin-left: 0;
   }
 }
 </style>

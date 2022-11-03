@@ -6,18 +6,28 @@
         src="@/assets/images/who-we-are/asset-2.png"
         alt=""
       />
-      <div class="d-flex flex-row align-items-center">
+      <div class="d-flex flex-row flex-wrap align-items-center w-100">
+        <h1 class="head mb-0">Our Product</h1>
+        <SectionNumberComponent
+          class="ms-auto mt-auto"
+          :number="'10 / 11'"
+          :section-name="'Our Product'"
+          :color="'#fff'"
+   
+        />
+      </div>
+      <!-- <div class=" align-items-center">
         <h2 class="head">Our Product</h2>
         <SectionNumberComponent
-          class="mx-auto mt-auto"
+          class=" section-number"
           :number="'06 / 11'"
           :section-name="'Our Product'"
           :color="'#fff'"
-          style="margin-left:45em !important"
-        />
-      </div>
+          style="margin-left: 45em !important"
+        /> 
+      </div> -->
       <div class="container d-flex flex-column justify-content-center">
-        <div class="d-flex flex-column align-items-start justify-content-start">
+        <!-- <div class="d-flex  "> -->
           <div class="container mt-5 pt-3">
             <el-row class="hide-mobile">
               <el-col :span="6"
@@ -43,13 +53,25 @@
                       <li class="list-group-item contact">Contact :</li>
                     </ul>
                     <div class="card-body" style="border: none">
-                      <a href="https://www.facebook.com/Official.ICData/" target="_blank" class="btn-touch">
+                      <a
+                        href="https://www.facebook.com/Official.ICData/"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="https://www.instagram.com/interconnectdata/" target="_blank" class="btn-touch">
+                      <a
+                        href="https://www.instagram.com/interconnectdata/"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/ig.svg" />
                       </a>
-                      <a href="https://mobile.twitter.com/icdata" target="_blank" class="btn-touch">
+                      <a
+                        href="https://mobile.twitter.com/icdata"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/twit.svg" />
                       </a>
                     </div>
@@ -82,7 +104,11 @@
                       <a href="#" class="btn-touch">
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="https://www.instagram.com/reliablebusinessservices/" target="_blank" class="btn-touch">
+                      <a
+                        href="https://www.instagram.com/reliablebusinessservices/"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/ig.svg" />
                       </a>
                       <a href="#" class="btn-touch">
@@ -117,7 +143,11 @@
                       <a href="#" class="btn-touch">
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="https://www.instagram.com/arthology.id/" target="_blank" class="btn-touch">
+                      <a
+                        href="https://www.instagram.com/arthology.id/"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/ig.svg" />
                       </a>
                       <a href="#" class="btn-touch">
@@ -130,7 +160,7 @@
                 ><div class="grid-content card-ic">
                   <div class="card" style="border: none">
                     <img
-                      src="@/assets/images/makasilogo.svg"
+                      src="@/assets/images/product/logo-makasi.svg"
                       class="card-img-top ic-image"
                       alt="responsive"
                     />
@@ -149,13 +179,25 @@
                       <li class="list-group-item contact">Contact :</li>
                     </ul>
                     <div class="card-body" style="border: none">
-                      <a href="https://www.facebook.com/people/Makasi-Indonesia/100083488881963/" target="_blank" class="btn-touch">
+                      <a
+                        href="https://www.facebook.com/people/Makasi-Indonesia/100083488881963/"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/fb.svg" />
                       </a>
-                      <a href="https://www.instagram.com/makasipos/" target="_blank" class="btn-touch">
+                      <a
+                        href="https://www.instagram.com/makasipos/"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/ig.svg" />
                       </a>
-                      <a href="https://twitter.com/makasipos" target="_blank" class="btn-touch">
+                      <a
+                        href="https://twitter.com/makasipos"
+                        target="_blank"
+                        class="btn-touch"
+                      >
                         <img src="@/assets/images/twit.svg" />
                       </a>
                     </div>
@@ -165,7 +207,7 @@
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </section>
 </template>
 
@@ -216,6 +258,10 @@ onMounted(() => {
         color: white;
       }
       .section-number {
+        display: none;
+        @media screen and (max-width: 567px) {
+          display: none;
+        }
         hr {
           width: 20px;
           border-top: 2px solid;
@@ -233,7 +279,7 @@ onMounted(() => {
       position: absolute;
       left: -1px;
       top: 30%;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 567px) {
         display: none;
       }
     }
@@ -250,31 +296,31 @@ onMounted(() => {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 567px) {
   #hero {
     padding: 0 30px;
   }
 }
 
 .section-number {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     margin-top: -2em !important;
     margin-left: -19em !important;
   }
 }
 
-// @media screen and (max-width:768px){
+// @media screen and (max-width:567px){
 //   display: none;
 // }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 567px) {
   #hero {
     padding: 0 30px;
 
     .container {
       overflow-x: scroll;
-      width: 460px;
+      width: 100vw;
       margin-left: -7.8em;
-      height: 589px !important;
+      // height: 589px !important;
       .hide-mobile {
         width: 1200px;
       }
@@ -290,11 +336,11 @@ onMounted(() => {
   margin-top: 6%;
   margin-left: -1em;
   @media screen and (min-width: 1920px) {
-    margin-top: 6%;
-  margin-left: 3em;
+    // margin-top: 6%;
+    // margin-left: 3em;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     margin-top: 2em;
     margin-left: -2em;
   }
@@ -306,9 +352,9 @@ onMounted(() => {
   box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   @media (min-width: 992px) {
-    margin-top: 0;
+    margin-top: -2em;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     margin-left: 50%;
   }
 }

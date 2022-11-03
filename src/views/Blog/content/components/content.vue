@@ -176,24 +176,27 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 567px) {
   .content {
-    width: 325px;
-    margin-left: -25%;
+    width: 342px;
+    margin-left: -15%;
+  }
+  .container-custom {
+    margin-left: -45% !important;
   }
   .img-1 {
-    width: 325px !important;
-    height: 325px !important;
+    width: 352px !important;
+    height: 280px !important;
   }
   .similar {
     width: 325px;
-    margin-left: -30%;
+    margin-left: -20%;
   }
   .sub-title {
     font-size: 30px !important;
     line-height: 37px;
     /* identical to box height */
-    margin-left: -20%;
+    margin-left: -15%;
 
     color: #000000;
   }

@@ -28,7 +28,11 @@
             We design and build solutions by connecting ideas and technology to solve
             problems and get new ideas to business lifecycle
           </p>
+       
         </div>
+        <p class="get-in-touch text-white open-reg-24" style="z-index:99">
+            GET IN TOUCH <span > <a  class="btn" @click="$router.push(`/contact-us`)" style="z-index:99"><img src="@/assets/images/getIn.svg"></a></span>
+          </p>
       </div>
     </div>
     <img class="asset-1" src="@/assets/images/who-we-are/asset-1.png" alt="asset" />
@@ -128,6 +132,10 @@ onMounted(() => {
       margin-top: 10px;
     }
   }
+}
+.get-in-touch{
+  // padding-top: 108px;
+
 }
 .asset-1 {
   position: absolute;

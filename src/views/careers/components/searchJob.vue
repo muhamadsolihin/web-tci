@@ -244,7 +244,7 @@ const emit = defineEmits(["toTop"]);
   width: 224.81px;
   height: 282px;
   margin-top: -14em;
-  margin-left: 14em;
+  margin-left: 9.6em;
 }
 .hide-mobile {
   @media screen and (max-width: 768px) {

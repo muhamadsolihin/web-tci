@@ -9,11 +9,11 @@
       <div class="d-flex flex-row align-items-center">
         <h2 class="head">Our Gallery</h2>
         <SectionNumberComponent
-          class="mx-auto mt-auto"
+          class="ms-auto mt-auto"
           :number="'08 / 11'"
           :section-name="'Our Gallery'"
           :color="'#fff'"
-          style="margin-left:33em !important"
+          
         />
       </div>
       <div class="container d-flex flex-column justify-content-center">
@@ -30,7 +30,7 @@
                     <p>Photo Studio</p>
                   </div>
                 </div>
-              <div class="row mt-3 pic-employee" style="margin-left: -3em">
+              <div class="row mt-4 pic-employee" style="margin-left: -3em">
                 <div class="col-md-6">
                   <img
                     class="img-box1 img"
@@ -191,7 +191,7 @@
             <div
               class="container-custom d-flex flex-column justify-content-center"
             >
-              <div class="row">
+              <div class="row" >
                 <div class="col-sm-6 col-6 col-md-6">
                   <img
                     class="img-2"
@@ -199,7 +199,7 @@
                     src="@/assets/images/galerry/pic-karin.png"
                   />
                 </div>
-                <div class="col-sm-6 col-6 col-md-6">
+                <div class="col-sm-6 col-6 col-md-6" style="margin-left:-3%">
                   <img
                     class="img-2"
                     style="width: 155px; height: 135px"
@@ -254,7 +254,7 @@ onMounted(() => {
     padding: 0 80px;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       border: 0;
     }
     .container {
@@ -275,7 +275,7 @@ onMounted(() => {
         // margin-left: 20em;
         // padding: 5px 10px;
         // font-family: "IBM Plex Mono", sans-serif;
-        //         @media screen and (min-width:1920px){
+        //         @media screen and (max-width:1920px){
         // margin-top: 2em !important;
         // position:absolute;
         //   }
@@ -296,7 +296,7 @@ onMounted(() => {
       position: absolute;
       left: -1px;
       top: 30%;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 567px) {
         display: none;
       }
     }
@@ -313,21 +313,21 @@ onMounted(() => {
 }
 
 .img-gallery{
-  @media screen and (max-width:768px){
+  @media screen and (max-width:567px){
     display: none;
   }
 }
 .img-karin{
-  @media screen and (min-width:1920px){
+  @media screen and (max-width:1920px){
     margin-left: -6em !important;
   }
 }
 
 .image-gallery {
-  @media screen and (min-width: 1920px) {
+  @media screen and (max-width: 1920px) {
     margin-top: -15em !important;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: none;
   }
 }
@@ -338,21 +338,21 @@ onMounted(() => {
   font-weight: 600;
   margin-top: 8%;
   margin-left: 0;
-  @media screen and (min-width: 1920px) {
-    font-size: 3em;
-    width: 400px;
-    margin-top: 3em !important;
-    margin-left: 2.5em !important;
+  @media screen and (max-width: 1920px) {
+    // font-size: 3em;
+    // width: 400px !important;
+    // margin-top: 3em !important;
+    // margin-left: 2.5em !important;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 3em;
-    width: 400px;
+  @media screen and (max-width: 567px) {
+    font-size: 2.1em;
+    width: 400px ;
     margin-top: 2em !important;
-    margin-left: -2.5em !important;
+    margin-left: -3.3em !important;
   }
 }
 .section-number {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     margin-top: 0 !important;
     margin-left: -18em !important;
     display: none !important;
@@ -363,11 +363,11 @@ onMounted(() => {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: -10em;
-  @media screen and (min-width:1920px){
+  margin-top: -12em !important;
+  @media screen and (max-width:1920px){
     margin-top: -20em;
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width:567px){
     display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -375,7 +375,7 @@ onMounted(() => {
   }
 }
 .pic-employee{
-  @media screen and (min-width:1920px){
+  @media screen and (max-width:1920px){
     margin-left: -6em !important;
   }
 }
@@ -665,10 +665,10 @@ onMounted(() => {
 
 .hide-desktop {
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: block;
     margin-top: -17em;
-    margin-left: -6em;
+    margin-left: 0;
     transform: scale(1);
     transition: transform 0.4s ease;
   }

@@ -216,7 +216,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
   line-height: 63px;
   text-align: center;
   color: white;
-  @media screen and (max-width:768px){
+  @media screen and (max-width:567px){
 
   }
 }
@@ -248,19 +248,19 @@ import BorderContainer from "@/components/BorderContainer.vue";
 }
 
 .carousel {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: none;
   }
 }
 .show-mobile {
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: block;
     z-index: -3;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 567px) {
   #hero {
     padding: 0;
     background-size: cover;
@@ -276,8 +276,8 @@ import BorderContainer from "@/components/BorderContainer.vue";
       }
 }
 .hero-title-1 {
-  font-size: 40px;
-line-height: 49px;
+  font-size: 30px !important;
+line-height: 39px;
 text-align: left;
 font-weight: 700;
 color: #FFFFFF;

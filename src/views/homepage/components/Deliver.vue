@@ -11,7 +11,7 @@
           <img
             class="mx-auto pic-cto"
             :class="imageHover ? 'image-hover' : 'image-unhover'"
-            src="@/assets/images/pkarief.png"
+            src="@/assets/images/pic-commisioner.png"
             alt="photo"
             @mouseenter="imageHover = true"
             @mouseleave="imageHover = false"

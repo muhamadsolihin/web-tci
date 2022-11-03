@@ -303,7 +303,7 @@
                     <img
                       class="text-center slideOut sequence zoomInLeft mt-4"
                       data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/2/6.png"
+                      src="@/assets/images/img-stack/lumen.png"
                       style="
                         width: 152px;
                         float: center;
@@ -535,7 +535,8 @@ onMounted(() => {
     display: none;
     @media screen and (max-width: 768px) {
       display: block;
-      width: 325.07px !important;
+      margin-left: -5%;
+      width: 300px !important;
       height: 447.96px !important;
     }
   }

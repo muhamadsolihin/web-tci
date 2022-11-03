@@ -82,15 +82,15 @@ const emit = defineEmits(["toTop"]);
 
 <style lang="scss" scoped>
 .hide-on-mobile {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     display: none;
   }
 }
 .show-mobile {
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     margin-top: 40%;
-    margin-left: -40%;
+    margin-left: -7em;
     display: block;
   }
 }
@@ -106,7 +106,7 @@ const emit = defineEmits(["toTop"]);
     width: 100%;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       border: 0;
     }
 
@@ -153,7 +153,7 @@ const emit = defineEmits(["toTop"]);
     text-align: center;
 
     color: black;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       font-size: 30px;
       margin-top: 10% !important;
     }
@@ -194,7 +194,7 @@ color: #000000;
 
     color: #000000;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 567px) {
       font-size: 13px !important;
 
       width: 325px !important;
@@ -217,12 +217,12 @@ color: #000000;
 .img-group {
   width: 557px;
   margin-top: 50%;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 567px) {
     width: 325px;
     height: 325px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 567px) {
   #footer {
     padding: 0 30px;
     .container-custom {
