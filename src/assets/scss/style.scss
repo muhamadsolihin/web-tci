@@ -40,3 +40,21 @@ body {
 .pointer:hover {
     opacity: 0.8;
 }
+
+.btn-arrow {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: #d6d6d6;
+    --bs-btn-bg: #808080;
+    --bs-btn-border-color: #808080;
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: #b7b0b0;
+    --bs-btn-hover-bg: #b7b0b0;
+    --bs-btn-hover-border-color: #b7b0b0;
+    --bs-btn-focus-shadow-rgb: #b7b0b0;
+    --bs-btn-active-color: #b7b0b0;
+    --bs-btn-active-bg: #b7b0b0;
+    --bs-btn-active-border-color: #b7b0b0;
+    --bs-btn-disabled-color: #c4c4c4;
+    --bs-btn-disabled-bg: #c4c4c4;
+    --bs-btn-disabled-border-color: #c4c4c4;
+}
