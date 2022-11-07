@@ -210,7 +210,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
 }
 .hero-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 600;
   margin-top: -8em;
   line-height: 63px;
@@ -276,7 +276,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
       }
 }
 .hero-title-1 {
-  font-size: 30px !important;
+  font-size: 20px !important;
 line-height: 39px;
 text-align: left;
 font-weight: 700;

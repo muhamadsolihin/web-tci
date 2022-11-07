@@ -32,9 +32,13 @@
             :key="indexCore"
           >
             <div class="ic-card justify-content-center align-items-center">
-              <div class="col-6">
-                <div class="images" style="height: 10em">
-                  <img class="images justify-content-center align-items-center mt-3 py-2" :src="core.images" alt="photo" />
+              <div class="d-flex justify-content-center">
+                <div class="images" style="height: 10em" :style="[styleObject]">
+                  <img
+                    class="images justify-content-center align-items-center mt-3 p-2"
+                    :src="core.images"
+                    alt="photo"
+                  />
                 </div>
               </div>
               <div class="d-flex mt-5 flex-row align-items-center mt-4">
@@ -74,6 +78,7 @@ import { defineProps, onMounted, ref } from "vue";
 
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 import BorderContainer from "@/components/BorderContainer.vue";
+import { styleType } from "element-plus/es/components/table-v2/src/common";
 
 const posX = ref(0);
 const addPos = () => {
@@ -103,6 +108,7 @@ const coreValues = ref([
   },
   {
     images: require("@/assets/images/our-work/logo-makasi.svg"),
+
     name: "Growth",
     description:
       "We help Makasi POS build their Point of Sales app from scratch.",
@@ -213,15 +219,15 @@ const coreValues = ref([
       margin: 1em;
       cursor: pointer;
     }
-    .images {
-      // width: 1em;
-      // margin-left: auto;
-      float: center;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      padding-left: 0;
-    }
+    // .images {
+    //   // width: 1em;
+    //   // margin-left: auto;
+    //   float: center;
+    //   justify-content: center;
+    //   align-content: center;
+    //   align-items: center;
+    //   padding-left: 0;
+    // }
   }
 }
 
@@ -242,7 +248,7 @@ const coreValues = ref([
         margin-top: 5px;
         line-height: 30px;
       }
-      .btn{
+      .btn {
         display: none;
       }
     }

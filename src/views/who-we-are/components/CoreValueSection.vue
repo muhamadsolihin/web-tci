@@ -196,6 +196,7 @@ onMounted(() => {
           border-top: 2px dashed #e78448;
           margin-left: 10px;
         }
+     
       }
     }
   }
@@ -218,6 +219,9 @@ onMounted(() => {
         margin-top: 5px;
         line-height: 30px;
       }
+      .btn{
+          display: none;
+        }
     }
   }
 }

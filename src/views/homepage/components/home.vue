@@ -9,9 +9,9 @@
         :sections-length="sectionsLength"
         :current-section="currentSection"
       />
-      <div class="d-flex flex-column justify-content-center my-auto">
+      <div class="d-flex mt-5 flex-column justify-content-center my-auto">
         <SectionNumberComponent
-          class="mt-auto me-auto"
+          class="mt-auto me-auto  "
           :number="'01 / 11'"
           :section-name="'Home'"
           :color="'#ffffff'"

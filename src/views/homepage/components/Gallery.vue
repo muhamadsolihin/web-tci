@@ -144,9 +144,10 @@ onMounted(() => {
 
 	@media screen and (max-width: 768px) {
 		#gallery {
-			padding: 0 30px;
+			padding: 0 20px;
 			.container-custom {
-				margin-top: -180px;
+				margin-top: -20px;
+				margin-bottom:1em;
 				.hide-on-mobile {
 					display: none;
 				}

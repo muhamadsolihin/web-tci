@@ -159,6 +159,7 @@
 		.core {
 			margin-top:3%;
 			margin-bottom:4%;
+			// margin-left: 5%;
 		  width: 550px;
 		  padding-right: 10px;
 		  transition: 0.5s ease-out;

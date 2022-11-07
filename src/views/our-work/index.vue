@@ -2,8 +2,8 @@
 	<MenuComponent :theme="'light'" :direction="'dark'" @goMenu="scrollToTop" />
 	<div id="our-works">
 		<HeroSection />
-		<Ourwork />
-		<!-- <Sample /> -->
+		<!-- <Ourwork /> -->
+		<Sample />
 		<FooterComponent
 			:sections-length="4"
 			:current-section="3"

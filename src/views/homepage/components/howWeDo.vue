@@ -6,7 +6,16 @@
       :current-section="currentSection"
     />
     <div class="container-custom">
-      <div class="d-flex flex-column h-100 pt-4">
+      <div class="d-flex flex-row align-items-center flex-wrap">
+				<h2 class="title">How We Do It</h2>
+				<SectionNumberComponent
+					class="ms-auto d-none d-md-flex"
+					:number="'03 / 11'"
+					:section-name="'How We Do It'"
+					:color="'#000000'"
+				/>
+			</div>
+      <!-- <div class="d-flex flex-column h-100 pt-4">
         <div class="container-fluid section-header ">
           <div class="row" >
             <div class="col-md-10">
@@ -23,12 +32,12 @@
               />
             </div>
           </div>
-        </div>
+        </div>--> 
         <div class="shape"></div>
 
         <div
           class="row h-80 "
-          style="margin-top: 10%; padding-bottom: 0 !important;margin-left: 5em;"
+          style="margin-top: 10%; padding-bottom: 0 !important;margin-left: 2em;"
         >
           <div class="row collapse-mobile">
             <div class="col-12">
@@ -95,7 +104,7 @@
             <ul class="nav p-2 mb-8">
               <div class="col-md-12">
                 <!--begin::Tab nav-->
-                <li class="nav-item active">
+                <li class="nav-item   active">
                   <a
                     class="nav-link btn btn-active-white head py-2 px-4 fs-6 fw-bold active"
                     data-bs-toggle="tab"
@@ -308,7 +317,7 @@
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </section>
 </template>
 
@@ -353,6 +362,7 @@ onMounted(() => {
     width: 100%;
     padding: 0 140px;
     background-color: white;
+    z-index: 99;
     .container-custom {
       padding: 80px 0;
       height: 100vh;
@@ -410,7 +420,7 @@ onMounted(() => {
 
   .open-reg-26 {
     text-align: left !important;
-    width: 15em;
+    // width: 15em;
     @media screen and (max-width: 576px) {
       font-size: 20px !important;
       width: 275px !important;
@@ -467,6 +477,7 @@ onMounted(() => {
     }
   }
   .hide-mobile {
+    // margin-left:-10%;
     @media screen and (max-width: 576px) {
       display: none;
     }
@@ -515,7 +526,7 @@ onMounted(() => {
     color: #b8bdc6;
   }
   .grid-content {
-    transform: translateY(600px);
+    transform: translateY(700px);
     animation: slideUp 1s ease-in-out forwards 0.5s;
   }
 
@@ -571,7 +582,7 @@ onMounted(() => {
     margin-top: 1.8em;
     font-size: 16px;
     z-index: 9;
-    width: 23em;
+    width: 25em;
     height: 200px;
     line-height: 30px;
 
@@ -586,7 +597,7 @@ onMounted(() => {
   }
   .tab-content {
     width: 400px;
-    margin-left: 3em;
+    margin-left: 20%;
     @media screen and (max-width: 576px) {
       width: 325px !important;
     }

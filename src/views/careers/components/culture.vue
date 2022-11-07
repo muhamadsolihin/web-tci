@@ -193,10 +193,8 @@ color: #000000;
     /* or 160% */
 
     color: #000000;
-
     @media screen and (max-width: 567px) {
       font-size: 13px !important;
-
       width: 325px !important;
     }
   }
