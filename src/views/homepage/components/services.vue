@@ -1,27 +1,25 @@
 <template>
-  <section id="howwedo">
-    <div class="container-border">
-      <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container hero-collap">
-        <div class="d-flex flex-row align-items-center">
-          <h2 class="hero-title">Our Services</h2>
-          <SectionNumberComponent
-            class="ms-auto"
-            :number="'05 / 11'"
-            :section-name="'Our Services'"
-            :color="'#000'"
-          />
-        </div>
-        <div
-          class="d-flex flex-row justify-content-start align-items-start w-100"
-        >
-          <div class="shape-blue"></div>
-        </div>
-        <div class="row">
+  <section id="core-value">
+    <BorderContainer
+      :theme="'light'"
+      :sections-length="sectionsLength"
+      :current-section="currentSection"
+    />
+    <div class="container-custom">
+      <div class="d-flex flex-column h-100 pt-4">
+        <h1 class="title">Our Services</h1>
+        <SectionNumberComponent
+          class="ms-auto"
+          :number="'03 / 11'"
+          :section-name="'How We Do It'"
+          :color="'#000'"
+          style="margin-top: -3.5em"
+        />
+        <div class="shape"></div>
+
+        <div class="row" style="margin-top: 10%">
           <div class="col-md-6">
-            <ul
-              class="nav flex-center bg-transparent overflow-auto flex-nowrap p-2 mb-8"
-            >
+            <ul class="nav flex-center bg-transparent flex-nowrap p-2 mb-8">
               <div class="row row-menu" style="margin-left: 18%">
                 <div class="col-md-6" style="border: none">
                   <!--begin::Tab nav-->
@@ -83,14 +81,14 @@
           <!--end::Tabs-->
           <!--begin:Tab content-->
           <div class="col-md-6">
-            <div class="tab-content">
+            <div class="tab-content content-field">
               <!--begin::Tab pane-->
               <div
                 class="tab-pane fade active show"
                 id="kt_lists_widget_3_tab_pane_1_consultant"
               >
                 <!--begin::Section-->
-                <el-col id="consultant" style="margin-top: 10%" :span="12"
+                <el-col id="consultant" style="" :span="12"
                   ><div class="grid-content">
                     <div>
                       <div class="head1" style="text-align: justify">
@@ -99,7 +97,7 @@
 
                       <div
                         class="subhead1 mt-4"
-                        style="text-align: justify; width: 34em; margin-top: 2%"
+                        style="text-align: justify; margin-top: 2%"
                       >
                         With our IT Consultant services, we could help you
                         revamp your IT Environment and synchronize it with your
@@ -132,7 +130,7 @@
 
                       <div
                         class="subhead1 mt-4"
-                        style="text-align: justify; width: 34em; margin-top: 2%"
+                        style="text-align: justify;  margin-top: 2%"
                       >
                         We are here to empower every enterprise across multiple
                         industries with the most suitable IT Solutions to build
@@ -157,7 +155,7 @@
 
                       <div
                         class="subhead1 mt-4"
-                        style="text-align: justify; width: 34em; margin-top: 2%"
+                        style="text-align: justify;  margin-top: 2%"
                       >
                         We will assist you in planning, designing, developing,
                         and implementing the infrastructure of your data center.
@@ -181,7 +179,7 @@
 
                       <div
                         class="subhead1 mt-4"
-                        style="text-align: justify; width: 34em; margin-top: 2%"
+                        style="text-align: justify;  margin-top: 2%"
                       >
                         Our security experts develop a personal approach to each
                         customer based on best practices and enriched that with
@@ -200,35 +198,31 @@
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-        >
-          <img
-            class="text-center batik-img"
-            src="@/assets/images/batik-1.svg"
-            style="
-              float: left;
-              justify-content: left;
-              height: 195px;
-              z-index: -2;
-            "
-          />
-        </div>
-      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import { defineProps, onMounted, ref } from "vue";
 import Hammer from "hammerjs";
-import { onMounted } from "vue";
 
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import BorderContainer from "@/components/BorderContainer.vue";
+
+const props = defineProps({
+  sectionsLength: {
+    type: Number,
+    require: true,
+  },
+  currentSection: {
+    type: Number,
+    require: true,
+  },
+});
 const emit = defineEmits(["swipeUp", "swipeDown"]);
+
 onMounted(() => {
-  var stage = document.getElementById("howwedo");
+  var stage = document.getElementById("core-value");
   var hammertime = new Hammer.Manager(stage);
   var Swipe = new Hammer.Swipe();
   hammertime.add(Swipe);
@@ -242,85 +236,129 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-#howwedo {
-  background-color: white;
+#core-value {
   height: 100vh;
-  margin-top: 0;
-  z-index: 1;
+  width: 100%;
+  padding: 0 140px;
+  background-color: white;
   @media screen and (max-width: 567px) {
-    margin-top: -1em;
+    padding: 0 40px 0;
   }
-  .container-border {
-    position: relative;
-    width: 100%;
+  .container-custom {
+    padding: 80px 0;
     height: 100vh;
-    margin-top: 5%;
-    padding: 0 80px;
-    border-left: 1px solid #b8bdc6;
-    border-right: 1px solid #b8bdc6;
+    width: 100%;
+    z-index: 2;
     @media screen and (max-width: 567px) {
       padding: 0;
-      z-index: 5;
+      margin-top: 5em;
     }
-  }
-  .section-number {
-    @media screen and (max-width: 567px) {
-      margin-left: -10% !important;
-    }
-  }
-  .row-menu {
-    @media screen and (max-width: 567px) {
-      margin-top: 3em;
-      margin-left: -30% !important;
-      width: 325px !important;
-    }
-  }
 
-  .menu-1 {
-    @media screen and (max-width: 567px) {
-      margin-top: -40% !important;
-      margin-left: 16em !important;
-    }
-  }
-  .menu-2 {
-    @media screen and (max-width: 567px) {
-      margin-top: 35% !important;
-      margin-left: -1em !important;
-    }
-  }
-  .menu-3 {
-    @media screen and (max-width: 567px) {
-      margin-top: -40% !important;
-      margin-left: 16em !important;
-    }
-  }
-  .shape-blue {
-    width: 68px;
-    height: 22px;
-    background-color: #0c4aa9;
-    margin-right: 20px;
-    margin-top: 10px;
-    @media screen and (max-width: 567px) {
-      display: none;
-    }
-  }
-  .asset-2 {
-    position: absolute;
-    left: 5%;
-    top: 0;
-    height: 711px;
-  }
-  .container {
-    // margin-top: -2em;
-    padding: 80px;
-    h2 {
+    .title {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      font-size: 3rem;
       line-height: 57px;
+      @media screen and (max-width: 567px) {
+        display: none;
+      }
+    }
+    .shape {
+      width: 38px;
+      height: 22px;
+      background-color: #0c4aa9;
+      margin-top: 10px;
+      @media screen and (max-width: 567px) {
+        display: none;
+      }
+    }
+    .cores {
+      padding: 20px 0;
+      width: 100%;
+      overflow-x: scroll;
+      .core {
+        width: 350px;
+        padding-right: 10px;
+        transition: 0.5s ease-out;
+        .description {
+          font-family: "Albert Sans", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 30px;
+          color: #8d8f9a;
+          margin-top: 20px;
+          padding-right: 40px;
+        }
+        .circle {
+          width: 18px;
+          height: 18px;
+          background: #e78448;
+          border-radius: 30px;
+        }
+        .border-dash {
+          width: 300px;
+          height: 0px;
+          border-top: 2px dashed #e78448;
+          margin-left: 10px;
+        }
+      }
     }
   }
 }
+
+.row-menu {
+  @media screen and (max-width: 567px) {
+    margin-top: 3em;
+    margin-left: -30% !important;
+    width: 325px !important;
+  }
+}
+
+.menu-1 {
+  @media screen and (max-width: 567px) {
+    margin-top: -40% !important;
+    margin-left: 16em !important;
+  }
+}
+.menu-2 {
+  @media screen and (max-width: 567px) {
+    margin-top: 35% !important;
+    margin-left: -1em !important;
+  }
+}
+.menu-3 {
+  @media screen and (max-width: 567px) {
+    margin-top: -40% !important;
+    margin-left: 16em !important;
+  }
+}
+.shape-blue {
+  width: 68px;
+  height: 22px;
+  background-color: #0c4aa9;
+  margin-right: 20px;
+  margin-top: 10px;
+  @media screen and (max-width: 567px) {
+    display: none;
+  }
+}
+.asset-2 {
+  position: absolute;
+  left: 5%;
+  top: 0;
+  height: 711px;
+}
+.container {
+  // margin-top: -2em;
+  padding: 80px;
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 57px;
+  }
+}
+
 .grid-content {
   transform: translateY(700px);
   animation: slideUp 1s ease-in-out forwards 0.5s;
@@ -373,7 +411,7 @@ onMounted(() => {
     text-align: center !important;
     width: 241px !important;
     padding-top: 1em;
-    margin-left: 0;
+    margin-left: 1em;
   }
 }
 .hero-title {
@@ -391,27 +429,45 @@ onMounted(() => {
 .subhead1 {
   font-family: "montserrat";
   font-size: 1em;
+  width: 25em;
   font-weight: 400;
   color: #000000;
   @media screen and (max-width: 567px) {
     font-size: 12px;
     width: 322px !important;
-    margin-left: -25% !important;
+    margin-left: -5% !important;
     text-align: center !important;
   }
 }
 .nav-link {
   border: none;
+  
 }
+
+
+.btn.btn-active-white:focus:not(.btn-active),
+.btn:hover{
+  color: #7e8299;
+  border-color: #ffffff;
+  //   width: 120px;
+  // height: 128px;
+  background-color: #fff;
+  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
+  @media screen and (max-width: 768px) {
+    // box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);
+    // width: 10px;
+    margin-left: 0 !important;
+    padding: 0;
+    // padding: 50px;
+    border-color: transparent !important;
+    background: transparent !important;
+  }
+}
+
+
 .data-centre {
   padding: 0 0 15px 0;
 }
-.btn-check:checked + .btn.btn-active-white,
-.btn-check:active + .btn.btn-active-white,
-.btn.btn-active-white:focus:not(.btn-active),
-.btn.btn-active-white:hover:not(.btn-active),
-.btn.btn-active-white:active:not(.btn-active),
-.btn.btn-active-white.active,
 .btn.btn-active-white.show,
 .show > .btn.btn-active-white {
   color: #7e8299;
@@ -420,297 +476,13 @@ onMounted(() => {
   // height: 128px;
   background-color: #fff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width: 567px) {
-    box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);
+  @media screen and (max-width: 768px) {
+    // box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);
+    // width: 120px;
+    // height: 128px;
+    // padding: 50px;
+    border-color: transparent !important;
+    background: transparent;
   }
-}
-.btn-check:checked + .btn.btn-active-white i,
-.btn-check:active + .btn.btn-active-white i,
-.btn.btn-active-white:focus:not(.btn-active) i,
-.btn.btn-active-white:hover:not(.btn-active) i,
-.btn.btn-active-white:active:not(.btn-active) i,
-.btn.btn-active-white.active i,
-.btn.btn-active-white.show i,
-.show > .btn.btn-active-white i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-white .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-white.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-white.dropdown-toggle:after,
-.btn.btn-active-white:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white.active.dropdown-toggle:after,
-.btn.btn-active-white.show.dropdown-toggle:after,
-.show > .btn.btn-active-white.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-  background-color: #f5f8fa;
-
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn.btn-light i {
-  color: #7e8299;
-}
-.btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light,
-.btn-check:active + .btn.btn-light,
-.btn.btn-light:focus:not(.btn-active),
-.btn.btn-light:hover:not(.btn-active),
-.btn.btn-light:active:not(.btn-active),
-.btn.btn-light.active,
-.btn.btn-light.show,
-.show > .btn.btn-light {
-  color: #7e8299;
-  border-color: #e4e6ef;
-  background-color: #e4e6ef;
-
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-light i,
-.btn-check:active + .btn.btn-light i,
-.btn.btn-light:focus:not(.btn-active) i,
-.btn.btn-light:hover:not(.btn-active) i,
-.btn.btn-light:active:not(.btn-active) i,
-.btn.btn-light.active i,
-.btn.btn-light.show i,
-.show > .btn.btn-light i {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn-check:active + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-light.dropdown-toggle:after,
-.btn.btn-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light.active.dropdown-toggle:after,
-.btn.btn-light.show.dropdown-toggle:after,
-.show > .btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-bg-light {
-  border-color: #f5f8fa;
-  background-color: #f5f8fa;
-
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-active-light,
-.btn-check:active + .btn.btn-active-light,
-.btn.btn-active-light:focus:not(.btn-active),
-.btn.btn-active-light:hover:not(.btn-active),
-.btn.btn-active-light:active:not(.btn-active),
-.btn.btn-active-light.active,
-.btn.btn-active-light.show,
-.show > .btn.btn-active-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-  background-color: #f5f8fa;
-}
-.btn-check:checked + .btn.btn-active-light i,
-.btn-check:active + .btn.btn-active-light i,
-.btn.btn-active-light:focus:not(.btn-active) i,
-.btn.btn-active-light:hover:not(.btn-active) i,
-.btn.btn-active-light:active:not(.btn-active) i,
-.btn.btn-active-light.active i,
-.btn.btn-active-light.show i,
-.show > .btn.btn-active-light i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-light.dropdown-toggle:after,
-.btn.btn-active-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light.active.dropdown-toggle:after,
-.btn.btn-active-light.show.dropdown-toggle:after,
-.show > .btn.btn-active-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-primary {
-  color: #ffffff;
-  border-color: #00b2ff;
-  background-color: #00b2ff;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn.btn-primary i {
-  color: #ffffff;
 }
 </style>

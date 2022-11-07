@@ -1,233 +1,82 @@
 <template>
-  <section id="hero">
-    <div class="container-border">
-      <img
-        class="asset-2"
-        src="@/assets/images/who-we-are/asset-2.png"
-        alt=""
+  <section id="gallery">
+    <div id="container-custom" class="container-custom w-100">
+      <BorderContainer
+        :theme="'light'"
+        :sections-length="sectionsLength"
+        :current-section="currentSection"
       />
-      <div class="d-flex flex-row align-items-center">
-        <h2 class="head">Our Gallery</h2>
+      <div class="d-flex flex-row flex-wrap align-items-center w-100">
+        <h1 class="title mb-0 text-white">Our Gallery</h1>
         <SectionNumberComponent
-          class="ms-auto mt-auto"
+          class="ms-auto d-none d-md-flex"
           :number="'08 / 11'"
           :section-name="'Our Gallery'"
           :color="'#fff'"
-          
         />
       </div>
-      <div class="container d-flex flex-column justify-content-center">
-        <div class="d-flex gallery-image">
-          <div class="row img-gallery">
-            <div class="col-md-6 ">
-              <img
-              class="img-box"
-                src="@/assets/images/galerry/pic1.png"
-                style="width: 35em; height: 15em"
-              />
-              <div class="transparent-box">
-                  <div class="caption">
-                    <p>Photo Studio</p>
-                  </div>
-                </div>
-              <div class="row mt-4 pic-employee" style="margin-left: -3em">
-                <div class="col-md-6">
-                  <img
-                    class="img-box1 img"
-                    src="@/assets/images/galerry/pic2.png"
-                    style="width: 16.8em; height: 15em; float: right"
-                  />
-                </div>
-                <div class="col-md-6" >
-                  <img
-                    class="img-box1 img"
-                    src="@/assets/images/galerry/pic3.png"
-                    style="width: 16.8em; height: 15em"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6" >
-              <img
-                class="img-box3 img img-karin"
-                src="@/assets/images/galerry/pic4.png"
-                style="
-                  width: 17em;
-                  height: 31em;
-                  margin-left: -3em;
-                  float: left;
-                "
-              />
-              <div class="row">
-                <div class="col-md-12 col-12">
-                  <img
-                    class="img-box4"
-                    src="@/assets/images/galerry/pic5.png"
-                    style="width: 17em; height: 15.3em; z-index: 3"
-                  />
-                </div>
-                <div class="col-md-12 col-12 mt-2">
-                  <img
-                    class="img-box5"
-                    src="@/assets/images/galerry/pic6.png"
-                    style="width: 17em; height: 15.3em"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="row image-gallery " style="margin-bottom: 0">
-            <div class=" col-12 col-md-6 col-lg-6 col-xl-6">
-              <div class="img-box text-white rounded">
-                <img
-                  class="img-box"
-                  src="@/assets/images/galerry/pic1.png"
-                  style="width: 35em; height: 15em"
-                />
-                <div class="transparent-box">
-                  <div class="caption">
-                    <p>Photo Studio</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row g-4" style="margin-top:2px ; margin-left: 0">
-                <div class="col-6 col-md-6 col-lg-6 col-xl-6 img-box1">
-                  <img
-                  class="img-box1 img "
-                    src="@/assets/images/galerry/pic2.png"
-                    style="width: 16.8em; height: 15em;float: right"
-                  />
-                  <div class="transparent-box1">
-                  <div class="caption1">
-                    <p>Employee Of The Month</p>
-                  </div>
-                </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-6 col-xl-6 img-box1">
-                  <img
-                  class="img-box1 img"
-                    src="@/assets/images/galerry/pic3.png"
-                    style="width: 16.8em; height: 15em; margin-left: -2em !important; float: left"
-                  />
-                  <div class="transparent-box2" style="margin-left:-1.1em !important">
-                  <div class="caption1">
-                    <p>Prelaunch Makasi - POS</p>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-6 col-xl-6">
-              <div class="row gallery-image" style="margin-bottom: 7.5em">
-                <div class="col-6 img-box3 img" style="margin-left: -2em">
-                  <img
-                  class="img-box3 img"
-                    src="@/assets/images/galerry/pic4.png"
-                    style="width: 17em; height: 31.7em"
-                  />
-                  <div class="transparent-box3" style="margin-left:0 !important">
-                  <div class="caption3">
-                    <p>Kuliah Umum </p>
-                  </div>
-                </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-6 col-xl-6 " style="margin-left: -1.5em">
-                  <img
-                  class="img-box4"
-                    src="@/assets/images/galerry/pic5.png"
-                    style="width: 17em; height: 15.3em; z-index: 3;"
-                  />
-                  <div class="transparent-box4" style="margin-left:0 !important">
-                  <div class="caption4">
-                    <p>Video Shooting</p>
-                  </div>
-                </div>
-                <div class="img-box5">
-                  <img
-                  class="img-box5"
-                    src="@/assets/images/galerry/pic6.png"
-                    style="width: 17em; height: 15.3em; margin-top: 1em"
-                  />
-                  <div class="transparent-box5" style="margin-left:0 !important">
-                  <div class="caption5">
-                    <p>Employee of The Month</p>
-                  </div>
-                </div>
-              </div>
-                </div>
-              </div>
-              
-            </div>
-          </div> -->
-
-          <div class="row hide-desktop">
-            <div class="col-12 col-sm-12">
-              <img class="img-1" src="@/assets/images/galerry/hero-image.png" />
-              <!-- <div class="transparent-box" style="margin-left:0 !important">
-                  <div class="caption">
-                    <p>Employee of The Month</p>
-                  </div>
-                </div> -->
-            </div>
-            <div class="row py-3">
-              <div class="col-sm-6 col-6 col-md-6">
-                <img
-                  class="img-2"
-                  style="width: 155px; height: 135px"
-                  src="@/assets/images/galerry/hero-1.png"
-                />
-              </div>
-              <div class="col-sm-6 col-6 col-md-6">
-                <img
-                  class="img-2"
-                  style="width: 155px; height: 135px"
-                  src="@/assets/images/galerry/hero-2.png"
-                />
-              </div>
-            </div>
-            <div
-              class="container-custom d-flex flex-column justify-content-center"
-            >
-              <div class="row" >
-                <div class="col-sm-6 col-6 col-md-6">
-                  <img
-                    class="img-2"
-                    style="width: 155px; height: 285px"
-                    src="@/assets/images/galerry/pic-karin.png"
-                  />
-                </div>
-                <div class="col-sm-6 col-6 col-md-6" style="margin-left:-3%">
-                  <img
-                    class="img-2"
-                    style="width: 155px; height: 135px"
-                    src="@/assets/images/galerry/hero-3.png"
-                  />
-                  <img
-                    class="img-2 mt-3"
-                    style="width: 155px; height: 135px"
-                    src="@/assets/images/galerry/hero-4.png"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			<div class="row  g-3 mt-3 mb-3">
+				<div class="col-12 col-md-6 col-lg-6 col-xl-6">
+					<div class="row g-3 h-100">
+						<div class="col-12">
+							<img :src="photoList[0]" alt="photo" />
+						</div>
+						<div class="col-6">
+							<img :src="photoList[1]" alt="photo" />
+						</div>
+						<div class="col-6">
+							<img :src="photoList[2]" alt="photo" />
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-md-3 col-lg-3 col-xl-3 pb-3">
+					<img :src="photoList[3]" alt="photo" />
+				</div>
+				<div class="col-6 col-md-3 col-lg-3 col-xl-3">
+					<div class="row g-3 h-100">
+						<div class="col-12">
+							<img :src="photoList[4]" alt="photo" />
+						</div>
+						<div class="col-12">
+							<img :src="photoList[5]" alt="photo" />
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</section>
 </template>
 
 <script setup>
-import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import { onMounted, ref } from "vue";
 import Hammer from "hammerjs";
-import { onMounted } from "vue";
+  import BorderContainer from "@/components/BorderContainer.vue";
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 
-const emit = defineEmits(["swipeUp", "swipeDown"]);
+const props = defineProps({
+  sectionsLength: {
+    type: Number,
+    require: true,
+  },
+  currentSection: {
+    type: Number,
+    require: true,
+  },
+});
+
+	const photoList = ref([
+		require('@/assets/images/our-gallery/photo-1.png'),
+		require('@/assets/images/our-gallery/photo-2.png'),
+		require('@/assets/images/galerry/pic3.png'),
+		require('@/assets/images/our-gallery/photo-4.png'),
+		require('@/assets/images/our-gallery/photo-5.png'),
+		require('@/assets/images/galerry/pic6.png'),
+	
+	]);
+  const emit = defineEmits(["swipeUp", "swipeDown"]);
 onMounted(() => {
-  var stage = document.getElementById("hero");
+  var stage = document.getElementById("gallery");
   var hammertime = new Hammer.Manager(stage);
   var Swipe = new Hammer.Swipe();
   hammertime.add(Swipe);
@@ -241,440 +90,67 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-#hero {
-  background-color: #263a5f;
-  background-size: cover;
-  height: 100vh;
-  padding: 0 80px;
-  position: relative;
+	#gallery {
+    height: 100vh;
+  width: 100%;
+  padding: 0 140px;
+  background-color: #263A5F;
   z-index: 1;
-  .container-border {
-    position: relative;
-    width: 100%;
-    padding: 0 80px;
-    border-left: 1px solid #b8bdc6;
-    border-right: 1px solid #b8bdc6;
-    @media screen and (max-width: 567px) {
-      border: 0;
+  .container-custom {
+    padding: 80px 0;
+    height: 100vh;
+    .title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      line-height: 57px;
     }
-    .container {
-      height: 100vh;
-      padding: 0;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.data-in-life {
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(136.6deg, #e78448 23.03%, #e09b3d 100%);
+				box-shadow: 0px 10px 100px rgba(231, 132, 72, 0.45);
+				.title {
+					font-family: 'Albert Sans';
+					font-style: normal;
+					font-weight: 600;
+					font-size: 35px;
+					line-height: 42px;
+					color: white;
+				}
+				.subtitle {
+					font-family: 'Open Sans';
+					font-style: italic;
+					font-weight: 300;
+					font-size: 12px;
+					line-height: 30px;
+					color: white;
+				}
+				.text-body {
+					font-family: 'Open Sans';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 30px;
+					color: white !important;
+				}
+			}
+		}
+	}
 
-      .hero-title {
-        font-family: "Montserrat", sans-serif;
-        font-size: 4.5rem;
-        font-weight: 600;
-        line-height: 83px;
-        text-align: start;
-        color: white;
-      }
-      .section-number {
-        // border: 2px solid #b8bdc6;
-        // border-radius: 25px;
-        // margin-left: 20em;
-        // padding: 5px 10px;
-        // font-family: "IBM Plex Mono", sans-serif;
-        //         @media screen and (max-width:1920px){
-        // margin-top: 2em !important;
-        // position:absolute;
-        //   }
-        hr {
-          width: 20px;
-          border-top: 2px solid;
-        }
-      }
-      .shape-blue {
-        width: 68px;
-        height: 22px;
-        background-color: #0c4aa9;
-        margin-right: 20px;
-        margin-top: 10px;
-      }
-    }
-    .asset-2 {
-      position: absolute;
-      left: -1px;
-      top: 30%;
-      @media screen and (max-width: 567px) {
-        display: none;
-      }
-    }
-  }
-  .asset-1 {
-    position: absolute;
-    bottom: -90px;
-    left: 45%;
-  }
-  .asset-3 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.img-gallery{
-  @media screen and (max-width:567px){
-    display: none;
-  }
-}
-.img-karin{
-  @media screen and (max-width:1920px){
-    margin-left: -6em !important;
-  }
-}
-
-.image-gallery {
-  @media screen and (max-width: 1920px) {
-    margin-top: -15em !important;
-  }
-  @media screen and (max-width: 567px) {
-    display: none;
-  }
-}
-.head {
-  font-family: "Albert Sans";
-  font-size: 3.4em;
-  color: #fff;
-  font-weight: 600;
-  margin-top: 8%;
-  margin-left: 0;
-  @media screen and (max-width: 1920px) {
-    // font-size: 3em;
-    // width: 400px !important;
-    // margin-top: 3em !important;
-    // margin-left: 2.5em !important;
-  }
-  @media screen and (max-width: 567px) {
-    font-size: 2.1em;
-    width: 400px ;
-    margin-top: 2em !important;
-    margin-left: -3.3em !important;
-  }
-}
-.section-number {
-  @media screen and (max-width: 567px) {
-    margin-top: 0 !important;
-    margin-left: -18em !important;
-    display: none !important;
-  }
-}
-
-.gallery-image {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: -12em !important;
-  @media screen and (max-width:1920px){
-    margin-top: -20em;
-  }
-  @media screen and (max-width:567px){
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 0;
-  }
-}
-.pic-employee{
-  @media screen and (max-width:1920px){
-    margin-left: -6em !important;
-  }
-}
-
-.gallery-image img {
-  transform: scale(1);
-  transition: transform 0.4s ease;
-}
-
-.img-box {
-  box-sizing: content-box;
-
-  overflow: hidden;
-  display: inline-block;
-  color: white;
-  position: relative;
-  background-color: white;
-}
-
-.img-box1 {
-  box-sizing: content-box;
-  width: 16.8em;
-  height: 15em;
-  margin-left: 0;
-  overflow: hidden;
-  display: inline-block;
-  color: #fff;
-  position: relative;
-  background-color: transparent;
-}
-
-.caption {
-  position: absolute;
-  text-align: left;
-  bottom: 5px;
-  left: 5%;
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.caption1 {
-  position: absolute;
-  text-align: left;
-  bottom: 20px;
-  z-index: 3;
-  left: 5%;
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.transparent-box {
-  width: 35em;
-  height: 15em;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: background-color 0.3s ease;
-}
-.transparent-box1 {
-  width: 16.8em;
-  height: 15em;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-  margin-left: 0;
-  transition: background-color 0.3s ease;
-}
-.transparent-box2 {
-  width: 15.9em;
-  height: 15em;
-  background-color: rgba(0, 0.5, 0, 0);
-  position: absolute;
-  top: 0;
-  margin-left: 0;
-  transition: background-color 0.3s ease;
-}
-
-// .img-box:hover img {
-//   transform: scale(1.1);
-// }
-
-.img-box:hover .transparent-box {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.img-box:hover .caption {
-  transform: translateY(-20px);
-  opacity: 1;
-}
-
-.img-box1:hover {
-  cursor: pointer;
-}
-
-// .img-box1:hover img {
-//   transform: scale(1.1);
-// }
-
-.img-box1:hover .transparent-box1 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.img-box1:hover .transparent-box2 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.img-box1:hover .caption1 {
-  transform: translateY(-20px);
-  opacity: 1;
-}
-
-.img-box1:hover {
-  cursor: pointer;
-}
-
-.caption > p:nth-child(2) {
-  font-size: 0.8em;
-}
-.caption1 > p:nth-child(2) {
-  font-size: 0.8em;
-}
-
-.opacity-low {
-  opacity: 0.5;
-}
-
-.img-box3 {
-  box-sizing: content-box;
-
-  margin-left: 0;
-  overflow: hidden;
-  display: inline-block;
-  color: #fff;
-  position: relative;
-  background-color: transparent;
-}
-
-.caption3 {
-  position: absolute;
-  text-align: left;
-  bottom: 5px;
-  left: 5%;
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.transparent-box3 {
-  width: 17em;
-  height: 31.7em;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-  margin-left: 0;
-  transition: background-color 0.3s ease;
-}
-
-.img-box3:hover {
-  cursor: none;
-}
-
-// .img-box3:hover img {
-//   transform: scale(1.1);
-// }
-
-.img-box3:hover .transparent-box3 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.img-box3:hover .caption3 {
-  transform: translateY(-20px);
-  opacity: 1;
-}
-
-.img-box3:hover {
-  cursor: pointer;
-}
-
-.caption3 > p:nth-child(2) {
-  font-size: 0.8em;
-}
-
-.img-box4 {
-  box-sizing: content-box;
-
-  margin-left: 0;
-  overflow: hidden;
-  display: inline-block;
-  color: #fff;
-  position: relative;
-  background-color: transparent;
-}
-
-.caption4 {
-  position: absolute;
-  text-align: left;
-  bottom: 5px;
-  left: 5%;
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.transparent-box4 {
-  width: 17em;
-  height: 15.3em;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-  margin-left: 0;
-  transition: background-color 0.3s ease;
-}
-
-.img-box4:hover {
-  cursor: none;
-}
-
-// .img-box3:hover img {
-//   transform: scale(1.1);
-// }
-
-.img-box4:hover .transparent-box4 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.img-box4:hover .caption4 {
-  transform: translateY(-20px);
-  opacity: 1;
-}
-
-.img-box4:hover {
-  cursor: pointer;
-}
-
-.caption3 > p:nth-child(2) {
-  font-size: 0.8em;
-}
-
-.img-box5 {
-  box-sizing: content-box;
-
-  margin-left: 0;
-  overflow: hidden;
-  display: inline-block;
-  color: #fff;
-  position: relative;
-  background-color: transparent;
-}
-
-.caption5 {
-  position: absolute;
-  text-align: left;
-  bottom: 5px;
-  left: 5%;
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.transparent-box5 {
-  width: 17em;
-  height: 15.3em;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-  margin-left: 0;
-  transition: background-color 0.3s ease;
-}
-
-.img-box5:hover {
-  cursor: none;
-}
-
-// .img-box3:hover img {
-//   transform: scale(1.1);
-// }
-
-.img-box5:hover .transparent-box4 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.img-box5:hover .caption4 {
-  transform: translateY(-20px);
-  opacity: 1;
-}
-
-.img-box5:hover {
-  cursor: pointer;
-}
-
-.caption3 > p:nth-child(2) {
-  font-size: 0.8em;
-}
-
-.hide-desktop {
-  display: none;
-  @media screen and (max-width: 567px) {
-    display: block;
-    margin-top: -17em;
-    margin-left: 0;
-    transform: scale(1);
-    transition: transform 0.4s ease;
-  }
-}
-.img-1 {
-  width: 325px;
-  height: 140px;
-}
+	@media screen and (max-width: 768px) {
+		#gallery {
+			padding: 0 30px;
+			.container-custom {
+				margin-top: -180px;
+				.hide-on-mobile {
+					display: none;
+				}
+			}
+		}
+	}
 </style>

@@ -1,220 +1,238 @@
 <template>
-  <section id="howwedo">
-    <div
-      class="container-fluid bg-biru"
-      
-    >
-      <div class="container-border">
-        <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-        <div class="container hero-collap">
-          <div class="d-flex flex-row align-items-center">
-            <SectionNumberComponent
-              class="ml-auto"
-              :number="'04 / 11'"
-              :section-name="'What We Do'"
-              :color="'#fff'"
-            />
-          </div>
-          <div
-            class="d-flex row-title flex-row justify-content-start align-items-start w-10" 
+
+	<section id="core-value">
+	  <BorderContainer
+		:theme="'light'"
+		:sections-length="sectionsLength"
+		:current-section="currentSection"
+	  />
+	  <div class="container-custom">
+		<div class="d-flex flex-column h-100 pt-4">
+			<SectionNumberComponent
+			class="mt-auto me-auto pointer"
+			:number="'03 / 07'"
+			:section-name="'How We Work'"
+			:color="'#fff'"
+		  />
+		  <h1 class="title-1">How We Work</h1>
+		  
+  
+		  <div class="cores d-flex flex-row align-items-start justify-content-center my-auto">
+			<div
+			  class="core d-flex flex-column"
+			  :style="`
+				  transform: translateX(-${posX}px);
+				`"
+			  v-for="(core, indexCore) in coreValues"
+			  :key="indexCore"
+			>
+			  <!-- <SectionNumberComponent
+				class="me-auto"
+				:number="''"
+				:section-name="`- 0${indexCore + 1} ${core.name}`"
+				:color="'#000000'"
+			  /> -->
+			  <p class="mb-0 title">{{ core.name }}</p>
+			  <div class="d-flex flex-row align-items-center mt-4">
+				<div class="circle"></div>
+				<div class="border-dash"></div>
+			  </div>
+			  <p class="mb-0 description">{{ core.description }}</p>
+			</div>
+		  </div>
+		  <!-- <div class="d-flex flex-row justify-content-end w-100">
+          <button
+            type="button"
+            class="btn btn-small btn-arrow"
+            :class="posX == 0 ? 'disabled' : ''"
+            @click="minPos"
           >
-            <h2 class="hero-title">This is How We Work</h2>
-            <img class="img-batik ms-auto" src="@/assets/images/batik2.svg" />
-          </div>
-          <div
-            class="row text-body h-80"
-            style="margin-top: 68px; padding-bottom: 0 !important"
+            <img src="@/assets/images/icons/caret-left.svg" alt="icon" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-small btn-arrow ms-2"
+            :class="posX == 2400 ? 'disabled' : ''"
+            @click="addPos"
           >
-            <div
-              class="col-12 card-1 col-md-4 col-lg-4 col-xl-4 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-              <p class="title">
-                Discover,<br />
-                design & build
-              </p>
-              <p class="subtitle">
-                We delivered tailored Digital and IT Solutions by listening to
-                our user needs, build prototype based on real feedback and apply
-                user feedback into scalable MVP. The way our end products are
-                built to give a great user experience.
-              </p>
-            </div>
-            <div
-              class="col-12 card-1 col-md-4 col-lg-4 col-xl-4 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-              <p class="title">
-                We grow <br />
-                your business
-              </p>
-              <p class="subtitle">
-                Our expertise work passionately in each product cycle to make
-                sure our users gain the benefit of growing their business. Our
-                solution will make it easier for them to engage with customers
-                and improve consistency.
-              </p>
-            </div>
-            <div
-              class="col-12 card-3 col-md-4 col-lg-4 col-xl-4 order-2 order-md-1 order-lg-1 order-xl-1"
-            >
-              <p class="title">
-                Dedicated for <br />
-                excellence
-              </p>
-              <p class="subtitle">
-                Our team fully assessed in terms of skills, experience, and
-                personality. Our objective is to deeply analyzed users’ needs to
-                create solution that speaks to your specific demographic and
-                meet your specified requirements.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
+            <img src="@/assets/images/icons/caret-right.svg" alt="icon" />
+          </button>
+        </div> -->
 
-<script setup>
-import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import Hammer from "hammerjs";
-import { onMounted } from "vue";
+  
 
-const emit = defineEmits(["swipeUp", "swipeDown"]);
-onMounted(() => {
-  var stage = document.getElementById("howwedo");
-  var hammertime = new Hammer.Manager(stage);
-  var Swipe = new Hammer.Swipe();
-  hammertime.add(Swipe);
-  hammertime.on("swipeup", function (ev) {
-    emit("swipeUp");
+		</div>
+	  </div>
+	</section>
+  </template>
+  
+  <script setup>
+  import { defineProps, onMounted, ref } from "vue";
+  import Hammer from "hammerjs";
+  
+  import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+  import BorderContainer from "@/components/BorderContainer.vue";
+  
+  const props = defineProps({
+	sectionsLength: {
+	  type: Number,
+	  require: true,
+	},
+	currentSection: {
+	  type: Number,
+	  require: true,
+	},
   });
-  hammertime.on("swipedown", function (ev) {
-    emit("swipeDown");
+  const emit = defineEmits(["swipeUp", "swipeDown"]);
+  
+  const posX = ref(0);
+  const addPos = () => {
+	posX.value += 300;
+  };
+  const minPos = () => {
+	posX.value -= 300;
+  };
+  const coreValues = ref([
+	{
+	  name: "Discover, Design & build",
+	  description:
+		"We delivered tailored Digital and IT Solutions by listening toour user needs, build prototype based on real feedback and apply user feedbacl into scalable MVP. The way our end products  are built to give a great user experience",
+	},
+
+	{
+	  name: "We grow your business",
+	  description:
+		"  Our expertise work passionately in each product cycle to make  sure our users gain the benefit of growing their business. Our solution will make it easier for them to engage with customers and improve consistency.",
+	},
+	{
+	  name: "Dedicated for excellence",
+	  description:
+		"   Our team fully assessed in terms of skills, experience, and personality. Our objective is to deeply analyzed users’ needs to create solution that speaks to your specific demographic and meet your specified requirements.",
+	},
+	
+  ]);
+  
+  onMounted(() => {
+	var stage = document.getElementById("core-value");
+	var hammertime = new Hammer.Manager(stage);
+	var Swipe = new Hammer.Swipe();
+	hammertime.add(Swipe);
+	hammertime.on("swipeup", function (ev) {
+	  emit("swipeUp");
+	});
+	hammertime.on("swipedown", function (ev) {
+	  emit("swipeDown");
+	});
   });
-});
-</script>
+  </script>
+  
+  <style lang="scss" scoped>
+  #core-value {
+	height: 100vh;
+	width: 100%;
+	padding: 0 140px;
+	background-color: #263a5f;
+  background-image: linear-gradient(#263a5f 35%, #fff 30%);
+	// background: linear-gradient(#263a5f 20vh,#263a5f);
+	.container-custom {
+	  padding: 80px 0;
+	  height: 100vh;
+	  width: 100%;
+	  z-index: 2;
+	  .title {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 600;
+		font-size: 30px;
+    width:345px;
+		line-height: 57px;
+	  }
+	  .shape {
+		width: 38px;
+		height: 22px;
+		background-color: #0c4aa9;
+		margin-top: 10px;
+	  }
+	  .cores {
+		padding: 20px 0;
+		width: 100%;
+		overflow-x: scroll;
+		.core {
+			margin-top:3%;
+			margin-bottom:4%;
+		  width: 550px;
+		  padding-right: 10px;
+		  transition: 0.5s ease-out;
+		  .description {
+			font-family: "Albert Sans", sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 30px;
+			color: #8d8f9a;
+			margin-top: 20px;
+			padding-right: 40px;
+		  }
+		  .circle {
+			width: 18px;
+			height: 18px;
+			background: #e78448;
+			border-radius: 30px;
+		  }
+		  .border-dash {
+			width: 300px;
+			height: 0px;
+			border-top: 2px dashed #e78448;
+			margin-left: 10px;
+		  }
+		}
+	  }
+	}
+  }
 
-<style lang="scss" scoped>
-#howwedo {
-  background-color: white;
-  height: 100vh;
-  margin-top: 0;
-  z-index: 1;
-  @media (max-width: 768px) {
-     height: 100%;
-    }
-  .container-border {
-    position: relative;
-    width: 100%;
-    padding: 0 80px;
-    @media (max-width: 768px) {
-      padding: 0 0px;
-    }
-  }
-  .section-number {
-    @media (max-width: 768px) {
-      margin-left: 0em !important;
-      margin-top: -3em;
-    }
-  }
-  .img-batik {
-    float: right;
-    margin-top: -3.6em !important ;
-    margin-right: -12em !important ;
-    @media screen and (max-width: 1920px) {
-      margin-top: 2em !important;
-      margin-right: -24em !important ;
-    }
-    @media (max-width: 768px) {
-      margin-left: -20em !important;
-      width: 32px;
-height: 161px;
-display: none;
 
-    }
-  }
-
-  .asset-2 {
-    position: absolute;
-    left: 5%;
-    top: 0;
-    height: 711px;
-  }
-  .container {
-    padding: 80px;
-    h2 {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      font-size: 3rem;
-      line-height: 57px;
-    }
-  }
-}
-
-.bg-biru{
-background-color: #263a5f; height: 35vh; margin-top: 0;
-@media screen and (max-width:768px){
-  height: 20vh;
-}
-}
-.row-title{
-  @media screen and (max-width:768px){
-  margin-top:-18em
-  }
-}
-
-.hero-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 3rem;
-  color: #fff;
-  margin-top: 21px;
-  line-height: 57px;
-  @media (max-width: 768px) {
-    
-    margin-left: 0 !important;
-    font-size: 2rem !important ;
-    margin-top: 9.5em !important;
-    line-height: 35px !important; 
-    width: 325px !important;
-    margin-bottom: 1.5em !important;
-  }
-}
-.card-1 {
-  border-left: 1px solid #b8bdc6;
-}
-
-.card-3 {
-  border-left: 1px solid #b8bdc6;
-  border-right: 1px solid #b8bdc6;
-}
-.title {
+  .title-1 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  margin-top: 3em !important;
-  font-size: 35px;
+  font-size: 40px;
   line-height: 43px;
+  margin-top: 20px;
   letter-spacing: -1.82px;
-  color: #000000;
+  color: #fff;
   @media screen and (max-width:768px){
     font-size: 20px;
     width: 239px;
-
+    color: #fff;
+    margin-top: -10em;
     line-height: 20px;
   }
 }
-.subtitle {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
-  /* or 188% */
-
-  color: #8d8f9a;
-}
-.text-body {
-  margin-top: -13.5% !important;
-}
-</style>
+  
+  @media screen and (max-width: 768px) {
+	#core-value {
+		
+	  padding: 0 30px;
+    background-color: #263a5f;
+  background-image: linear-gradient(#263a5f 20%, #fff 20%);
+	  .container-custom {
+		height: 100vh;
+		padding: 80px 0;
+		border: none;
+		.title {
+		  font-size: 20px;
+		  font-weight: 600;
+		  line-height: 20px;
+		}
+    .core{
+      width:350px;
+    }
+		.text-body {
+		  font-size: 12px;
+		  margin-top: 5px;
+		  line-height: 30px;
+		}
+	  }
+	}
+  }
+  </style>
+  

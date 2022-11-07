@@ -1,116 +1,108 @@
 <template>
-  <section id="howwedo">
-    <div class="container-border">
-      <BorderContainer
-        :theme="'dark'"
-        :sections-length="sectionsLength"
-        :current-section="currentSection"
-      />
-      <img class="asset-2" src="@/assets/images/animate/asset-2.png" alt="" />
-      <div class="container hero-collap">
-        <div class="d-flex flex-row align-items-center">
-          <h2 class="hero-title">How We Do It</h2>
-          <SectionNumberComponent
-            class="ms-auto"
-            :number="'03 / 11'"
-            :section-name="'How We Do It'"
-            :color="'#000'"
-            
-          />
-        </div>
-        <div
-          class="d-flex  flex-row justify-content-start align-items-start w-20"
-        >
-          <div class="shape-blue"></div>
-        </div>
-         
-        
-        <div
-          class="row h-80 b"
-          style="margin-top: 68px; padding-bottom: 0 !important"
-        >
-
- 
-        <div class="row  collapse-mobile">
-              <div class="col-12">
-                <ul
-                  class="nav flex-center justify-content-left bg-transparent pt-5"
-                >
-                  <div class="row  row-menu" style="width: 300px">
-                    <div class="col-md-12" style="border: none">
-                      <div class="row g-5">
-                        <div class="col-2">
-                          <!--begin::Tab nav-->
-                          <li class="nav-item menu-0 flex-equal">
-                            <a
-                              class="nav-link btn btn-active-white text-center btn-color-gray-500 btn-active-color-gray-700 px-4 fs-6 fw-bold active"
-                              data-bs-toggle="tab"
-                              style="text-align: center"
-                              href="#kt_lists_widget_3_tab_pane_1"
-                              ><p class="no-title">01</p></a
-                            >
-                          </li>
-                        </div>
-                        <div class="col-2">
-                          <li class="nav-item menu-1  flex-equal">
-                            <a
-                              class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                              data-bs-toggle="tab"
-                              href="#kt_lists_adaptive"
-                              ><p class="no-title">02</p></a
-                            >
-                          </li>
-                        </div>
-                        <div class="col-2">
-                          <li class="nav-item menu-2 flex-equal">
-                            <a
-                              class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                              data-bs-toggle="tab"
-                              href="#kt_lists_orien"
-                              ><p class="no-title">03</p></a
-                            >
-                          </li>
-                        </div>
-                        <div class="col-2">
-                          <li class="nav-item  " style="width:20px">
-                            <a
-                              class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                              data-bs-toggle="tab"
-                              href="#kt_lists_sustainable"
-                              ><p class="no-title">04</p></a
-                            >
-                          </li>
-                        </div>
-  
-                       
-                      </div>
-                    </div>
-                    <!--end::Tab nav-->
-                    <!--begin::Tab nav-->
-                    <div class="col-md-6"></div>
-                    <!--end::Tab nav-->
-                  </div>
-                </ul>
-              </div>
+  <section id="core-value">
+    <BorderContainer
+      :theme="'light'"
+      :sections-length="sectionsLength"
+      :current-section="currentSection"
+    />
+    <div class="container-custom">
+      <div class="d-flex flex-column h-100 pt-4">
+        <div class="container-fluid section-header ">
+          <div class="row" >
+            <div class="col-md-10">
+              <h1 class="title">How We Do It</h1>
             </div>
 
+            <div class="col-md-2 justify-content-end align-items-right text-right">
+              <SectionNumberComponent
+                class="mx-auto section-nums"
+                :number="'03 / 11'"
+                :section-name="'How We Do It'"
+                :color="'#000'"
+                style="width:250px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="shape"></div>
 
-
+        <div
+          class="row h-80 "
+          style="margin-top: 10%; padding-bottom: 0 !important;margin-left: 5em;"
+        >
+          <div class="row collapse-mobile">
+            <div class="col-12">
+              <ul class="nav bg-transparent pt-5">
+                <div class="row row-menu" style="width: 300px">
+                  <div class="col-md-12" style="border: none">
+                    <div class="row g-5">
+                      <div class="col-2">
+                        <!--begin::Tab nav-->
+                        <li class="nav-item menu-0 flex-equal">
+                          <a
+                            class="nav-link btn btn-active-white text-center btn-color-gray-500 btn-active-color-gray-700 px-4 fs-6 fw-bold active"
+                            data-bs-toggle="tab"
+                            style="text-align: center"
+                            href="#kt_lists_widget_3_tab_pane_1"
+                            ><p class="no-title">01</p></a
+                          >
+                        </li>
+                      </div>
+                      <div class="col-2">
+                        <li class="nav-item menu-1 flex-equal">
+                          <a
+                            class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                            data-bs-toggle="tab"
+                            href="#kt_lists_adaptive"
+                            ><p class="no-title">02</p></a
+                          >
+                        </li>
+                      </div>
+                      <div class="col-2">
+                        <li class="nav-item menu-2 flex-equal">
+                          <a
+                            class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                            data-bs-toggle="tab"
+                            href="#kt_lists_orien"
+                            ><p class="no-title">03</p></a
+                          >
+                        </li>
+                      </div>
+                      <div class="col-2">
+                        <li class="nav-item" style="width: 20px">
+                          <a
+                            class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                            data-bs-toggle="tab"
+                            href="#kt_lists_sustainable"
+                            ><p class="no-title">04</p></a
+                          >
+                        </li>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end::Tab nav-->
+                  <!--begin::Tab nav-->
+                  <div class="col-md-6"></div>
+                  <!--end::Tab nav-->
+                </div>
+              </ul>
+            </div>
+          </div>
 
           <div
             class="col-12 hide-mobile col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-          >
-            <ul class="nav flex-center bg-transparent flex-nowrap p-2 mb-8">
+            >
+            <ul class="nav p-2 mb-8">
               <div class="col-md-12">
                 <!--begin::Tab nav-->
-                <li class="nav-item active ">
+                <li class="nav-item active">
                   <a
                     class="nav-link btn btn-active-white head py-2 px-4 fs-6 fw-bold active"
                     data-bs-toggle="tab"
                     href="#kt_lists_widget_3_tab_pane_1"
                     style="
                       text-align: left;
-                      margin-left: 106px;
+                      /* margin-left: 106px; */
                       font-weight: 500 !important;
                     "
                     >01 &nbsp;Positive impact in development</a
@@ -127,7 +119,7 @@
                     href="#kt_lists_adaptive"
                     style="
                       text-align: left;
-                      margin-left: 103px;
+                      /* margin-left: 103px; */
                       font-weight: 500 !important;
                     "
                     >02 &nbsp;Adaptive solution development</a
@@ -140,7 +132,7 @@
                     href="#kt_lists_orien"
                     style="
                       text-align: left;
-                      margin-left: 103px;
+                      /* margin-left: 103px; */
                       font-weight: 500 !important;
                     "
                     >03 &nbsp;User oriented group of talents</a
@@ -153,7 +145,7 @@
                     href="#kt_lists_sustainable"
                     style="
                       text-align: left;
-                      margin-left: 103px;
+                      /* margin-left: 103px; */
                       font-weight: 500 !important;
                     "
                     >04 &nbsp;Sustainable way of achieving</a
@@ -167,33 +159,29 @@
           </div>
 
           <div
-            class="col-12  col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
+            class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 order-lg-2 order-xl-2 d-flex flex-row"
           >
-            <div class="d-flex  flex-column justify-content-center h-100">
-              <div class="tab-content ">
+            <div class="justify-content-center h-100">
+              <div class="tab-content content-field">
                 <!--begin::Tab pane-->
                 <div
-                  class="tab-pane  active show"
+                  class="tab-pane active show"
                   id="kt_lists_widget_3_tab_pane_1"
                 >
                   <!--begin::Section-->
                   <el-col id="#" style="margin-top: 10%" :span="12"
-                    ><div class="grid-content ">
+                    ><div class="grid-content">
                       <div>
                         <div
-                          class="open-reg-26"
-                          style="text-align: justify; width: 574px"
+                          class="open-reg-26 tithe-field"
+                          style="text-align: justify"
                         >
                           Positive impact in development
                         </div>
 
                         <div
-                          class="subhead1 "
-                          style="
-                            text-align: justify;
-                            width: 34em;
-                            height: 180px;
-                          "
+                          class="subhead1"
+                          style="text-align: justify; height: 180px"
                         >
                           At every stage of product cycle we design solutions to
                           meet user needs and are easy to use. We invest our
@@ -219,7 +207,7 @@
                     ><div class="grid-content">
                       <div>
                         <div
-                          class="open-reg-26 "
+                          class="open-reg-26"
                           style="text-align: justify; width: 574px"
                         >
                           Adaptive solution development
@@ -228,7 +216,7 @@
                           class="subhead1"
                           style="
                             text-align: justify;
-                            width: 34em;
+                            /* width: 34em; */
                             height: 180px;
                           "
                         >
@@ -263,7 +251,7 @@
                           class="subhead1"
                           style="
                             text-align: justify;
-                            width: 34em;
+                            /* width: 34em; */
                             height: 180px;
                           "
                         >
@@ -294,7 +282,7 @@
                           class="subhead1"
                           style="
                             text-align: justify;
-                            width: 34em;
+                            /* width: 34em; */
                             height: 180px;
                           "
                         >
@@ -320,35 +308,32 @@
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
-        >
-          <img
-            class="text-center batik-img"
-            src="@/assets/images/batik-1.svg"
-            style="
-              float: left;
-              justify-content: left;
-              height: 195px;
-              z-index: -2;
-            "
-          />
-        </div>
-      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import { defineProps, onMounted, ref } from "vue";
 import Hammer from "hammerjs";
-import { onMounted } from "vue";
+
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import BorderContainer from "@/components/BorderContainer.vue";
+
+const props = defineProps({
+  sectionsLength: {
+    type: Number,
+    require: true,
+  },
+  currentSection: {
+    type: Number,
+    require: true,
+  },
+});
 
 const emit = defineEmits(["swipeUp", "swipeDown"]);
+
 onMounted(() => {
-  var stage = document.getElementById("howwedo");
+  var stage = document.getElementById("core-value");
   var hammertime = new Hammer.Manager(stage);
   var Swipe = new Hammer.Swipe();
   hammertime.add(Swipe);
@@ -362,32 +347,70 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-#howwedo {
-  background-color: white;
-  height: 100vh;
-  z-index: 2;
-  @media screen and (max-width: 576px) {
-    padding: 0;
-  }
-  .container-border {
-    position: relative;
+// @media screen and (max-width: 992px) {
+  #core-value {
+    height: 100vh;
     width: 100%;
-    padding: 0 80px;
-    border-left: 1px solid #b8bdc6;
-    border-right: 1px solid #b8bdc6;
-    @media screen and (max-width: 576px) {
-      padding: 0;
-      border: 0;
+    padding: 0 140px;
+    background-color: white;
+    .container-custom {
+      padding: 80px 0;
+      height: 100vh;
+      width: 100%;
+      z-index: 2;
+      .title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        line-height: 57px;
+      }
+
+      .shape {
+        width: 38px;
+        height: 22px;
+        background-color: #0c4aa9;
+        margin-top: 10px;
+      }
+      .cores {
+        padding: 20px 0;
+        width: 100%;
+        overflow-x: scroll;
+        .core {
+          width: 350px;
+          padding-right: 10px;
+          transition: 0.5s ease-out;
+          .description {
+            font-family: "Albert Sans", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #8d8f9a;
+            margin-top: 20px;
+            padding-right: 40px;
+          }
+          .circle {
+            width: 18px;
+            height: 18px;
+            background: #e78448;
+            border-radius: 30px;
+          }
+          .border-dash {
+            width: 300px;
+            height: 0px;
+            border-top: 2px dashed #e78448;
+            margin-left: 10px;
+          }
+        }
+      }
     }
   }
-  .section-number {
-    @media screen and (max-width: 576px) {
-      margin-top: -7em;
-      margin-left: -14em !important;
-    }
+  .section-header{
+	  height: 8vh;
   }
 
   .open-reg-26 {
+    text-align: left !important;
+    width: 15em;
     @media screen and (max-width: 576px) {
       font-size: 20px !important;
       width: 275px !important;
@@ -403,7 +426,7 @@ onMounted(() => {
   }
   .container {
     padding: 80px;
-    margin-top:10%;
+    margin-top: 10%;
     h2 {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
@@ -411,497 +434,231 @@ onMounted(() => {
       line-height: 57px;
     }
   }
-}
 
-.nav-item {
-
-  @media screen and (max-width: 576px) {
-    margin-top: -20% !important;
-    margin-left: -20% !important;
-   
-  }
-}
-.batik-img {
-  margin-left: -12%;
-  margin-top: -45%!important;
-  display: none;
-  @media screen and (max-width: 1920px) {
+  // .nav-item {
+  //   @media screen and (max-width: 576px) {
+  //     margin-top: -30% !important;
+  //     margin-left: -20% !important;
+  //   }
+  // }
+  .batik-img {
     margin-left: -12%;
-    margin-top: 5.5% !important;
+    margin-top: -45% !important;
     display: none;
+    @media screen and (max-width: 1920px) {
+      margin-left: -12%;
+      margin-top: 5.5% !important;
+      display: none;
+    }
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
   }
-  @media screen and (max-width: 576px) {
+  .head {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+
+    color: #b8bdc6;
+    @media screen and (max-width: 576px) {
+    }
+  }
+  .hide-mobile {
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+  .head1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+
+    color: #000000;
+  }
+  .hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 83px;
+    text-align: start;
+
+    color: black;
+    @media screen and (max-width: 576px) {
+      font-size: 30px !important;
+      margin-top: 10% !important;
+    }
+  }
+  .shape-blue {
+    width: 68px;
+    height: 22px;
+    background-color: #0c4aa9;
+    margin-right: 20px;
+    margin-top: 10px;
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+  .head1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+
+    color: #b8bdc6;
+  }
+  .grid-content {
+    transform: translateY(600px);
+    animation: slideUp 1s ease-in-out forwards 0.5s;
+  }
+
+  .collapse-mobile {
     display: none;
+    @media screen and (max-width: 576px) {
+      display: block;
+      width: 350px;
+      margin-top: -4em;
+      margin-bottom: 4em;
+    }
   }
-}
-.head {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  /* identical to box height */
-
-  color: #b8bdc6;
-  @media screen and (max-width: 576px) {
+  .sub-1-title {
+    font-style: normal;
+    font-weight: 500;
+    position: absolute;
+    font-size: 14px;
+    width: 145px;
+    margin-top: -5.2em;
+    margin-bottom: 5em;
+    padding-top: 9px;
+    height: 42px;
+    margin-left: -3em;
+    text-align: center;
+    line-height: 21px;
+    /* identical to box height */
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 36px;
   }
-}
-.hide-mobile{
-  @media screen and (max-width: 576px) {
-    display: none;
+  .no-title {
+    width: 32px;
+    height: 18px;
+    text-align: center;
+    margin-left: -18px;
+    padding-top: 8px;
+    font-size: 18px !important;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000000;
   }
-}
-.head1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 43px;
-  /* identical to box height */
-
-  color: #000000;
-}
-.hero-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 4.5rem;
-  font-weight: 600;
-  line-height: 83px;
-  text-align: start;
-
-  color: black;
-  @media screen and (max-width: 576px) {
-    font-size: 30px !important;
-    margin-top: 10% !important;
+  // .nav-link {
+  //   border: 1px solid #000000;
+  //   border-radius: 100%;
+  // }
+  .nav-item {
+    margin-top: -1.5em;
   }
-}
-.shape-blue {
-  width: 68px;
-  height: 22px;
-  background-color: #0c4aa9;
-  margin-right: 20px;
-  margin-top: 10px;
-  @media screen and (max-width: 576px) {
-    display: none;
+  .subhead1 {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 1.8em;
+    font-size: 16px;
+    z-index: 9;
+    width: 23em;
+    height: 200px;
+    line-height: 30px;
+
+    /* or 167% */
+
+    color: #000000 !important;
+    @media screen and (max-width: 576px) {
+      font-size: 13px !important;
+
+      width: 275px !important;
+    }
   }
-}
-.head1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 43px;
-  /* identical to box height */
-
-  color: #b8bdc6;
-}
-.grid-content{
-  transform: translateY(600px);
-  animation: slideUp 1s ease-in-out forwards 0.5s;
-}
-
-.collapse-mobile {
-  display: none;
-  @media screen and (max-width:576px){
-    display: block;
-    width: 320px;
-    margin-left: 5em;
-    padding-left: 2em;
-    margin-top: -4em;
-    margin-bottom: 4em;
+  .tab-content {
+    width: 400px;
+    margin-left: 3em;
+    @media screen and (max-width: 576px) {
+      width: 325px !important;
+    }
   }
-
-}
-.sub-1-title {
-  font-style: normal;
-  font-weight: 500;
-  position: absolute;
-  font-size: 14px;
-  width: 145px;
-  margin-top: -5.2em;
-  margin-bottom: 5em;
-  padding-top: 9px;
-  height: 42px;
-  margin-left: -3em;
-  text-align: center;
-  line-height: 21px;
-  /* identical to box height */
-  color: #000000;
-  border: 1px solid #000000;
-  border-radius: 36px;
-}
-.no-title {
-  width: 32px;
-  height: 18px;
-  text-align: center;
-  margin-left: -18px;
-  padding-top: 8px;
-  font-size: 18px !important;
-  line-height: 18px;
-  font-weight: 400;
-  color: #000000;
-}
-// .nav-link {
-//   border: 1px solid #000000;
-//   border-radius: 100%;
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .tab-pane {
+    margin-top: -5em;
+    height: 180px;
+  }
+  .nav-link {
+    border-radius: 36px;
+    width: 25em;
+    border: 1px solid #b8bdc6;
+    border-radius: 36px;
+    @media screen and (max-width: 576px) {
+      border-radius: 100%;
+      width: 20px;
+    }
+  }
+  li:last-child {
+    border-right: hidden !important;
+  }
+  .btn-check:checked + .btn.btn-active-white,
+  .btn-check:active + .btn.btn-active-white,
+  .btn.btn-active-white:focus:not(.btn-active),
+  .btn.btn-active-white:hover:not(.btn-active),
+  .btn.btn-active-white:active:not(.btn-active),
+  .btn.btn-active-white.active,
+  .btn.btn-active-white.show,
+  .show > .btn.btn-active-white {
+    color: #000;
+    border: 1px solid #e78448 !important;
+    width: 25em;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
+    @media screen and (max-width: 576px) {
+      width: 20px;
+    }
+  }
 // }
-.subhead1 {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 1.8em;
-  font-size: 18px;
-  z-index: 9;
-  height: 200px;
-  line-height: 30px;
 
-  /* or 167% */
-
-  color: #000000 !important;
-  @media screen and (max-width: 576px) {
-    font-size: 13px !important;
-
-    width: 275px !important;
+@media screen and (max-width: 768px) {
+  #core-value {
+    padding-left: 3em;
+    .container-custom {
+      height: 100vh;
+      padding: 120px 0;
+      border: none;
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+      .section-nums {
+        display: none;
+      }
+      .text-body {
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 30px;
+      }
+    }
   }
-}
-.tab-content{
-  @media screen and (max-width: 576px) {
- 
-
-    width: 325px !important;
+  .core {
+    width: 325px;
   }
-}
-@keyframes slideUp {
-  0% {
-    transform: translateY(300px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.tab-pane {
-  margin-top: -5em;
-  height: 180px;
-}
-.nav-link {
-  border-radius: 36px;
-  width: 25em;
-  border: 1px solid #b8bdc6;
-border-radius: 36px;
-@media screen and (max-width:576px){
-  border-radius: 100%;
-  width: 20px;
-}
-}
-li:last-child {
-  border-right: hidden !important;
-}
-.btn-check:checked + .btn.btn-active-white,
-.btn-check:active + .btn.btn-active-white,
-.btn.btn-active-white:focus:not(.btn-active),
-.btn.btn-active-white:hover:not(.btn-active),
-.btn.btn-active-white:active:not(.btn-active),
-.btn.btn-active-white.active,
-.btn.btn-active-white.show,
-.show > .btn.btn-active-white {
-  color: #000;
-  border: 1px solid #e78448 !important;
-  width: 25em;
-  background-color: #ffffff;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width:576px){
-
-  width: 20px;
-}
-}
-.btn-check:checked + .btn.btn-active-white i,
-.btn-check:active + .btn.btn-active-white i,
-.btn.btn-active-white:focus:not(.btn-active) i,
-.btn.btn-active-white:hover:not(.btn-active) i,
-.btn.btn-active-white:active:not(.btn-active) i,
-.btn.btn-active-white.active i,
-.btn.btn-active-white.show i,
-.show > .btn.btn-active-white i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-white .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-white.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-white.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-white
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-white.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-white.dropdown-toggle:after,
-.btn.btn-active-white:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-white.active.dropdown-toggle:after,
-.btn.btn-active-white.show.dropdown-toggle:after,
-.show > .btn.btn-active-white.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-
-  background-color: #f5f8fa;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn.btn-light i {
-  color: #7e8299;
-}
-.btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light,
-.btn-check:active + .btn.btn-light,
-.btn.btn-light:focus:not(.btn-active),
-.btn.btn-light:hover:not(.btn-active),
-.btn.btn-light:active:not(.btn-active),
-.btn.btn-light.active,
-.btn.btn-light.show,
-.show > .btn.btn-light {
-  color: #7e8299;
-
-  border-color: #e4e6ef;
-  background-color: #e4e6ef;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-light i,
-.btn-check:active + .btn.btn-light i,
-.btn.btn-light:focus:not(.btn-active) i,
-.btn.btn-light:hover:not(.btn-active) i,
-.btn.btn-light:active:not(.btn-active) i,
-.btn.btn-light.active i,
-.btn.btn-light.show i,
-.show > .btn.btn-light i {
-  color: #7e8299;
-}
-.btn-check:checked + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn-check:active + .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show > .btn.btn-light .svg-icon svg:hover [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-light.dropdown-toggle:after,
-.btn.btn-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-light.active.dropdown-toggle:after,
-.btn.btn-light.show.dropdown-toggle:after,
-.show > .btn.btn-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-bg-light {
-  border-color: #f5f8fa;
-
-  background-color: #f5f8fa;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn-check:checked + .btn.btn-active-light,
-.btn-check:active + .btn.btn-active-light,
-.btn.btn-active-light:focus:not(.btn-active),
-.btn.btn-active-light:hover:not(.btn-active),
-.btn.btn-active-light:active:not(.btn-active),
-.btn.btn-active-light.active,
-.btn.btn-active-light.show,
-.show > .btn.btn-active-light {
-  color: #7e8299;
-  border-color: #f5f8fa;
-
-  background-color: #f5f8fa;
-}
-.btn-check:checked + .btn.btn-active-light i,
-.btn-check:active + .btn.btn-active-light i,
-.btn.btn-active-light:focus:not(.btn-active) i,
-.btn.btn-active-light:hover:not(.btn-active) i,
-.btn.btn-active-light:active:not(.btn-active) i,
-.btn.btn-active-light.active i,
-.btn.btn-active-light.show i,
-.show > .btn.btn-active-light i {
-  color: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg [fill]:not(.permanent):not(g),
-.show > .btn.btn-active-light .svg-icon svg [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-  fill: #7e8299;
-}
-.btn-check:checked
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn-check:active
-  + .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:focus:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:hover:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light:active:not(.btn-active)
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g),
-.btn.btn-active-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.btn.btn-active-light.show .svg-icon svg:hover [fill]:not(.permanent):not(g),
-.show
-  > .btn.btn-active-light
-  .svg-icon
-  svg:hover
-  [fill]:not(.permanent):not(g) {
-  transition: fill 0.3s ease;
-}
-.btn-check:checked + .btn.btn-active-light.dropdown-toggle:after,
-.btn-check:active + .btn.btn-active-light.dropdown-toggle:after,
-.btn.btn-active-light:focus:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:hover:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light:active:not(.btn-active).dropdown-toggle:after,
-.btn.btn-active-light.active.dropdown-toggle:after,
-.btn.btn-active-light.show.dropdown-toggle:after,
-.show > .btn.btn-active-light.dropdown-toggle:after {
-  color: #7e8299;
-}
-
-.btn.btn-primary {
-  color: #ffffff;
-  border-color: #b8bdc6;
-  border: none;
-  background-color: #b8bdc6;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-}
-.btn.btn-primary i {
-  color: #ffffff;
 }
 </style>

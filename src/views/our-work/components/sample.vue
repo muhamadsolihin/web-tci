@@ -1,279 +1,251 @@
 <template>
-	<section id="hero">
-		<div class="container-border">
-            <img
-				class="asset-2"
-				src="@/assets/images/who-we-are/asset-2.png"
-				alt=""
-			/>
-            <div class="d-flex flex-row align-items-center">
-        <h2>Our Works</h2>
-        <SectionNumberComponent
-          class="ms-auto"
-          :number="'02 / 02'"
-          :section-name="'Our Works'"
-          :color="'#000000'"
-        />
-      </div>
-      <div
-        class="d-flex flex-row align-items-start justify-content-between mt-4"  
-      >
+  <section id="core-value">
+    <BorderContainer
+      :theme="'light'"
+      :sections-length="4"
+      :current-section="1"
+    />
+    <div class="container-custom">
+      <div class="d-flex flex-column h-100 pt-4">
+        <h1 class="title">Our Works</h1>
+        <div class="shape"></div>
 
-        <el-row :gutter="5" style="margin-top: 53px">
-          <el-col :span="6"
-            ><div class="grid-content card-ic">
-              <div class="card" style="border: none">
-                <img
-                  src="@/assets/images/our-work/bmc.png"
-                  class="card-img-top ic-image"
-                  alt="responsive"
-                />
-                <hr
-                  class="center"
-                  style="width: 13.5em; margin: auto; margin-top: 4.5em"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Batamec</h5>
-                  <p class="card-text">
-                    We did a rebrand and digital marketing planning for PT
-                    Batamec Shipyard, a national shipyard company with its long
-                    history.
-                  </p>
+        <div class="cores d-flex flex-row align-items-start my-auto">
+          <!-- <div class="row g-3 h-100">
+						<div class="col-12">
+							<img :src="photoList[0]" alt="photo" />
+						</div>
+						<div class="col-6">
+							<img :src="photoList[1]" alt="photo" />
+						</div>
+						<div class="col-6">
+							<img :src="photoList[2]" alt="photo" />
+						</div>
+					</div> -->
+
+          <div
+            class="core d-flex flex-column"
+            :style="`
+                transform: translateX(-${posX}px);
+              `"
+            v-for="(core, indexCore) in coreValues"
+            :key="indexCore"
+          >
+            <div class="ic-card justify-content-center align-items-center">
+              <div class="col-6">
+                <div class="images" style="height: 10em">
+                  <img class="images justify-content-center align-items-center mt-3 py-2" :src="core.images" alt="photo" />
                 </div>
               </div>
+              <div class="d-flex mt-5 flex-row align-items-center mt-4">
+                <!-- <div class="circle "></div> -->
+                <div class="border-dash"></div>
+              </div>
+              <p class="mb-1 description">{{ core.description }}</p>
             </div>
-          </el-col>
-          <el-col :span="6"
-            ><div class="grid-content card-ic">
-              <div class="card" style="border: none">
-                <img
-                  src="@/assets/images/our-work/collega.png"
-                  class="card-img-top collega-img"
-                  alt="responsive"
-                />
-                <hr
-                  class="center"
-                  style="width: 13.5em; margin: auto; margin-top: 4.5em"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Collega</h5>
-                  <p class="card-text">We help Collega builds their Digital Banking product with our experienced technical team.</p>
-                </div>
-              </div>
-            </div></el-col
-          >
-          <el-col :span="6"
-            ><div class="grid-content card-ic">
-              <div class="card" style="border: none">
-                <img
-                  src="@/assets/images/our-work/sedekah.png"
-                  class="card-img-top sedekah-img"
-                  alt="responsive"
-                />
-                <hr
-                  class="center"
-                  style="width: 13.5em; margin: auto; margin-top: 5.5em"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Sedekah Ide untuk Bandung</h5>
-                  <p class="card-text">We did their Campaign Strategies, including their Digital Marketing, Website Management, and Social Media Handling.</p>
-                </div>
-              </div>
-            </div></el-col
-          >
-          <el-col :span="6"
-            ><div class="grid-content card-ic">
-              <div class="card" style="border: none">
-                <img
-                  src="@/assets/images/makasilogo.svg"
-                  class="card-img-top ic-image"
-                  alt="responsive"
-                />
-                <hr
-                  class="center"
-                  style="width: 13.5em; margin: auto; margin-top: 4.5em"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Makasi</h5>
-                  <p class="card-text">We help Makasi POS build their Point of Sales app from scratch. </p>
-                </div>
-              </div>
-            </div></el-col
-          >
-        </el-row>
-    </div>
-			</div>
-		
-		<img
-			class="asset-1"
-			src="@/assets/images/who-we-are/asset-1.png"
-			alt="asset"
-		/>
-		<img
-			class="asset-3"
-			src="@/assets/images/who-we-are/asset-3.png"
-			alt="asset"
-		/>
-	</section>
+          </div>
+        </div>
 
+        <div class="d-flex flex-row justify-content-end w-100">
+          <button
+            type="button"
+            class="btn btn-small btn-arrow"
+            :class="posX == 0 ? 'disabled' : ''"
+            @click="minPos"
+          >
+            <img src="@/assets/images/icons/caret-left.svg" alt="icon" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-small btn-arrow ms-2"
+            :class="posX == 2400 ? 'disabled' : ''"
+            @click="addPos"
+          >
+            <img src="@/assets/images/icons/caret-right.svg" alt="icon" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
+import { defineProps, onMounted, ref } from "vue";
 
-import SectionNumberComponent from '@/components/SectionNumberComponent.vue';
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import BorderContainer from "@/components/BorderContainer.vue";
 
+const posX = ref(0);
+const addPos = () => {
+  posX.value += 300;
+};
+const minPos = () => {
+  posX.value -= 300;
+};
+const coreValues = ref([
+  {
+    images: require("@/assets/images/our-work/bmc.svg"),
+    name: "Innovation",
+    description:
+      "We did a rebrand and digital marketing planning for PT Batamec Shipyard, a national shipyard company with its long history.",
+  },
+  {
+    images: require("@/assets/images/our-work/collega.svg"),
+    name: "Collaboration",
+    description:
+      "We help Collega builds their Digital Banking product with our experienced technical team.",
+  },
+  {
+    images: require("@/assets/images/our-work/sedekah.svg"),
+    name: "Team Work",
+    description:
+      "We did their Campaign Strategies, including their Digital Marketing, Website Management, and Social Media Handling.",
+  },
+  {
+    images: require("@/assets/images/our-work/logo-makasi.svg"),
+    name: "Growth",
+    description:
+      "We help Makasi POS build their Point of Sales app from scratch.",
+  },
+  {
+    images: require("@/assets/images/our-work/icdata.svg"),
+    name: "Passion",
+    description:
+      "To excel through quality, to delight our clients, to enjoy our work.",
+  },
+  {
+    images: require("@/assets/images/our-work/foodiz.svg"),
+    name: "Loyalty",
+    description:
+      "Means we stay true to the company and to each other in good and bad times",
+  },
+]);
 </script>
 
 <style lang="scss" scoped>
-	#hero {
-		background-color: #ffffff !important;
-		background-size: cover;
-		height: 100vh;
-		width: 100%;
-		padding: 0 80px;
-		position: relative;
-    z-index: -1;
-		.container-border {
-			position: relative;
-			width: 100%;
-			padding: 0 80px;
-			border-left: 1px solid #b8bdc6;
-			border-right: 1px solid #b8bdc6;
-			.container {
-				height: 100vh;
-				padding: 0;
-				border-left: 1px solid #b8bdc6;
-				border-right: 1px solid #b8bdc6;
-				.hero-title {
-					font-family: 'Montserrat', sans-serif;
-					font-size: 4.5rem;
-					font-weight: 600;
-					line-height: 83px;
-					text-align: start;
-          color: white;
-				}
-				.section-number {
-					border: 2px solid #b8bdc6;
-					border-radius: 25px;
-					margin-right: auto;
-					padding: 5px 10px;
-					font-family: 'IBM Plex Mono', sans-serif;
-					hr {
-						width: 20px;
-						border-top: 2px solid;
-					}
-				}
-				.shape-blue {
-					width: 68px;
-					height: 22px;
-					background-color: #0c4aa9;
-					margin-right: 20px;
-					margin-top: 10px;
-				}
-			}
-			.asset-2 {
-				position: absolute;
-				left: -1px;
-				top: 30%;
-			}
-		}
-		.asset-1 {
-			position: absolute;
-			bottom: -90px;
-			left: 45%;
-		}
-		.asset-3 {
-			position: absolute;
-			bottom: 0;
-		}
-	}
-
-    #vision {
-  background-color: white !important;
-  padding-top: 15%;
+#core-value {
   height: 100vh;
-  .container-border {
-			position: relative;
-			width: 100%;
-			padding: 0 80px;
-			border-left: 1px solid #b8bdc6;
-			border-right: 1px solid #b8bdc6;
-  }
-
-
-    h2 {
+  width: 100%;
+  padding: 0 140px;
+  background-color: white;
+  .container-custom {
+    padding: 80px 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    .title {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      font-size: 3rem;
       line-height: 57px;
     }
-    .asset-2 {
-				position: absolute;
-				left: -1px;
-				top: 30%;
-			}
+    .shape {
+      width: 38px;
+      height: 22px;
+      background-color: #0c4aa9;
+      margin-top: 10px;
+    }
+    .cores {
+      padding: 20px 0;
+      width: 90%;
+
+      overflow-x: scroll;
+      .core {
+        width: 17em;
+        height: 33em !important;
+        z-index: 99;
+        // margin: 0 2em;
+        padding-right: 10px;
+        transition: 0.5s ease-out;
+        z-index: 99;
+
+        .ic-card {
+          -webkit-transform: scale(1.1);
+          padding: 20px;
+          width: 17em;
+          height: 33em;
+          transform: scale(1.1);
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: translateZ(0);
+          // transition: all 0.2s ease;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+        }
+        .ic-card:hover {
+          transform: translateZ(0);
+          box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+
+          -webkit-transition-property: transform;
+          transition-property: transform;
+          z-index: 3;
+        }
+        .description {
+          font-family: "Albert Sans", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 30px;
+          color: #8d8f9a;
+          margin-top: 20px;
+          padding-right: 0px;
+        }
+        .circle {
+          width: 18px;
+          height: 18px;
+          background: #e78448;
+          border-radius: 30px;
+        }
+        .border-dash {
+          width: 300px;
+          height: 0px;
+          border-top: 2px dashed #b8bdc6;
+          margin-left: 10px;
+        }
+      }
+    }
+    .card-ic {
+      width: 17em;
+      height: 33em;
+      z-index: 99;
+      margin: 1em;
+      cursor: pointer;
+    }
+    .images {
+      // width: 1em;
+      // margin-left: auto;
+      float: center;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      padding-left: 0;
+    }
   }
+}
 
-
-.card-ic {
-  width: 17em;
-  height: 33em;
-
-  transition: all 0.2s ease;
-  cursor: pointer;
-  @media (min-width: 992px) {
-    margin-top: 0;
+@media screen and (max-width: 768px) {
+  #core-value {
+    padding: 0 30px;
+    .container-custom {
+      height: 100vh;
+      padding: 80px 0;
+      border: none;
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+      .text-body {
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 30px;
+      }
+      .btn{
+        display: none;
+      }
+    }
   }
 }
-
-.card-ic:hover {
-  background-color: #fff;
-  box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
-  transform: scale(1.1);
-}
-.ic-image {
-  width: 132px;
-  height: 120px;
-  margin-top: 4em;
-  margin-left: 25%;
-  float: center;
-  justify-content: center;
-}
-.collega-img {
-  margin-top: 21%;
-  width: 250px;
-  height: 125px;
-}
-.sedekah-img {
-  margin-top: 15%;
-  width: 226px;
-  height: 126px;
-}
-
-.card-title {
-  font-family: "Albert Sans";
-  font-size: 1.56em;
-  font-weight: 600;
-  text-align: left;
-  margin-top: 10%;
-  margin-left: 6%;
-}
-
-.card-text {
-  font-family: "Open Sans";
-  font-size: 1.125em;
-  font-weight: 400;
-  color: #8d8f9a;
-  text-align: left;
-  margin-left: 6%;
-
-  line-height: 30px;
-  /* or 167% */
-}
-
 </style>
-
-
-
-
-
