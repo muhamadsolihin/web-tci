@@ -427,7 +427,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   color: #000000;
   @media screen and (max-width: 768px) {
     margin-left: -23%;
-    width: 350px;
+    width: 320px;
     
   }
 }
@@ -449,7 +449,7 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
       }
       @media screen and (max-width: 768px) {
     margin-left: -23%;
-    width: 350px;
+    width: 350px !important;
     
   }
 }

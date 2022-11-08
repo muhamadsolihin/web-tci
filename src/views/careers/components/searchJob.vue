@@ -241,10 +241,10 @@ const emit = defineEmits(["toTop"]);
   }
 }
 .asset-high-1 {
-  width: 224.81px;
-  height: 282px;
-  margin-top: -14em;
-  margin-left: 9.6em;
+  width: 200px;
+  height: 260px;
+  margin-top: -12em;
+  margin-left: 11.7em;
 }
 .hide-mobile {
   @media screen and (max-width: 768px) {

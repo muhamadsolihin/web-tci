@@ -39,7 +39,7 @@
                 </div>
                 <div class="d-flex mt-5 flex-row align-items-center mt-4">
                   <!-- <div class="circle "></div> -->
-                  <div class="border-dash"></div>
+                  <div class="border"></div>
                 </div>
                 <p class="mb-1 description">{{ core.description }}</p>
               </div>
@@ -198,7 +198,7 @@
             background: #e78448;
             border-radius: 30px;
           }
-          .border-dash {
+          .border {
             width: 300px;
             height: 0px;
             border-top: 2px dashed #b8bdc6;

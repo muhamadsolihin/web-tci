@@ -327,7 +327,7 @@
                           </div>
                           <div
                             class="head1"
-                            style="text-align: center; width: 331px;margin-left: -9em;"
+                            style="text-align: center; width: 331px;margin-left: -2em;"
                           >
                             At TCI, we offer some benefits that allows you to
                             gain more skill through our Interconnect Academy

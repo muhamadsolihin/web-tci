@@ -42,7 +42,8 @@
           <div class="row collapse-mobile">
             <div class="col-12">
               <ul class="nav bg-transparent pt-5">
-                <div class="row row-menu" style="width: 300px">
+                <div class="row row-menu" style="width: 300px; margin-left: 1%
+                ;">
                   <div class="col-md-12" style="border: none">
                     <div class="row g-5">
                       <div class="col-2">
@@ -528,6 +529,7 @@ onMounted(() => {
   .grid-content {
     transform: translateY(700px);
     animation: slideUp 1s ease-in-out forwards 0.5s;
+    
   }
 
   .collapse-mobile {
@@ -648,7 +650,7 @@ onMounted(() => {
 
 @media screen and (max-width: 768px) {
   #core-value {
-    padding-left: 3em;
+    padding-left: 1em;
     .container-custom {
       height: 100vh;
       padding: 120px 0;
@@ -665,6 +667,9 @@ onMounted(() => {
         font-size: 12px;
         margin-top: 5px;
         line-height: 30px;
+      }
+      .grid-content{
+        margin-left: -30%;
       }
     }
   }
