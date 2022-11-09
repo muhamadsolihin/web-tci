@@ -1,6 +1,8 @@
 <template>
   <MenuComponent :theme="currentSection == 1 ? 'dark' : 'light'" :direction="direction" />
+  <!-- <loader> -->
   <transition :name="direction" @after-enter="listening = true" mode="out-in">
+
     <Home
       :sections-length="sections.length"
       :current-section="currentSection"
@@ -82,12 +84,14 @@
       @swipeDown="swipeDown"
       v-else-if="currentSection == 12"
     />
+
   </transition>
 </template>
 
 <script setup>
 import { onMounted, ref } from "vue";
 import MenuComponent from "@/components/MenuComponent.vue";
+// import loader from "@/components/Loader.vue";
 import Home from "./components/home.vue";
 import Deliver from "./components/Deliver.vue";
 import HowWeDo from "./components/howWeDo.vue";

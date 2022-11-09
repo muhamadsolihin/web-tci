@@ -88,7 +88,7 @@
                     <p class="card-text">2021</p>
                   </div>
                   <ul class="list-group list-group-flush" style="border: none">
-                    <li class="list-group-item contact">Contact :</li>
+                    <li class="list-group-item contactrbi">Contact :</li>
                   </ul>
                   <div class="card-body" style="border: none">
                     <a href="#" class="btn-touch">
@@ -375,7 +375,7 @@ onMounted(() => {
   font-weight: 600;
   line-height: 1.8em;
   color: #000;
-  margin-top: 6%;
+  margin-top: 8%;
   margin-left: 6%;
   text-align: justify;
 }

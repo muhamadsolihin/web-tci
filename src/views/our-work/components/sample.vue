@@ -1,5 +1,7 @@
 <template>
+
   <section id="core-value">
+
     <BorderContainer
       :theme="'light'"
       :sections-length="4"
@@ -126,6 +128,7 @@ const coreValues = ref([
       "Means we stay true to the company and to each other in good and bad times",
   },
 ]);
+
 </script>
 
 <style lang="scss" scoped>

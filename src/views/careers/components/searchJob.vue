@@ -1,260 +1,221 @@
 <template>
-  <section id="footer">
+    <section id="show-mobile">
+
+</section>
+  <section id="diversity">
     <div class="container-custom">
       <BorderContainer
         :theme="'light'"
-        :sections-length="sectionsLength"
-        :current-section="currentSection"
+        :sections-length="4"
+        :current-section="1"
       />
-      <div class="row hide-mobile mx-1">
-        <div class="col-12 py-5 discover">
-          <h1 class="hashtag title">
-            path path into Meaningful work starts here
-          </h1>
+      <div class="row h-100">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="d-flex  flex-column justify-content-center h-100">
+            <h2
+              class="mt-5 py-5 pt-5 title text-white"
+              
+            >
+              Path into Meaningful work starts here
+            </h2>
+            <p
+              class="open-reg-24 mt-3 text-body text-white"
+          
+            >
+              We know that everyone has a lot of different skills and field
+              interests. If you are a passionate person who is ready to share
+              your vision and show the world what you got, no matter where you
+              came from, we have a spot for you. Find the most suitable job
+              here.
+            </p>
+            <!-- <SectionNumberComponent
+              class="mt-auto me-auto mb-auto d-none d-md-flex"
+              :number="'06 / 07'"
+              :section-name="'Diversity Equity Inclusion'"
+              :color="'#000000'"
+            /> -->
+            <img class="assets-3  me-auto mb-auto d-none d-md-flex" src="@/assets/images/careers/search.svg" />
+          </div>
         </div>
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end location"
-        >
-          <p class="sub-title">
-            We know that everyone has a lot of different skills and field
-            interests. If you are a passionate person who is ready to share your
-            vision and show the world what you got, no matter where you came
-            from, we have a spot for you. Find the most suitable job here.
-          </p>
-          <img class="assets-3" src="@/assets/images/careers/search.svg" />
-        </div>
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end find-us"
-        >
-          <img class="asset-high" src="@/assets/images/careers/high.png" />
-        </div>
-      </div>
-
-      <div class="row show-mobile mx-1 h-50">
-        <div class="col-12 py-5 discover">
-          <h1 class="hashtag title">
-            path path into Meaningful work starts here
-          </h1>
-        </div>
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end location"
-        >
-          <p class="sub-title">
-            We know that everyone has a lot of different skills and field
-            interests. If you are a passionate person who is ready to share your
-            vision and show the world what you got, no matter where you came
-            from, we have a spot for you. Find the most suitable job here.
-          </p>
-          <img class="assets-3" src="@/assets/images/careers/search.svg" />
-        </div>
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end find-us"
-        >
-          <img class="asset-high-1" src="@/assets/images/careers/high.png" />
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-row">
+          <img
+            class="mb-auto diversity-image"
+            src="@/assets/images/careers/high.png"
+            alt="photo"
+          />
         </div>
       </div>
     </div>
   </section>
+
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from "vue";
+import { defineProps, ref, onMounted } from "vue";
 
+import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 import BorderContainer from "@/components/BorderContainer.vue";
-
-const props = defineProps({
-  sectionsLength: {
-    type: Number,
-    require: true,
-  },
-  currentSection: {
-    type: Number,
-    require: true,
-  },
-});
-
-const emit = defineEmits(["toTop"]);
 </script>
 
 <style lang="scss" scoped>
-#footer {
+#diversity {
+  background-image: url("@/assets/images/careers/Background.png");
+  background-size: cover;
   height: 100vh;
   width: 100%;
   padding: 0 140px;
-  background-image: url("@/assets/images/careers/Background.png");
-  position: relative;
-  @media screen and (max-width: 768px) {
-    // font-weight: 700;
-    // font-size: 30px !important;
-    // line-height: 47px;
-    // width: 325px;
-  }
   .container-custom {
-    padding: 80px 0 0 0;
-    height: 100%;
-    width: 100%;
+    padding: 80px 0;
+    height: 100vh;
     border-left: 1px solid #b8bdc6;
-    border-right: 0px solid #b8bdc6;
-    .hashtag {
-      span {
-        color: #e78448;
-      }
+    border-right: 1px solid #b8bdc6;
+    .diversity-image {
+      width: 82%;
+      object-fit: contain;
+      margin-left: 18% !important;
     }
     .title {
-      width: 546px;
-      margin-left: 0.5em;
-      font-family: "Montserrat";
-      font-style: normal;
+      font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      font-size: 45px;
-      line-height: 67px;
-      letter-spacing: -2.81895px;
-      text-transform: capitalize;
+      line-height: 57px;
+      font-size: 55px;
+line-height: 67px;
+letter-spacing: -2.81895px;
+text-transform: capitalize;
 
-      color: #ffffff;
-      @media screen and (max-width: 768px) {
-        font-weight: 700;
-        font-size: 30px !important;
-        line-height: 47px;
-        width: 325px;
-      }
-    }
-    .discover {
-      border-bottom: 1px solid #b8bdc6;
-    }
-    .location {
-      // padding: 0 40px;
-      height: 50%;
-    }
-    .find-us {
-      height: 50%;
-      border-left: 1px solid #b8bdc6;
-      position: relative;
-      .to-top {
-        position: absolute;
-        bottom: 0;
-        right: -5px;
-        height: 200px;
-        width: 200px;
-        border: 1px solid #b8bdc6;
-        z-index: 1;
-      }
-    }
-  }
+color: #FFFFFF;
 
-  .assets-3 {
-    width: 295px;
-    height: 44px;
-    @media screen and (max-width: 768px) {
-      width: 158px;
-      height: 25px;
+    }
+    .open-reg-24{
+        color: #fff !important;
     }
   }
 }
-.asset-high {
-  width: 566px !important;
-  height: 710px !important;
-  margin-top: -50%;
-  margin-left: 5.6em;
-
-  @media screen and (min-width: 1920px) {
-    margin-bottom: 15%;
-    margin-top: 0;
-  }
-  @media screen and (max-width: 768px) {
-    width: 224.81px;
-    height: 282px;
-    margin-top: -60em;
-    margin-left: 14em;
-    // margin-bottom: -19%;
-  }
-}
-.sub-title {
-  width: 546px;
-
-  /* Sub Body Text */
-  margin-top: 10%;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  /* or 133% */
-
-  color: #ffffff;
-  @media screen and (max-width: 768px) {
-    font-size: 13px;
-    line-height: 20px;
-    display: flex;
-    margin-left: 1em;
-    margin-top: -1rem !important;
-    /* or 154% */
-    width: 214px;
-  }
+#show-mobile{
+  display: none;
 }
 @media screen and (max-width: 768px) {
-  #footer {
-    background-image: url("@/assets/images/careers/bg-mobile.png");
-    background-size: contain;
+  #diversity {
     padding: 0 30px;
-    margin-bottom: -49.4vh;
+    height: 50vh;
+    margin-top: -100%;
     .container-custom {
-      height: 50vh !important;
-      // padding: 80px 0;
+      height: 100vh;
+      padding: 80px 0;
       border: none;
-      .hashtag {
-        font-size: 24px;
-        line-height: 37px;
+      .diversity-image {
+        width: 50%;
+        margin-top: -93%;
+        margin-left:58% !important; 
+        object-fit: contain;
+        display: flex;
       }
       .title {
-        font-size: 30px;
-        line-height: 37px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-top: -48% !important;
+        letter-spacing: 1.81895px;
+      }
+      .text-body {
+        font-size: 12px;
+        margin-top: 5px;
+        color: #fff !important;
+        line-height: 30px;
+      }
+      .open-reg-24{
+        width: 50%;
+        margin-top: -10% !important;
+    }
+    }
 
-        margin-top: -3em;
-        margin-left: -0.1em;
-      }
-      .discover {
-        border-bottom: none;
-      }
-      .location {
-        padding: 0;
-        height: auto;
-      }
-      .find-us {
-        padding: 0;
-        border-left: none;
-        height: auto;
-        .to-top {
-          height: 60px;
-          width: 60px;
-          img {
-            height: 30px;
-          }
-        }
-      }
-    }
-    .tci-logo {
-      height: 20%;
-      top: 30%;
-      transform: translate(0, -30%);
+    .image-hover,
+    .image-unhover,
+    .title-smaller,
+    .title-bigger,
+    .text-smaller,
+    .text-bigger {
+      animation: 0s;
     }
   }
-}
-.asset-high-1 {
-  width: 200px;
-  height: 260px;
-  margin-top: -12em;
-  margin-left: 11.7em;
-}
-.hide-mobile {
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-}
-.show-mobile {
-  display: none;
-  @media screen and (max-width: 768px) {
+  #show-mobile{
+    height: 50vh;
     display: block;
+  }
+}
+
+.image-hover {
+  animation: popup 1s ease-out;
+  transform: scale(1.1);
+}
+.image-unhover {
+  animation: popdown 1s ease-out;
+  transform: scale(1);
+}
+@keyframes popup {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes popdown {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.title-smaller {
+  animation: smaller 1s;
+  font-size: 45px;
+}
+@keyframes smaller {
+  from {
+    font-size: 50px;
+  }
+  to {
+    font-size: 45px;
+  }
+}
+.title-bigger {
+  animation: bigger 1s;
+  font-size: 50px;
+}
+@keyframes bigger {
+  from {
+    font-size: 45px;
+  }
+  to {
+    font-size: 50px;
+  }
+}
+
+.text-smaller {
+  animation: textsmaller 1s;
+  font-size: 21px;
+}
+@keyframes textsmaller {
+  from {
+    font-size: 24px;
+  }
+  to {
+    font-size: 21px;
+  }
+}
+.text-bigger {
+  animation: textbigger 1s;
+  font-size: 24px;
+}
+@keyframes textbigger {
+  from {
+    font-size: 21px;
+  }
+  to {
+    font-size: 24px;
   }
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
-  <section id="hero">
+  <!-- <section id="hero">
     <div class="container-custom justify-content-center">
       <BorderContainer
         :theme="'dark'"
         :sections-length="4"
         :current-section="1"
       />
-      <div class="row">
+       <div class="row">
         <div class="col-8 col-md-8 col-lg-8 col-xl-8">
           <h1 class="hero-title">
             We do our job professionally quickly and precisely.
@@ -28,9 +28,9 @@
             alt="asset"
           />
         </div>
-      </div>
+      </div> 
     </div>
-  </section>
+  </section> -->
   <section id="hero1">
     <div class="container-custom d-flex flex-column justify-content-center">
       <BorderContainer
@@ -40,7 +40,7 @@
       />
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="col-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center">
             <img
               class="asset-4"
               src="@/assets/images/careers/animate.gif"
@@ -52,7 +52,7 @@
                 <ul
                   class="nav flex-center justify-content-left bg-transparent pt-5"
                 >
-                  <div class="row row-menu" style="width: 300px">
+                  <div class="row row-menu " style="width: 300px; margin-top: -20%; margin-left: -20%;">
                     <div class="col-md-12" style="border: none">
                       <div class="row">
                         <div class="col-2">
@@ -120,6 +120,20 @@
                             >
                           </li>
                         </div>
+                        <div
+                          class="col-2 nav-7 justify-content-right align-items-right"
+                          style="margin-top:-17%; margin-left:100%"
+                        >
+                          <li class="nav-item menu-3 flex-equal">
+                            <a
+                              class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
+                              data-bs-toggle="tab"
+                              href="#kt_lists_family"
+                            >
+                              <p class="no-title">07</p></a
+                            >
+                          </li>
+                        </div>
                       </div>
                     </div>
                     <!--end::Tab nav-->
@@ -131,22 +145,22 @@
               </div>
             </div>
 
-            <div class="row" style="height: 350px; margin-left: -50%">
+            <div class="row collapse-mobile" style="height: 350px; margin-left: -60%">
               <!--end::Tabs-->
               <!--begin:Tab content-->
               <div class="col-md-12">
-                <div class="tab-content">
+                <div class="tab-content d-flex justify-content-center">
                   <!--begin::Tab pane-->
                   <div
                     class="tab-pane fade active show"
                     id="kt_lists_widget_3_tab_pane_1_consultant"
                   >
                     <!--begin::Section-->
-                    <el-col id="consultant" style="margin-top: 10%" :span="12"
+                    <el-col id="consultant " style="margin-top: 10%" :span="12"
                       ><div class="grid-content">
                         <div>
-                          <div class="col-md-6">
-                            <p class="sub-1-title"> Healtcare</p>
+                          <div class="col-md-6 d-flex justify-content-center">
+                            <p class="sub-1-title">Healtcare</p>
                           </div>
 
                           <div
@@ -186,8 +200,8 @@
                     <el-col id="consultant" style="margin-top: 10%" :span="12"
                       ><div class="grid-content">
                         <div>
-                          <div class="col-md-6">
-                            <p class="sub-1-title"> Skill Improvement</p>
+                          <div class="col-md-6 d-flex justify-content-center">
+                            <p class="sub-1-title">Skill Improvement</p>
                           </div>
                           <div
                             class="head1"
@@ -222,7 +236,7 @@
                     <el-col id="consultant" style="margin-top: 10%" :span="12"
                       ><div class="grid-content">
                         <div>
-                          <div class="col-md-6">
+                          <div class="col-md-6 d-flex justify-content-center">
                             <p class="sub-1-title">Career Acceleration</p>
                           </div>
                           <div
@@ -255,8 +269,8 @@
                     <el-col style="margin-top: 10%" :span="12"
                       ><div class="grid-content">
                         <div>
-                          <div class="col-md-6">
-                            <p class="sub-1-title"> Work with Diversity</p>
+                          <div class="col-md-6 d-flex justify-content-center">
+                            <p class="sub-1-title">Work with Diversity</p>
                           </div>
 
                           <div
@@ -289,12 +303,12 @@
                     <el-col style="margin-top: 10%" :span="12"
                       ><div class="grid-content">
                         <div>
-                          <div class="col-md-6">
+                          <div class="col-md-6 d-flex justify-content-center">
                             <p class="sub-1-title">Time Balance</p>
                           </div>
                           <div
                             class="head1"
-                            style="text-align: center; width: 331px;"
+                            style="text-align: center; width: 331px"
                           >
                             You could get your vacation time or send some remote
                             working request when you need it, your team members
@@ -322,12 +336,16 @@
                     <el-col style="margin-top: 10%" :span="12"
                       ><div class="grid-content">
                         <div>
-                          <div class="col-md-6">
-                            <p class="sub-1-title">Ease your Worries </p>
+                          <div class="col-md-6 d-flex justify-content-center">
+                            <p class="sub-1-title">Ease your Worries</p>
                           </div>
                           <div
                             class="head1"
-                            style="text-align: center; width: 331px;margin-left: -2em;"
+                            style="
+                              text-align: center;
+                              width: 331px;
+                              margin-left: -2em;
+                            "
                           >
                             At TCI, we offer some benefits that allows you to
                             gain more skill through our Interconnect Academy
@@ -346,6 +364,41 @@
                           >
                             <img
                               src="@/assets/images/careers/mobile/ease.png"
+                              style="width: 123px; height: 126px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </el-col>
+                  </div>
+                  <div class="tab-pane fade" id="kt_lists_family">
+                    <el-col style="margin-top: 10%" :span="12"
+                      ><div class="grid-content">
+                        <div>
+                          <div class="col-md-6 d-flex justify-content-center">
+                            <p class="sub-1-title">Family Time</p>
+                          </div>
+                          <div
+                            class="head1"
+                            style="
+                              text-align: center;
+                              width: 331px;
+                              margin-left: -2em;
+                            "
+                          >
+                          You could spend more time with your family by taking the parental leave when you are welcoming a new child through birth, adoption, foster, or surrogacy.
+                          </div>
+
+                          <div
+                            class="subhead1 mt-4"
+                            style="
+                              text-align: center;
+                              width: 331px;
+                              margin-top: 2%;
+                            "
+                          >
+                            <img
+                              src="@/assets/images/careers/mobile/family.svg"
                               style="width: 123px; height: 126px"
                             />
                           </div>
@@ -468,19 +521,19 @@ import BorderContainer from "@/components/BorderContainer.vue";
         line-height: 48px;
       }
     }
-
   }
-  .head1{
-      margin-left:-3em;
-    }
-    .subhead1{
-      margin-left:-3em;
-    }
+  .head1 {
+    margin-left: -3.5em;
+    margin-top: 4em;
+  }
+  .subhead1 {
+    margin-left: -3em;
+  }
 }
 
 #hero1 {
   background-color: #fff;
-  height: 100% !important;
+  height: 100%;
   width: 100%;
   padding: 0 140px;
   overflow: hidden;
@@ -488,12 +541,12 @@ import BorderContainer from "@/components/BorderContainer.vue";
 
 .collapse-mobile {
   display: none;
-  @media screen and (max-width:567px){
+  @media screen and (max-width: 567px) {
     display: block;
+    width: 500px;
+    
+    margin-left: -70%;
   }
-  width: 500px;
-
-  margin-left: 0;
 }
 
 .sub-1-title {
@@ -501,12 +554,12 @@ import BorderContainer from "@/components/BorderContainer.vue";
   font-weight: 500;
   position: absolute;
   font-size: 14px;
-  width: 145px;
-  margin-top: -4.5em;
+  width: 50%;
+  margin-top: 0;
   margin-bottom: 5em;
   padding-top: 9px;
   height: 42px;
-  margin-left: -7em;
+  margin-left: 5em;
   text-align: center;
   line-height: 21px;
   /* identical to box height */

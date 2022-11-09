@@ -25,8 +25,8 @@
 <script setup>
 	import MenuComponent from '@/components/MenuComponent.vue';
 	import HeroSection from './components/HeroSection.vue';
-	import Careerpage from './components/providing.vue';
-	import Culture from './components/culture.vue';
+	import Culture from './components/sample.vue';
+	import  Careerpage from './components/providing.vue';
 	import SearchJob from './components/searchJob.vue';
   import FooterComponent from '@/components/FooterComponent.vue';
 
