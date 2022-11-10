@@ -2,6 +2,7 @@
 	<MenuComponent :theme="'dark'" :direction="'down'" @goMenu="scrollToTop" />
 	<div id="our-gallery">
 		<HeroSection />
+		<Gallery />
 		<GallerySection />
 		<FooterComponent
 			:sections-length="4"
@@ -14,7 +15,8 @@
 <script setup>
 	import MenuComponent from '@/components/MenuComponent.vue';
 	import HeroSection from './components/HeroSection.vue';
-	import GallerySection from './components/GallerySection.vue';
+	import Gallery from './components/sample.vue';
+	// import GallerySection from './components/GallerySection.vue';
   import FooterComponent from "@/components/FooterComponent.vue";
 
   const scrollToTop = () => {
