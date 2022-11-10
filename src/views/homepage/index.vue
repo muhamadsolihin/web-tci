@@ -93,7 +93,7 @@ import { onMounted, ref } from "vue";
 import MenuComponent from "@/components/MenuComponent.vue";
 // import loader from "@/components/Loader.vue";
 import Home from "./components/home.vue";
-import Deliver from "./components/Deliver.vue";
+import Deliver from "./components/sample.vue";
 import HowWeDo from "./components/howWeDo.vue";
 import HowWork from "./components/HowWork.vue";
 import Stack from "./components/stack.vue";
