@@ -10,7 +10,7 @@
         <h1 class="title">Our Services</h1>
         <SectionNumberComponent
           class="ms-auto"
-          :number="'03 / 11'"
+          :number="'05 / 11'"
           :section-name="'How We Do It'"
           :color="'#000'"
           style="margin-top: -3.5em"

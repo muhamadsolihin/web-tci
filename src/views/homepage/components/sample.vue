@@ -1,201 +1,49 @@
 <template>
-  <section id="core-value">
-    <BorderContainer
-      :theme="'light'"
-      :sections-length="sectionsLength"
-      :current-section="currentSection"
-    />
+  <section id="deliver">
     <div class="container-custom">
-      <div class="d-flex flex-column h-100 pt-4">
-        <h1 class="title">Our Services</h1>
-        <SectionNumberComponent
-          class="ms-auto"
-          :number="'03 / 11'"
-          :section-name="'How We Do It'"
-          :color="'#000'"
-          style="margin-top: -3.5em"
-        />
-        <div class="shape"></div>
-
-        <div class="row" style="margin-top: 10%">
-          <div class="col-md-6">
-            <ul class="nav flex-center bg-transparent flex-nowrap p-2 mb-8">
-              <div class="row row-menu" style="margin-left: 18%">
-                <div class="col-md-6" style="border: none">
-                  <!--begin::Tab nav-->
-                  <li class="nav-item menu-0 flex-equal">
-                    <a
-                      class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold active"
-                      data-bs-toggle="tab"
-                      href="#kt_lists_widget_3_tab_pane_1_consultant"
-                      ><img
-                        class="pic-nav effect-steve"
-                        src="@/assets/images/animate/consutant.svg"
-                    /></a>
-                  </li>
-
-                  <!--end::Tab nav-->
-                  <!--begin::Tab nav-->
-
-                  <li
-                    class="nav-item menu-1 flex-equal"
-                    style="margin-top: 55px"
-                  >
-                    <a
-                      class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                      data-bs-toggle="tab"
-                      href="#kt_lists_data"
-                      ><img
-                        class="data-centre"
-                        src="@/assets/images/animate/dataanimate.svg"
-                    /></a>
-                  </li>
-                </div>
-                <!--end::Tab nav-->
-                <!--begin::Tab nav-->
-                <div class="col-md-6">
-                  <li class="nav-item menu-2 flex-equal mx-1">
-                    <a
-                      class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                      data-bs-toggle="tab"
-                      href="#kt_lists_widget_3_tab_pane_2_digital"
-                      ><img src="@/assets/images/animate/digital.svg"
-                    /></a>
-                  </li>
-                  <li
-                    class="nav-item menu-3 flex-equal"
-                    style="margin-top: 55px"
-                  >
-                    <a
-                      class="nav-link btn btn-active-white btn-color-gray-500 btn-active-color-gray-700 py-2 px-4 fs-6 fw-bold"
-                      data-bs-toggle="tab"
-                      href="#kt_lists_widget_3_tab_pane_4_cyber"
-                      ><img src="@/assets/images/cyberanimate.svg"
-                    /></a>
-                  </li>
-                </div>
-                <!--end::Tab nav-->
-              </div>
-            </ul>
+      <BorderContainer
+        :theme="'light'"
+        :sections-length="sectionsLength"
+        :current-section="currentSection"
+      />
+      <div class="row h-100">
+        <div class="col-12 col-md-7 col-lg-7 col-xl-7">
+          <div class="d-flex flex-column justify-content-center h-100">
+            <SectionNumberComponent
+              class="me-auto mt-3"
+              :number="'01 / 11'"
+              :section-name="'Journey'"
+              :color="'#000000'"
+              style="margin-top: 0"
+            />
+            <h2 class="mt-2 title" :class="imageHover ? 'title-smaller' : 'title-bigger'">
+              Your Journey <br />
+              Our Story
+            </h2>
+            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+              The success of our clients is a big part of who we are and how
+                we believe in our values. Their journey becomes our story of
+                passion and persistence.
+            </p>
+            <img
+              class="mb-auto pic-cto-1"
+              :class="imageHover ? 'image-hover' : 'image-unhover'"
+              src="@/assets/images/rndm1.png"
+              alt="photo"
+              @mouseenter="imageHover = true"
+              @mouseleave="imageHover = false"
+            />
           </div>
-          <!--end::Tabs-->
-          <!--begin:Tab content-->
-          <div class="col-md-6">
-            <div class="tab-content content-field">
-              <!--begin::Tab pane-->
-              <div
-                class="tab-pane fade active show"
-                id="kt_lists_widget_3_tab_pane_1_consultant"
-              >
-                <!--begin::Section-->
-                <el-col id="consultant" style="" :span="12"
-                  ><div class="grid-content">
-                    <div>
-                      <div class="head1" style="text-align: justify">
-                        IT Consultant
-                      </div>
-
-                      <div
-                        class="subhead1 mt-4"
-                        style="text-align: justify; margin-top: 2%"
-                      >
-                        With our IT Consultant services, we could help you
-                        revamp your IT Environment and synchronize it with your
-                        business needs, leveraging the experiences inside it. We
-                        also offer consultancy on holistic, fast, and
-                        cost-effective optimization of IT Systems and Processes
-                        to ensure tangible business outcomes for you.
-                      </div>
-                    </div>
-                  </div>
-                </el-col>
-                <!--end::Section-->
-                <!--begin::Section-->
-
-                <!--end::Section-->
-              </div>
-              <!--end::Tab pane-->
-              <!--begin::Tab pane-->
-              <div
-                class="tab-pane fade"
-                id="kt_lists_widget_3_tab_pane_2_digital"
-              >
-                <!--begin::Chart-->
-                <el-col id="consultant" style="margin-top: 10%" :span="12"
-                  ><div class="grid-content">
-                    <div>
-                      <div class="head1" style="text-align: justify">
-                        Digital Transformation
-                      </div>
-
-                      <div
-                        class="subhead1 mt-4"
-                        style="text-align: justify; margin-top: 2%"
-                      >
-                        We are here to empower every enterprise across multiple
-                        industries with the most suitable IT Solutions to build
-                        up new technology-based business models that meet the
-                        requirements of modern business environment.
-                      </div>
-                    </div>
-                  </div>
-                </el-col>
-                <!--end::Chart-->
-              </div>
-              <!--end::Tab pane-->
-              <!--begin::Tab pane-->
-              <div class="tab-pane fade" id="kt_lists_data">
-                <!--begin::Items-->
-                <el-col id="consultant" style="margin-top: 10%" :span="12"
-                  ><div class="grid-content">
-                    <div>
-                      <div class="head1" style="text-align: justify">
-                        Data Center & Infrastructures
-                      </div>
-
-                      <div
-                        class="subhead1 mt-4"
-                        style="text-align: justify; margin-top: 2%"
-                      >
-                        We will assist you in planning, designing, developing,
-                        and implementing the infrastructure of your data center.
-                        We deliver detailed documentation to facilitate the
-                        upgrade, migration, and diagnostic processes.
-                      </div>
-                    </div>
-                  </div>
-                </el-col>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="kt_lists_widget_3_tab_pane_4_cyber"
-              >
-                <el-col style="margin-top: 10%" :span="12"
-                  ><div class="grid-content">
-                    <div>
-                      <div class="head1" style="text-align: justify">
-                        Cyber Security
-                      </div>
-
-                      <div
-                        class="subhead1 mt-4"
-                        style="text-align: justify; margin-top: 2%"
-                      >
-                        Our security experts develop a personal approach to each
-                        customer based on best practices and enriched that with
-                        our own experience. We offer a variety of services from
-                        information security consulting to assessing, testing,
-                        and improving the protection of applications and
-                        networks for companies.
-                      </div>
-                    </div>
-                  </div>
-                </el-col>
-              </div>
-              <!--end::Items-->
-            </div>
-            <!--end::Tab pane-->
-          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-5 col-xl-5 d-flex flex-row align-items-start">
+          <img
+            class="mx-auto pic-cto"
+            :class="imageHover ? 'image-hover' : 'image-unhover'"
+            src="@/assets/images/pictceo.png"
+            alt="photo"
+            @mouseenter="imageHover = true"
+            @mouseleave="imageHover = false"
+          />
         </div>
       </div>
     </div>
@@ -203,8 +51,8 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted, ref } from "vue";
 import Hammer from "hammerjs";
+import { onMounted, ref } from "vue";
 
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 import BorderContainer from "@/components/BorderContainer.vue";
@@ -219,10 +67,13 @@ const props = defineProps({
     require: true,
   },
 });
+
 const emit = defineEmits(["swipeUp", "swipeDown"]);
 
+const imageHover = ref(false);
+
 onMounted(() => {
-  var stage = document.getElementById("core-value");
+  var stage = document.getElementById("deliver");
   var hammertime = new Hammer.Manager(stage);
   var Swipe = new Hammer.Swipe();
   hammertime.add(Swipe);
@@ -236,238 +87,165 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-#core-value {
+#deliver {
+  background-color: #eeeaea;
   height: 100vh;
   width: 100%;
-  padding: 0 140px;
-  background-color: white;
-  @media screen and (max-width: 567px) {
-    padding: 0 40px 0;
-  }
+  padding: 0 140px 340px ;
+  z-index: 1;
+  
   .container-custom {
-    padding: 80px 0;
     height: 100vh;
-    width: 100%;
-    z-index: 2;
-    @media screen and (max-width: 567px) {
-      padding: 0;
-      margin-top: 5em;
-    }
-
+    padding: 80px 0;
+    border-left: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
     .title {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      line-height: 57px;
-      @media screen and (max-width: 567px) {
-        display: none;
-      }
+      line-height: 55px;
     }
-    .shape {
-      width: 38px;
-      height: 22px;
-      background-color: #0c4aa9;
-      margin-top: 10px;
-      @media screen and (max-width: 567px) {
-        display: none;
-      }
-    }
-    .cores {
-      padding: 20px 0;
+    .pic-cto {
       width: 100%;
-      overflow-x: scroll;
-      .core {
-        width: 350px;
-        padding-right: 10px;
-        transition: 0.5s ease-out;
-        .description {
-          font-family: "Albert Sans", sans-serif;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 30px;
-          color: #8d8f9a;
-          margin-top: 20px;
-          padding-right: 40px;
-        }
-        .circle {
-          width: 18px;
-          height: 18px;
-          background: #e78448;
-          border-radius: 30px;
-        }
-        .border-dash {
-          width: 300px;
-          height: 0px;
-          border-top: 2px dashed #e78448;
-          margin-left: 10px;
-        }
-      }
+      object-fit: contain;
+      
+    }
+    .pic-cto-1 {
+      width: 60%;
+      justify-content: left;
+      margin-top: 20%;
+      object-fit: contain;
+    }
+    .text-body {
+      font-family: "Open Sans", sans-serif;
+      line-height: 30px;
+      font-weight: 400;
+      font-size: 1.5em;
+      width: 585px;
+      color: #000 !important;
+    }
+  }
+  .asset-2 {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    height: 711px;
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 }
 
-.row-menu {
-  @media screen and (max-width: 567px) {
-    margin-top: 3em;
-    margin-left: -30% !important;
-    width: 325px !important;
+@media screen and (max-width: 768px) {
+  #deliver {
+    padding: 0 30px;
+    .container-custom {
+      height: 100vh;
+      padding: 80px 0;
+      border: none;
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+      .text-body {
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 20px;
+        width: 385px;
+      }
+      .pic-cto {
+        width: 90%;
+        margin-left: 1em !important;
+        object-fit: contain;
+      }
+      .pic-cto-1 {
+        display: none;
+      }
+    }
+
+    .image-hover,
+    .image-unhover,
+    .title-smaller,
+    .title-bigger,
+    .text-smaller,
+    .text-bigger {
+      animation: 0s;
+    }
   }
 }
 
-.menu-1 {
-  @media screen and (max-width: 567px) {
-    margin-top: -40% !important;
-    margin-left: 16em !important;
+.image-hover {
+  animation: popup 1s ease-out;
+  transform: scale(1.1);
+}
+.image-unhover {
+  animation: popdown 1s ease-out;
+  transform: scale(1);
+}
+@keyframes popup {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
   }
 }
-.menu-2 {
-  @media screen and (max-width: 567px) {
-    margin-top: 35% !important;
-    margin-left: -1em !important;
+@keyframes popdown {
+  from {
+    transform: scale(1.1);
   }
-}
-.menu-3 {
-  @media screen and (max-width: 567px) {
-    margin-top: -40% !important;
-    margin-left: 16em !important;
-  }
-}
-.shape-blue {
-  width: 68px;
-  height: 22px;
-  background-color: #0c4aa9;
-  margin-right: 20px;
-  margin-top: 10px;
-  @media screen and (max-width: 567px) {
-    display: none;
-  }
-}
-.asset-2 {
-  position: absolute;
-  left: 5%;
-  top: 0;
-  height: 711px;
-}
-.container {
-  // margin-top: -2em;
-  padding: 80px;
-  h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 57px;
+  to {
+    transform: scale(1);
   }
 }
 
-.grid-content {
-  transform: translateY(700px);
-  animation: slideUp 1s ease-in-out forwards 0.5s;
+.title-smaller {
+  animation: smaller 1s;
+  font-size: 40px;
 }
-@keyframes slideUp {
-  0% {
-    transform: translateY(300px);
+@keyframes smaller {
+  from {
+    font-size: 46px;
   }
-  100% {
-    transform: translateY(0px);
+  to {
+    font-size: 40px;
+  }
+}
+.title-bigger {
+  animation: bigger 1s;
+  font-size: 46px;
+}
+@keyframes bigger {
+  from {
+    font-size: 40px;
+  }
+  to {
+    font-size: 46px;
   }
 }
 
-.batik-img {
-  margin-left: -12%;
-  margin-top: -9.1% !important;
-  width: 262px;
-  height: 195px;
-  display: none;
-  @media screen and (max-width: 1920px) {
-    margin-left: -12%;
-    margin-top: 11.5% !important;
-    display: none;
-  }
-  @media screen and (max-width: 567px) {
-    display: none;
-  }
-}
-.head {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 500;
+.text-smaller {
+  animation: textsmaller 1s;
   font-size: 16px;
-  line-height: 21px;
-  /* identical to box height */
-
-  color: #b8bdc6;
 }
-.head1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 43px;
-  /* identical to box height */
-
-  color: #000000;
-  @media screen and (max-width: 567px) {
-    font-size: 30px !important;
-    text-align: center !important;
-    width: 241px !important;
-    padding-top: 1em;
-    margin-left: 1em;
+@keyframes textsmaller {
+  from {
+    font-size: 18px;
+  }
+  to {
+    font-size: 16px;
   }
 }
-.hero-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 4.5rem;
-  font-weight: 600;
-  line-height: 83px;
-  text-align: start;
-  color: black;
-
-  @media screen and (max-width: 567px) {
-    display: none;
-  }
+.text-bigger {
+  animation: textbigger 1s;
+  font-size: 18px;
 }
-.subhead1 {
-  font-family: "montserrat";
-  font-size: 1em;
-  width: 25em;
-  font-weight: 400;
-  color: #000000;
-  @media screen and (max-width: 567px) {
-    font-size: 12px;
-    width: 322px !important;
-    margin-left: -5% !important;
-    text-align: center !important;
+@keyframes textbigger {
+  from {
+    font-size: 16px;
   }
-}
-.nav-link {
-  border: none;
-}
-
-.btn.btn-active-white:focus:not(.btn-active),
-.btn:hover {
-  color: #7e8299;
-  // border-color: #ffffff;
-  // //   width: 120px;
-  // // height: 128px;
-  // background-color: #fff;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width: 567px) {
-    box-shadow: none;
-    animation: pulse 1s infinite;
-  transition: .3s;
-  }
-}
-
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  70% {
-    transform: scale(.9);
-  }
-    100% {
-    transform: scale(1);
+  to {
+    font-size: 18px;
   }
 }
 </style>

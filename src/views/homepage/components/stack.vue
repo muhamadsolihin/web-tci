@@ -401,7 +401,7 @@
                   <div class="col-md-7">
                     <SectionNumberComponent
                       class="mx-auto"
-                      :number="'05 / 11'"
+                      :number="'04 / 11'"
                       :section-name="'Technology Stack'"
                       :color="'#000'"
                     />

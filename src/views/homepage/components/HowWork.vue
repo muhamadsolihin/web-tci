@@ -10,7 +10,7 @@
 		<div class="d-flex flex-column h-100 pt-4">
 			<SectionNumberComponent
 			class="mt-auto me-auto pointer"
-			:number="'03 / 07'"
+			:number="'03 / 11'"
 			:section-name="'How We Work'"
 			:color="'#fff'"
 		  />

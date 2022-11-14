@@ -10,7 +10,7 @@
 				<h2 class="title">How We Do It</h2>
 				<SectionNumberComponent
 					class="ms-auto d-none d-md-flex"
-					:number="'03 / 11'"
+					:number="'02 / 11'"
 					:section-name="'How We Do It'"
 					:color="'#000000'"
 				/>
