@@ -446,43 +446,30 @@ onMounted(() => {
 
 
 .btn.btn-active-white:focus:not(.btn-active),
-.btn:hover{
+.btn:hover {
   color: #7e8299;
-  border-color: #ffffff;
-  //   width: 120px;
-  // height: 128px;
-  background-color: #fff;
+  // border-color: #ffffff;
+  // //   width: 120px;
+  // // height: 128px;
+  // background-color: #fff;
   box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width: 768px) {
-    // box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);
-    // width: 10px;
-    margin-left: 0 !important;
-    padding: 0;
-    // padding: 50px;
-    border-color: transparent !important;
-    background: transparent !important;
+  @media screen and (max-width: 567px) {
+    box-shadow: none;
+    animation: pulse 1s infinite;
+  transition: .3s;
   }
 }
 
 
-.data-centre {
-  padding: 0 0 15px 0;
-}
-.btn.btn-active-white.show,
-.show > .btn.btn-active-white {
-  color: #7e8299;
-  border-color: #ffffff;
-  //   width: 120px;
-  // height: 128px;
-  background-color: #fff;
-  box-shadow: 0px 10px 40px rgba(114, 112, 112, 0.15);
-  @media screen and (max-width: 768px) {
-    // box-shadow: 0px 10px 20px rgba(114, 112, 112, 0.15);
-    // width: 120px;
-    // height: 128px;
-    // padding: 50px;
-    border-color: transparent !important;
-    background: transparent;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(.9);
+  }
+    100% {
+    transform: scale(1);
   }
 }
 </style>

@@ -305,10 +305,6 @@ const photoList = ref([
 	padding-left: 20%;
     // width: 325px;
     height: 50vh;
-    .img {
-      width: 100vw;
-      height: 100vh;
-    }
     .container-custom {
       margin-top: -100px;
       .hide-on-mobile {
