@@ -38,7 +38,8 @@
               style="margin-top: 20%; margin-left: 4%"
             >
               <el-carousel-item>
-                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
+                <a href="https://teknologicakrainternasional.com/blog/" style="text-decoration:none">
+                <div class="card btn" style="width: 36.6em; border: none">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -46,17 +47,18 @@
                   />
                   <div class="card-body">
                     <h5 class="card-title">
-                      How Data Could Impact Our Daily Life
+                      How Data Could Impact Our Daily Lif
                     </h5>
                     <p class="card-text">
                       Saat membicarakan soal data, apa yang pertama kali
                       terlintas dipikiranmu?
                     </p>
                   </div>
-                </div>
+                </div></a>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
+                <a href="https://teknologicakrainternasional.com/blog/" style="text-decoration:none">
+                <div class="card btn" style="width: 36.6em; border: none" >
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -72,9 +74,11 @@
                     </p>
                   </div>
                 </div>
+              </a>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
+                <a href="https://teknologicakrainternasional.com/blog/" style="text-decoration:none">
+                <div class="card btn" style="width: 36.6em; border: none" >
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -90,6 +94,7 @@
                     </p>
                   </div>
                 </div>
+                </a>
               </el-carousel-item>
             </el-carousel>
           </div>
@@ -128,7 +133,8 @@
               style="margin-top: 20%; margin-left: 4%"
             >
               <el-carousel-item>
-                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
+                <a href="https://teknologicakrainternasional.com/blog/" style="text-decoration:none">
+                <div class="card btn" style="width: 36.6em; border: none" >
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -144,9 +150,11 @@
                     </p>
                   </div>
                 </div>
+                </a>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
+                <a href="https://teknologicakrainternasional.com/blog/" style="text-decoration:none">
+                <div class="card btn" style="width: 36.6em; border: none" >
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -162,9 +170,11 @@
                     </p>
                   </div>
                 </div>
+                </a>
               </el-carousel-item>
               <el-carousel-item>
-                <div class="card btn" style="width: 36.6em; border: none" @click="$router.push(`/blog`)">
+                <a href="https://teknologicakrainternasional.com/blog/" style="text-decoration:none">
+                <div class="card btn" style="width: 36.6em; border: none">
                   <img
                     src="@/assets/images/galerry/blog.png"
                     class="card-img-top"
@@ -180,6 +190,7 @@
                     </p>
                   </div>
                 </div>
+                </a>
               </el-carousel-item>
             </el-carousel>
           </div>
