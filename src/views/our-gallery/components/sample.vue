@@ -102,7 +102,7 @@
                 <img :src="photoList[16]" alt="photo" />
                 <div class="hover-overlay"></div>
                 <div class="hover-2-content px-4 py-4">
-                  <p class="hover-2-description mb-5">lorem ipsum</p>
+                  <p class="hover-2-description mb-5">Our Commissioner and CEO opening the “Employee of the Month” event.</p>
                 </div>
               </div>
             </div>

@@ -183,15 +183,15 @@
                     ><div class="grid-content">
                       <div>
                         <div
-                          class="open-reg-26 tithe-field"
-                          style="text-align: justify"
+                          class="open-reg-26 "
+                          style="text-align: left; width: 30vw "
                         >
                           Positive impact in development
                         </div>
 
                         <div
                           class="subhead1"
-                          style="text-align: justify; height: 180px"
+                          style="text-align: left; height: 180px"
                         >
                           At every stage of product cycle we design solutions to
                           meet user needs and are easy to use. We invest our
@@ -218,7 +218,7 @@
                       <div>
                         <div
                           class="open-reg-26"
-                          style="text-align: justify; width: 574px"
+                          style="text-align: justify; width: 30vw"
                         >
                           Adaptive solution development
                         </div>
@@ -252,7 +252,7 @@
                       <div>
                         <div
                           class="open-reg-26"
-                          style="text-align: justify; width: 574px"
+                          style="text-align: justify; width: 30vw"
                         >
                           User oriented group of talents
                         </div>
@@ -283,7 +283,7 @@
                       <div>
                         <div
                           class="open-reg-26"
-                          style="text-align: justify; width: 574px"
+                          style="text-align: justify; width: 30vw"
                         >
                           Sustainable way of achieving
                         </div>

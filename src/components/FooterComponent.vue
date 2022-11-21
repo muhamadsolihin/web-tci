@@ -27,11 +27,11 @@
 				<div
 					class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column justify-content-end find-us"
 				>
-					<p class="ibm-semibold-16">Find Us</p>
-					<p class="open-reg-12 text-regent-grey pointer">Facebook</p>
-					<p class="open-reg-12 text-regent-grey pointer">Instagram</p>
-					<p class="open-reg-12 text-regent-grey pointer">Linkedin</p>
-					<div class="to-top d-flex flex-column pointer" @click="emit('toTop')">
+					<p class="ibm-semibold-16 open-reg-12 ">Find Us</p>
+					<a class="text-regent-grey pointer open-reg-12 " href="https://www.facebook.com/TeknologiCakraInternasional/" target="_blank" style="text-decoration:none; ; z-index: 9;">	<p class="open-reg-12">Facebook</p></a>
+					<a class="text-regent-grey pointer open-reg-12 " href="https://www.instagram.com/teknologicakrainternasional/" target="_blank" style="text-decoration:none; ; z-index: 9;">	<p class="open-reg-12">Instagram</p></a>
+					<a class="text-regent-grey pointer open-reg-12 " href="https://www.linkedin.com/company/teknologicakrainternasional/" target="_blank" style="text-decoration:none; ; z-index: 9;">	<p class="open-reg-12">Linkedin</p></a>
+					<div class="to-top d-flex flex-column pointer open-reg-12 " @click="emit('toTop')">
 						<img class="m-auto" src="@/assets/images/icons/arrow-up.svg" />
 					</div>
 				</div>

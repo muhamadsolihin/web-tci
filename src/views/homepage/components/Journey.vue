@@ -16,11 +16,11 @@
               :color="'#000000'"
               style="margin-top: 0"
             />
-            <h2 class="mt-2 title" :class="imageHover ? 'title-smaller' : 'title-bigger'">
+            <h2 class="mt-5 title">
               Your Journey <br />
               Our Story
             </h2>
-            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+            <p class="text-body mt-3" >
               The success of our clients is a big part of who we are and how
                 we believe in our values. Their journey becomes our story of
                 passion and persistence.

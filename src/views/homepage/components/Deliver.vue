@@ -26,17 +26,17 @@
               :color="'#000000'"
               style="margin-top: 0"
             />
-            <h2 class="mt-2 title" :class="imageHover ? 'title-smaller' : 'title-bigger'">
+            <h2 class="mt-2 title">
               We Deliver <br />
               Consistent Solutions
             </h2>
-            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+            <p class="text-body">
               Using a combination of technology, process and talents we focus on our users
               needs and help to accelerate their business at any scale. We deliver
               consistent solutions and that is why we are all about the details and the
               end-users.
             </p>
-            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+            <p class="text-body">
               We constantly listen to our user feedback through our development cycle to
               ensure a foundational setup for success. Whether it is to grow your
               business, get greater connection with customers.
