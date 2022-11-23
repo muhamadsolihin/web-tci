@@ -9,7 +9,7 @@
       <div class="d-flex flex-column h-100 pt-4">
         <h1 class="title">Our Services</h1>
         <SectionNumberComponent
-          class="ms-auto"
+          class="ms-auto sec-number"
           :number="'05 / 11'"
           :section-name="'How We Do It'"
           :color="'#000'"
@@ -258,6 +258,9 @@ onMounted(() => {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
       line-height: 57px;
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
       @media screen and (max-width: 567px) {
         display: none;
       }
@@ -306,7 +309,19 @@ onMounted(() => {
   }
 }
 
+// .sec-number{
+//   display: block !important;
+//   @media screen and (max-width: 992px) {
+// display: block !important;
+//   }
+// }
+
 .row-menu {
+  @media screen and (max-width: 992px) {
+    margin-top: -30%;
+    margin-left: -30% !important;
+    width: 325px !important;
+  }
   @media screen and (max-width: 567px) {
     margin-top: 3em;
     margin-left: -30% !important;
@@ -362,6 +377,12 @@ onMounted(() => {
 .grid-content {
   transform: translateY(700px);
   animation: slideUp 1s ease-in-out forwards 0.5s;
+  @media screen and (max-width: 992px) {
+margin-top: -20%;
+  }
+  @media screen and (max-width: 567px) {
+margin-top: 0;
+  }
 }
 @keyframes slideUp {
   0% {
@@ -406,6 +427,12 @@ onMounted(() => {
   /* identical to box height */
 
   color: #000000;
+  @media screen and (max-width: 992px) {
+    font-size: 20px;
+    width: 100%;
+    line-height: 25px;
+
+  }
   @media screen and (max-width: 567px) {
     font-size: 30px !important;
     text-align: center !important;
@@ -432,6 +459,9 @@ onMounted(() => {
   width: 25em;
   font-weight: 400;
   color: #000000;
+  @media screen and (max-width: 992px) {
+      width:380px ;
+  }
   @media screen and (max-width: 567px) {
     font-size: 12px;
     width: 322px !important;

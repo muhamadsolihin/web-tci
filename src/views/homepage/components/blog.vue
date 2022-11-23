@@ -16,7 +16,7 @@
               :number="'09 / 11'"
               :section-name="'Our Blog'"
               :color="'#000000'"
-              style="margin-left: 3em"
+              style="margin-left: 10%"
             />
             <p class="headblog">Our Blog</p>
             <p class="subhead">
@@ -269,6 +269,11 @@ onMounted(() => {
     }
   }
   .card-title {
+    @media screen and (max-width: 992px) {
+      font-size: 18px !important;
+      width: 50%;
+      line-height: 22px;
+    }
     @media screen and (max-width: 768px) {
       font-size: 18px !important;
       line-height: 22px;
@@ -293,7 +298,10 @@ onMounted(() => {
     margin-left: 6%;
     margin-top: 2%;
     letter-spacing: -2.81895px;
-
+    @media screen and (max-width: 992px) {
+      font-size: 30px;
+      line-height: 37px;
+    }
     @media screen and (max-width: 768px) {
       font-size: 30px;
       line-height: 37px;
@@ -307,7 +315,13 @@ onMounted(() => {
 
     line-height: 50px;
     margin-left: 6%;
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+      line-height: 25px;
+      /* or 192% */
 
+      color: #8d8f9a;
+    }
     @media screen and (max-width: 768px) {
       font-size: 18px;
       line-height: 25px;

@@ -7,7 +7,7 @@
     />
     <div class="container-custom">
       <div class="d-flex flex-column h-100 pt-4">
-        <div class="d-flex flex-row flex-wrap align-items-center w-100">
+        <div class="d-flex header flex-row flex-wrap align-items-center w-100">
           <h1 class="title mb-0">Our Product</h1>
           <SectionNumberComponent
             class="ms-auto mt-auto"
@@ -425,5 +425,11 @@ img {
       }
     }
   }
+}
+@media screen and (max-width: 992px) {
+.header{
+  margin-top: -3em;
+}
+
 }
 </style>

@@ -114,6 +114,10 @@ onMounted(() => {
       line-height: 83px;
       text-align: start;
       color: white;
+      @media (max-width: 992px) {
+        font-size: 20px !important;
+        line-height: 25px;
+      }
       @media (max-width: 768px) {
         font-size: 40px !important;
         line-height: 49px;
@@ -123,6 +127,11 @@ onMounted(() => {
     .text-body {
       color: white !important;
       width: 50%;
+      @media (max-width: 992px) {
+        font-size: 20px !important;
+        line-height: 25px;
+        width: 100%;
+      }
     }
     .shape-blue {
       width: 68px;
@@ -141,6 +150,9 @@ onMounted(() => {
   position: absolute;
   bottom: -90px;
   left: 45%;
+  @media (max-width: 992px) {
+    display: none;
+      }
   @media (max-width: 768px) {
     display: none;
   }

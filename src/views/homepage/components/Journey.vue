@@ -103,6 +103,10 @@ onMounted(() => {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
       line-height: 55px;
+      @media screen and (max-width: 992px) {
+      width: 100%;
+      line-height: 35px;
+    }
     }
     .pic-cto {
       width: 100%;
@@ -122,6 +126,11 @@ onMounted(() => {
       font-size: 1.5em;
       width: 585px;
       color: #000 !important;
+      @media screen and (max-width: 992px) {
+        font-size: 20px;
+        width: 100% ;
+
+      }
     }
   }
   .asset-2 {

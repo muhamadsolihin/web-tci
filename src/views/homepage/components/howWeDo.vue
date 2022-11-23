@@ -422,9 +422,15 @@ onMounted(() => {
   .open-reg-26 {
     text-align: left !important;
     // width: 15em;
+    @media screen and (max-width: 992px) {
+      font-size: 20px !important;
+line-height: 20px;
+margin-left: 25%;
+    }
     @media screen and (max-width: 576px) {
       font-size: 20px !important;
       width: 275px !important;
+      margin: 0 0 20px;
       text-align: left !important;
     }
   }
@@ -479,6 +485,10 @@ onMounted(() => {
   }
   .hide-mobile {
     // margin-left:-10%;
+    @media screen and (max-width: 992px) {
+      margin-left: -10%;
+      margin-top: -5%;
+    }
     @media screen and (max-width: 576px) {
       display: none;
     }
@@ -529,6 +539,7 @@ onMounted(() => {
   .grid-content {
     transform: translateY(700px);
     animation: slideUp 1s ease-in-out forwards 0.5s;
+
     
   }
 
@@ -591,15 +602,24 @@ onMounted(() => {
     /* or 167% */
 
     color: #000000 !important;
+    @media screen and (max-width: 992px) {
+      font-size: 13px !important;
+      line-height:20px;
+      margin-left: 25%;
+      width: 100%;
+    }
     @media screen and (max-width: 576px) {
       font-size: 13px !important;
-
+      margin: 0;
       width: 275px !important;
     }
   }
   .tab-content {
     width: 400px;
     margin-left: 20%;
+    @media screen and (max-width: 992px) {
+      margin-top: -10%;
+    }
     @media screen and (max-width: 576px) {
       width: 325px !important;
     }
@@ -659,6 +679,7 @@ onMounted(() => {
         font-size: 20px;
         font-weight: 600;
         line-height: 20px;
+        margin:0;
       }
       .section-nums {
         display: none;
