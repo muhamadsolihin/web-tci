@@ -63,6 +63,12 @@ const router = createRouter({
                 import ('../views/Blog/content/index.vue'),
         },
         {
+            path: '/jobs',
+            name: 'job-list',
+            component: () =>
+                import ('../views/jobs/index.vue'),
+        },
+        {
             path: '/test2',
             name: 'test2',
             component: () =>

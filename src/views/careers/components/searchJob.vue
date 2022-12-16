@@ -34,7 +34,7 @@
               :section-name="'Diversity Equity Inclusion'"
               :color="'#000000'"
             /> -->
-            <img class="assets-3  me-auto mb-auto d-none d-md-flex" src="@/assets/images/careers/search.svg" />
+            <img class="assets-3  me-auto mb-auto d-none d-md-flex pointer" src="@/assets/images/careers/search.svg" @click="$router.push('/jobs')" />
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-row">
