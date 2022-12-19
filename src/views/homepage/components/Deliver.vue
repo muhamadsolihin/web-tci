@@ -26,17 +26,17 @@
               :color="'#000000'"
               style="margin-top: 0"
             />
-            <h2 class="mt-2 title" :class="imageHover ? 'title-smaller' : 'title-bigger'">
+            <h2 class="mt-2 title">
               We Deliver <br />
               Consistent Solutions
             </h2>
-            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+            <p class="text-body">
               Using a combination of technology, process and talents we focus on our users
               needs and help to accelerate their business at any scale. We deliver
               consistent solutions and that is why we are all about the details and the
               end-users.
             </p>
-            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+            <p class="text-body">
               We constantly listen to our user feedback through our development cycle to
               ensure a foundational setup for success. Whether it is to grow your
               business, get greater connection with customers.
@@ -109,6 +109,10 @@ onMounted(() => {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
       line-height: 55px;
+      @media (max-width:992px) {
+      font-size:20px ;
+      line-height: 25px;
+    }
     }
     .pic-cto {
       width: 90%;
@@ -125,6 +129,11 @@ onMounted(() => {
       font-weight: 400;
       width: 585px;
       color: #8D8F9A !important;
+      @media (max-width: 992px) {
+      width: 100%;
+      font-size: 12px;
+      line-height: 18px;
+    }
     }
   }
   .asset-2 {

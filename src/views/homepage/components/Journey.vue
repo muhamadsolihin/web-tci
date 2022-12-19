@@ -1,189 +1,260 @@
 <template>
-  <section id="journey">
-    <div class="container-fluid" style="background: #eeeaea; height: 44em">
-      <el-row class="container">
-        <el-col :span="10" :offset="2"
-          ><div class="grid-content" />
-          <div
-            class="card"
-            style="
-              border: none;
-              background: transparent;
-              margin-top: 10em;
-              margin-left: -15%;
-              width: 29em;
-            "
-          >
-            <div
-              class="card-header bg-transparent"
-              style="border: none; text-align: left"
-            >
-              Your Journey,<br />
+  <section id="deliver">
+    <div class="container-custom">
+      <BorderContainer
+        :theme="'light'"
+        :sections-length="sectionsLength"
+        :current-section="currentSection"
+      />
+      <div class="row h-100">
+        <div class="col-12 col-md-7 col-lg-7 col-xl-7">
+          <div class="d-flex flex-column justify-content-center h-100">
+            <SectionNumberComponent
+              class="me-auto mt-3"
+              :number="'07 / 11'"
+              :section-name="'Your Journey Our Story'"
+              :color="'#000000'"
+              style="margin-top: 0"
+            />
+            <h2 class="mt-5 title">
+              Your Journey <br />
               Our Story
-            </div>
-            <ul class="list-group bg-transparent" style="border: none">
-              <li
-                class="list-group-item bg-transparent subhead"
-                style="border: none; text-align: left"
-              >
-                The success of our clients is a big part of who we are and how
+            </h2>
+            <p class="text-body mt-3" >
+              The success of our clients is a big part of who we are and how
                 we believe in our values. Their journey becomes our story of
                 passion and persistence.
-              </li>
-              <li class="list-group-item bg-transparent" style="border: none">
-                <img
-                  class="rndm"
-                  src="@/assets/images/rndm1.png"
-                  style="width: 29em; height: 18em; margin-top: 9em"
-                />
-              </li>
-            </ul>
+            </p>
+            <img
+              class="mb-auto pic-cto-1"
+              :class="imageHover ? 'image-hover' : 'image-unhover'"
+              src="@/assets/images/rndm1.png"
+              alt="photo"
+              @mouseenter="imageHover = true"
+              @mouseleave="imageHover = false"
+            />
           </div>
-        </el-col>
-        <el-col :gutter="10" :span="10" :offset="2" style="margin-left: -1em"
-          ><div class="grid-content cards" />
+        </div>
+        <div class="col-12 col-md-5 col-lg-5 col-xl-5 d-flex flex-row align-items-start">
           <img
-            class="ceopict"
+            class="mx-auto pic-cto"
+            :class="imageHover ? 'image-hover' : 'image-unhover'"
             src="@/assets/images/pictceo.png"
-            style="
-              width: 40em;
-              height: 41em;
-              margin-top: 10em;
-              margin-left: 10%;
-            "
+            alt="photo"
+            @mouseenter="imageHover = true"
+            @mouseleave="imageHover = false"
           />
-        </el-col>
-      </el-row>
+        </div>
+      </div>
     </div>
-    <!-- <Gallery/> -->
   </section>
 </template>
 
 <script setup>
+import Hammer from "hammerjs";
+import { onMounted, ref } from "vue";
+
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
-import Hammer from 'hammerjs';
-import { onMounted } from 'vue';
+import BorderContainer from "@/components/BorderContainer.vue";
 
+const props = defineProps({
+  sectionsLength: {
+    type: Number,
+    require: true,
+  },
+  currentSection: {
+    type: Number,
+    require: true,
+  },
+});
 
-const emit = defineEmits(['swipeUp', 'swipeDown']);
+const emit = defineEmits(["swipeUp", "swipeDown"]);
+
+const imageHover = ref(false);
+
 onMounted(() => {
-		var stage = document.getElementById('journey');
-		var hammertime = new Hammer.Manager(stage);
-		var Swipe = new Hammer.Swipe();
-		hammertime.add(Swipe);
-		hammertime.on('swipeup', function (ev) {
-			emit('swipeUp');
-		});
-		hammertime.on('swipedown', function (ev) {
-			emit('swipeDown');
-		});
-	});
+  var stage = document.getElementById("deliver");
+  var hammertime = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  hammertime.add(Swipe);
+  hammertime.on("swipeup", function (ev) {
+    emit("swipeUp");
+  });
+  hammertime.on("swipedown", function (ev) {
+    emit("swipeDown");
+  });
+});
 </script>
 
 <style lang="scss" scoped>
-#journey {
+#deliver {
+  background-color: #eeeaea;
   height: 100vh;
-}
-.head {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 55px;
-  line-height: 67px;
-  margin-top: 3em;
-  /* identical to box height */
-  letter-spacing: -2.81895px;
-  color: #000000;
-}
-.card-header {
-  font-family: "montserrat";
-  font-size: 3.4em;
-  color: #000000;
-  font-weight: 600;
-  line-height: 67px;
-  letter-spacing: -2.81895px;
-  @media screen and (max-width:567px){
-margin-top: 11em;
-margin-left: 0;
-font-size: 24px;
-width: 325px;
-line-height: 29px;
+  width: 100%;
+  padding: 0 140px 340px ;
+  z-index: 1;
+  
+  .container-custom {
+    height: 100vh;
+    padding: 80px 0;
+    border-left: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
+    .title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      line-height: 55px;
+      @media screen and (max-width: 992px) {
+      width: 100%;
+      line-height: 35px;
+    }
+    }
+    .pic-cto {
+      width: 100%;
+      object-fit: contain;
+      
+    }
+    .pic-cto-1 {
+      width: 60%;
+      justify-content: left;
+      margin-top: 20%;
+      object-fit: contain;
+    }
+    .text-body {
+      font-family: "Open Sans", sans-serif;
+      line-height: 30px;
+      font-weight: 400;
+      font-size: 1.5em;
+      width: 585px;
+      color: #000 !important;
+      @media screen and (max-width: 992px) {
+        font-size: 20px;
+        width: 100% ;
+
+      }
+    }
+  }
+  .asset-2 {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    height: 711px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
-.card{
-  @media screen and (max-width:567px){
 
-width: 325px !important;
+@media screen and (max-width: 768px) {
+  #deliver {
+    padding: 0 30px;
+    .container-custom {
+      height: 100vh;
+      padding: 80px 0;
+      border: none;
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+      .text-body {
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 20px;
+        width: 385px;
+      }
+      .pic-cto {
+        width: 90%;
+        margin-left: 1em !important;
+        object-fit: contain;
+      }
+      .pic-cto-1 {
+        display: none;
+      }
+    }
 
+    .image-hover,
+    .image-unhover,
+    .title-smaller,
+    .title-bigger,
+    .text-smaller,
+    .text-bigger {
+      animation: 0s;
+    }
   }
 }
-.subhead {
-  font-family: "open sans";
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 1.5em;
-  @media screen and (max-width:567px){
-    font-size: 13px;
-line-height: 18px;
-width:325px;
-margin-left:1.9em !important
 
-
-  }
-}
-
-.ceopict {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  @media screen and (max-width:567px){
-    margin-left: -10em !important; 
-    margin-top: 2.5em !important;
-    width: 345px !important;
-height: 383.3px !important;
-  }
-}
-.ceopict:hover,
-.ceopict:focus,
-.ceopict:active {
-  -webkit-transform: scale(1.1);
+.image-hover {
+  animation: popup 1s ease-out;
   transform: scale(1.1);
 }
-
-.rndm {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  @media screen and (max-width:567px){
-    margin-top:0.5em !important;
-    margin-left: 1.5em !important;
-    width: 325px !important;
-height: 210px !important;
+.image-unhover {
+  animation: popdown 1s ease-out;
+  transform: scale(1);
+}
+@keyframes popup {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes popdown {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
   }
 }
 
-.rndm:hover,
-.rndm:focus,
-.rndm:active {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+.title-smaller {
+  animation: smaller 1s;
+  font-size: 40px;
+}
+@keyframes smaller {
+  from {
+    font-size: 46px;
+  }
+  to {
+    font-size: 40px;
+  }
+}
+.title-bigger {
+  animation: bigger 1s;
+  font-size: 46px;
+}
+@keyframes bigger {
+  from {
+    font-size: 40px;
+  }
+  to {
+    font-size: 46px;
+  }
+}
+
+.text-smaller {
+  animation: textsmaller 1s;
+  font-size: 16px;
+}
+@keyframes textsmaller {
+  from {
+    font-size: 18px;
+  }
+  to {
+    font-size: 16px;
+  }
+}
+.text-bigger {
+  animation: textbigger 1s;
+  font-size: 18px;
+}
+@keyframes textbigger {
+  from {
+    font-size: 16px;
+  }
+  to {
+    font-size: 18px;
+  }
 }
 </style>

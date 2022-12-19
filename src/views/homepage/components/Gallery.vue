@@ -143,6 +143,9 @@
 	padding: 0 140px;
 	background-color: #263a5f;
 	z-index: 1;
+	// @media screen and (max-width: 992px) {
+	// 	  margin-top: -6em;
+	// 	  }
 	.container-custom {
 	  padding: 80px 0;
 	  height: 100vh;
@@ -168,6 +171,7 @@
 		  font-size: 35px;
 		  line-height: 42px;
 		  color: white;
+
 		}
 		.subtitle {
 		  font-family: "Open Sans";

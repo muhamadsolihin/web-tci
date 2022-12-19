@@ -1,95 +1,49 @@
 <template>
-  <section id="gallery">
-    <div id="container-custom" class="container-custom w-100">
+  <section id="deliver">
+    <div class="container-custom">
       <BorderContainer
         :theme="'light'"
         :sections-length="sectionsLength"
         :current-section="currentSection"
       />
-      <div class="d-flex flex-row flex-wrap align-items-center w-100">
-        <h1 class="title mb-0 text-white">Our Gallery</h1>
-        <SectionNumberComponent
-          class="ms-auto d-none d-md-flex"
-          :number="'08 / 11'"
-          :section-name="'Our Gallery'"
-          :color="'#fff'"
-        />
-      </div>
-      <div class="row g-3 mt-3 mb-3">
-        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-          <div class="row g-3 h-100">
-            <div class="col-12">
-              <div class="hover hover-2 text-white rounded">
-                <img :src="photoList[0]" alt="photo" />
-                <div class="hover-overlay"></div>
-                <div class="hover-2-content px-5 py-4">
-                  <p class="hover-2-description mb-5">Photo Studio</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="hover-1 hover-2 text-white rounded">
-                <img :src="photoList[1]" alt="photo" />
-                <div class="hover-overlay"></div>
-                <div class="hover-2-content px-5 py-4">
-                  <p class="hover-2-description mb-5">
-                    Employee Of <br />
-                    The Month
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="hover-1 hover-2 text-white rounded">
-                <img :src="photoList[2]" alt="photo" />
-                <div class="hover-overlay"></div>
-                <div class="hover-2-content px-5 py-4">
-                  <p class="hover-2-description mb-5">
-                    Prelaunch <br />
-                    Makasi - POS
-                  </p>
-                </div>
-              </div>
-            </div>
+      <div class="row h-100">
+        <div class="col-12 col-md-7 col-lg-7 col-xl-7">
+          <div class="d-flex flex-column justify-content-center h-100">
+            <SectionNumberComponent
+              class="me-auto mt-3"
+              :number="'01 / 11'"
+              :section-name="'Journey'"
+              :color="'#000000'"
+              style="margin-top: 0"
+            />
+            <h2 class="mt-2 title" :class="imageHover ? 'title-smaller' : 'title-bigger'">
+              Your Journey <br />
+              Our Story
+            </h2>
+            <p class="text-body" :class="imageHover ? 'text-smaller' : 'text-bigger'">
+              The success of our clients is a big part of who we are and how
+                we believe in our values. Their journey becomes our story of
+                passion and persistence.
+            </p>
+            <img
+              class="mb-auto pic-cto-1"
+              :class="imageHover ? 'image-hover' : 'image-unhover'"
+              src="@/assets/images/rndm1.png"
+              alt="photo"
+              @mouseenter="imageHover = true"
+              @mouseleave="imageHover = false"
+            />
           </div>
         </div>
-        <div class="col-6 col-md-3 col-lg-3 col-xl-3 pb-3">
-          <div class="hover-3 hover-2 text-white rounded">
-            <img :src="photoList[3]" alt="photo" />
-            <div class="hover-overlay"></div>
-            <div class="hover-2-content px-5 py-4">
-              <p class="hover-2-description mb-5">
-                   Kuliah Umum
-                  </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3 col-lg-3 col-xl-3">
-          <div class="row g-3 h-100">
-            <div class="col-12">
-              <div class="hover-1 hover-2 text-white rounded">
-                <img :src="photoList[4]" alt="photo" />
-                <div class="hover-overlay"></div>
-                <div class="hover-2-content px-5 py-4">
-                  <p class="hover-2-description mb-5">
-                    Video Shooting
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="hover-1 hover-2 text-white rounded">
-                <img :src="photoList[5]" alt="photo" />
-                <div class="hover-overlay"></div>
-                <div class="hover-2-content px-5 py-4">
-                  <p class="hover-2-description mb-5">
-                    Employee Of <br />
-                    The Month
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-12 col-md-5 col-lg-5 col-xl-5 d-flex flex-row align-items-start">
+          <img
+            class="mx-auto pic-cto"
+            :class="imageHover ? 'image-hover' : 'image-unhover'"
+            src="@/assets/images/pictceo.png"
+            alt="photo"
+            @mouseenter="imageHover = true"
+            @mouseleave="imageHover = false"
+          />
         </div>
       </div>
     </div>
@@ -97,10 +51,11 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
 import Hammer from "hammerjs";
-import BorderContainer from "@/components/BorderContainer.vue";
+import { onMounted, ref } from "vue";
+
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
+import BorderContainer from "@/components/BorderContainer.vue";
 
 const props = defineProps({
   sectionsLength: {
@@ -113,17 +68,12 @@ const props = defineProps({
   },
 });
 
-const photoList = ref([
-  require("@/assets/images/our-gallery/photo-1.png"),
-  require("@/assets/images/our-gallery/photo-2.png"),
-  require("@/assets/images/galerry/pic3.png"),
-  require("@/assets/images/our-gallery/photo-4.png"),
-  require("@/assets/images/our-gallery/photo-5.png"),
-  require("@/assets/images/galerry/pic6.png"),
-]);
 const emit = defineEmits(["swipeUp", "swipeDown"]);
+
+const imageHover = ref(false);
+
 onMounted(() => {
-  var stage = document.getElementById("gallery");
+  var stage = document.getElementById("deliver");
   var hammertime = new Hammer.Manager(stage);
   var Swipe = new Hammer.Swipe();
   hammertime.add(Swipe);
@@ -137,172 +87,165 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-#gallery {
+#deliver {
+  background-color: #eeeaea;
   height: 100vh;
   width: 100%;
-  padding: 0 140px;
-  background-color: #263a5f;
+  padding: 0 140px 340px ;
   z-index: 1;
+  
   .container-custom {
-    padding: 80px 0;
     height: 100vh;
+    padding: 80px 0;
+    border-left: 1px solid #b8bdc6;
+    border-right: 1px solid #b8bdc6;
     .title {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      line-height: 57px;
+      line-height: 55px;
     }
-    img {
+    .pic-cto {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      
     }
-    .data-in-life {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(136.6deg, #e78448 23.03%, #e09b3d 100%);
-      box-shadow: 0px 10px 100px rgba(231, 132, 72, 0.45);
-      .title {
-        font-family: "Albert Sans";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 42px;
-        color: white;
-      }
-      .subtitle {
-        font-family: "Open Sans";
-        font-style: italic;
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 30px;
-        color: white;
-      }
-      .text-body {
-        font-family: "Open Sans";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 30px;
-        color: white !important;
-      }
+    .pic-cto-1 {
+      width: 60%;
+      justify-content: left;
+      margin-top: 20%;
+      object-fit: contain;
+    }
+    .text-body {
+      font-family: "Open Sans", sans-serif;
+      line-height: 30px;
+      font-weight: 400;
+      font-size: 1.5em;
+      width: 585px;
+      color: #000 !important;
+    }
+  }
+  .asset-2 {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    height: 711px;
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  #gallery {
-    padding: 0 20px;
+  #deliver {
+    padding: 0 30px;
     .container-custom {
-      margin-top: -20px;
-      margin-bottom: 1em;
-      .hide-on-mobile {
+      height: 100vh;
+      padding: 80px 0;
+      border: none;
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+      .text-body {
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 20px;
+        width: 385px;
+      }
+      .pic-cto {
+        width: 90%;
+        margin-left: 1em !important;
+        object-fit: contain;
+      }
+      .pic-cto-1 {
         display: none;
       }
+    }
+
+    .image-hover,
+    .image-unhover,
+    .title-smaller,
+    .title-bigger,
+    .text-smaller,
+    .text-bigger {
+      animation: 0s;
     }
   }
 }
 
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
-
-/* DEMO GENERAL ============================== */
-.hover {
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 40%;
+.image-hover {
+  animation: popup 1s ease-out;
+  transform: scale(1.1);
 }
-.hover-1 {
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 80%;
+.image-unhover {
+  animation: popdown 1s ease-out;
+  transform: scale(1);
 }
-.hover-3 {
-  overflow: hidden;
-  position: relative;
-  height: 100%;
+@keyframes popup {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
-
-.hover-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  transition: all 0.4s;
+@keyframes popdown {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-.hover img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
+.title-smaller {
+  animation: smaller 1s;
+  font-size: 40px;
 }
-.hover-1 img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
+@keyframes smaller {
+  from {
+    font-size: 46px;
+  }
+  to {
+    font-size: 40px;
+  }
 }
-.hover-3 img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
+.title-bigger {
+  animation: bigger 1s;
+  font-size: 46px;
 }
-
-.hover-content {
-  position: relative;
-  z-index: 99;
+@keyframes bigger {
+  from {
+    font-size: 40px;
+  }
+  to {
+    font-size: 46px;
+  }
 }
 
-/* DEMO 2 ============================== */
-.hover-2 .hover-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+.text-smaller {
+  animation: textsmaller 1s;
+  font-size: 16px;
 }
-
-.hover-2-title {
-  position: absolute;
-  // top: 50%;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  z-index: 99;
-  transition: all 0.3s;
+@keyframes textsmaller {
+  from {
+    font-size: 18px;
+  }
+  to {
+    font-size: 16px;
+  }
 }
-
-.hover-2-description {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  font-family: "Albert Sans";
-  font-size: 1.5em;
-  opacity: 0;
-  font-weight: 600;
-  left: 7%;
-  text-align: left;
-  z-index: 99;
-  transition: all 0.3s;
+.text-bigger {
+  animation: textbigger 1s;
+  font-size: 18px;
 }
-
-.hover-2:hover .hover-2-title {
-  transform: translateY(-1.5rem);
-}
-
-.hover-2:hover .hover-2-description {
-  bottom: 0.5rem;
-  opacity: 1;
-}
-
-.hover-2:hover .hover-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+@keyframes textbigger {
+  from {
+    font-size: 16px;
+  }
+  to {
+    font-size: 18px;
+  }
 }
 </style>

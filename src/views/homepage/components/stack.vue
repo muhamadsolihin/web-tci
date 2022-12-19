@@ -23,7 +23,7 @@
                 <div class="row g-3">
                   <div class="col-md-2">
                     <img
-                      class="text-center stack-image slideOut sequence zoomInLeft mt-2"
+                      class="text-center stack-image1 slideOut sequence zoomInLeft mt-2"
                       data-animation="slideInRight"
                       :class="imageHover ? 'image-hover' : 'image-unhover'"
                       data-animation-delay=".3s"
@@ -41,7 +41,7 @@
                   </div>
                   <div class="col-md-2 col-sm-2">
                     <img
-                      class="text-center stack-image slideOut sequence zoomInLeft mt-2"
+                      class="text-center stack-image2 slideOut sequence zoomInLeft mt-2"
                       data-animation="slideInRight"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/4.png"
@@ -56,7 +56,7 @@
                   </div>
                   <div class="col-md-2 col-sm-2">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      class="text-center slideOut stack-image3 sequence zoomInLeft mt-3"
                       data-animation-delay=".6s"
                       data-animation="zoomIn"
                       src="@/assets/images/img-stack/3.png"
@@ -71,7 +71,7 @@
                   </div>
                   <div class="col-md-2 col-sm-2">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      class="text-center slideOut stack-image4 sequence zoomInLeft mt-3"
                       data-animation-delay=".9s"
                       data-animation="zoomIn"
                       src="@/assets/images/img-stack/2.png"
@@ -86,7 +86,7 @@
                   </div>
                   <div class="col-md-2 col-sm-2">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      class="text-center slideOut stack-image5 sequence zoomInLeft mt-2"
                       data-animation-delay=".3s"
                       data-animation="zoomIn"
                       src="@/assets/images/img-stack/1.png"
@@ -103,7 +103,7 @@
                 <div class="row g-3 mt-2">
                   <div class="col-md-2">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      class="text-center slideOut stack-image6 sequence zoomReverseIn mt-2"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/1/5.png"
@@ -118,7 +118,7 @@
                   </div>
                   <div class="col-md-2">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      class="text-center slideOut stack-image7 sequence zoomReverseIn mt-2"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/1/4.png"
@@ -133,7 +133,7 @@
                   </div>
                   <div class="col-md-2">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn"
+                      class="text-center slideOut stack-image8 sequence zoomReverseIn"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/1/3.png"
@@ -149,7 +149,7 @@
                   </div>
                   <div class="col-md-2">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      class="text-center slideOut stack-image9 sequence zoomReverseIn mt-2"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/1/2.png"
@@ -164,7 +164,7 @@
                   </div>
                   <div class="col-md-2">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn"
+                      class="text-center slideOut stack-image10 sequence zoomReverseIn"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/1/1.png"
@@ -182,7 +182,7 @@
                 <div class="row g-3 mt-2">
                   <div class="col-md-3">
                     <img
-                      class="text-center slideOut sequence zoomInLeft"
+                      class="text-center slideOut stack-image11 sequence zoomInLeft"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/1/8.png"
                       style="
@@ -196,7 +196,7 @@
                   </div>
                   <div class="col-md-3">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-4"
+                      class="text-center slideOut stack-image12 sequence zoomInLeft mt-4"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/1/7.png"
                       style="
@@ -210,7 +210,7 @@
                   </div>
                   <div class="col-md-6">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      class="text-center slideOut stack-image13 sequence zoomInLeft mt-3"
                       data-animation-delay=".3s"
                       data-animation="zoomIn"
                       src="@/assets/images/img-stack/1/6.png"
@@ -227,7 +227,7 @@
                 <div class="row g-3 mt-2">
                   <div class="col-md-3">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      class="text-center slideOut stack-image14 sequence zoomReverseIn mt-2"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/2/4.png"
@@ -241,7 +241,7 @@
                   </div>
                   <div class="col-md-3">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn mt-2"
+                      class="text-center slideOut stack-image15 sequence zoomReverseIn mt-2"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/2/3.png"
@@ -255,7 +255,7 @@
                   </div>
                   <div class="col-md-3">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn"
+                      class="text-center slideOut stack-image16 sequence zoomReverseIn"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/2/2.png"
@@ -270,7 +270,7 @@
                   </div>
                   <div class="col-md-2">
                     <img
-                      class="text-center slideOut sequence zoomReverseIn mt-1"
+                      class="text-center slideOut stack-image17 sequence zoomReverseIn mt-1"
                       data-animation-delay=".3s"
                       data-animation="zoomReverseIn"
                       src="@/assets/images/img-stack/2/1.png"
@@ -287,7 +287,7 @@
                 <div class="row g-3 mt-2">
                   <div class="col-md-5">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      class="text-center slideOut stack-image18 sequence zoomInLeft mt-2"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/2/7.png"
                       style="
@@ -301,7 +301,7 @@
                   </div>
                   <div class="col-md-3">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-4"
+                      class="text-center slideOut stack-image19 sequence zoomInLeft mt-4"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/lumen.png"
                       style="
@@ -314,7 +314,7 @@
                   </div>
                   <div class="col-md-4">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      class="text-center slideOut stack-image20 sequence zoomInLeft mt-3"
                       data-animation-delay=".3s"
                       data-animation="zoomIn"
                       src="@/assets/images/img-stack/2/5.png"
@@ -329,7 +329,7 @@
                 <div class="row g-3 mt-2">
                   <div class="col-md-4">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      class="text-center slideOut stack-image21 sequence zoomInLeft mt-2"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/2/10.png"
                       style="width: 146px; float: left; justify-content: center"
@@ -337,7 +337,7 @@
                   </div>
                   <div class="col-md-5">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      class="text-center slideOut stack-image22 sequence zoomInLeft mt-2"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/2/9.png"
                       style="
@@ -349,7 +349,7 @@
                   </div>
                   <div class="col-md-3">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-3"
+                      class="text-center slideOut stack-image23 sequence zoomInLeft mt-3"
                       data-animation-delay=".3s"
                       data-animation="zoomIn"
                       src="@/assets/images/img-stack/2/8.png"
@@ -364,7 +364,7 @@
                 <div class="row g-3 mt-2">
                   <div class="col-md-4">
                     <img
-                      class="text-center slideOut sequence zoomInLeft mt-2"
+                      class="text-center slideOut stack-image24 sequence zoomInLeft mt-2"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/2/13.png"
                       style="width: 167px; float: left; justify-content: center"
@@ -372,7 +372,7 @@
                   </div>
                   <div class="col-md-5">
                     <img
-                      class="text-center slideOut sequence zoomInLeft"
+                      class="text-center slideOut stack-image25 sequence zoomInLeft"
                       data-animation-delay=".3s"
                       src="@/assets/images/img-stack/2/12.png"
                       style="
@@ -401,7 +401,7 @@
                   <div class="col-md-7">
                     <SectionNumberComponent
                       class="mx-auto"
-                      :number="'05 / 11'"
+                      :number="'04 / 11'"
                       :section-name="'Technology Stack'"
                       :color="'#000'"
                     />
@@ -563,7 +563,7 @@ onMounted(() => {
   .hide-on-mobile .hero-title {
     font-family: "Montserrat", sans-serif;
     font-size: 55px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 67px;
     text-align: start;
     color: black;
@@ -584,6 +584,10 @@ onMounted(() => {
     text-align: right;
 
     color: #000000;
+    @media screen and (max-width: 992px) {
+      font-size: 12px;
+      margin-top: -2em;
+    }
     @media screen and (max-width: 768px) {
       font-size: 12px;
       margin-top: -2em;
@@ -651,6 +655,9 @@ onMounted(() => {
   /* or 133% */
 
   color: #000000;
+  @media screen and (max-width: 992px) {
+    font-size: 13px;
+  }
   @media screen and (max-width: 768px) {
     font-size: 13px;
   }
@@ -765,4 +772,112 @@ h1 {
     transform: translateX(0px);
   }
 }
+@media screen and (max-width: 992px) {
+  
+  .hide-on-mobile {
+  margin-left: -20%;
+  width: 330px;
+  }
+    
+
+  .stack-image1{
+    width: 40px !important;
+    height: 50px !important;
+  }
+  
+  .stack-image2{
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .stack-image3{
+    width: 50px !important;
+    height: 30px !important;
+  }
+  .stack-image4{
+    width: 50px !important;
+    height: 20px !important;
+  }
+  .stack-image5{
+    width: 100px !important;
+    height: 30px !important;
+  }
+
+  .stack-image6{
+    width: 50px !important;
+    height: 20px !important;
+  }
+  .stack-image7{
+    width: 70px !important;
+    height: 20px !important;
+  }
+  .stack-image8{
+    display: none;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .stack-image9{
+    width: 70px !important;
+    height: 20px !important;
+  }
+  
+  .stack-image10{
+    width: 100px !important;
+    height: 40px !important;
+  }
+
+  .stack-image11{
+    width: 70px !important;
+    height: 35px !important;
+  }
+  .stack-image12{
+    width: 90px !important;
+    height: 35px !important;
+  }
+  .stack-image13{
+    width: 130px !important;
+    height: 35px !important;
+  }
+  .stack-image14{
+    width: 70px !important;
+    height: 20px !important;
+  }
+  .stack-image15{
+    width: 70px !important;
+    height: 20px !important;
+  }
+  .stack-image16{
+    width: 70px !important;
+    height:30px !important;
+  }
+  .stack-image17{
+   display: none;
+  }
+  .stack-image18{
+    width: 100px !important;
+    height:30px !important;
+  }
+  .stack-image19{
+    width: 120px !important;
+    height:40px !important;
+  }
+  .stack-image20{
+    width: 70px !important;
+    height:20px !important;
+  }
+  .stack-image21{
+    width: 70px !important;
+    height:30px !important;
+  }
+  .stack-image22{
+    width: 70px !important;
+    height:30px !important;
+  }
+  .stack-image23{
+    width: 70px !important;
+    height:30px !important;
+  }
+
+
+  }
+
 </style>

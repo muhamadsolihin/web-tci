@@ -63,6 +63,10 @@
       line-height: 60px;
       text-align: start;
       color: white;
+      @media screen and (max-width:992px){
+        font-size: 20px;
+        line-height: 25px;
+      }
       @media screen and (min-width:1920px){
         font-size: 80px;
         line-height: 83px;
@@ -98,7 +102,13 @@
     right: 0;
   }
 }
+@media screen and (max-width: 992px) {
+  .albert-reg-20{
+    font-size: 18px;
+          width: 100%;
+        }
 
+}
 
 	@media screen and (max-width: 768px) {
 		#hero {
