@@ -3,10 +3,11 @@
     <input
       :class="['input-field__input', { 'input-field__input--focused': isFocused }]"
       type="text"
-      v-model="search"
+      v-model="searchValue"
       ref="input"
       @focus="isFocused = true"
       @blur="isFocused = false"
+      @keyup.enter="searchJob"
     />
     <div
       @click="clickPlaceholder"
@@ -26,11 +27,30 @@
 <script setup>
 import { ref, computed } from "vue";
 
-const isFocused = ref(false);
-const search = ref("");
-const floatOn = computed(() => {
-  return isFocused.value || search.value.length > 0;
+const props = defineProps({
+  search: {
+    type: String,
+    require: true,
+    default: "",
+  },
 });
+const emit = defineEmits(["update:search", "doSearch"]);
+
+const searchValue = computed({
+  get: () => props.search,
+  set: (val) => {
+    emit("update:search", val);
+  },
+});
+
+const isFocused = ref(false);
+const floatOn = computed(() => {
+  return isFocused.value || searchValue.value.length > 0;
+});
+
+const searchJob = () => {
+  emit("doSearch", true);
+};
 </script>
 
 <style lang="scss" scoped>
