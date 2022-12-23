@@ -161,6 +161,7 @@
 		#gallery {
 			padding: 0 30px;
 			.container-custom {
+				padding: 0 30px;
 				margin-top: -180px;
 				.hide-on-mobile {
 					display: none;

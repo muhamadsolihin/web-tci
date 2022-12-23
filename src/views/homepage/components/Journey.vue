@@ -20,10 +20,10 @@
               Your Journey <br />
               Our Story
             </h2>
-            <p class="text-body mt-3" >
-              The success of our clients is a big part of who we are and how
-                we believe in our values. Their journey becomes our story of
-                passion and persistence.
+            <p class="text-body mt-3">
+              The success of our clients is a big part of who we are and how we
+              believe in our values. Their journey becomes our story of passion
+              and persistence.
             </p>
             <img
               class="mb-auto pic-cto-1"
@@ -35,7 +35,9 @@
             />
           </div>
         </div>
-        <div class="col-12 col-md-5 col-lg-5 col-xl-5 d-flex flex-row align-items-start">
+        <div
+          class="col-12 col-md-5 col-lg-5 col-xl-5 d-flex flex-row align-items-start"
+        >
           <img
             class="mx-auto pic-cto"
             :class="imageHover ? 'image-hover' : 'image-unhover'"
@@ -91,9 +93,9 @@ onMounted(() => {
   background-color: #eeeaea;
   height: 100vh;
   width: 100%;
-  padding: 0 140px 340px ;
+  padding: 0 140px 340px;
   z-index: 1;
-  
+
   .container-custom {
     height: 100vh;
     padding: 80px 0;
@@ -104,14 +106,14 @@ onMounted(() => {
       font-weight: 600;
       line-height: 55px;
       @media screen and (max-width: 992px) {
-      width: 100%;
-      line-height: 35px;
-    }
+        font-size: 24px;
+        width: 100%;
+        line-height: 35px;
+      }
     }
     .pic-cto {
       width: 100%;
       object-fit: contain;
-      
     }
     .pic-cto-1 {
       width: 60%;
@@ -127,9 +129,9 @@ onMounted(() => {
       width: 585px;
       color: #000 !important;
       @media screen and (max-width: 992px) {
-        font-size: 20px;
-        width: 100% ;
-
+        font-size: 16px;
+        line-height: 20px;
+        width: 100%;
       }
     }
   }

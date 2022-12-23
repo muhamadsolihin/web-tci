@@ -18,7 +18,7 @@
         </div>
         <div class="shape"></div>
 
-        <div class="cores  d-flex flex-row align-items-start my-auto">
+        <div class="cores d-flex flex-row align-items-start my-auto">
           <div
             class="grid-content card-ic"
             :style="`
@@ -26,11 +26,17 @@
               `"
           >
             <div class="card" style="border: none">
+              <a
+                   href="https://interconnectdata.com/"
+                  target="_blank"
+                  class="btn-touch"
+                >
               <img
                 src="@/assets/images/iclogo.svg"
                 class="card-img-top ic-image"
                 alt="responsive"
               />
+              </a>
               <hr
                 class="center"
                 style="width: 20.5em; margin: auto; margin-top: 4.5em"
@@ -73,80 +79,91 @@
                 transform: translateX(-${posX}px);margin-left:1em;
               `"
           >
-                <div class="card" style="border: none">
-                  <img
-                    src="@/assets/images/rbilogo.png"
-                    class="card-img-top ic-image"
-                    alt="responsive"
-                  />
-                  <hr
-                    class="center"
-                    style="width: 20.5em; margin: auto; margin-top: 4.5em"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Reliable Bussiness Service</h5>
-                    <p class="card-text">2021</p>
-                  </div>
-                  <ul class="list-group list-group-flush" style="border: none">
-                    <li class="list-group-item contactrbi">Contact :</li>
-                  </ul>
-                  <div class="card-body" style="border: none">
-                    <a href="#" class="btn-touch">
-                      <img src="@/assets/images/fb.svg" />
-                    </a>
-                    <a
-                      href="https://www.instagram.com/reliablebusinessservices/"
-                      target="_blank"
-                      class="btn-touch"
-                    >
-                      <img src="@/assets/images/ig.svg" />
-                    </a>
-                    <a href="#" class="btn-touch">
-                      <img src="@/assets/images/twit.svg" />
-                    </a>
-                  </div>
-                </div></div
-            >
+            <div class="card" style="border: none">
+              <a
+                  href="https://rb-investigation.com/"
+                  target="_blank"
+                  class="btn-touch"
+                >
+              
+              <img
+                src="@/assets/images/rbilogo.png"
+                class="card-img-top ic-image"
+                alt="responsive"
+              /></a>
+              <hr
+                class="center"
+                style="width: 20.5em; margin: auto; margin-top: 4.5em"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Reliable Bussiness Service</h5>
+                <p class="card-text">2021</p>
+              </div>
+              <ul class="list-group list-group-flush" style="border: none">
+                <li class="list-group-item contactrbi">Contact :</li>
+              </ul>
+              <div class="card-body" style="border: none">
+                <a href="#" class="btn-touch">
+                  <img src="@/assets/images/fb.svg" />
+                </a>
+                <a
+                  href="https://www.instagram.com/reliablebusinessservices/"
+                  target="_blank"
+                  class="btn-touch"
+                >
+                  <img src="@/assets/images/ig.svg" />
+                </a>
+                <a href="#" class="btn-touch">
+                  <img src="@/assets/images/twit.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
           <div
             class="grid-content card-ic"
             :style="`
                 transform: translateX(-${posX}px);margin-left:1em;
               `"
           >
-                <div class="card" style="border: none">
-                  <img
-                    src="@/assets/images/artlogo.svg"
-                    class="card-img-top ic-image"
-                    alt="responsive"
-                  />
-                  <hr
-                    class="center"
-                    style="width: 20.5em; margin: auto; margin-top: 4.5em"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Arthology Branding Consultant</h5>
-                    <p class="card-text">2021</p>
-                  </div>
-                  <ul class="list-group list-group-flush" style="border: none">
-                    <li class="list-group-item contactart">Contact :</li>
-                  </ul>
-                  <div class="card-body" style="border: none">
-                    <a href="#" class="btn-touch">
-                      <img src="@/assets/images/fb.svg" />
-                    </a>
-                    <a
-                      href="https://www.instagram.com/arthology.id/"
-                      target="_blank"
-                      class="btn-touch"
-                    >
-                      <img src="@/assets/images/ig.svg" />
-                    </a>
-                    <a href="#" class="btn-touch">
-                      <img src="@/assets/images/twit.svg" />
-                    </a>
-                  </div>
-                </div></div
-            >
+            <div class="card" style="border: none">
+              <a
+                  href="https://arthology.id/"
+                  target="_blank"
+                  class="btn-touch"
+                >
+              <img
+                src="@/assets/images/artlogo.svg"
+                class="card-img-top ic-image"
+                alt="responsive"
+              /></a>
+              <hr
+                class="center"
+                style="width: 20.5em; margin: auto; margin-top: 4.5em"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Arthology Branding Consultant</h5>
+                <p class="card-text">2021</p>
+              </div>
+              <ul class="list-group list-group-flush" style="border: none">
+                <li class="list-group-item contactart">Contact :</li>
+              </ul>
+              <div class="card-body" style="border: none">
+                <a href="#" class="btn-touch">
+                  <img src="@/assets/images/fb.svg" />
+                </a>
+                <a
+                  href="https://www.instagram.com/arthology.id/"
+                  target="_blank"
+                  class="btn-touch"
+                >
+                  <img src="@/assets/images/ig.svg" />
+                </a>
+                <a href="#" class="btn-touch">
+                  <img src="@/assets/images/twit.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
           <div
             class="grid-content card-ic"
             :style="`
@@ -154,49 +171,54 @@
                 margin-left:1em;
               `"
           >
-                <div class="card" style="border: none">
-                  <img
-                    src="@/assets/images/product/logo-makasi.svg"
-                    class="card-img-top ic-image"
-                    alt="responsive"
-                  />
-                  <hr
-                    class="center"
-                    style="width: 20.5em; margin: auto; margin-top: 4.5em"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Makasi</h5>
-                    <p class="card-text">2021</p>
-                  </div>
-                  <ul class="list-group list-group-flush" style="border: none">
-                    <li class="list-group-item contact">Contact :</li>
-                  </ul>
-                  <div class="card-body" style="border: none">
-                    <a
-                      href="https://www.facebook.com/people/Makasi-Indonesia/100083488881963/"
-                      target="_blank"
-                      class="btn-touch"
-                    >
-                      <img src="@/assets/images/fb.svg" />
-                    </a>
-                    <a
-                      href="https://www.instagram.com/makasipos/"
-                      target="_blank"
-                      class="btn-touch"
-                    >
-                      <img src="@/assets/images/ig.svg" />
-                    </a>
-                    <a
-                      href="https://twitter.com/makasipos"
-                      target="_blank"
-                      class="btn-touch"
-                    >
-                      <img src="@/assets/images/twit.svg" />
-                    </a>
-                  </div>
-                </div></div
-            >
-          
+            <div class="card" style="border: none">
+              <a
+                  href="https://makasipos.com/"
+                  target="_blank"
+                  class="btn-touch"
+                >
+              <img
+                src="@/assets/images/product/logo-makasi.svg"
+                class="card-img-top ic-image"
+                alt="responsive"
+              /></a>
+              <hr
+                class="center"
+                style="width: 20.5em; margin: auto; margin-top: 4.5em"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Makasi</h5>
+                <p class="card-text">2021</p>
+              </div>
+              <ul class="list-group list-group-flush" style="border: none">
+                <li class="list-group-item contact">Contact :</li>
+              </ul>
+              <div class="card-body" style="border: none">
+                <a
+                  href="https://www.facebook.com/people/Makasi-Indonesia/100083488881963/"
+                  target="_blank"
+                  class="btn-touch"
+                >
+                  <img src="@/assets/images/fb.svg" />
+                </a>
+                <a
+                  href="https://www.instagram.com/makasipos/"
+                  target="_blank"
+                  class="btn-touch"
+                >
+                  <img src="@/assets/images/ig.svg" />
+                </a>
+                <a
+                  href="https://twitter.com/makasipos"
+                  target="_blank"
+                  class="btn-touch"
+                >
+                  <img src="@/assets/images/twit.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+
           <!-- <div
             class="core d-flex flex-column"
             :style="`
@@ -340,69 +362,69 @@ onMounted(() => {
       }
     }
     .card-ic {
-  width: 27em;
-  height: 43em;
-  padding: 30px;
-  background-color: #fff;
-  box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  // @media (min-width: 992px) {
-  //   margin-top: -2em;
-  // }
-  // @media screen and (max-width: 567px) {
-  //   margin-left: 50%;
-  // }
-}
-.ic-image {
-  width: 18.5em;
-  height: 6em;
-  margin-top: 1em;
-  // margin-left: 10%;
-}
-.contact {
-  font-family: "Albert Sans";
-  font-size: 1.56em;
-  font-weight: 600;
-  line-height: 1.8em;
-  color: #000;
-  margin-top: 20%;
-  // margin-left: 6%;
-  text-align: justify;
-}
-.contactrbi {
-  font-family: "Albert Sans";
-  font-size: 1.56em;
-  font-weight: 600;
-  line-height: 1.8em;
-  color: #000;
-  margin-top: 8%;
-  margin-left: 6%;
-  text-align: justify;
-}
-.contactart {
-  font-family: "Albert Sans";
-  font-size: 1.56em;
-  font-weight: 600;
-  line-height: 1.8em;
-  color: #000;
-  margin-top:10%;
-  // margin-left: 6%;
-  text-align: justify;
-}
-.card-title {
-  font-family: "Albert Sans";
-  font-size: 1.56em;
-  font-weight: 600;
-  text-align: left;
-  margin-top: 10%;
-  // margin-left: 6%;
-}
+      width: 27em;
+      height: 43em;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      // @media (min-width: 992px) {
+      //   margin-top: -2em;
+      // }
+      // @media screen and (max-width: 567px) {
+      //   margin-left: 50%;
+      // }
+    }
+    .ic-image {
+      width: 18.5em;
+      height: 6em;
+      margin-top: 1em;
+      // margin-left: 10%;
+    }
+    .contact {
+      font-family: "Albert Sans";
+      font-size: 1.56em;
+      font-weight: 600;
+      line-height: 1.8em;
+      color: #000;
+      margin-top: 20%;
+      // margin-left: 6%;
+      text-align: justify;
+    }
+    .contactrbi {
+      font-family: "Albert Sans";
+      font-size: 1.56em;
+      font-weight: 600;
+      line-height: 1.8em;
+      color: #000;
+      margin-top: 8%;
+      margin-left: 6%;
+      text-align: justify;
+    }
+    .contactart {
+      font-family: "Albert Sans";
+      font-size: 1.56em;
+      font-weight: 600;
+      line-height: 1.8em;
+      color: #000;
+      margin-top: 10%;
+      // margin-left: 6%;
+      text-align: justify;
+    }
+    .card-title {
+      font-family: "Albert Sans";
+      font-size: 1.56em;
+      font-weight: 600;
+      text-align: left;
+      margin-top: 10%;
+      // margin-left: 6%;
+    }
 
-img {
-  text-align: center;
-  margin: 5%;
-  margin-top: 1%;
-}
+    img {
+      text-align: center;
+      margin: 5%;
+      margin-top: 1%;
+    }
   }
 }
 
@@ -427,9 +449,8 @@ img {
   }
 }
 @media screen and (max-width: 992px) {
-.header{
-  margin-top: -3em;
-}
-
+  .header {
+    margin-top: -3em;
+  }
 }
 </style>

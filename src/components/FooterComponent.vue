@@ -29,7 +29,7 @@
         >
           <p class="ibm-semibold-16 open-reg-12">Find Us</p>
           <a
-            class="text-regent-grey pointer open-reg-12"
+            class="text-regent-grey pointer open-reg-12 w-50"
             href="https://www.facebook.com/TeknologiCakraInternasional/"
             target="_blank"
             style="text-decoration: none; z-index: 9"
@@ -37,7 +37,7 @@
             <p class="open-reg-12">Facebook</p></a
           >
           <a
-            class="text-regent-grey pointer open-reg-12"
+            class="text-regent-grey pointer open-reg-12 w-50"
             href="https://www.instagram.com/teknologicakrainternasional/"
             target="_blank"
             style="text-decoration: none; z-index: 9"

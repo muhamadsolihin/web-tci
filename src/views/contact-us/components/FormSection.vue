@@ -156,7 +156,8 @@
       padding: 20px 25px;
       margin-top: 40px;
       width: 100%;
-      background: linear-gradient(119.27deg, #e58146 0%, #e09b3d 100%);
+      border: 2px solid #000000;
+      border-radius: 20px;
       p {
         font-family: "Albert Sans";
         font-style: normal;

@@ -120,6 +120,15 @@
 		}
 	}
 
+	@media screen and (max-width: 992px) {
+				.hero-title {
+					font-size: 30px !important;
+					font-weight: 600;
+					line-height: 38px !important;
+				}
+
+	}
+
 	@media screen and (max-width: 768px) {
 		#hero {
 			padding: 0 30px;

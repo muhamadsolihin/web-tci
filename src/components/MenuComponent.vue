@@ -128,10 +128,10 @@
 			text: 'Our Gallery',
 			link: '/our-gallery',
 		},
-		// {
-		// 	text: 'Careers',
-		// 	link: '/careers',
-		// },
+		{
+			text: 'Careers',
+			link: '/jobs',
+		},
 		{
 			text: 'Contact Us',
 			link: '/contact-us',

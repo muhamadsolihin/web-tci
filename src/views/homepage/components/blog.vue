@@ -261,6 +261,7 @@ onMounted(() => {
     background: #ffffff;
     box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
     padding: 20px;
+
   }
   .blog-row {
     margin-top: -6em;
@@ -279,7 +280,14 @@ onMounted(() => {
       line-height: 22px;
     }
   }
-  .show-mobile {
+  .card-img-top{
+    @media screen and (max-width: 992px) {
+      margin-top: 10%;
+      width: 50%;
+
+    }
+  }
+    .show-mobile {
     display: none;
     @media screen and (max-width: 768px) {
       display: block;
@@ -345,6 +353,11 @@ onMounted(() => {
     line-height: 31px;
     margin-left: -3%;
     color: #b8bdc6;
+    @media screen and (max-width: 992px) {
+      font-size: 13px;
+      width: 50%;
+      line-height: 20px;
+    }
     @media screen and (max-width: 768px) {
       font-size: 13px;
       line-height: 22px;

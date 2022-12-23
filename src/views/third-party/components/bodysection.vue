@@ -444,6 +444,9 @@ import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
   color: #000000;
 
   width: 1174px;
+  @media screen and (max-width: 992px) {
+    width: 100% !important;
+      }
   @media screen and (min-width: 1920px) {
     width: 1374px;
       }

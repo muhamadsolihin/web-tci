@@ -71,7 +71,7 @@
               <div class="card-body">
                 <a
                   href="https://drive.google.com/file/d/1fWdoz8xKvzkaGokDGSECIC4KagVDR5jD/view?usp=sharing"
-                  class="btn btn-primary"
+                  class="btn btn2 btn-primary"
                   style="float: center; margin-left: 10%"
                   >IT Solution Profile &nbsp;<img
                     src="@/assets/images/media-gallery/icon-download.svg"
@@ -89,7 +89,7 @@
               <div class="card-body">
                 <a
                   href="https://drive.google.com/file/d/1gx7II_pfH_Si6Uf9KvVg6wvIqs54Pw2s/view?usp=sharing"
-                  class="btn btn-primary"
+                  class="btn btn3 btn-primary"
                   style="float: center; margin-left: 30%"
                   >Mini Company Profile &nbsp;<img
                     src="@/assets/images/media-gallery/icon-download.svg"
@@ -280,6 +280,10 @@ export default {
       line-height: 83px;
       text-align: center;
       color: black;
+      @media screen and (max-width: 992px) {
+        margin-top: -30%;
+        font-size: 30px !important;
+      }
       @media screen and (min-width: 1920px) {
         margin-top: -4em;
       }
@@ -309,6 +313,13 @@ export default {
   border-radius: 30px;
   padding: 10px;
   color: #000000;
+  @media screen and (max-width: 992px) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 20% !important;
+    margin-left: 10%;
+    width: 284px;
+  }
   @media screen and (max-width: 768px) {
     font-size: 10px;
     line-height: 13px;
@@ -333,8 +344,25 @@ export default {
     margin-left: 5%;
   }
 }
+.btn2 {
+  margin-left: 18%;
+  @media screen and (max-width: 992px) {
+    margin-left: 0!important;
+    width: 100% !important;
+  }
+}
+.btn3 {
+  margin-left: 18%;
+  @media screen and (max-width: 992px) {
+    margin-left: -25%!important;
+  }
+}
 .btn1 {
   margin-left: 18%;
+  @media screen and (max-width: 992px) {
+    margin-left: -26%;
+  }
+  
   @media screen and (min-width: 1920px) {
     margin-left: 26%;
   }

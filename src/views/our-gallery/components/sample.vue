@@ -301,10 +301,10 @@ const photoList = ref([
 
 @media screen and (max-width: 768px) {
   #gallery {
-    padding: 0 10px;
-	padding-left: 20%;
+    padding: 0 80px;
     // width: 325px;
-    height: 50vh;
+    height: 100vh;
+    margin-bottom: -50%;
     .container-custom {
       margin-top: -100px;
       .hide-on-mobile {

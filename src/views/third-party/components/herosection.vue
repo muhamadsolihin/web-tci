@@ -96,7 +96,7 @@ import BorderContainer from "@/components/BorderContainer.vue";
     height: 100vh;
     border-left: 1px solid #b8bdc6;
     border-right: 1px solid #b8bdc6;
-    
+
     .hero-title {
       font-family: "Montserrat";
       font-style: normal;
@@ -117,7 +117,6 @@ import BorderContainer from "@/components/BorderContainer.vue";
         font-size: 80px;
         line-height: 83px;
         width: 1133px;
-        
       }
       @media screen and (max-width: 768px) {
         font-size: 20px !important;
@@ -127,7 +126,6 @@ import BorderContainer from "@/components/BorderContainer.vue";
         margin-left: 15%;
         margin-right: 0;
         letter-spacing: 0px !important;
-        
       }
     }
     .hero-sub-title {
@@ -148,7 +146,6 @@ import BorderContainer from "@/components/BorderContainer.vue";
         width: 324px;
         margin-left: 15%;
         margin-right: 0;
-        
       }
     }
     .section-number {
@@ -199,10 +196,38 @@ import BorderContainer from "@/components/BorderContainer.vue";
 
   @media screen and (max-width: 768px) {
     font-size: 14px;
-    line-height:16px;
+    line-height: 16px;
     margin-top: -1.5em;
-    
   }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-title {
+    font-size: 20px;
+    display: block;
+    color: #000;
+    display: none;
+    margin-left: -20em;
+
+  }
+  .hero-sub-title {
+    font-size: 20px !important;
+
+    margin-top: 55% !important;
+    width: 100%;
+    /* identical to box height */
+    margin-left: 0 !important;
+  }
+  .list-table {
+    padding: 0;
+margin-top:-10%;
+  width: 100%;
+}
+.list-content {
+width: 100%;
+margin-top: 1em !important;
+}
+
 }
 
 @media screen and (max-width: 768px) {

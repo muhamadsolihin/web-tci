@@ -16,402 +16,216 @@
         <div
           class="d-flex flex-row justify-content-start align-items-start w-50"
         ></div>
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="container_outer_img hide-on-mobile">
-              <div class="img-inner">
-                <div class="row g-3">
-                  <div class="col-md-2">
-                    <img
-                      class="text-center stack-image1 slideOut sequence zoomInLeft mt-2"
-                      data-animation="slideInRight"
-                      :class="imageHover ? 'image-hover' : 'image-unhover'"
-                      data-animation-delay=".3s"
-                      @mouseenter="imageHover = true"
-                      @mouseleave="imageHover = false"
-                      src="@/assets/images/img-stack/5.png"
-                      style="
-                        width: 56px;
-                        height: 62px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2 col-sm-2">
-                    <img
-                      class="text-center stack-image2 slideOut sequence zoomInLeft mt-2"
-                      data-animation="slideInRight"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/4.png"
-                      style="
-                        width: 61px;
-                        height: 64;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2 col-sm-2">
-                    <img
-                      class="text-center slideOut stack-image3 sequence zoomInLeft mt-3"
-                      data-animation-delay=".6s"
-                      data-animation="zoomIn"
-                      src="@/assets/images/img-stack/3.png"
-                      style="
-                        width: 77px;
-                        height: 46px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2 col-sm-2">
-                    <img
-                      class="text-center slideOut stack-image4 sequence zoomInLeft mt-3"
-                      data-animation-delay=".9s"
-                      data-animation="zoomIn"
-                      src="@/assets/images/img-stack/2.png"
-                      style="
-                        width: 120px;
-                        height: 41px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2 col-sm-2">
-                    <img
-                      class="text-center slideOut stack-image5 sequence zoomInLeft mt-2"
-                      data-animation-delay=".3s"
-                      data-animation="zoomIn"
-                      src="@/assets/images/img-stack/1.png"
-                      style="
-                        width: 126.48px;
-                        height: 52.41px;
-                        float: right;
-                        justify-content: center;
-                        margin-right: -6em;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-2">
-                    <img
-                      class="text-center slideOut stack-image6 sequence zoomReverseIn mt-2"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/1/5.png"
-                      style="
-                        width: 109px;
-                        height: 36px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2">
-                    <img
-                      class="text-center slideOut stack-image7 sequence zoomReverseIn mt-2"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/1/4.png"
-                      style="
-                        width: 115px;
-                        height: 30px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 1.5em !important;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2">
-                    <img
-                      class="text-center slideOut stack-image8 sequence zoomReverseIn"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/1/3.png"
-                      style="
-                        width: 44px;
-                        height: 61px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 3.5em !important;
-                        margin-top: -1em;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2">
-                    <img
-                      class="text-center slideOut stack-image9 sequence zoomReverseIn mt-2"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/1/2.png"
-                      style="
-                        width: 87px;
-                        height: 32px;
-                        float: right;
-                        justify-content: center;
-                        margin-right: -2.5em;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2">
-                    <img
-                      class="text-center slideOut stack-image10 sequence zoomReverseIn"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/1/1.png"
-                      style="
-                        width: 118px;
-                        height: 61px;
-                        float: right;
-                        justify-content: center;
-                        margin-right: -6em;
-                        margin-top: -1em;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut stack-image11 sequence zoomInLeft"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/1/8.png"
-                      style="
-                        width: 124px;
-                        height: 70px;
-                        float: right;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut stack-image12 sequence zoomInLeft mt-4"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/1/7.png"
-                      style="
-                        width: 164px;
-                        height: 38px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      class="text-center slideOut stack-image13 sequence zoomInLeft mt-3"
-                      data-animation-delay=".3s"
-                      data-animation="zoomIn"
-                      src="@/assets/images/img-stack/1/6.png"
-                      style="
-                        width: 229px;
-                        height: 52px;
-                        float: right;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut stack-image14 sequence zoomReverseIn mt-2"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/2/4.png"
-                      style="
-                        width: 123px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut stack-image15 sequence zoomReverseIn mt-2"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/2/3.png"
-                      style="
-                        width: 127px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut stack-image16 sequence zoomReverseIn"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/2/2.png"
-                      style="
-                        width: 112px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: 2em !important;
-                        margin-top: 0;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-2">
-                    <img
-                      class="text-center slideOut stack-image17 sequence zoomReverseIn mt-1"
-                      data-animation-delay=".3s"
-                      data-animation="zoomReverseIn"
-                      src="@/assets/images/img-stack/2/1.png"
-                      style="
-                        width: 116px;
-
-                        float: center;
-                        justify-content: center;
-                        margin-left: 10%;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-5">
-                    <img
-                      class="text-center slideOut stack-image18 sequence zoomInLeft mt-2"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/2/7.png"
-                      style="
-                        width: 189px;
-                        height: 70px;
-                        float: left;
-                        justify-content: center;
-                        margin-left: 0;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut stack-image19 sequence zoomInLeft mt-4"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/lumen.png"
-                      style="
-                        width: 152px;
-                        float: center;
-                        justify-content: center;
-                        margin-left: -1em;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <img
-                      class="text-center slideOut stack-image20 sequence zoomInLeft mt-3"
-                      data-animation-delay=".3s"
-                      data-animation="zoomIn"
-                      src="@/assets/images/img-stack/2/5.png"
-                      style="
-                        width: 161px;
-                        float: right;
-                        justify-content: center;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-4">
-                    <img
-                      class="text-center slideOut stack-image21 sequence zoomInLeft mt-2"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/2/10.png"
-                      style="width: 146px; float: left; justify-content: center"
-                    />
-                  </div>
-                  <div class="col-md-5">
-                    <img
-                      class="text-center slideOut stack-image22 sequence zoomInLeft mt-2"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/2/9.png"
-                      style="
-                        width: 208px;
-                        float: center;
-                        justify-content: center;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut stack-image23 sequence zoomInLeft mt-3"
-                      data-animation-delay=".3s"
-                      data-animation="zoomIn"
-                      src="@/assets/images/img-stack/2/8.png"
-                      style="
-                        width: 143px;
-                        float: right;
-                        justify-content: center;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-4">
-                    <img
-                      class="text-center slideOut stack-image24 sequence zoomInLeft mt-2"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/2/13.png"
-                      style="width: 167px; float: left; justify-content: center"
-                    />
-                  </div>
-                  <div class="col-md-5">
-                    <img
-                      class="text-center slideOut stack-image25 sequence zoomInLeft"
-                      data-animation-delay=".3s"
-                      src="@/assets/images/img-stack/2/12.png"
-                      style="
-                        width: 162px;
-                        float: center;
-                        justify-content: center;
-                      "
-                    />
-                  </div>
-                  <div class="col-md-3">
-                    <img
-                      class="text-center slideOut sequence zoomInLeft"
-                      :class="imageHover ? 'image-hover' : 'image-unhover'"
-                      data-animation-delay=".3s"
-                      data-animation="zoomIn"
-                      src="@/assets/images/img-stack/2/11.png"
-                      style="
-                        width: 168px;
-                        float: right;
-                        justify-content: center;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-7">
-                    <SectionNumberComponent
-                      class="mx-auto"
-                      :number="'04 / 11'"
-                      :section-name="'Technology Stack'"
-                      :color="'#000'"
-                    />
-                  </div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-1"></div>
-                </div>
+        <div class="row w-100 show-mobile">
+          <div class="col-12 hide-on-mobile col-md-6">
+            <div
+              class="d-flex flex-row mt-3 align-items-center justify-content-center"
+            >
+              <div class="col-2">
+                <img :src="photoList[0]" alt="photo" class="img-stack" />
+              </div>
+              <div class="col-2">
+                <img :src="photoList[1]" alt="photo" class="img-stack" />
+              </div>
+              <div class="col-2">
+                <img :src="photoList[2]" alt="photo" class="img-stack" />
+              </div>
+              <div class="col-2">
+                <img :src="photoList[3]" alt="photo" class="img-stack" />
+              </div>
+              <div class="col-2">
+                <img :src="photoList[4]" alt="photo" class="img-stack" />
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row mt-3 align-items-center justify-content-center"
+            >
+              <div class="col-2">
+                <img :src="photoList[5]" alt="photo" class="img-stack" />
+              </div>
+              <div class="col-2">
+                <img :src="photoList[6]" alt="photo" class="img-stack" />
+              </div>
+              <div class="col-2">
+                <img
+                  :src="photoList[7]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 50%"
+                />
+              </div>
+              <div class="col-2">
+                <img :src="photoList[8]" alt="photo" class="img-stack" />
+              </div>
+              <div class="col-2">
+                <img :src="photoList[9]" alt="photo" class="img-stack" />
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row mt-3 align-items-center justify-content-center"
+              style="margin-left: 7%"
+            >
+              <div class="col-4">
+                <img
+                  :src="photoList[10]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70%"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[11]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[12]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row mt-3 align-items-center justify-content-center"
+              style="width: 80%; margin-left: 7%"
+            >
+              <div class="col">
+                <img
+                  :src="photoList[13]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 80% !important"
+                />
+              </div>
+              <div class="col">
+                <img
+                  :src="photoList[14]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 80% !important"
+                />
+              </div>
+              <div class="col">
+                <img
+                  :src="photoList[15]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 80% !important"
+                />
+              </div>
+              <div class="col">
+                <img
+                  :src="photoList[16]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 100% !important"
+                />
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row mt-3 align-items-center justify-content-center"
+              style="margin-left: 7%"
+            >
+              <div class="col-4">
+                <img
+                  :src="photoList[17]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70%"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[18]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[19]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row mt-3 align-items-center justify-content-center"
+              style="margin-left: 7%"
+            >
+              <div class="col-4">
+                <img
+                  :src="photoList[20]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70%"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[21]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[22]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row mt-3 align-items-center justify-content-center"
+              style="margin-left: 7%"
+            >
+              <div class="col-4">
+                <img
+                  :src="photoList[23]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70%"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[24]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  :src="photoList[25]"
+                  alt="photo"
+                  class="img-stack"
+                  style="width: 70% !important"
+                />
+              </div>
+            </div>
+            <div class="row g-3 mt-4">
+              <div class="col-md-7">
+                <SectionNumberComponent
+                  class="mx-auto"
+                  :number="'04 / 11'"
+                  :section-name="'Technology Stack'"
+                  :color="'#000'"
+                />
               </div>
             </div>
           </div>
+
           <!--end::Tabs-->
           <!--begin:Tab content-->
           <div class="col-md-6">
@@ -452,7 +266,7 @@
           class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 order-lg-1 order-xl-1"
         >
           <img
-            class="batik-img "
+            class="batik-img"
             src="@/assets/images/img-stack/batik.png"
             style="
               float: right;
@@ -470,6 +284,37 @@
 import SectionNumberComponent from "@/components/SectionNumberComponent.vue";
 import Hammer from "hammerjs";
 import { onMounted } from "vue";
+
+import { ref } from "vue";
+
+const photoList = ref([
+  require("@/assets/images/img-stack/logo/1.svg"),
+  require("@/assets/images/img-stack/logo/2.svg"),
+  require("@/assets/images/img-stack/logo/3.svg"),
+  require("@/assets/images/img-stack/logo/4.svg"),
+  require("@/assets/images/img-stack/logo/5.svg"),
+  require("@/assets/images/img-stack/logo/6.svg"),
+  require("@/assets/images/img-stack/logo/7.svg"),
+  require("@/assets/images/img-stack/logo/8.svg"),
+  require("@/assets/images/img-stack/logo/9.svg"),
+  require("@/assets/images/img-stack/logo/10.svg"),
+  require("@/assets/images/img-stack/logo/11.svg"),
+  require("@/assets/images/img-stack/logo/12.svg"),
+  require("@/assets/images/img-stack/logo/13.svg"),
+  require("@/assets/images/img-stack/logo/14.svg"),
+  require("@/assets/images/img-stack/logo/15.svg"),
+  require("@/assets/images/img-stack/logo/16.svg"),
+  require("@/assets/images/img-stack/logo/17.svg"),
+  require("@/assets/images/img-stack/logo/18.svg"),
+  require("@/assets/images/img-stack/logo/19.svg"),
+  require("@/assets/images/img-stack/logo/20.svg"),
+  require("@/assets/images/img-stack/logo/21.svg"),
+  require("@/assets/images/img-stack/logo/22.svg"),
+  require("@/assets/images/img-stack/logo/23.svg"),
+  require("@/assets/images/img-stack/logo/24.svg"),
+  require("@/assets/images/img-stack/logo/25.svg"),
+  require("@/assets/images/img-stack/logo/26.svg"),
+]);
 
 const emit = defineEmits(["swipeUp", "swipeDown"]);
 onMounted(() => {
@@ -493,8 +338,8 @@ onMounted(() => {
   margin-top: -4em;
   z-index: 1;
   @media screen and (min-width: 1920px) {
-      margin-top: 2em;
-    }
+    margin-top: 2em;
+  }
   .container-border {
     position: relative;
     width: 100%;
@@ -506,6 +351,10 @@ onMounted(() => {
       padding: 0;
     }
   }
+  .img-stack {
+    width: 80%;
+  }
+
   .image-hover {
     animation: popup 1s ease-out;
     transform: scale(1.1);
@@ -572,7 +421,6 @@ onMounted(() => {
     }
   }
 
-
   .sub-title {
     font-family: "Open Sans";
     font-style: italic;
@@ -610,19 +458,25 @@ onMounted(() => {
     height: 711px;
   }
 }
-.batik-img {
-    margin-right: -48.7em;
-    margin-top: -35% !important;
-    display: none;
-    @media screen and (min-width: 1920px) {
-      margin-right: -60.7em;
-      margin-top: -15% !important;
-    }
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
+.show-mobile{
+  margin-left: -15%;
+  @media screen and (max-width:992px) {
+  margin-left: 5% !important;
   }
-.sequence{
+}
+.batik-img {
+  margin-right: -48.7em;
+  margin-top: -35% !important;
+  display: none;
+  @media screen and (min-width: 1920px) {
+    margin-right: -60.7em;
+    margin-top: -15% !important;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.sequence {
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
 }
@@ -692,8 +546,6 @@ h1 {
 }
 
 .slideOut {
-
-
   animation-duration: 1s;
   animation-fill-mode: both;
   display: inline-block;
@@ -773,111 +625,106 @@ h1 {
   }
 }
 @media screen and (max-width: 992px) {
-  
   .hide-on-mobile {
-  margin-left: -20%;
-  width: 330px;
+    margin-left: -20%;
+    width: 330px;
   }
-    
 
-  .stack-image1{
+  .stack-image1 {
     width: 40px !important;
     height: 50px !important;
   }
-  
-  .stack-image2{
+
+  .stack-image2 {
     width: 40px !important;
     height: 40px !important;
   }
-  .stack-image3{
+  .stack-image3 {
     width: 50px !important;
     height: 30px !important;
   }
-  .stack-image4{
+  .stack-image4 {
     width: 50px !important;
     height: 20px !important;
   }
-  .stack-image5{
+  .stack-image5 {
     width: 100px !important;
     height: 30px !important;
   }
 
-  .stack-image6{
+  .stack-image6 {
     width: 50px !important;
     height: 20px !important;
   }
-  .stack-image7{
+  .stack-image7 {
     width: 70px !important;
     height: 20px !important;
   }
-  .stack-image8{
+  .stack-image8 {
     display: none;
     width: 40px !important;
     height: 40px !important;
   }
-  .stack-image9{
+  .stack-image9 {
     width: 70px !important;
     height: 20px !important;
   }
-  
-  .stack-image10{
+
+  .stack-image10 {
     width: 100px !important;
     height: 40px !important;
   }
 
-  .stack-image11{
+  .stack-image11 {
     width: 70px !important;
     height: 35px !important;
   }
-  .stack-image12{
+  .stack-image12 {
     width: 90px !important;
     height: 35px !important;
   }
-  .stack-image13{
+  .stack-image13 {
     width: 130px !important;
     height: 35px !important;
   }
-  .stack-image14{
+  .stack-image14 {
     width: 70px !important;
     height: 20px !important;
   }
-  .stack-image15{
+  .stack-image15 {
     width: 70px !important;
     height: 20px !important;
   }
-  .stack-image16{
+  .stack-image16 {
     width: 70px !important;
-    height:30px !important;
+    height: 30px !important;
   }
-  .stack-image17{
-   display: none;
+  .stack-image17 {
+    display: none;
   }
-  .stack-image18{
+  .stack-image18 {
     width: 100px !important;
-    height:30px !important;
+    height: 30px !important;
   }
-  .stack-image19{
+  .stack-image19 {
     width: 120px !important;
-    height:40px !important;
+    height: 40px !important;
   }
-  .stack-image20{
+  .stack-image20 {
     width: 70px !important;
-    height:20px !important;
+    height: 20px !important;
   }
-  .stack-image21{
+  .stack-image21 {
     width: 70px !important;
-    height:30px !important;
+    height: 30px !important;
   }
-  .stack-image22{
+  .stack-image22 {
     width: 70px !important;
-    height:30px !important;
+    height: 30px !important;
   }
-  .stack-image23{
+  .stack-image23 {
     width: 70px !important;
-    height:30px !important;
+    height: 30px !important;
   }
-
-
-  }
-
+}
 </style>

@@ -147,8 +147,9 @@
 	// 	  margin-top: -6em;
 	// 	  }
 	.container-custom {
-	  padding: 80px 0;
+	  padding: 100px 40px;
 	  height: 100vh;
+	  margin-top: -3%;
 	  .title {
 		font-family: "Montserrat", sans-serif;
 		font-weight: 600;
@@ -189,6 +190,16 @@
 		  line-height: 30px;
 		  color: white !important;
 		}
+	  }
+	}
+  }
+
+  @media screen and (max-width: 992px) {
+	#gallery {
+	  padding: 0 140px;
+	  .container-custom {
+		margin-top: -35px;
+		//-bottom:100px;
 	  }
 	}
   }
