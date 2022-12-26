@@ -29,7 +29,12 @@
               </div>
               <div class="col-6 col-md-3 col-lg-3 col-xl-3">
                 <p class="mb-0 job-subtitle">Location</p>
-                <p class="mb-0 job-description">{{ job.location }}</p>
+                <p class="mb-0 job-description">
+                  <span v-for="(loc, indexLoc) in job.location" :key="indexLoc"
+                    >{{ loc.name }}
+                    <span v-if="indexLoc < job.location.length - 1">/ </span></span
+                  >
+                </p>
               </div>
               <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                 <button type="button" class="btn btn-apply" @click="goToApps(job.uuid)">
@@ -67,18 +72,27 @@ const search = ref("");
 
 const genereateSkill = (skills) => {
   let skillText = "";
-  skills.forEach((skill, indexSkill) => {
-    if (indexSkill < skills.length - 1) {
-      skillText += `${skill.name}, `;
-    } else {
-      skillText += skill.name;
-    }
-  });
+  if (skills.length < 8) {
+    skills.forEach((skill, indexSkill) => {
+      if (indexSkill < skills.length - 1) {
+        skillText += `${skill.name}, `;
+      } else {
+        skillText += skill.name;
+      }
+    });
+  } else {
+    skills.forEach((skill, indexSkill) => {
+      if (indexSkill < skills.length - 1 && indexSkill < 7) {
+        skillText += `${skill.name}, `;
+      }
+    });
+    skillText += "...";
+  }
   return skillText;
 };
 
 const goToApps = (uuid) => {
-  window.open("https://apps.interconnectdata.com//job-vacancy/" + uuid);
+  window.open("https://apps.interconnectdata.com/job-vacancy/" + uuid);
 };
 
 const searchJob = () => {
